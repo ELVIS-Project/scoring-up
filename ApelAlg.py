@@ -96,19 +96,58 @@ if prolatio == 3:
 
         # Given the total amount of minims in-between the "semibreves", see if they can be arranged in groups of 3
         # According to how many minims remain ungrouped (1, 2 or 0), modifiy the duration of the appropriate note of the sequence ('imperfection', 'alteration', no-modification)
+
+        # 1 minim left out:
         if minim_counter % 3 == 1:
-            start_note.addAttribute('num', '3')
-            start_note.addAttribute('numbase', '2')
-            start_note.addAttribute('quality', 'i')
+            # Default Case
+            if start_note.name == 'note' and not start_note.hasAttribute('quality'):
+                # Imperfection a.p.p.
+                start_note.addAttribute('quality', 'i')
+                start_note.addAttribute('num', '3')
+                start_note.addAttribute('numbase', '2')
+            # Exception Case
+            elif end_note.name == 'note' and not end_note.hasAttribute('quality'):
+                # Imperfection a.p.a.
+                end_note.addAttribute('quality', 'i')
+                end_note.addAttribute('num', '3')
+                end_note.addAttribute('numbase', '2')
+            # Mistake Case
+            else:
+                print("MINIM MISTAKE 1")
+                break
+
+        # 2 minims left out:
         elif minim_counter % 3 == 2:
-            middle_notes[-1].addAttribute('num', '1')
-            middle_notes[-1].addAttribute('numbase', '2')
-            middle_notes[-1].addAttribute('quality', 'a')
+            # Default case
+            before_last = middle_notes[-1]
+            if before_last.name == 'note' and before_last.getAttribute('dur').value == 'minima' and not before_last.hasAttribute('quality'):
+                # Alteration
+                before_last.addAttribute('quality', 'a')
+                before_last.addAttribute('num', '1')
+                before_last.addAttribute('numbase', '2')
+            # Exception Case
+            elif (start_note.name == 'note' and not start_note.hasAttribute('quality')) and (end_note.name == 'note' and not end_note.hasAttribute('quality')):
+                # Imperfection a.p.p. 
+                start_note.addAttribute('quality', 'i')
+                start_note.addAttribute('num', '3')
+                start_note.addAttribute('numbase', '2')
+                # Imperfection a.p.a.
+                end_note.addAttribute('quality', 'i')
+                end_note.addAttribute('num', '3')
+                end_note.addAttribute('numbase', '2')
+            # Mistake Case
+            else:
+                print("MINIM MISTAKE 2")
+                break
+        
+        # 0 minims left out:
         else:
             pass
+
 # prolatio = 2
 else:
     pass
+
 
 # Semibreves in between breves (or higher note values)
 if tempus == 3:
@@ -153,16 +192,54 @@ if tempus == 3:
 
         # Given the total amount of semibreves in-between the "breves", see if they can be arranged in groups of 3
         # According to how many semibreves remain ungrouped (1, 2 or 0), modifiy the duration of the appropriate note of the sequence ('imperfection', 'alteration', no-modification)
+        
+        # 1 semibreve left out:
         if count_Sb % 3 == 1:
-            start_note.addAttribute('num', '3')
-            start_note.addAttribute('numbase', '2')
-            start_note.addAttribute('quality', 'i')
+            # Default Case
+            if start_note.name == 'note' and not start_note.hasAttribute('quality'):
+                # Imperfection a.p.p.
+                start_note.addAttribute('quality', 'i')
+                start_note.addAttribute('num', '3')
+                start_note.addAttribute('numbase', '2')
+            # Exception Case
+            elif end_note.name == 'note' and not end_note.hasAttribute('quality'):
+                # Imperfection a.p.a.
+                end_note.addAttribute('quality', 'i')
+                end_note.addAttribute('num', '3')
+                end_note.addAttribute('numbase', '2')
+            # Mistake Case
+            else:
+                print("SB MISTAKE 1")
+                break
+
+        # 2 semibreves left out:
         elif count_Sb % 3 == 2:
-            middle_notes[-1].addAttribute('num', '1')
-            middle_notes[-1].addAttribute('numbase', '2')
-            middle_notes[-1].addAttribute('quality', 'a')
+            # Default case
+            before_last = middle_notes[-1]
+            if before_last.name == 'note' and before_last.getAttribute('dur').value == 'semibrevis' and not before_last.hasAttribute('quality'):
+                # Alteration
+                before_last.addAttribute('quality', 'a')
+                before_last.addAttribute('num', '1')
+                before_last.addAttribute('numbase', '2')
+            # Exception Case
+            elif (start_note.name == 'note' and not start_note.hasAttribute('quality')) and (end_note.name == 'note' and not end_note.hasAttribute('quality')):
+                # Imperfection a.p.p. 
+                start_note.addAttribute('quality', 'i')
+                start_note.addAttribute('num', '3')
+                start_note.addAttribute('numbase', '2')
+                # Imperfection a.p.a.
+                end_note.addAttribute('quality', 'i')
+                end_note.addAttribute('num', '3')
+                end_note.addAttribute('numbase', '2')
+            # Mistake Case
+            else:
+                print("SB MISTAKE 2")
+                break
+        
+        # 0 semibreves left out:
         else:
             pass
+
 # tempus = 2
 else:
     pass
@@ -217,16 +294,54 @@ if modusminor == 3:
 
         # Given the total amount of breves in-between the "longas", see if they can be arranged in groups of 3
         # According to how many breves remain ungrouped (1, 2 or 0), modifiy the duration of the appropriate note of the sequence ('imperfection', 'alteration', no-modification)
+        
+        # 1 breve left out:
         if count_L % 3 == 1:
-            start_note.addAttribute('num', '3')
-            start_note.addAttribute('numbase', '2')
-            start_note.addAttribute('quality', 'i')
+            # Default Case
+            if start_note.name == 'note' and not start_note.hasAttribute('quality'):
+                # Imperfection a.p.p.
+                start_note.addAttribute('quality', 'i')
+                start_note.addAttribute('num', '3')
+                start_note.addAttribute('numbase', '2')
+            # Exception Case
+            elif end_note.name == 'note' and not end_note.hasAttribute('quality'):
+                # Imperfection a.p.a.
+                end_note.addAttribute('quality', 'i')
+                end_note.addAttribute('num', '3')
+                end_note.addAttribute('numbase', '2')
+            # Mistake Case
+            else:
+                print("BREVE MISTAKE 1")
+                break
+
+        # 2 breves left out:
         elif count_L % 3 == 2:
-            middle_notes[-1].addAttribute('num', '1')
-            middle_notes[-1].addAttribute('numbase', '2')
-            middle_notes[-1].addAttribute('quality', 'a')
+            # Default case
+            before_last = middle_notes[-1]
+            if before_last.name == 'note' and before_last.getAttribute('dur').value == 'brevis' and not before_last.hasAttribute('quality'):
+                # Alteration
+                before_last.addAttribute('quality', 'a')
+                before_last.addAttribute('num', '1')
+                before_last.addAttribute('numbase', '2')
+            # Exception Case
+            elif (start_note.name == 'note' and not start_note.hasAttribute('quality')) and (end_note.name == 'note' and not end_note.hasAttribute('quality')):
+                # Imperfection a.p.p. 
+                start_note.addAttribute('quality', 'i')
+                start_note.addAttribute('num', '3')
+                start_note.addAttribute('numbase', '2')
+                # Imperfection a.p.a.
+                end_note.addAttribute('quality', 'i')
+                end_note.addAttribute('num', '3')
+                end_note.addAttribute('numbase', '2')
+            # Mistake Case
+            else:
+                print("BREVE MISTAKE 2")
+                break
+        
+        # 3 breves left out
         else:
             pass
+
 # modusminor = 2
 else:
     pass
