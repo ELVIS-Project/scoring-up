@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mei xml:id="m-1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.music-encoding.org/ns/mei" meiversion="2013">
+    <meiHead xml:id="m-2">
+        <fileDesc xml:id="m-3">
+            <titleStmt xml:id="m-4">
+                <title xml:id="m-10" />
+                <respStmt xml:id="m-11">
+                    <persName xml:id="m-12" />
+                </respStmt>
+            </titleStmt>
+            <pubStmt xml:id="m-13">
+                <availability xml:id="m-14">
+                    <useRestrict xml:id="m-15">Copyright © </useRestrict>
+                </availability>
+            </pubStmt>
+        </fileDesc>
+        <encodingDesc xml:id="m-16">
+            <appInfo xml:id="m-17">
+                <application xml:id="sibelius" isodate="2016-9-12T12:45:36Z" version="8300">
+                    <name xml:id="m-19" type="operating-system">Mac OS X Mountain Lion</name>
+                </application>
+                <application xml:id="sibmei" type="plugin" version="2.0.1">
+                    <name xml:id="m-21">Sibelius to MEI Exporter (2.0.1)</name>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <workDesc xml:id="m-5">
+            <work xml:id="m-6">
+                <titleStmt xml:id="m-7">
+                    <title xml:id="m-8" />
+                    <respStmt xml:id="m-9" />
+                </titleStmt>
+            </work>
+        </workDesc>
+    </meiHead>
+    <music xml:id="m-22">
+        <body xml:id="m-23">
+            <mdiv xml:id="m-24">
+                <score xml:id="m-25">
+                    <scoreDef xml:id="m-26">
+                        <staffGrp xml:id="m-27">
+                            <staffDef xml:id="m-28" clef.line="2" clef.shape="G" key.mode="major" key.sig="0" lines="5" n="1" modusmaior="2" modusminor="3" tempus="3" prolatio="3">
+                                <!-- keyboard.piano.grand.bright -->
+                                <instrDef xml:id="m-30" midi.channel="1" midi.pan="63" midi.volume="100" />
+                            </staffDef>
+                        </staffGrp>
+                    </scoreDef>
+                    <section xml:id="m-31">
+                        <staff xml:id="m-33">
+                            <layer xml:id="m-34">
+                                <note xml:id="m-35" dur="brevis" dur.ges="2048p" oct="4" pname="b" />
+                                <note xml:id="m-36" dur="semibrevis" dur.ges="682p" oct="5" pname="c" />
+                                <rest xml:id="m-37" dur="semibrevis" dur.ges="682p" oct="5" pname="c" />
+                                <rest xml:id="m-38" dur="brevis" dur.ges="341p" oct="4" pname="b" />
+                            </layer>
+                        </staff>
+                    </section>
+                </score>
+            </mdiv>
+        </body>
+    </music>
+</mei>
