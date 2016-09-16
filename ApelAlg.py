@@ -346,4 +346,4 @@ if modusminor == 3:
 else:
     pass
 
-documentToFile(doc, "stage1" + file[:-4] + ".mei")
+documentToFile(doc, file[:-4] + "_stage1.mei")
