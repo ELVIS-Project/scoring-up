@@ -100,13 +100,13 @@ if prolatio == 3:
         # 1 minim left out:
         if minim_counter % 3 == 1:
             # Default Case
-            if start_note.name == 'note' and not start_note.hasAttribute('quality'):
+            if start_note.name == 'note' and start_note.getAttribute('dur').value == 'semibrevis' and not start_note.hasAttribute('quality'):
                 # Imperfection a.p.p.
                 start_note.addAttribute('quality', 'i')
                 start_note.addAttribute('num', '3')
                 start_note.addAttribute('numbase', '2')
             # Exception Case
-            elif end_note.name == 'note' and not end_note.hasAttribute('quality'):
+            elif end_note.name == 'note' and end_note.getAttribute('dur').value == 'semibrevis' and not end_note.hasAttribute('quality'):
                 # Imperfection a.p.a.
                 end_note.addAttribute('quality', 'i')
                 end_note.addAttribute('num', '3')
@@ -126,7 +126,7 @@ if prolatio == 3:
                 before_last.addAttribute('num', '1')
                 before_last.addAttribute('numbase', '2')
             # Exception Case
-            elif (start_note.name == 'note' and not start_note.hasAttribute('quality')) and (end_note.name == 'note' and not end_note.hasAttribute('quality')):
+            elif (start_note.name == 'note' and start_note.getAttribute('dur').value == 'semibrevis' and not start_note.hasAttribute('quality')) and (end_note.name == 'note' and end_note.getAttribute('dur').value == 'semibrevis' and not end_note.hasAttribute('quality')):
                 # Imperfection a.p.p. 
                 start_note.addAttribute('quality', 'i')
                 start_note.addAttribute('num', '3')
@@ -196,13 +196,13 @@ if tempus == 3:
         # 1 semibreve left out:
         if count_Sb % 3 == 1:
             # Default Case
-            if start_note.name == 'note' and not start_note.hasAttribute('quality'):
+            if start_note.name == 'note' and start_note.getAttribute('dur').value == 'brevis' and not start_note.hasAttribute('quality'):
                 # Imperfection a.p.p.
                 start_note.addAttribute('quality', 'i')
                 start_note.addAttribute('num', '3')
                 start_note.addAttribute('numbase', '2')
             # Exception Case
-            elif end_note.name == 'note' and not end_note.hasAttribute('quality'):
+            elif end_note.name == 'note' and end_note.getAttribute('dur').value == 'brevis' and not end_note.hasAttribute('quality'):
                 # Imperfection a.p.a.
                 end_note.addAttribute('quality', 'i')
                 end_note.addAttribute('num', '3')
@@ -222,7 +222,7 @@ if tempus == 3:
                 before_last.addAttribute('num', '1')
                 before_last.addAttribute('numbase', '2')
             # Exception Case
-            elif (start_note.name == 'note' and not start_note.hasAttribute('quality')) and (end_note.name == 'note' and not end_note.hasAttribute('quality')):
+            elif (start_note.name == 'note' and start_note.getAttribute('dur').value == 'brevis' and not start_note.hasAttribute('quality')) and (end_note.name == 'note' and end_note.getAttribute('dur').value == 'brevis' and not end_note.hasAttribute('quality')):
                 # Imperfection a.p.p. 
                 start_note.addAttribute('quality', 'i')
                 start_note.addAttribute('num', '3')
@@ -286,7 +286,7 @@ if modusminor == 3:
                 print("MISTAKE \nNote/Rest element not considered: " + str(note) + ", with a duration @dur = " + dur)
             minim_counter += gain
 
-        count_L = minim_counter / (tempus * prolatio)
+        count_B = minim_counter / (tempus * prolatio)
         if(minim_counter % (tempus * prolatio) == 0):
             print("GOOD")
         else:
@@ -296,15 +296,15 @@ if modusminor == 3:
         # According to how many breves remain ungrouped (1, 2 or 0), modifiy the duration of the appropriate note of the sequence ('imperfection', 'alteration', no-modification)
         
         # 1 breve left out:
-        if count_L % 3 == 1:
+        if count_B % 3 == 1:
             # Default Case
-            if start_note.name == 'note' and not start_note.hasAttribute('quality'):
+            if start_note.name == 'note' and start_note.getAttribute('dur').value == 'longa' and not start_note.hasAttribute('quality'):
                 # Imperfection a.p.p.
                 start_note.addAttribute('quality', 'i')
                 start_note.addAttribute('num', '3')
                 start_note.addAttribute('numbase', '2')
             # Exception Case
-            elif end_note.name == 'note' and not end_note.hasAttribute('quality'):
+            elif end_note.name == 'note' and end_note.getAttribute('dur').value == 'longa' and not end_note.hasAttribute('quality'):
                 # Imperfection a.p.a.
                 end_note.addAttribute('quality', 'i')
                 end_note.addAttribute('num', '3')
@@ -315,7 +315,7 @@ if modusminor == 3:
                 break
 
         # 2 breves left out:
-        elif count_L % 3 == 2:
+        elif count_B % 3 == 2:
             # Default case
             before_last = middle_notes[-1]
             if before_last.name == 'note' and before_last.getAttribute('dur').value == 'brevis' and not before_last.hasAttribute('quality'):
@@ -324,7 +324,7 @@ if modusminor == 3:
                 before_last.addAttribute('num', '1')
                 before_last.addAttribute('numbase', '2')
             # Exception Case
-            elif (start_note.name == 'note' and not start_note.hasAttribute('quality')) and (end_note.name == 'note' and not end_note.hasAttribute('quality')):
+            elif (start_note.name == 'note' and start_note.getAttribute('dur').value == 'longa' and not start_note.hasAttribute('quality')) and (end_note.name == 'note' and end_note.getAttribute('dur').value == 'longa' and not end_note.hasAttribute('quality')):
                 # Imperfection a.p.p. 
                 start_note.addAttribute('quality', 'i')
                 start_note.addAttribute('num', '3')
