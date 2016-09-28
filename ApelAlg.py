@@ -1,6 +1,143 @@
 from pymei import *
 from fractions import *
 
+# Given the total amount of semibreves in-between the "breves", see if they can be arranged in groups of 3
+    # According to how many semibreves remain ungrouped (1, 2 or 0), modifiy the duration of the appropriate note of the sequence ('imperfection', 'alteration', no-modification)
+def modification(counter, start_note, middle_notes, end_note, short_note, long_note):
+    # 1 minim left out:
+    if counter % 3 == 1:
+        # Default Case
+        if start_note is not None and start_note.name == 'note' and start_note.getAttribute('dur').value == long_note and not start_note.hasAttribute('quality'):
+            # Imperfection a.p.p.
+            start_note.addAttribute('quality', 'i')
+            start_note.addAttribute('num', '3')
+            start_note.addAttribute('numbase', '2')
+        # Exception Case
+        elif end_note.name == 'note' and end_note.getAttribute('dur').value == long_note and not end_note.hasAttribute('quality'):
+            # Imperfection a.p.a.
+            end_note.addAttribute('quality', 'i')
+            end_note.addAttribute('num', '3')
+            end_note.addAttribute('numbase', '2')
+        # Mistake Case
+        else:
+            print("MISTAKE 1")
+
+    # 2 minims left out:
+    elif counter % 3 == 2:
+        # Default case
+        before_last = middle_notes[-1]
+        if before_last.name == 'note' and before_last.getAttribute('dur').value == short_note and not before_last.hasAttribute('quality'):
+            # Alteration
+            before_last.addAttribute('quality', 'a')
+            before_last.addAttribute('num', '1')
+            before_last.addAttribute('numbase', '2')
+        # Exception Case
+        elif (start_note is not None and start_note.name == 'note' and start_note.getAttribute('dur').value == long_note and not start_note.hasAttribute('quality')) and (end_note.name == 'note' and end_note.getAttribute('dur').value == long_note and not end_note.hasAttribute('quality')):
+            # Imperfection a.p.p. 
+            start_note.addAttribute('quality', 'i')
+            start_note.addAttribute('num', '3')
+            start_note.addAttribute('numbase', '2')
+            # Imperfection a.p.a.
+            end_note.addAttribute('quality', 'i')
+            end_note.addAttribute('num', '3')
+            end_note.addAttribute('numbase', '2')
+        # Mistake Case
+        else:
+            print("MISTAKE 2")
+    
+    # 0 minims left out:
+    else:
+        pass
+
+def minims_between_semibreves(start_note, middle_notes, end_note):
+    # Counting notes in between the extremes
+    minim_counter = 0
+    for note in middle_notes:
+        dur = note.getAttribute('dur').value
+        if dur == 'minima':
+            gain = 1
+        else:
+            print("MISTAKE \nNote/Rest element not considered: " + str(note) + ", with a duration @dur = " + dur)
+        minim_counter += gain
+
+    # Given the total amount of minims in-between the "semibreves", see if they can be arranged in groups of 3
+    # According to how many minims remain ungrouped (1, 2 or 0), modifiy the duration of the appropriate note of the sequence ('imperfection', 'alteration', no-modification)
+    modification(minim_counter, start_note, middle_notes, end_note, 'minima', 'semibrevis')
+
+def sb_between_breves(start_note, middle_notes, end_note):
+    # Counting notes in between the extremes
+    minim_counter = 0
+    for note in middle_notes:
+        dur = note.getAttribute('dur').value
+        if dur == 'minima':
+            gain = 1
+            if note.hasAttribute('num') and note.hasAttribute('numbase'):
+                ratio = Fraction(int(note.getAttribute('numbase').value), int(note.getAttribute('num').value))
+                gain *= ratio
+            else:
+                pass
+        elif dur == 'semibrevis':
+            gain = prolatio
+            if note.hasAttribute('num') and note.hasAttribute('numbase'):
+                ratio = Fraction(int(note.getAttribute('numbase').value), int(note.getAttribute('num').value))
+                gain *= ratio
+            else:
+                pass
+        else:
+            print("MISTAKE \nNote/Rest element not considered: " + str(note) + ", with a duration @dur = " + dur)
+        minim_counter += gain
+
+    count_Sb = minim_counter / prolatio
+    if(minim_counter % prolatio == 0):
+        print("GOOD")
+    else:
+        print("BAD! THE DIVISION IS NOT AN INTEGER NUMBER - not an integer number of Semibreves!")
+
+    # Given the total amount of semibreves in-between the "breves", see if they can be arranged in groups of 3
+    # According to how many semibreves remain ungrouped (1, 2 or 0), modifiy the duration of the appropriate note of the sequence ('imperfection', 'alteration', no-modification)
+    modification(count_Sb, start_note, middle_notes, end_note, 'semibrevis', 'brevis')
+
+def breves_between_longas(start_note, middle_notes, end_note):
+    # Counting notes in between the extremes
+    minim_counter = 0
+    for note in middle_notes:
+        dur = note.getAttribute('dur').value
+        if dur == 'minima':
+            gain = 1
+            if note.hasAttribute('num') and note.hasAttribute('numbase'):
+                ratio = Fraction(int(note.getAttribute('numbase').value), int(note.getAttribute('num').value))
+                gain *= ratio
+            else:
+                pass
+        elif dur == 'semibrevis':
+            gain = prolatio
+            if note.hasAttribute('num') and note.hasAttribute('numbase'):
+                ratio = Fraction(int(note.getAttribute('numbase').value), int(note.getAttribute('num').value))
+                gain *= ratio
+            else:
+                pass
+        elif dur == 'brevis':
+            gain = tempus * prolatio
+            if note.hasAttribute('num') and note.hasAttribute('numbase'):
+                ratio = Fraction(int(note.getAttribute('numbase').value), int(note.getAttribute('num').value))
+                gain *= ratio
+            else:
+                pass
+        else:
+            print("MISTAKE \nNote/Rest element not considered: " + str(note) + ", with a duration @dur = " + dur)
+        minim_counter += gain
+
+    count_B = minim_counter / (tempus * prolatio)
+    if(minim_counter % (tempus * prolatio) == 0):
+        print("GOOD")
+    else:
+        print("BAD! THE DIVISION IS NOT AN INTEGER NUMBER - not an integer number of Breves!")
+
+    # Given the total amount of breves in-between the "longas", see if they can be arranged in groups of 3
+    # According to how many breves remain ungrouped (1, 2 or 0), modifiy the duration of the appropriate note of the sequence ('imperfection', 'alteration', no-modification)
+    modification(count_B, start_note, middle_notes, end_note, 'brevis', 'longa')
+
+
 file = raw_input("Piece: ")
 doc = documentFromFile(file).getMeiDocument()
 listNotesRests = doc.getElementsByName('note')
@@ -77,172 +214,63 @@ for i in range(0, len(stavesDef)):
 
     # Minims in between semibreves (or higher note values)
     if prolatio == 3:
+        print("\nSEMIBREVE GEQ")
+        print(list_of_indices_geq_Sb)
+        print ""
+
+        if 0 not in list_of_indices_geq_Sb and list_of_indices_geq_Sb != []:
+            start_note = None
+            f = list_of_indices_geq_Sb[0]
+            end_note = voice_noterest_content[f]
+            middle_notes = voice_noterest_content[0:f]
+            print(start_note)
+            print(middle_notes)
+            print(end_note)
+            minims_between_semibreves(start_note, middle_notes, end_note)
+
         for i in range(0, len(list_of_indices_geq_Sb)-1):
             # Define the sequence of notes
             o = list_of_indices_geq_Sb[i]
-            f = list_of_indices_geq_Sb[i+1]
             start_note = voice_noterest_content[o]
+            f = list_of_indices_geq_Sb[i+1]
             end_note = voice_noterest_content[f]
             middle_notes = voice_noterest_content[o+1:f]
             print(start_note)
             print(middle_notes)
             print(end_note)
-
-            # Counting notes in between the extremes
-            minim_counter = 0
-            for note in middle_notes:
-                dur = note.getAttribute('dur').value
-                if dur == 'minima':
-                    gain = 1
-                else:
-                    print("MISTAKE \nNote/Rest element not considered: " + str(note) + ", with a duration @dur = " + dur)
-                minim_counter += gain
-
-            # Given the total amount of minims in-between the "semibreves", see if they can be arranged in groups of 3
-            # According to how many minims remain ungrouped (1, 2 or 0), modifiy the duration of the appropriate note of the sequence ('imperfection', 'alteration', no-modification)
-
-            # 1 minim left out:
-            if minim_counter % 3 == 1:
-                # Default Case
-                if start_note.name == 'note' and start_note.getAttribute('dur').value == 'semibrevis' and not start_note.hasAttribute('quality'):
-                    # Imperfection a.p.p.
-                    start_note.addAttribute('quality', 'i')
-                    start_note.addAttribute('num', '3')
-                    start_note.addAttribute('numbase', '2')
-                # Exception Case
-                elif end_note.name == 'note' and end_note.getAttribute('dur').value == 'semibrevis' and not end_note.hasAttribute('quality'):
-                    # Imperfection a.p.a.
-                    end_note.addAttribute('quality', 'i')
-                    end_note.addAttribute('num', '3')
-                    end_note.addAttribute('numbase', '2')
-                # Mistake Case
-                else:
-                    print("MINIM MISTAKE 1")
-                    break
-
-            # 2 minims left out:
-            elif minim_counter % 3 == 2:
-                # Default case
-                before_last = middle_notes[-1]
-                if before_last.name == 'note' and before_last.getAttribute('dur').value == 'minima' and not before_last.hasAttribute('quality'):
-                    # Alteration
-                    before_last.addAttribute('quality', 'a')
-                    before_last.addAttribute('num', '1')
-                    before_last.addAttribute('numbase', '2')
-                # Exception Case
-                elif (start_note.name == 'note' and start_note.getAttribute('dur').value == 'semibrevis' and not start_note.hasAttribute('quality')) and (end_note.name == 'note' and end_note.getAttribute('dur').value == 'semibrevis' and not end_note.hasAttribute('quality')):
-                    # Imperfection a.p.p. 
-                    start_note.addAttribute('quality', 'i')
-                    start_note.addAttribute('num', '3')
-                    start_note.addAttribute('numbase', '2')
-                    # Imperfection a.p.a.
-                    end_note.addAttribute('quality', 'i')
-                    end_note.addAttribute('num', '3')
-                    end_note.addAttribute('numbase', '2')
-                # Mistake Case
-                else:
-                    print("MINIM MISTAKE 2")
-                    break
-            
-            # 0 minims left out:
-            else:
-                pass
-
+            minims_between_semibreves(start_note, middle_notes, end_note)
+    
     # prolatio = 2
     else:
         pass
 
-
     # Semibreves in between breves (or higher note values)
     if tempus == 3:
+        print("\nBREVE GEQ")
+        print(list_of_indices_geq_B)
+        print ""
+
+        if 0 not in list_of_indices_geq_B and list_of_indices_geq_B != []:
+            start_note = None
+            f = list_of_indices_geq_B[0]
+            end_note = voice_noterest_content[f]
+            middle_notes = voice_noterest_content[0:f]
+            print(start_note)
+            print(middle_notes)
+            print(end_note)
+            sb_between_breves(start_note, middle_notes, end_note)
+
         for i in range(0, len(list_of_indices_geq_B)-1):
             # Define the sequence of notes
             o = list_of_indices_geq_B[i]
-            f = list_of_indices_geq_B[i+1]
             start_note = voice_noterest_content[o]
+            f = list_of_indices_geq_B[i+1]
             end_note = voice_noterest_content[f]
             middle_notes = voice_noterest_content[o+1:f]
             print(start_note)
             print(middle_notes)
             print(end_note)
-
-            # Counting notes in between the extremes
-            minim_counter = 0
-            for note in middle_notes:
-                dur = note.getAttribute('dur').value
-                if dur == 'minima':
-                    gain = 1
-                    if note.hasAttribute('num') and note.hasAttribute('numbase'):
-                        ratio = Fraction(int(note.getAttribute('numbase').value), int(note.getAttribute('num').value))
-                        gain *= ratio
-                    else:
-                        pass
-                elif dur == 'semibrevis':
-                    gain = prolatio
-                    if note.hasAttribute('num') and note.hasAttribute('numbase'):
-                        ratio = Fraction(int(note.getAttribute('numbase').value), int(note.getAttribute('num').value))
-                        gain *= ratio
-                    else:
-                        pass
-                else:
-                    print("MISTAKE \nNote/Rest element not considered: " + str(note) + ", with a duration @dur = " + dur)
-                minim_counter += gain
-
-            count_Sb = minim_counter / prolatio
-            if(minim_counter % prolatio == 0):
-                print("GOOD")
-            else:
-                print("BAD! THE DIVISION IS NOT AN INTEGER NUMBER - not an integer number of Semibreves!")
-
-            # Given the total amount of semibreves in-between the "breves", see if they can be arranged in groups of 3
-            # According to how many semibreves remain ungrouped (1, 2 or 0), modifiy the duration of the appropriate note of the sequence ('imperfection', 'alteration', no-modification)
-            
-            # 1 semibreve left out:
-            if count_Sb % 3 == 1:
-                # Default Case
-                if start_note.name == 'note' and start_note.getAttribute('dur').value == 'brevis' and not start_note.hasAttribute('quality'):
-                    # Imperfection a.p.p.
-                    start_note.addAttribute('quality', 'i')
-                    start_note.addAttribute('num', '3')
-                    start_note.addAttribute('numbase', '2')
-                # Exception Case
-                elif end_note.name == 'note' and end_note.getAttribute('dur').value == 'brevis' and not end_note.hasAttribute('quality'):
-                    # Imperfection a.p.a.
-                    end_note.addAttribute('quality', 'i')
-                    end_note.addAttribute('num', '3')
-                    end_note.addAttribute('numbase', '2')
-                # Mistake Case
-                else:
-                    print("SB MISTAKE 1")
-                    break
-
-            # 2 semibreves left out:
-            elif count_Sb % 3 == 2:
-                # Default case
-                before_last = middle_notes[-1]
-                if before_last.name == 'note' and before_last.getAttribute('dur').value == 'semibrevis' and not before_last.hasAttribute('quality'):
-                    # Alteration
-                    before_last.addAttribute('quality', 'a')
-                    before_last.addAttribute('num', '1')
-                    before_last.addAttribute('numbase', '2')
-                # Exception Case
-                elif (start_note.name == 'note' and start_note.getAttribute('dur').value == 'brevis' and not start_note.hasAttribute('quality')) and (end_note.name == 'note' and end_note.getAttribute('dur').value == 'brevis' and not end_note.hasAttribute('quality')):
-                    # Imperfection a.p.p. 
-                    start_note.addAttribute('quality', 'i')
-                    start_note.addAttribute('num', '3')
-                    start_note.addAttribute('numbase', '2')
-                    # Imperfection a.p.a.
-                    end_note.addAttribute('quality', 'i')
-                    end_note.addAttribute('num', '3')
-                    end_note.addAttribute('numbase', '2')
-                # Mistake Case
-                else:
-                    print("SB MISTAKE 2")
-                    break
-            
-            # 0 semibreves left out:
-            else:
-                pass
+            sb_between_breves(start_note, middle_notes, end_note)
 
     # tempus = 2
     else:
@@ -250,101 +278,31 @@ for i in range(0, len(stavesDef)):
 
     # Breves in between longas (or higher note values)
     if modusminor == 3:
+        print("\nLONGA GEQ")
+        print(list_of_indices_geq_L)
+        print ""
+
+        if 0 not in list_of_indices_geq_L and list_of_indices_geq_L != []:
+            start_note = None
+            f = list_of_indices_geq_L[0]
+            end_note = voice_noterest_content[f]
+            middle_notes = voice_noterest_content[0:f]
+            print(start_note)
+            print(middle_notes)
+            print(end_note)
+            sb_between_breves(start_note, middle_notes, end_note)
+
         for i in range(0, len(list_of_indices_geq_L)-1):
             # Define the sequence of notes
             o = list_of_indices_geq_L[i]
-            f = list_of_indices_geq_L[i+1]
             start_note = voice_noterest_content[o]
+            f = list_of_indices_geq_L[i+1]
             end_note = voice_noterest_content[f]
             middle_notes = voice_noterest_content[o+1:f]
             print(start_note)
             print(middle_notes)
             print(end_note)
-
-            # Counting notes in between the extremes
-            minim_counter = 0
-            for note in middle_notes:
-                dur = note.getAttribute('dur').value
-                if dur == 'minima':
-                    gain = 1
-                    if note.hasAttribute('num') and note.hasAttribute('numbase'):
-                        ratio = Fraction(int(note.getAttribute('numbase').value), int(note.getAttribute('num').value))
-                        gain *= ratio
-                    else:
-                        pass
-                elif dur == 'semibrevis':
-                    gain = prolatio
-                    if note.hasAttribute('num') and note.hasAttribute('numbase'):
-                        ratio = Fraction(int(note.getAttribute('numbase').value), int(note.getAttribute('num').value))
-                        gain *= ratio
-                    else:
-                        pass
-                elif dur == 'brevis':
-                    gain = tempus * prolatio
-                    if note.hasAttribute('num') and note.hasAttribute('numbase'):
-                        ratio = Fraction(int(note.getAttribute('numbase').value), int(note.getAttribute('num').value))
-                        gain *= ratio
-                    else:
-                        pass
-                else:
-                    print("MISTAKE \nNote/Rest element not considered: " + str(note) + ", with a duration @dur = " + dur)
-                minim_counter += gain
-
-            count_B = minim_counter / (tempus * prolatio)
-            if(minim_counter % (tempus * prolatio) == 0):
-                print("GOOD")
-            else:
-                print("BAD! THE DIVISION IS NOT AN INTEGER NUMBER - not an integer number of Breves!")
-
-            # Given the total amount of breves in-between the "longas", see if they can be arranged in groups of 3
-            # According to how many breves remain ungrouped (1, 2 or 0), modifiy the duration of the appropriate note of the sequence ('imperfection', 'alteration', no-modification)
-            
-            # 1 breve left out:
-            if count_B % 3 == 1:
-                # Default Case
-                if start_note.name == 'note' and start_note.getAttribute('dur').value == 'longa' and not start_note.hasAttribute('quality'):
-                    # Imperfection a.p.p.
-                    start_note.addAttribute('quality', 'i')
-                    start_note.addAttribute('num', '3')
-                    start_note.addAttribute('numbase', '2')
-                # Exception Case
-                elif end_note.name == 'note' and end_note.getAttribute('dur').value == 'longa' and not end_note.hasAttribute('quality'):
-                    # Imperfection a.p.a.
-                    end_note.addAttribute('quality', 'i')
-                    end_note.addAttribute('num', '3')
-                    end_note.addAttribute('numbase', '2')
-                # Mistake Case
-                else:
-                    print("BREVE MISTAKE 1")
-                    break
-
-            # 2 breves left out:
-            elif count_B % 3 == 2:
-                # Default case
-                before_last = middle_notes[-1]
-                if before_last.name == 'note' and before_last.getAttribute('dur').value == 'brevis' and not before_last.hasAttribute('quality'):
-                    # Alteration
-                    before_last.addAttribute('quality', 'a')
-                    before_last.addAttribute('num', '1')
-                    before_last.addAttribute('numbase', '2')
-                # Exception Case
-                elif (start_note.name == 'note' and start_note.getAttribute('dur').value == 'longa' and not start_note.hasAttribute('quality')) and (end_note.name == 'note' and end_note.getAttribute('dur').value == 'longa' and not end_note.hasAttribute('quality')):
-                    # Imperfection a.p.p. 
-                    start_note.addAttribute('quality', 'i')
-                    start_note.addAttribute('num', '3')
-                    start_note.addAttribute('numbase', '2')
-                    # Imperfection a.p.a.
-                    end_note.addAttribute('quality', 'i')
-                    end_note.addAttribute('num', '3')
-                    end_note.addAttribute('numbase', '2')
-                # Mistake Case
-                else:
-                    print("BREVE MISTAKE 2")
-                    break
-            
-            # 3 breves left out
-            else:
-                pass
+            breves_between_longas(start_note, middle_notes, end_note)
 
     # modusminor = 2
     else:
