@@ -61,7 +61,7 @@
 										<syl xml:id="m-46" wordpos="i">Se</syl>
 									</verse>
 								</note>
-								<note xml:id="m-42" dur="longa" dur.ges="6144p" oct="4" pname="e">
+								<note xml:id="m-42" dur="longa" dur.ges="6144p" oct="4" pname="e" quality="i" num="3" numbase="2">
 									<verse xml:id="m-78" n="1">
 										<syl xml:id="m-79" wordpos="i">gra</syl>
 									</verse>
@@ -308,7 +308,7 @@
 										<syl xml:id="m-403" wordpos="i">mes</syl>
 									</verse>
 								</note>
-								<note xml:id="m-401" dur="longa" dur.ges="6144p" oct="4" pname="a">
+								<note xml:id="m-401" dur="longa" dur.ges="6144p" oct="4" pname="a" quality="i" num="3" numbase="2">
 									<verse xml:id="m-404" n="1">
 										<syl xml:id="m-405" wordpos="i">tant</syl>
 									</verse>
@@ -356,7 +356,7 @@
 								<note xml:id="m-482" dur="semibrevis" dur.ges="1536p" oct="4" pname="g" />
 								<note xml:id="m-483" dur="semibrevis" dur.ges="1536p" oct="4" pname="f" />
 								<barLine xml:id="m-7f8cf7c6-f0b3-4483-9525-1769120a1756" />
-								<note xml:id="m-504" dur="longa" dur.ges="9216p" oct="4" pname="e">
+								<note xml:id="m-504" dur="longa" dur.ges="9216p" oct="4" pname="e" quality="i" num="3" numbase="2">
 									<verse xml:id="m-507" n="1">
 										<syl xml:id="m-508" wordpos="i">rir</syl>
 									</verse>
@@ -556,7 +556,7 @@
 									</verse>
 								</note>
 								<barLine xml:id="m-7241b891-a42a-4422-bed3-0ad920e79258" />
-								<note xml:id="m-793" dur="longa" dur.ges="9216p" oct="4" pname="e">
+								<note xml:id="m-793" dur="longa" dur.ges="9216p" oct="4" pname="e" quality="i" num="3" numbase="2">
 									<verse xml:id="m-796" n="1">
 										<syl xml:id="m-797" wordpos="i">ent</syl>
 									</verse>
@@ -621,7 +621,7 @@
 										<syl xml:id="m-898" wordpos="t">se</syl>
 									</verse>
 								</note>
-								<note xml:id="m-892" dur="longa" dur.ges="6144p" oct="4" pname="d">
+								<note xml:id="m-892" dur="longa" dur.ges="6144p" oct="4" pname="d" quality="i" num="3" numbase="2">
 									<verse xml:id="m-899" n="1">
 										<syl xml:id="m-900" wordpos="i">et</syl>
 									</verse>
@@ -703,7 +703,7 @@
 								<note xml:id="m-1002" dur="semibrevis" dur.ges="1024p" oct="4" pname="e" quality="i" num="3" numbase="2" />
 								<note xml:id="m-1003" dur="minima" dur.ges="512p" oct="4" pname="d" />
 								<barLine xml:id="m-b4a7f534-399d-475b-916a-88ff5d609a57" />
-								<note xml:id="m-1037" dur="brevis" dur.ges="3072p" oct="4" pname="e" />
+								<note xml:id="m-1037" dur="brevis" dur.ges="3072p" oct="4" pname="e" quality="a" num="1" numbase="2" />
 								<note xml:id="m-1038" dur="longa" dur.ges="6144p" oct="4" pname="f">
 									<accid xml:id="m-1039" accid="s" />
 								</note>
@@ -742,7 +742,7 @@
 										<syl xml:id="m-94" wordpos="i">ne</syl>
 									</verse>
 								</note>
-								<note xml:id="m-92" dur="longa" dur.ges="6144p" oct="3" oct.ges="2" pname="a">
+								<note xml:id="m-92" dur="longa" dur.ges="6144p" oct="3" oct.ges="2" pname="a" quality="i" num="3" numbase="2">
 									<verse xml:id="m-95" n="1">
 										<syl xml:id="m-96" con="u" wordpos="t">rint</syl>
 									</verse>

@@ -290,7 +290,7 @@ for i in range(0, len(stavesDef)):
             print(start_note)
             print(middle_notes)
             print(end_note)
-            sb_between_breves(start_note, middle_notes, end_note)
+            breves_between_longas(start_note, middle_notes, end_note)
 
         for i in range(0, len(list_of_indices_geq_L)-1):
             # Define the sequence of notes

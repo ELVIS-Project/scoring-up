@@ -1151,7 +1151,7 @@
 									</verse>
 								</note>
 								<barLine xml:id="m-842d8531-6fda-4516-a292-79bf53ebd21e" />
-								<note xml:id="m-1709" dur="longa" dur.ges="6144p" oct="4" pname="f">
+								<note xml:id="m-1709" dur="longa" dur.ges="6144p" oct="4" pname="f" num="3" numbase="2"> <!--edit-->
 									<verse xml:id="m-1714" n="1">
 										<syl xml:id="m-1715" con="u" wordpos="t">tur.</syl>
 									</verse>
@@ -1882,7 +1882,7 @@
 									</verse>
 								</note>
 								<barLine xml:id="m-3b43b24d-e9ad-48a0-9909-122f33a98b35" />
-								<note xml:id="m-1718" dur="longa" dur.ges="6144p" oct="4" oct.ges="3" pname="c">
+								<note xml:id="m-1718" dur="longa" dur.ges="6144p" oct="4" oct.ges="3" pname="c" num="3" numbase="2"> <!--edit-->
 									<verse xml:id="m-1723" n="1">
 										<syl xml:id="m-1724" con="u" wordpos="t">tis.</syl>
 									</verse>
