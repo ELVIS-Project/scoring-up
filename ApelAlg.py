@@ -13,11 +13,16 @@ def modification(counter, start_note, middle_notes, end_note, following_note, sh
             start_note.addAttribute('num', '3')
             start_note.addAttribute('numbase', '2')
         # Exception Case
-        elif (end_note.name == 'note' and end_note.getAttribute('dur').value == long_note and not end_note.hasAttribute('quality')) and (following_note is not None and following_note.getAttribute('dur').value != long_note):
+        elif end_note.name == 'note' and end_note.getAttribute('dur').value == long_note and not end_note.hasAttribute('quality'):
             # Imperfection a.p.a.
             end_note.addAttribute('quality', 'i')
             end_note.addAttribute('num', '3')
             end_note.addAttribute('numbase', '2')
+            # Raise a warning when this imperfect note is followed by a perfect note (contradiction with the first rule)
+            if following_note is not None and following_note.getAttribute('dur').value == long_note:
+                print("WARNING! An imperfection a.p.a. is required, but this imperfect note is followed by a perfect note, this contradicts the fundamental rule: 'A note is perfect before another one of the same kind'.")
+                print("The imperfected note is " + str(end_note) + " and is followed by the perfect note " + str(following_note))
+                print("")
         # Mistake Case
         else:
             print("MISTAKE 1 - Impossible to do Imperfection a.p.p. and also Imperfection a.p.a.")
@@ -27,16 +32,16 @@ def modification(counter, start_note, middle_notes, end_note, following_note, sh
 
     # 2 minims left out:
     elif counter % 3 == 2:
+        before_last = middle_notes[-1]
         if counter == 2:
             # Default case
-            before_last = middle_notes[-1]
             if before_last.name == 'note' and before_last.getAttribute('dur').value == short_note and not before_last.hasAttribute('quality'):
                 # Alteration
                 before_last.addAttribute('quality', 'a')
                 before_last.addAttribute('num', '1')
                 before_last.addAttribute('numbase', '2')
             # Exception Case
-            elif (start_note is not None and start_note.name == 'note' and start_note.getAttribute('dur').value == long_note and not start_note.hasAttribute('quality')) and (end_note.name == 'note' and end_note.getAttribute('dur').value == long_note and not end_note.hasAttribute('quality')) and (following_note is not None and following_note.getAttribute('dur').value != long_note):
+            elif (start_note is not None and start_note.name == 'note' and start_note.getAttribute('dur').value == long_note and not start_note.hasAttribute('quality')) and (end_note.name == 'note' and end_note.getAttribute('dur').value == long_note and not end_note.hasAttribute('quality')):
                 # Imperfection a.p.p. 
                 start_note.addAttribute('quality', 'i')
                 start_note.addAttribute('num', '3')
@@ -45,6 +50,11 @@ def modification(counter, start_note, middle_notes, end_note, following_note, sh
                 end_note.addAttribute('quality', 'i')
                 end_note.addAttribute('num', '3')
                 end_note.addAttribute('numbase', '2')
+                # Raise a warning when this imperfect note is followed by a perfect note (contradiction with the first rule)
+                if following_note is not None and following_note.getAttribute('dur').value == long_note:
+                    print("WARNING! An imperfection a.p.a. is required, but this imperfect note is followed by a perfect note, this contradicts the fundamental rule: 'A note is perfect before another one of the same kind'.")
+                    print("The imperfected note is " + str(end_note) + " and is followed by the perfect note " + str(following_note))
+                    print("")
             # Mistake Case
             else:
                 print("MISTAKE 2 - Alteration is impossible - Imperfections a.p.p. and a.p.a. are also impossible")
@@ -52,9 +62,8 @@ def modification(counter, start_note, middle_notes, end_note, following_note, sh
                 print(end_note)
                 print("")
         else:
-            before_last = middle_notes[-1]
             # Default case
-            if (start_note is not None and start_note.name == 'note' and start_note.getAttribute('dur').value == long_note and not start_note.hasAttribute('quality')) and (end_note.name == 'note' and end_note.getAttribute('dur').value == long_note and not end_note.hasAttribute('quality')) and (following_note is not None and following_note.getAttribute('dur').value != long_note):
+            if (start_note is not None and start_note.name == 'note' and start_note.getAttribute('dur').value == long_note and not start_note.hasAttribute('quality')) and (end_note.name == 'note' and end_note.getAttribute('dur').value == long_note and not end_note.hasAttribute('quality')):
                 # Imperfection a.p.p. 
                 start_note.addAttribute('quality', 'i')
                 start_note.addAttribute('num', '3')
@@ -63,6 +72,12 @@ def modification(counter, start_note, middle_notes, end_note, following_note, sh
                 end_note.addAttribute('quality', 'i')
                 end_note.addAttribute('num', '3')
                 end_note.addAttribute('numbase', '2')
+                # Raise a warning when this imperfect note is followed by a perfect note (contradiction with the first rule)
+                # ALLOWS LAST PART OF THE FIRST VOICE FROM CUM_VENERINT TO WORK
+                if following_note is not None and following_note.getAttribute('dur').value == long_note:
+                    print("WARNING! An imperfection a.p.a. is required, but this imperfect note is followed by a perfect note, this contradicts the fundamental rule: 'A note is perfect before another one of the same kind'.")
+                    print("The imperfected note is " + str(end_note) + " and is followed by the perfect note " + str(following_note))
+                    print("")
             # Exception Case
             elif before_last.name == 'note' and before_last.getAttribute('dur').value == short_note and not before_last.hasAttribute('quality'):
                 # Alteration
