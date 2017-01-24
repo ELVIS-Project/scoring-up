@@ -1,10 +1,10 @@
 from pymei import *
 from fractions import *
 
-# Given the total amount of semibreves in-between the "breves", see if they can be arranged in groups of 3
-# According to how many semibreves remain ungrouped (1, 2 or 0), modifiy the duration of the appropriate note of the sequence ('imperfection', 'alteration', no-modification)
+# Given the total amount of "breves" in-between the "longs", see if they can be arranged in groups of 3
+# According to how many breves remain ungrouped (1, 2 or 0), modifiy the duration of the appropriate note of the sequence ('imperfection', 'alteration', no-modification)
 def modification(counter, start_note, middle_notes, end_note, following_note, short_note, long_note):
-    # 1 minim left out:
+    # 1 breve left out:
     if counter % 3 == 1:
         # Default Case
         if start_note is not None and start_note.name == 'note' and start_note.getAttribute('dur').value == long_note and not start_note.hasAttribute('quality'):
@@ -30,9 +30,10 @@ def modification(counter, start_note, middle_notes, end_note, following_note, sh
             print(end_note)
             print("")
 
-    # 2 minims left out:
+    # 2 breves left out:
     elif counter % 3 == 2:
         before_last = middle_notes[-1]
+        # 2 exact breves between the longs
         if counter == 2:
             # Default case
             if before_last.name == 'note' and before_last.getAttribute('dur').value == short_note and not before_last.hasAttribute('quality'):
@@ -61,6 +62,7 @@ def modification(counter, start_note, middle_notes, end_note, following_note, sh
                 print(start_note)
                 print(end_note)
                 print("")
+        # 5, 8, 11, 14, 17, 20, ... breves between the longs
         else:
             # Default case
             if (start_note is not None and start_note.name == 'note' and start_note.getAttribute('dur').value == long_note and not start_note.hasAttribute('quality')) and (end_note.name == 'note' and end_note.getAttribute('dur').value == long_note and not end_note.hasAttribute('quality')):
@@ -73,7 +75,6 @@ def modification(counter, start_note, middle_notes, end_note, following_note, sh
                 end_note.addAttribute('num', '3')
                 end_note.addAttribute('numbase', '2')
                 # Raise a warning when this imperfect note is followed by a perfect note (contradiction with the first rule)
-                # ALLOWS LAST PART OF THE FIRST VOICE FROM CUM_VENERINT TO WORK
                 if following_note is not None and following_note.getAttribute('dur').value == long_note:
                     print("WARNING! An imperfection a.p.a. is required, but this imperfect note is followed by a perfect note, this contradicts the fundamental rule: 'A note is perfect before another one of the same kind'.")
                     print("The imperfected note is " + str(end_note) + " and is followed by the perfect note " + str(following_note))
@@ -91,7 +92,7 @@ def modification(counter, start_note, middle_notes, end_note, following_note, sh
                 print(end_note)
                 print("")
     
-    # 0 minims left out:
+    # 0 breves left out:
     else:
         pass
 
@@ -254,10 +255,6 @@ for i in range(0, len(stavesDef)):
             pass
 
     #########################################################################
-    # MISSING THE CASE WERE THERE IS A NOTE BEFORE THE FIRST ONE INDEXED    #
-    # Measure 3 - in Flos                                                   #
-    # Sb - B --> The first semibreve is part of the middle_notes            #
-    # and the starting_note doesn't exist (its index is out of range: '-1') #
     # MISSING THE PRESENCE OF A DOT                                         #
     # Measure 2 - in Flos                                                   #
     #########################################################################
