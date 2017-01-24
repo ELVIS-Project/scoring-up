@@ -7,7 +7,7 @@ def modification(counter, start_note, middle_notes, end_note, following_note, sh
     # 1 breve left out:
     if counter % 3 == 1:
         # Default Case
-        if start_note is not None and start_note.name == 'note' and start_note.getAttribute('dur').value == long_note and not start_note.hasAttribute('quality'):
+        if start_note is not None and start_note.name == 'note' and start_note.getAttribute('dur').value == long_note and not start_note.hasAttribute('quality') and not start_note.hasChildren('dot'):
             # Imperfection a.p.p.
             start_note.addAttribute('quality', 'i')
             start_note.addAttribute('num', '3')
@@ -42,7 +42,7 @@ def modification(counter, start_note, middle_notes, end_note, following_note, sh
                 before_last.addAttribute('num', '1')
                 before_last.addAttribute('numbase', '2')
             # Exception Case
-            elif (start_note is not None and start_note.name == 'note' and start_note.getAttribute('dur').value == long_note and not start_note.hasAttribute('quality')) and (end_note.name == 'note' and end_note.getAttribute('dur').value == long_note and not end_note.hasAttribute('quality')):
+            elif (start_note is not None and start_note.name == 'note' and start_note.getAttribute('dur').value == long_note and not start_note.hasAttribute('quality') and not start_note.hasChildren('dot')) and (end_note.name == 'note' and end_note.getAttribute('dur').value == long_note and not end_note.hasAttribute('quality')):
                 # Imperfection a.p.p. 
                 start_note.addAttribute('quality', 'i')
                 start_note.addAttribute('num', '3')
@@ -65,7 +65,7 @@ def modification(counter, start_note, middle_notes, end_note, following_note, sh
         # 5, 8, 11, 14, 17, 20, ... breves between the longs
         else:
             # Default case
-            if (start_note is not None and start_note.name == 'note' and start_note.getAttribute('dur').value == long_note and not start_note.hasAttribute('quality')) and (end_note.name == 'note' and end_note.getAttribute('dur').value == long_note and not end_note.hasAttribute('quality')):
+            if (start_note is not None and start_note.name == 'note' and start_note.getAttribute('dur').value == long_note and not start_note.hasAttribute('quality') and not start_note.hasChildren('dot')) and (end_note.name == 'note' and end_note.getAttribute('dur').value == long_note and not end_note.hasAttribute('quality')):
                 # Imperfection a.p.p. 
                 start_note.addAttribute('quality', 'i')
                 start_note.addAttribute('num', '3')
@@ -253,11 +253,6 @@ for i in range(0, len(stavesDef)):
             #print(noterest)
             #print ""
             pass
-
-    #########################################################################
-    # MISSING THE PRESENCE OF A DOT                                         #
-    # Measure 2 - in Flos                                                   #
-    #########################################################################
 
     # Minims in between semibreves (or higher note values)
     if prolatio == 3:
