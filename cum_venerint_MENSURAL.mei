@@ -183,7 +183,8 @@
 										<syl xml:id="m-221" wordpos="i">sir</syl>
 									</verse>
 								</note>
-								<rest xml:id="m-219" dur="longa" dur.ges="6144p" EVENTUALDUR="2B" num="3" numbase="2" />
+								<rest xml:id="m-219a" dur="brevis" dur.ges="6144p" EVENTUALDUR="2B" num="3" numbase="2" />
+								<rest xml:id="m-219b" dur="brevis" dur.ges="6144p" EVENTUALDUR="2B" num="3" numbase="2" />
 								<barLine xml:id="m-cc66264f-8284-44c1-90ab-caf159da49e6" />
 								<note xml:id="m-237" dur="brevis" dur.ges="3072p" oct="4" pname="f" plica="asc">
 									<verse xml:id="m-242" n="1">
@@ -301,7 +302,8 @@
 										<syl xml:id="m-383" wordpos="i">nir</syl>
 									</verse>
 								</note>
-								<rest xml:id="m-381" dur="longa" dur.ges="6144p" EVENTUALDUR="2B" num="3" numbase="2" />
+								<rest xml:id="m-381a" dur="brevis" dur.ges="6144p" EVENTUALDUR="2B" num="3" numbase="2" />
+								<rest xml:id="m-381b" dur="brevis" dur.ges="6144p" EVENTUALDUR="2B" num="3" numbase="2" />
 								<barLine xml:id="m-91cc7f0d-e8df-47dc-880f-71df2af1bf28" />
 								<note xml:id="m-400" dur="brevis" dur.ges="3072p" oct="4" pname="g">
 									<verse xml:id="m-402" n="1">
@@ -419,7 +421,8 @@
 										<syl xml:id="m-589" wordpos="t">re</syl>
 									</verse>
 								</note>
-								<rest xml:id="m-585" dur="longa" dur.ges="6144p" EVENTUALDUR="2B" num="3" numbase="2" />
+								<rest xml:id="m-585a" dur="brevis" dur.ges="6144p" EVENTUALDUR="2B" num="3" numbase="2" />
+								<rest xml:id="m-585b" dur="brevis" dur.ges="6144p" EVENTUALDUR="2B" num="3" numbase="2" />
 								<barLine xml:id="m-8dfe6d62-692e-480f-8939-8d9523b39b60" />
 								<note xml:id="m-607" dur="brevis" dur.ges="3072p" oct="4" pname="g">
 									<verse xml:id="m-611" n="1">
@@ -482,7 +485,8 @@
 										<syl xml:id="m-687" wordpos="i">re</syl>
 									</verse>
 								</note>
-								<rest xml:id="m-685" dur="longa" dur.ges="6144p" EVENTUALDUR="2B" num="3" numbase="2" />
+								<rest xml:id="m-685a" dur="brevis" dur.ges="6144p" EVENTUALDUR="2B" num="3" numbase="2" />
+								<rest xml:id="m-685b" dur="brevis" dur.ges="6144p" EVENTUALDUR="2B" num="3" numbase="2" />
 								<barLine xml:id="m-5bd2d490-fa5b-4631-8a32-4e5f06ffb455" />
 								<note xml:id="m-709" dur="semibrevis" dur.ges="1536p" oct="4" pname="a">
 									<verse xml:id="m-716" n="1">
@@ -593,7 +597,8 @@
 										<syl xml:id="m-854" wordpos="t">nir</syl>
 									</verse>
 								</note>
-								<rest xml:id="m-848" dur="longa" dur.ges="6144p" EVENTUALDUR="2B" num="3" numbase="2" />
+								<rest xml:id="m-848a" dur="brevis" dur.ges="6144p" EVENTUALDUR="2B" num="3" numbase="2" />
+								<rest xml:id="m-848b" dur="brevis" dur.ges="6144p" EVENTUALDUR="2B" num="3" numbase="2" />
 								<barLine xml:id="m-cda0388f-a37a-4602-a9fb-4c0b6577d853" />
 								<note xml:id="m-868" dur="brevis" dur.ges="3072p" oct="4" pname="d">
 									<verse xml:id="m-872" n="1">
@@ -781,7 +786,8 @@
 										<syl xml:id="m-208" wordpos="t">tes</syl>
 									</verse>
 								</note>
-								<rest xml:id="m-202" dur="longa" dur.ges="6144p" EVENTUALDUR="2B" num="3" numbase="2" />
+								<rest xml:id="m-202a" dur="brevis" dur.ges="6144p" EVENTUALDUR="2B" num="3" numbase="2" />
+								<rest xml:id="m-202b" dur="brevis" dur.ges="6144p" EVENTUALDUR="2B" num="3" numbase="2" />
 								<barLine xml:id="m-bfa11473-8e17-438f-8b1e-d2c31b26d197" />
 								<note xml:id="m-224" dur="brevis" dur.ges="3072p" oct="3" oct.ges="2" pname="g" plica="asc">
 									<verse xml:id="m-227" n="1">
@@ -895,7 +901,8 @@
 										<syl xml:id="m-495" wordpos="t">tes</syl>
 									</verse>
 								</note>
-								<rest xml:id="m-489" dur="longa" dur.ges="6144p" EVENTUALDUR="2B" num="3" numbase="2" />
+								<rest xml:id="m-489a" dur="brevis" dur.ges="6144p" EVENTUALDUR="2B" num="3" numbase="2" />
+								<rest xml:id="m-489b" dur="brevis" dur.ges="6144p" EVENTUALDUR="2B" num="3" numbase="2" />
 								<barLine xml:id="m-8daaf487-ecac-4a62-97b8-8a71a4d1de83" />
 								<note xml:id="m-512" dur="longa" dur.ges="9216p" oct="3" oct.ges="2" pname="a">
 									<verse xml:id="m-515" n="1">
@@ -967,7 +974,8 @@
 										<syl xml:id="m-754" wordpos="t">te</syl>
 									</verse>
 								</note>
-								<rest xml:id="m-748" dur="longa" dur.ges="6144p" EVENTUALDUR="2B" num="3" numbase="2" />
+								<rest xml:id="m-748a" dur="brevis" dur.ges="6144p" EVENTUALDUR="2B" num="3" numbase="2" />
+								<rest xml:id="m-748b" dur="brevis" dur.ges="6144p" EVENTUALDUR="2B" num="3" numbase="2" />
 								<barLine xml:id="m-78620514-0b9d-47bc-922a-0551681b3798" />
 								<note xml:id="m-783" dur="longa" dur.ges="6144p" oct="3" oct.ges="2" pname="c" quality="i" num="3" numbase="2">
 									<verse xml:id="m-785" n="1">
@@ -1027,7 +1035,8 @@
 										<syl xml:id="m-910" wordpos="t">tes</syl>
 									</verse>
 								</note>
-								<rest xml:id="m-904" dur="longa" dur.ges="6144p" EVENTUALDUR="2B" num="3" numbase="2" />
+								<rest xml:id="m-904a" dur="brevis" dur.ges="6144p" EVENTUALDUR="2B" num="3" numbase="2" />
+								<rest xml:id="m-904b" dur="brevis" dur.ges="6144p" EVENTUALDUR="2B" num="3" numbase="2" />
 								<barLine xml:id="m-cdb5690a-4ae5-4287-b4cd-abd105843de5" />
 								<note xml:id="m-930" dur="brevis" dur.ges="3072p" oct="4" oct.ges="3" pname="c">
 									<accid xml:id="m-931" accid="s" />

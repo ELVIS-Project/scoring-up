@@ -2,8 +2,8 @@ from pymei import *
 from fractions import *
 
 # Given the total amount of semibreves in-between the "breves", see if they can be arranged in groups of 3
-    # According to how many semibreves remain ungrouped (1, 2 or 0), modifiy the duration of the appropriate note of the sequence ('imperfection', 'alteration', no-modification)
-def modification(counter, start_note, middle_notes, end_note, short_note, long_note):
+# According to how many semibreves remain ungrouped (1, 2 or 0), modifiy the duration of the appropriate note of the sequence ('imperfection', 'alteration', no-modification)
+def modification(counter, start_note, middle_notes, end_note, following_note, short_note, long_note):
     # 1 minim left out:
     if counter % 3 == 1:
         # Default Case
@@ -21,35 +21,66 @@ def modification(counter, start_note, middle_notes, end_note, short_note, long_n
         # Mistake Case
         else:
             print("MISTAKE 1")
+            print(start_note)
+            print(end_note)
+            print("")
 
     # 2 minims left out:
     elif counter % 3 == 2:
-        # Default case
-        before_last = middle_notes[-1]
-        if before_last.name == 'note' and before_last.getAttribute('dur').value == short_note and not before_last.hasAttribute('quality'):
-            # Alteration
-            before_last.addAttribute('quality', 'a')
-            before_last.addAttribute('num', '1')
-            before_last.addAttribute('numbase', '2')
-        # Exception Case
-        elif (start_note is not None and start_note.name == 'note' and start_note.getAttribute('dur').value == long_note and not start_note.hasAttribute('quality')) and (end_note.name == 'note' and end_note.getAttribute('dur').value == long_note and not end_note.hasAttribute('quality')):
-            # Imperfection a.p.p. 
-            start_note.addAttribute('quality', 'i')
-            start_note.addAttribute('num', '3')
-            start_note.addAttribute('numbase', '2')
-            # Imperfection a.p.a.
-            end_note.addAttribute('quality', 'i')
-            end_note.addAttribute('num', '3')
-            end_note.addAttribute('numbase', '2')
-        # Mistake Case
+        if counter == 2:
+            # Default case
+            before_last = middle_notes[-1]
+            if before_last.name == 'note' and before_last.getAttribute('dur').value == short_note and not before_last.hasAttribute('quality'):
+                # Alteration
+                before_last.addAttribute('quality', 'a')
+                before_last.addAttribute('num', '1')
+                before_last.addAttribute('numbase', '2')
+            # Exception Case
+            elif (start_note is not None and start_note.name == 'note' and start_note.getAttribute('dur').value == long_note and not start_note.hasAttribute('quality')) and (end_note.name == 'note' and end_note.getAttribute('dur').value == long_note and not end_note.hasAttribute('quality')) and (following_note is not None and following_note.getAttribute('dur').value != long_note):
+                # Imperfection a.p.p. 
+                start_note.addAttribute('quality', 'i')
+                start_note.addAttribute('num', '3')
+                start_note.addAttribute('numbase', '2')
+                # Imperfection a.p.a.
+                end_note.addAttribute('quality', 'i')
+                end_note.addAttribute('num', '3')
+                end_note.addAttribute('numbase', '2')
+            # Mistake Case
+            else:
+                print("MISTAKE 2 - Alteration is impossible - Imperfections a.p.p. and a.p.a. are also impossible")
+                print(start_note)
+                print(end_note)
+                print("")
         else:
-            print("MISTAKE 2")
+            before_last = middle_notes[-1]
+            # Default case
+            if (start_note is not None and start_note.name == 'note' and start_note.getAttribute('dur').value == long_note and not start_note.hasAttribute('quality')) and (end_note.name == 'note' and end_note.getAttribute('dur').value == long_note and not end_note.hasAttribute('quality')) and (following_note is not None and following_note.getAttribute('dur').value != long_note):
+                # Imperfection a.p.p. 
+                start_note.addAttribute('quality', 'i')
+                start_note.addAttribute('num', '3')
+                start_note.addAttribute('numbase', '2')
+                # Imperfection a.p.a.
+                end_note.addAttribute('quality', 'i')
+                end_note.addAttribute('num', '3')
+                end_note.addAttribute('numbase', '2')
+            # Exception Case
+            elif before_last.name == 'note' and before_last.getAttribute('dur').value == short_note and not before_last.hasAttribute('quality'):
+                # Alteration
+                before_last.addAttribute('quality', 'a')
+                before_last.addAttribute('num', '1')
+                before_last.addAttribute('numbase', '2')
+            # Mistake Case
+            else:
+                print("MISTAKE 2 - Imperfections a.p.p. and a.p.a. are impossible - Alteration is also impossible")
+                print(start_note)
+                print(end_note)
+                print("")
     
     # 0 minims left out:
     else:
         pass
 
-def minims_between_semibreves(start_note, middle_notes, end_note):
+def minims_between_semibreves(start_note, middle_notes, end_note, following_note):
     # Counting notes in between the extremes
     minim_counter = 0
     for note in middle_notes:
@@ -62,9 +93,9 @@ def minims_between_semibreves(start_note, middle_notes, end_note):
 
     # Given the total amount of minims in-between the "semibreves", see if they can be arranged in groups of 3
     # According to how many minims remain ungrouped (1, 2 or 0), modifiy the duration of the appropriate note of the sequence ('imperfection', 'alteration', no-modification)
-    modification(minim_counter, start_note, middle_notes, end_note, 'minima', 'semibrevis')
+    modification(minim_counter, start_note, middle_notes, end_note, following_note, 'minima', 'semibrevis')
 
-def sb_between_breves(start_note, middle_notes, end_note):
+def sb_between_breves(start_note, middle_notes, end_note, following_note):
     # Counting notes in between the extremes
     minim_counter = 0
     for note in middle_notes:
@@ -89,15 +120,16 @@ def sb_between_breves(start_note, middle_notes, end_note):
 
     count_Sb = minim_counter / prolatio
     if(minim_counter % prolatio == 0):
-        print("GOOD")
+        #print("GOOD")
+        pass
     else:
         print("BAD! THE DIVISION IS NOT AN INTEGER NUMBER - not an integer number of Semibreves!")
 
     # Given the total amount of semibreves in-between the "breves", see if they can be arranged in groups of 3
     # According to how many semibreves remain ungrouped (1, 2 or 0), modifiy the duration of the appropriate note of the sequence ('imperfection', 'alteration', no-modification)
-    modification(count_Sb, start_note, middle_notes, end_note, 'semibrevis', 'brevis')
+    modification(count_Sb, start_note, middle_notes, end_note, following_note, 'semibrevis', 'brevis')
 
-def breves_between_longas(start_note, middle_notes, end_note):
+def breves_between_longas(start_note, middle_notes, end_note, following_note):
     # Counting notes in between the extremes
     minim_counter = 0
     for note in middle_notes:
@@ -129,15 +161,16 @@ def breves_between_longas(start_note, middle_notes, end_note):
 
     count_B = minim_counter / (tempus * prolatio)
     if(minim_counter % (tempus * prolatio) == 0):
-        print("GOOD")
+        #print("GOOD")
+        pass
     else:
         print("BAD! THE DIVISION IS NOT AN INTEGER NUMBER - not an integer number of Breves!")
 
     # Given the total amount of breves in-between the "longas", see if they can be arranged in groups of 3
     # According to how many breves remain ungrouped (1, 2 or 0), modifiy the duration of the appropriate note of the sequence ('imperfection', 'alteration', no-modification)
-    modification(count_B, start_note, middle_notes, end_note, 'brevis', 'longa')
+    modification(count_B, start_note, middle_notes, end_note, following_note, 'brevis', 'longa')
 
-
+# Remove the @quality, @num and @numbase attributes
 file = raw_input("Piece: ")
 doc = documentFromFile(file).getMeiDocument()
 listNotesRests = doc.getElementsByName('note')
@@ -148,17 +181,18 @@ for note_or_rest in listNotesRests:
     note_or_rest.removeAttribute('quality')
 documentToFile(doc, file[:-4] + "_stg0.mei")
 
+# For each voice (staff element) in the "score"
 staves = doc.getElementsByName('staff')
 stavesDef = doc.getElementsByName('staffDef')
 for i in range(0, len(stavesDef)):
     staffDef = stavesDef[i]
     staff = staves[i]
 
+    # Getting the mensuration information of the voice
     prolatio = int(staffDef.getAttribute('prolatio').value)
     tempus = int(staffDef.getAttribute('tempus').value)
     modusminor = int(staffDef.getAttribute('modusminor').value)
     modusmaior = int(staffDef.getAttribute('modusmaior').value)
-
 
     # Getting all the notes and rests of one voice into a python list, in order.
     # This allows to retrieve the index, which is not possible with MEI lists.
@@ -169,10 +203,11 @@ for i in range(0, len(stavesDef)):
         if name == 'note' or name == 'rest':
             voice_noterest_content.append(element)
         else:
-            print(name)
-            print(element)
-            print ""
-    print(voice_noterest_content)
+            #print(name)
+            #print(element)
+            #print ""
+            pass
+    #print(voice_noterest_content)
 
     # Find indices for starting and ending points of each sequence of notes to be analyzed.
     # Each of the following is a list of indices of notes greater or equal than: a Semibreve, a Breve, a Long and a Maxima, respectively.
@@ -198,9 +233,9 @@ for i in range(0, len(stavesDef)):
             list_of_indices_geq_L.append(voice_noterest_content.index(noterest))
             list_of_indices_geq_Max.append(voice_noterest_content.index(noterest))
         else:
-            print("SHOULD BE A MINIM, IS IT?  It is " + dur)
-            print(noterest)
-            print ""
+            #print("SHOULD BE A MINIM, IS IT?  It is " + dur)
+            #print(noterest)
+            #print ""
             pass
 
     #########################################################################
@@ -215,18 +250,22 @@ for i in range(0, len(stavesDef)):
     # Minims in between semibreves (or higher note values)
     if prolatio == 3:
         print("\nSEMIBREVE GEQ")
-        print(list_of_indices_geq_Sb)
-        print ""
+        #print(list_of_indices_geq_Sb)
+        #print ""
 
         if 0 not in list_of_indices_geq_Sb and list_of_indices_geq_Sb != []:
             start_note = None
             f = list_of_indices_geq_Sb[0]
             end_note = voice_noterest_content[f]
+            try:
+                following_note = voice_noterest_content[f+1]
+            except:
+                following_note = None
             middle_notes = voice_noterest_content[0:f]
-            print(start_note)
-            print(middle_notes)
-            print(end_note)
-            minims_between_semibreves(start_note, middle_notes, end_note)
+            #print(start_note)
+            #print(middle_notes)
+            #print(end_note)
+            minims_between_semibreves(start_note, middle_notes, end_note, following_note)
 
         for i in range(0, len(list_of_indices_geq_Sb)-1):
             # Define the sequence of notes
@@ -234,11 +273,15 @@ for i in range(0, len(stavesDef)):
             start_note = voice_noterest_content[o]
             f = list_of_indices_geq_Sb[i+1]
             end_note = voice_noterest_content[f]
+            try:
+                following_note = voice_noterest_content[f+1]
+            except:
+                following_note = None
             middle_notes = voice_noterest_content[o+1:f]
-            print(start_note)
-            print(middle_notes)
-            print(end_note)
-            minims_between_semibreves(start_note, middle_notes, end_note)
+            #print(start_note)
+            #print(middle_notes)
+            #print(end_note)
+            minims_between_semibreves(start_note, middle_notes, end_note, following_note)
     
     # prolatio = 2
     else:
@@ -247,18 +290,22 @@ for i in range(0, len(stavesDef)):
     # Semibreves in between breves (or higher note values)
     if tempus == 3:
         print("\nBREVE GEQ")
-        print(list_of_indices_geq_B)
-        print ""
+        #print(list_of_indices_geq_B)
+        #print ""
 
         if 0 not in list_of_indices_geq_B and list_of_indices_geq_B != []:
             start_note = None
             f = list_of_indices_geq_B[0]
             end_note = voice_noterest_content[f]
+            try:
+                following_note = voice_noterest_content[f+1]
+            except:
+                following_note = None
             middle_notes = voice_noterest_content[0:f]
-            print(start_note)
-            print(middle_notes)
-            print(end_note)
-            sb_between_breves(start_note, middle_notes, end_note)
+            #print(start_note)
+            #print(middle_notes)
+            #print(end_note)
+            sb_between_breves(start_note, middle_notes, end_note, following_note)
 
         for i in range(0, len(list_of_indices_geq_B)-1):
             # Define the sequence of notes
@@ -266,11 +313,15 @@ for i in range(0, len(stavesDef)):
             start_note = voice_noterest_content[o]
             f = list_of_indices_geq_B[i+1]
             end_note = voice_noterest_content[f]
+            try:
+                following_note = voice_noterest_content[f+1]
+            except:
+                following_note = None
             middle_notes = voice_noterest_content[o+1:f]
-            print(start_note)
-            print(middle_notes)
-            print(end_note)
-            sb_between_breves(start_note, middle_notes, end_note)
+            #print(start_note)
+            #print(middle_notes)
+            #print(end_note)
+            sb_between_breves(start_note, middle_notes, end_note, following_note)
 
     # tempus = 2
     else:
@@ -279,18 +330,22 @@ for i in range(0, len(stavesDef)):
     # Breves in between longas (or higher note values)
     if modusminor == 3:
         print("\nLONGA GEQ")
-        print(list_of_indices_geq_L)
-        print ""
+        #print(list_of_indices_geq_L)
+        #print ""
 
         if 0 not in list_of_indices_geq_L and list_of_indices_geq_L != []:
             start_note = None
             f = list_of_indices_geq_L[0]
             end_note = voice_noterest_content[f]
+            try:
+                following_note = voice_noterest_content[f+1]
+            except:
+                following_note = None
             middle_notes = voice_noterest_content[0:f]
-            print(start_note)
-            print(middle_notes)
-            print(end_note)
-            breves_between_longas(start_note, middle_notes, end_note)
+            #print(start_note)
+            #print(middle_notes)
+            #print(end_note)
+            breves_between_longas(start_note, middle_notes, end_note, following_note)
 
         for i in range(0, len(list_of_indices_geq_L)-1):
             # Define the sequence of notes
@@ -298,14 +353,18 @@ for i in range(0, len(stavesDef)):
             start_note = voice_noterest_content[o]
             f = list_of_indices_geq_L[i+1]
             end_note = voice_noterest_content[f]
+            try:
+                following_note = voice_noterest_content[f+1]
+            except:
+                following_note = None
             middle_notes = voice_noterest_content[o+1:f]
-            print(start_note)
-            print(middle_notes)
-            print(end_note)
-            breves_between_longas(start_note, middle_notes, end_note)
+            #print(start_note)
+            #print(middle_notes)
+            #print(end_note)
+            breves_between_longas(start_note, middle_notes, end_note, following_note)
 
     # modusminor = 2
     else:
         pass
 
-    documentToFile(doc, file[:-4] + "_stage1.mei")
+    documentToFile(doc, file[:-4] + "_STG2.mei")
