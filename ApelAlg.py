@@ -138,11 +138,39 @@ def sb_between_breves(start_note, middle_notes, end_note, following_note):
             #print(seq[first_dotted_note_index])
             break
 
-    # If first_dotted_note_index == 0, we have a dot at the start_note, which will make this note 'perfect' --> DOT OF PERFECTION. The other dots must be of augmentation.
     # If first_dotted_note_index == -1, then there is no dot in the sequence at all
-    # In both cases, we follow the usual process of counting the minims to figure out how many semibreves are in the middle_notes
-    if first_dotted_note_index == 0 or first_dotted_note_index == -1:
-        #print('Perfection OR no-dot\n')
+    if first_dotted_note_index == -1:
+        #print('No-dot\n')
+        # Counting notes in between the extremes
+        minim_counter = 0
+        for note in middle_notes:
+            dur = note.getAttribute('dur').value
+            if dur == 'minima':
+                gain = 1
+                if note.hasAttribute('num') and note.hasAttribute('numbase'):
+                    ratio = Fraction(int(note.getAttribute('numbase').value), int(note.getAttribute('num').value))
+                    gain *= ratio
+                else:
+                    pass
+            elif dur == 'semibrevis':
+                gain = prolatio
+                if note.hasAttribute('num') and note.hasAttribute('numbase'):
+                    ratio = Fraction(int(note.getAttribute('numbase').value), int(note.getAttribute('num').value))
+                    gain *= ratio
+                else:
+                    pass
+            else:
+                print("MISTAKE \nNote/Rest element not considered: " + str(note) + ", with a duration @dur = " + dur)
+            minim_counter += gain
+
+        # Total of semibreves in the middle_notes
+        count_Sb = minim_counter / prolatio
+
+    # If first_dotted_note_index == 0, we have a dot at the start_note, which will make this note 'perfect' --> DOT OF PERFECTION. The other dots must be of augmentation (or perfection dots).
+    elif first_dotted_note_index == 0:
+        # DOT OF PERFECTION
+        start_note.getChildrenByName('dot')[0].addAttribute('form', 'perf')
+        #print('Perfection\n')
         # Counting notes in between the extremes
         minim_counter = 0
         for note in middle_notes:
@@ -165,7 +193,7 @@ def sb_between_breves(start_note, middle_notes, end_note, following_note):
                 if note.hasAttribute('num') and note.hasAttribute('numbase'):
                     ratio = Fraction(int(note.getAttribute('numbase').value), int(note.getAttribute('num').value))
                     gain *= ratio
-                elif note.hasChildren('dot'):
+                elif note.hasChildren('dot') and prolatio == 2:
                     gain = 3
                     note.addAttribute('quality', 'p')
                     note.getChildrenByName('dot')[0].addAttribute('form', 'aug')
@@ -241,7 +269,7 @@ def sb_between_breves(start_note, middle_notes, end_note, following_note):
                 if note.hasAttribute('num') and note.hasAttribute('numbase'):
                     ratio = Fraction(int(note.getAttribute('numbase').value), int(note.getAttribute('num').value))
                     gain *= ratio
-                elif note.hasChildren('dot'):
+                elif note.hasChildren('dot') and prolatio == 2:
                     gain = 3
                     note.addAttribute('quality', 'p')
                     note.getChildrenByName('dot')[0].addAttribute('form', 'aug')
@@ -326,11 +354,46 @@ def breves_between_longas(start_note, middle_notes, end_note, following_note):
             #print(noterest)
             break
 
-    # If first_dotted_note_index == 0, we have a dot at the start_note, which will make this note 'perfect' --> DOT OF PERFECTION. The other dots must be of augmentation.
     # If first_dotted_note_index == -1, then there is no dot in the sequence at all
-    # In both cases, we follow the usual process of counting the minims to figure out how many breves are in the middle_notes
-    if first_dotted_note_index == 0 or first_dotted_note_index == -1:
-        #print('Perfection OR no-dot\n')
+    if first_dotted_note_index == -1:
+        #print('No-dot\n')
+        # Counting notes in between the extremes
+        minim_counter = 0
+        for note in middle_notes:
+            dur = note.getAttribute('dur').value
+            if dur == 'minima':
+                gain = 1
+                if note.hasAttribute('num') and note.hasAttribute('numbase'):
+                    ratio = Fraction(int(note.getAttribute('numbase').value), int(note.getAttribute('num').value))
+                    gain *= ratio
+                else:
+                    pass
+            elif dur == 'semibrevis':
+                gain = prolatio
+                if note.hasAttribute('num') and note.hasAttribute('numbase'):
+                    ratio = Fraction(int(note.getAttribute('numbase').value), int(note.getAttribute('num').value))
+                    gain *= ratio
+                else:
+                    pass
+            elif dur == 'brevis':
+                gain = tempus * prolatio
+                if note.hasAttribute('num') and note.hasAttribute('numbase'):
+                    ratio = Fraction(int(note.getAttribute('numbase').value), int(note.getAttribute('num').value))
+                    gain *= ratio
+                else:
+                    pass
+            else:
+                print("MISTAKE \nNote/Rest element not considered: " + str(note) + ", with a duration @dur = " + dur)
+            minim_counter += gain
+
+        # Total of breves in the middle_notes
+        count_B = minim_counter / (tempus * prolatio)
+
+    # If first_dotted_note_index == 0, we have a dot at the start_note, which will make this note 'perfect' --> DOT OF PERFECTION. The other dots must be of augmentation (or perfection dots).
+    elif first_dotted_note_index == 0:
+        # DOT OF PERFECTION
+        start_note.getChildrenByName('dot')[0].addAttribute('form', 'perf')
+        #print('Perfection\n')
         # Counting notes in between the extremes
         minim_counter = 0
         for note in middle_notes:
@@ -353,7 +416,7 @@ def breves_between_longas(start_note, middle_notes, end_note, following_note):
                 if note.hasAttribute('num') and note.hasAttribute('numbase'):
                     ratio = Fraction(int(note.getAttribute('numbase').value), int(note.getAttribute('num').value))
                     gain *= ratio
-                elif note.hasChildren('dot'):
+                elif note.hasChildren('dot') and prolatio == 2:
                     gain = 3
                     note.addAttribute('quality', 'p')
                     note.getChildrenByName('dot')[0].addAttribute('form', 'aug')
@@ -366,7 +429,7 @@ def breves_between_longas(start_note, middle_notes, end_note, following_note):
                 if note.hasAttribute('num') and note.hasAttribute('numbase'):
                     ratio = Fraction(int(note.getAttribute('numbase').value), int(note.getAttribute('num').value))
                     gain *= ratio
-                elif note.hasChildren('dot'):
+                elif note.hasChildren('dot') and tempus == 2:
                     gain = 3 * prolatio
                     note.addAttribute('quality', 'p')
                     note.getChildrenByName('dot')[0].addAttribute('form', 'aug')
@@ -449,7 +512,7 @@ def breves_between_longas(start_note, middle_notes, end_note, following_note):
                 if note.hasAttribute('num') and note.hasAttribute('numbase'):
                     ratio = Fraction(int(note.getAttribute('numbase').value), int(note.getAttribute('num').value))
                     gain *= ratio
-                elif note.hasChildren('dot'):
+                elif note.hasChildren('dot') and prolatio == 2:
                     gain = 3
                     note.addAttribute('quality', 'p')
                     note.getChildrenByName('dot')[0].addAttribute('form', 'aug')
@@ -462,7 +525,7 @@ def breves_between_longas(start_note, middle_notes, end_note, following_note):
                 if note.hasAttribute('num') and note.hasAttribute('numbase'):
                     ratio = Fraction(int(note.getAttribute('numbase').value), int(note.getAttribute('num').value))
                     gain *= ratio
-                elif note.hasChildren('dot'):
+                elif note.hasChildren('dot') and tempus == 2:
                     gain = 3 * prolatio
                     note.addAttribute('quality', 'p')
                     note.getChildrenByName('dot')[0].addAttribute('form', 'aug')
