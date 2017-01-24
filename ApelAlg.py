@@ -13,14 +13,14 @@ def modification(counter, start_note, middle_notes, end_note, following_note, sh
             start_note.addAttribute('num', '3')
             start_note.addAttribute('numbase', '2')
         # Exception Case
-        elif end_note.name == 'note' and end_note.getAttribute('dur').value == long_note and not end_note.hasAttribute('quality'):
+        elif (end_note.name == 'note' and end_note.getAttribute('dur').value == long_note and not end_note.hasAttribute('quality')) and (following_note is not None and following_note.getAttribute('dur').value != long_note):
             # Imperfection a.p.a.
             end_note.addAttribute('quality', 'i')
             end_note.addAttribute('num', '3')
             end_note.addAttribute('numbase', '2')
         # Mistake Case
         else:
-            print("MISTAKE 1")
+            print("MISTAKE 1 - Impossible to do Imperfection a.p.p. and also Imperfection a.p.a.")
             print(start_note)
             print(end_note)
             print("")
@@ -367,4 +367,4 @@ for i in range(0, len(stavesDef)):
     else:
         pass
 
-    documentToFile(doc, file[:-4] + "_STG2.mei")
+    documentToFile(doc, file[:-4] + "_STG3.mei")
