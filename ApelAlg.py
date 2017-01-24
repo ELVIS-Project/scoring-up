@@ -94,7 +94,25 @@ def modification(counter, start_note, middle_notes, end_note, following_note, sh
     
     # 0 breves left out:
     else:
-        pass
+        # Long followed by a long, or 3 breves between longs -> pass (do nothing)
+        if counter == 0 or counter == 3:
+            pass
+        # 6, 9, 12, 15, 18, ... breves between longs
+        else:
+            before_last = middle_notes[-1]
+            # Default case
+            if (start_note is not None and start_note.name == 'note' and start_note.getAttribute('dur').value == long_note and not start_note.hasAttribute('quality') and not start_note.hasChildren('dot')) and (before_last.name == 'note' and before_last.getAttribute('dur').value == short_note and not before_last.hasAttribute('quality')):
+                # Imperfection a.p.p. 
+                start_note.addAttribute('quality', 'i')
+                start_note.addAttribute('num', '3')
+                start_note.addAttribute('numbase', '2')
+                # Alteration
+                before_last.addAttribute('quality', 'a')
+                before_last.addAttribute('num', '1')
+                before_last.addAttribute('numbase', '2')
+            # Exception Case: pass
+            else:
+                pass
 
 def minims_between_semibreves(start_note, middle_notes, end_note, following_note):
     # Counting notes in between the extremes
@@ -802,7 +820,7 @@ for i in range(0, len(stavesDef)):
             acum_boolean += mensuration[i]
         except:
             break
-    print(acum_boolean)
+    #print(acum_boolean)
     print(notes_NoDivisionDot_possibility)
     if len(notes_NoDivisionDot_possibility) != 0:
         dots = staff.getDescendantsByName('dot')
