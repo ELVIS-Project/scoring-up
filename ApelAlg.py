@@ -719,4 +719,40 @@ for i in range(0, len(stavesDef)):
     else:
         pass
 
+    # There are notes that, when dotted, the dot used must be a dot of augmentation
+    # Only imperfect notes can be augmented by a dot, but not all dots in them are augmentation dots
+    # These imperfect notes can be followed by a division dot, as they can form a perfection with a larger note.
+    # If a note is perfect, by the functions above all the dotted notes with smaller values are examined to determine if the dot is a 'division dot' or an 'augmentation dot'
+    # But in case of larger values, this is not evaluated.
+    # The following code performs that action. It goes from 'maxima' to 'semibrevis', until if finds a perfect mensuration. 
+    # All the notes larger than that perfect note are considered to be augmented by any dot following them.
+
+    note_level = ['maxima', 'longa', 'brevis', 'semibrevis']
+    mensuration = [modusmaior, modusminor, tempus, prolatio]
+    notes_NoDivisionDot_possibility = []
+    i = 0
+    acum_boolean =  mensuration[0]
+    while (acum_boolean % 2 == 0):
+        notes_NoDivisionDot_possibility.append(note_level[i])
+        i += 1
+        try:
+            acum_boolean += mensuration[i]
+        except:
+            break
+    print(acum_boolean)
+    if len(notes_NoDivisionDot_possibility) != 0:
+        dots = staff.getDescendantsByName('dot')
+        for dot in dots:
+            dotted_note = dot.getParent()
+            dur_dotted_note = dotted_note.getAttribute('dur').value
+            if dur_dotted_note in notes_NoDivisionDot_possibility:
+                # Augmentation dot
+                dot.addAttribute('form', 'aug')
+                dotted_note.addAttribute('quality', 'p')
+                dotted_note.addAttribute('num', '2')
+                dotted_note.addAttribute('numbase', '3')
+
+
+
+
     documentToFile(doc, file[:-4] + "_STG3.mei")
