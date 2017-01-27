@@ -1,23 +1,38 @@
 from pymei import *
 from fractions import *
 
-def followed_by_dot(noterest):
-    flag = False
-    dot = None
-    for i in range(0, len(voice_content)):
-        if voice_content[i] == noterest:
-            if voice_content[i+1].name == 'dot':
-                flag = True
-                dot = voice_content[i+1]
-                break
-    return [flag, dot]
+def get_peer_index(target_element):
+    peers = target_element.getPeers()
+    i = 0
+    for element in peers:
+        if element == target_element:
+            index = i
+            break
+        i += 1
+    return [index, peers]
+
+def get_next_element(target_element):
+    [index, peers] = get_peer_index(target_element)
+    try:
+        next_element = peers[index + 1]
+    except:
+        next_element = None
+    return next_element
 
 def get_preceding_element(target_element):
-    preceding_element = None
-    for i in range(0, len(voice_content)):
-        if voice_content[i] == target_element:
-            preceding_element = voice_content[i-1]
+    [index, peers] = get_peer_index(target_element)
+    try:
+        preceding_element = peers[index - 1]
+    except:
+        preceding_element = None
     return preceding_element
+
+def followed_by_dot(target_element):
+    next_element = get_next_element(target_element)
+    if next_element is not None and next_element.name == 'dot':
+        return True
+    else:
+        return False
 
 # Given the total amount of "breves" in-between the "longs", see if they can be arranged in groups of 3
 # According to how many breves remain ungrouped (1, 2 or 0), modifiy the duration of the appropriate note of the sequence ('imperfection', 'alteration', no-modification)
@@ -25,13 +40,13 @@ def modification(counter, start_note, middle_notes, end_note, following_note, sh
     # 1 breve left out:
     if counter % 3 == 1:
         # Default Case
-        if start_note is not None and start_note.name == 'note' and start_note.getAttribute('dur').value == long_note and not start_note.hasAttribute('quality') and not followed_by_dot(start_note)[0]:
+        if start_note is not None and start_note.name == 'note' and start_note.getAttribute('dur').value == long_note and not start_note.hasAttribute('quality') and not followed_by_dot(start_note):
             # Imperfection a.p.p.
             start_note.addAttribute('quality', 'i')
             start_note.addAttribute('num', '3')
             start_note.addAttribute('numbase', '2')
         # Exception Case
-        elif end_note.name == 'note' and end_note.getAttribute('dur').value == long_note and not end_note.hasAttribute('quality') and not followed_by_dot(end_note)[0]:
+        elif end_note.name == 'note' and end_note.getAttribute('dur').value == long_note and not end_note.hasAttribute('quality') and not followed_by_dot(end_note):
             # Imperfection a.p.a.
             end_note.addAttribute('quality', 'i')
             end_note.addAttribute('num', '3')
@@ -60,7 +75,7 @@ def modification(counter, start_note, middle_notes, end_note, following_note, sh
                 before_last.addAttribute('num', '1')
                 before_last.addAttribute('numbase', '2')
             # Exception Case
-            elif (start_note is not None and start_note.name == 'note' and start_note.getAttribute('dur').value == long_note and not start_note.hasAttribute('quality') and not followed_by_dot(start_note)[0]) and (end_note.name == 'note' and end_note.getAttribute('dur').value == long_note and not end_note.hasAttribute('quality') and not followed_by_dot(end_note)[0]):
+            elif (start_note is not None and start_note.name == 'note' and start_note.getAttribute('dur').value == long_note and not start_note.hasAttribute('quality') and not followed_by_dot(start_note)) and (end_note.name == 'note' and end_note.getAttribute('dur').value == long_note and not end_note.hasAttribute('quality') and not followed_by_dot(end_note)):
                 # Imperfection a.p.p. 
                 start_note.addAttribute('quality', 'i')
                 start_note.addAttribute('num', '3')
@@ -83,7 +98,7 @@ def modification(counter, start_note, middle_notes, end_note, following_note, sh
         # 5, 8, 11, 14, 17, 20, ... breves between the longs
         else:
             # Default case
-            if (start_note is not None and start_note.name == 'note' and start_note.getAttribute('dur').value == long_note and not start_note.hasAttribute('quality') and not followed_by_dot(start_note)[0]) and (end_note.name == 'note' and end_note.getAttribute('dur').value == long_note and not end_note.hasAttribute('quality') and not followed_by_dot(end_note)[0]):
+            if (start_note is not None and start_note.name == 'note' and start_note.getAttribute('dur').value == long_note and not start_note.hasAttribute('quality') and not followed_by_dot(start_note)) and (end_note.name == 'note' and end_note.getAttribute('dur').value == long_note and not end_note.hasAttribute('quality') and not followed_by_dot(end_note)):
                 # Imperfection a.p.p. 
                 start_note.addAttribute('quality', 'i')
                 start_note.addAttribute('num', '3')
@@ -124,7 +139,7 @@ def minims_between_semibreves(start_note, middle_notes, end_note, following_note
             if note.hasAttribute('num') and note.hasAttribute('numbase'):
                 ratio = Fraction(int(note.getAttribute('numbase').value), int(note.getAttribute('num').value))
                 gain *= ratio
-            elif followed_by_dot(note)[0]:
+            elif followed_by_dot(note):
                 gain = 1.5
                 print("\nSequence: " + str(start_note) + " -- " + str(end_note))
                 print("DOT")
@@ -150,7 +165,7 @@ def sb_between_breves(start_note, middle_notes, end_note, following_note):
     first_dotted_note_index = -1
     for noterest in seq:
         note_counter += 1
-        if noterest is not None and followed_by_dot(noterest)[0]:
+        if noterest is not None and followed_by_dot(noterest):
             first_dotted_note_index = note_counter
             #print(noterest)
             #print(seq[first_dotted_note_index])
@@ -187,7 +202,7 @@ def sb_between_breves(start_note, middle_notes, end_note, following_note):
     # If first_dotted_note_index == 0, we have a dot at the start_note, which will make this note 'perfect' --> DOT OF PERFECTION. The other dots must be of augmentation (or perfection dots).
     elif first_dotted_note_index == 0:
         # DOT OF PERFECTION
-        dot_element = followed_by_dot(start_note)[1]
+        dot_element = get_next_element(start_note)
         dot_element.addAttribute('form', 'perf')
         #print('Perfection\n')
         # Counting notes in between the extremes
@@ -199,10 +214,10 @@ def sb_between_breves(start_note, middle_notes, end_note, following_note):
                 if note.hasAttribute('num') and note.hasAttribute('numbase'):
                     ratio = Fraction(int(note.getAttribute('numbase').value), int(note.getAttribute('num').value))
                     gain *= ratio
-                elif followed_by_dot(note)[0]:
+                elif followed_by_dot(note):
                     gain = 1.5
                     note.addAttribute('quality', 'p')
-                    dot_element = followed_by_dot(note)[1]
+                    dot_element = get_next_element(note)
                     dot_element.addAttribute('form', 'aug')
                     note.addAttribute('num', '2')
                     note.addAttribute('numbase', '3')
@@ -213,10 +228,10 @@ def sb_between_breves(start_note, middle_notes, end_note, following_note):
                 if note.hasAttribute('num') and note.hasAttribute('numbase'):
                     ratio = Fraction(int(note.getAttribute('numbase').value), int(note.getAttribute('num').value))
                     gain *= ratio
-                elif followed_by_dot(note)[0] and prolatio == 2:
+                elif followed_by_dot(note) and prolatio == 2:
                     gain = 3
                     note.addAttribute('quality', 'p')
-                    dot_element = followed_by_dot(note)[1]
+                    dot_element = get_next_element(note)
                     dot_element.addAttribute('form', 'aug')
                     note.addAttribute('num', '2')
                     note.addAttribute('numbase', '3')
@@ -277,10 +292,10 @@ def sb_between_breves(start_note, middle_notes, end_note, following_note):
                 if note.hasAttribute('num') and note.hasAttribute('numbase'):
                     ratio = Fraction(int(note.getAttribute('numbase').value), int(note.getAttribute('num').value))
                     gain *= ratio
-                elif followed_by_dot(note)[0]:
+                elif followed_by_dot(note):
                     gain = 1.5
                     note.addAttribute('quality', 'p')
-                    dot_element = followed_by_dot(note)[1]
+                    dot_element = get_next_element(note)
                     dot_element.addAttribute('form', 'aug')
                     note.addAttribute('num', '2')
                     note.addAttribute('numbase', '3')
@@ -291,10 +306,10 @@ def sb_between_breves(start_note, middle_notes, end_note, following_note):
                 if note.hasAttribute('num') and note.hasAttribute('numbase'):
                     ratio = Fraction(int(note.getAttribute('numbase').value), int(note.getAttribute('num').value))
                     gain *= ratio
-                elif followed_by_dot(note)[0] and prolatio == 2:
+                elif followed_by_dot(note) and prolatio == 2:
                     gain = 3
                     note.addAttribute('quality', 'p')
-                    dot_element = followed_by_dot(note)[1]
+                    dot_element = get_next_element(note)
                     dot_element.addAttribute('form', 'aug')
                     note.addAttribute('num', '2')
                     note.addAttribute('numbase', '3')
@@ -317,7 +332,7 @@ def sb_between_breves(start_note, middle_notes, end_note, following_note):
                 no_division_dot_flag = False
                 #print('Imperfection app\n')
                 first_dotted_note = part1_middle_notes[-1]
-                dot_element = followed_by_dot(first_dotted_note)[1]
+                dot_element = get_next_element(first_dotted_note)
                 dot_element.addAttribute('form', 'div')
                 minim_counter = minim_counter1 + minim_counter2
                 # Total of semibreves in the middle_notes
@@ -327,7 +342,7 @@ def sb_between_breves(start_note, middle_notes, end_note, following_note):
                 # DOT OF AUGMENTATION
                 #print('Augmentation_typeI\n')
                 first_dotted_note = part1_middle_notes[-1]
-                dot_element = followed_by_dot(first_dotted_note)[1]
+                dot_element = get_next_element(first_dotted_note)
                 dot_element.addAttribute('form', 'aug')
                 first_dotted_note.addAttribute('quality', 'p')
                 first_dotted_note.addAttribute('num', '2')
@@ -341,7 +356,7 @@ def sb_between_breves(start_note, middle_notes, end_note, following_note):
             #print(seq)
             #print('Augmentation_def\n')
             first_dotted_note = part1_middle_notes[-1]
-            dot_element = followed_by_dot(first_dotted_note)[1]
+            dot_element = get_next_element(first_dotted_note)
             dot_element.addAttribute('form', 'aug')
             first_dotted_note.addAttribute('quality', 'p')
             first_dotted_note.addAttribute('num', '2')
@@ -374,7 +389,7 @@ def breves_between_longas(start_note, middle_notes, end_note, following_note):
     first_dotted_note_index = -1
     for noterest in seq:
         note_counter += 1
-        if noterest is not None and followed_by_dot(noterest)[0]:
+        if noterest is not None and followed_by_dot(noterest):
             first_dotted_note_index = note_counter
             #print(noterest)
             break
@@ -417,7 +432,7 @@ def breves_between_longas(start_note, middle_notes, end_note, following_note):
     # If first_dotted_note_index == 0, we have a dot at the start_note, which will make this note 'perfect' --> DOT OF PERFECTION. The other dots must be of augmentation (or perfection dots).
     elif first_dotted_note_index == 0:
         # DOT OF PERFECTION
-        dot_element = followed_by_dot(start_note)[1]
+        dot_element = get_next_element(start_note)
         dot_element.addAttribute('form', 'perf')
         #print('Perfection\n')
         # Counting notes in between the extremes
@@ -429,10 +444,10 @@ def breves_between_longas(start_note, middle_notes, end_note, following_note):
                 if note.hasAttribute('num') and note.hasAttribute('numbase'):
                     ratio = Fraction(int(note.getAttribute('numbase').value), int(note.getAttribute('num').value))
                     gain *= ratio
-                elif followed_by_dot(note)[0]:
+                elif followed_by_dot(note):
                     gain = 1.5
                     note.addAttribute('quality', 'p')
-                    dot_element = followed_by_dot(note)[1]
+                    dot_element = get_next_element(note)
                     dot_element.addAttribute('form', 'aug')
                     note.addAttribute('num', '2')
                     note.addAttribute('numbase', '3')
@@ -443,10 +458,10 @@ def breves_between_longas(start_note, middle_notes, end_note, following_note):
                 if note.hasAttribute('num') and note.hasAttribute('numbase'):
                     ratio = Fraction(int(note.getAttribute('numbase').value), int(note.getAttribute('num').value))
                     gain *= ratio
-                elif followed_by_dot(note)[0] and prolatio == 2:
+                elif followed_by_dot(note) and prolatio == 2:
                     gain = 3
                     note.addAttribute('quality', 'p')
-                    dot_element = followed_by_dot(note)[1]
+                    dot_element = get_next_element(note)
                     dot_element.addAttribute('form', 'aug')
                     note.addAttribute('num', '2')
                     note.addAttribute('numbase', '3')
@@ -457,10 +472,10 @@ def breves_between_longas(start_note, middle_notes, end_note, following_note):
                 if note.hasAttribute('num') and note.hasAttribute('numbase'):
                     ratio = Fraction(int(note.getAttribute('numbase').value), int(note.getAttribute('num').value))
                     gain *= ratio
-                elif followed_by_dot(note)[0] and tempus == 2:
+                elif followed_by_dot(note) and tempus == 2:
                     gain = 3 * prolatio
                     note.addAttribute('quality', 'p')
-                    dot_element = followed_by_dot(note)[1]
+                    dot_element = get_next_element(note)
                     dot_element.addAttribute('form', 'aug')
                     note.addAttribute('num', '2')
                     note.addAttribute('numbase', '3')
@@ -528,10 +543,10 @@ def breves_between_longas(start_note, middle_notes, end_note, following_note):
                 if note.hasAttribute('num') and note.hasAttribute('numbase'):
                     ratio = Fraction(int(note.getAttribute('numbase').value), int(note.getAttribute('num').value))
                     gain *= ratio
-                elif followed_by_dot(note)[0]:
+                elif followed_by_dot(note):
                     gain = 1.5
                     note.addAttribute('quality', 'p')
-                    dot_element = followed_by_dot(note)[1]
+                    dot_element = get_next_element(note)
                     dot_element.addAttribute('form', 'aug')
                     note.addAttribute('num', '2')
                     note.addAttribute('numbase', '3')
@@ -542,10 +557,10 @@ def breves_between_longas(start_note, middle_notes, end_note, following_note):
                 if note.hasAttribute('num') and note.hasAttribute('numbase'):
                     ratio = Fraction(int(note.getAttribute('numbase').value), int(note.getAttribute('num').value))
                     gain *= ratio
-                elif followed_by_dot(note)[0] and prolatio == 2:
+                elif followed_by_dot(note) and prolatio == 2:
                     gain = 3
                     note.addAttribute('quality', 'p')
-                    dot_element = followed_by_dot(note)[1]
+                    dot_element = get_next_element(note)
                     dot_element.addAttribute('form', 'aug')
                     note.addAttribute('num', '2')
                     note.addAttribute('numbase', '3')
@@ -556,10 +571,10 @@ def breves_between_longas(start_note, middle_notes, end_note, following_note):
                 if note.hasAttribute('num') and note.hasAttribute('numbase'):
                     ratio = Fraction(int(note.getAttribute('numbase').value), int(note.getAttribute('num').value))
                     gain *= ratio
-                elif followed_by_dot(note)[0] and tempus == 2:
+                elif followed_by_dot(note) and tempus == 2:
                     gain = 3 * prolatio
                     note.addAttribute('quality', 'p')
-                    dot_element = followed_by_dot(note)[1]
+                    dot_element = get_next_element(note)
                     dot_element.addAttribute('form', 'aug')
                     note.addAttribute('num', '2')
                     note.addAttribute('numbase', '3')
@@ -582,7 +597,7 @@ def breves_between_longas(start_note, middle_notes, end_note, following_note):
                 no_division_dot_flag = False
                 #print('Imperfection app\n')
                 first_dotted_note = part1_middle_notes[-1]
-                dot_element = followed_by_dot(first_dotted_note)[1]
+                dot_element = get_next_element(first_dotted_note)
                 dot_element.addAttribute('form', 'div')
                 minim_counter = minim_counter1 + minim_counter2
                 # Total of breves in the middle_notes
@@ -592,7 +607,7 @@ def breves_between_longas(start_note, middle_notes, end_note, following_note):
                 # DOT OF AUGMENTATION
                 #print('Augmentation_typeI\n')
                 first_dotted_note = part1_middle_notes[-1]
-                dot_element = followed_by_dot(first_dotted_note)[1]
+                dot_element = get_next_element(first_dotted_note)
                 dot_element.addAttribute('form', 'aug')
                 first_dotted_note.addAttribute('quality', 'p')
                 first_dotted_note.addAttribute('num', '2')
@@ -605,7 +620,7 @@ def breves_between_longas(start_note, middle_notes, end_note, following_note):
             #print(seq)
             #print('Augmentation_def\n')
             first_dotted_note = part1_middle_notes[-1]
-            dot_element = followed_by_dot(first_dotted_note)[1]
+            dot_element = get_next_element(first_dotted_note)
             dot_element.addAttribute('form', 'aug')
             first_dotted_note.addAttribute('quality', 'p')
             first_dotted_note.addAttribute('num', '2')
@@ -843,6 +858,7 @@ for i in range(0, len(stavesDef)):
         dots = staff.getDescendantsByName('dot')
         for dot in dots:
             dotted_note = get_preceding_element(dot)
+            # The preceding element of a dot should be either a <note> or a <rest>, so the following variable (dur_dotted_note) should be well defined
             dur_dotted_note = dotted_note.getAttribute('dur').value
             if dur_dotted_note in notes_NoDivisionDot_possibility:
                 # Augmentation dot
