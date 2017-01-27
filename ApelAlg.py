@@ -63,6 +63,7 @@ def counting_minims_in_an_undotted_sequence(sequence_of_notes, note_durs, undott
         else:
             pass
         minim_counter += gain
+        #print((gain, minim_counter))
     return minim_counter
 
 def counting_minims(sequence_of_notes, note_durs, undotted_note_gain, dotted_note_gain):
@@ -103,6 +104,7 @@ def counting_minims(sequence_of_notes, note_durs, undotted_note_gain, dotted_not
             else:
                 pass
         minim_counter += gain
+        #print(str(gain) + ", " + str(minim_counter))
     return minim_counter
 
 # Given the total amount of "breves" in-between the "longs", see if they can be arranged in groups of 3
@@ -221,6 +223,10 @@ def sb_between_breves(start_note, middle_notes, end_note, following_note):
     undotted_note_gain = [1, prolatio]
     dotted_note_gain = [1.5, 3]
 
+    # I have already taken into account that the minim could be dotted (and smaller values?),
+    # the new note that could be dotted is the semibrevis. SO:
+
+
     # If first_dotted_note_index == -1, then there is no dot in the sequence at all
     if first_dotted_note_index == -1:
         # Getting the total of semibreves in the middle_notes
@@ -240,49 +246,65 @@ def sb_between_breves(start_note, middle_notes, end_note, following_note):
 
     # Otherwise, if the dot is in any middle note:
     else:
-        # We have to divide the sequence of middle_notes in 2 parts: before the dot, and after the dot.
-        # Then count the number of semibreves in each of the two parts to discover if this 'dot' is a 
-        # 'dot of division' or a 'dot of addition'
-        part1_middle_notes = sequence[1 : first_dotted_note_index + 1]
-        part2_middle_notes = sequence[first_dotted_note_index + 1 : len(sequence)]
+        first_dotted_note = sequence[first_dotted_note_index]######################################
+        dot_element = get_next_element(first_dotted_note)
+        if dot_element.hasAttribute('form') and dot_element.getAttribute('form').value == 'aug':
+            #If the first dot is an already known dot of augmentation
+            minim_counter = counting_minims(middle_notes, note_durs, undotted_note_gain, dotted_note_gain)
+            count_Sb = minim_counter / (prolatio)
+        else:
+            # We have to divide the sequence of middle_notes in 2 parts: before the dot, and after the dot.
+            # Then count the number of semibreves in each of the two parts to discover if this 'dot' is a 
+            # 'dot of division' or a 'dot of addition'
+            part1_middle_notes = sequence[1 : first_dotted_note_index + 1]
+            part2_middle_notes = sequence[first_dotted_note_index + 1 : len(sequence)]
 
-        # Semibreves BEFORE the first dot
-        minim_counter1 = counting_minims_in_an_undotted_sequence(part1_middle_notes, note_durs, undotted_note_gain)
-        part1_count_Sb = minim_counter1 / float(prolatio)
+            # Semibreves BEFORE the first dot
+            minim_counter1 = counting_minims_in_an_undotted_sequence(part1_middle_notes, note_durs, undotted_note_gain)
+            part1_count_Sb = minim_counter1 / float(prolatio)
 
-        # The individual value of the first dotted note (the last note in the sequence preceding the dot)
-        first_dotted_note = part1_middle_notes[-1]
-        dur = first_dotted_note.getAttribute('dur').value
-        first_dotted_note_default_gain = undotted_note_gain[note_durs.index(dur)]
-        #print("Notes in the Sequence preceeding this dot " + str(part1_middle_notes))
-        #print("FIRST DOTTED NOTE: " + str(first_dotted_note) + ", with duration of: " + dur + ", which gain is: " + str(first_dotted_note_default_gain))
+            # The individual value of the first dotted note (the last note in the sequence preceding the dot)
+            dur = first_dotted_note.getAttribute('dur').value
+            first_dotted_note_default_gain = undotted_note_gain[note_durs.index(dur)]
+            #print("Notes in the Sequence preceeding this dot " + str(part1_middle_notes))
+            #print("FIRST DOTTED NOTE: " + str(first_dotted_note) + ", with duration of: " + dur + ", which gain is: " + str(first_dotted_note_default_gain))
 
-        # Taking the second part of the sequence of the middle notes (part2_middle_notes) into account
-        # Count the number of semibreves in the second part of the sequence of middle_notes
-        minim_counter2 = counting_minims(part2_middle_notes, note_durs, undotted_note_gain, dotted_note_gain)
-        part2_count_Sb = minim_counter2 / float(prolatio)
+            # Taking the second part of the sequence of the middle notes (part2_middle_notes) into account
+            # Count the number of semibreves in the second part of the sequence of middle_notes
+            minim_counter2 = counting_minims(part2_middle_notes, note_durs, undotted_note_gain, dotted_note_gain)
+            part2_count_Sb = minim_counter2 / float(prolatio)
 
 
-        # If there is just one semibreve before the first dot
-        if part1_count_Sb == 1:
-            # Two possibilities: dot of division / dot of augmentation
-            # We have to use the results of the second part of the middle notes (part2_middle_notes) to figure this out
+            # If there is just one semibreve before the first dot
+            if part1_count_Sb == 1:
+                # Two possibilities: dot of division / dot of augmentation
+                # We have to use the results of the second part of the middle notes (part2_middle_notes) to figure this out
 
-            # If the number of semibreves after the dot is an integer number
-            if part2_count_Sb == int(part2_count_Sb):
-                # DOT OF DIVISION
-                no_division_dot_flag = False
-                #print('Imperfection app\n')
-                dot_element = get_next_element(first_dotted_note)
-                dot_element.addAttribute('form', 'div')
-                minim_counter = minim_counter1 + minim_counter2
-                # Total of semibreves in the middle_notes
-                modification(part1_count_Sb, start_note, part1_middle_notes, None, None, 'semibrevis', 'brevis')
-                modification(part2_count_Sb, None, part2_middle_notes, end_note, following_note, 'semibrevis', 'brevis')
+                # If the number of semibreves after the dot is an integer number
+                if part2_count_Sb == int(part2_count_Sb):
+                    # DOT OF DIVISION
+                    no_division_dot_flag = False
+                    #print('Imperfection app\n')
+                    dot_element.addAttribute('form', 'div')
+                    minim_counter = minim_counter1 + minim_counter2
+                    # Total of semibreves in the middle_notes
+                    modification(part1_count_Sb, start_note, part1_middle_notes, None, None, 'semibrevis', 'brevis')
+                    modification(part2_count_Sb, None, part2_middle_notes, end_note, following_note, 'semibrevis', 'brevis')
+                else:
+                    # DOT OF AUGMENTATION
+                    #print('Augmentation_typeI\n')
+                    dot_element.addAttribute('form', 'aug')
+                    first_dotted_note.addAttribute('quality', 'p')
+                    first_dotted_note.addAttribute('num', '2')
+                    first_dotted_note.addAttribute('numbase', '3')
+                    minim_counter = minim_counter1 + (0.5 * first_dotted_note_default_gain) + minim_counter2
+                    pass
+
+            # If there is more than one semibreve before the first dot, it is impossible for that dot to be a 'dot of division'
             else:
                 # DOT OF AUGMENTATION
-                #print('Augmentation_typeI\n')
-                dot_element = get_next_element(first_dotted_note)
+                #print(sequence)
+                #print('Augmentation_def\n')
                 dot_element.addAttribute('form', 'aug')
                 first_dotted_note.addAttribute('quality', 'p')
                 first_dotted_note.addAttribute('num', '2')
@@ -290,20 +312,8 @@ def sb_between_breves(start_note, middle_notes, end_note, following_note):
                 minim_counter = minim_counter1 + (0.5 * first_dotted_note_default_gain) + minim_counter2
                 pass
 
-        # If there is more than one semibreve before the first dot, it is impossible for that dot to be a 'dot of division'
-        else:
-            # DOT OF AUGMENTATION
-            #print('Augmentation_def\n')
-            dot_element = get_next_element(first_dotted_note)
-            dot_element.addAttribute('form', 'aug')
-            first_dotted_note.addAttribute('quality', 'p')
-            first_dotted_note.addAttribute('num', '2')
-            first_dotted_note.addAttribute('numbase', '3')
-            minim_counter = minim_counter1 + (0.5 * first_dotted_note_default_gain) + minim_counter2
-            pass
-
-        # Total of semibreves in the middle_notes
-        count_Sb = minim_counter / prolatio
+            # Total of semibreves in the middle_notes
+            count_Sb = minim_counter / prolatio
 
     if no_division_dot_flag:
         # Checking that the sequence of notes is fine, and then calling the modification function
@@ -346,65 +356,69 @@ def breves_between_longas(start_note, middle_notes, end_note, following_note):
 
     # Otherwise, if the dot is in any middle note:
     else:
-        # We have to divide the sequence of middle_notes in 2 parts: before the dot, and after the dot.
-        # Then count the number of breves in each of the two parts to discover if this 'dot' is a 
-        # 'dot of division' or a 'dot of addition'
-        part1_middle_notes = sequence[1 : first_dotted_note_index + 1]
-        part2_middle_notes = sequence[first_dotted_note_index + 1 : len(sequence)]
+        first_dotted_note = sequence[first_dotted_note_index]######################################
+        dot_element = get_next_element(first_dotted_note)
+        if dot_element.hasAttribute('form') and dot_element.getAttribute('form').value == 'aug':
+            #If the first dot is an already known dot of augmentation
+            minim_counter = counting_minims(middle_notes, note_durs, undotted_note_gain, dotted_note_gain)
+            count_B = minim_counter / (tempus * prolatio)
+        else:
+            # We have to divide the sequence of middle_notes in 2 parts: before the dot, and after the dot.
+            # Then count the number of breves in each of the two parts to discover if this 'dot' is a 
+            # 'dot of division' or a 'dot of addition'
+            part1_middle_notes = sequence[1 : first_dotted_note_index + 1]
+            part2_middle_notes = sequence[first_dotted_note_index + 1 : len(sequence)]
 
-        # Breves BEFORE the first dot
-        minim_counter1 = counting_minims_in_an_undotted_sequence(part1_middle_notes, note_durs, undotted_note_gain)
-        part1_count_B = minim_counter1 / float(tempus*prolatio)
-        
-        # The individual value of the first dotted note (the last note in the sequence preceding the dot)
-        first_dotted_note = part1_middle_notes[-1]
-        dur = first_dotted_note.getAttribute('dur').value
-        first_dotted_note_default_gain = undotted_note_gain[note_durs.index(dur)]
+            # Breves BEFORE the first dot
+            minim_counter1 = counting_minims_in_an_undotted_sequence(part1_middle_notes, note_durs, undotted_note_gain)
+            part1_count_B = minim_counter1 / float(tempus*prolatio)
+            
+            # The individual value of the first dotted note (the last note in the sequence preceding the dot)
+            first_dotted_note = part1_middle_notes[-1]
+            dur = first_dotted_note.getAttribute('dur').value
+            first_dotted_note_default_gain = undotted_note_gain[note_durs.index(dur)]
 
-        # Taking the second part of the sequence of the middle notes (part2_middle_notes) into account
-        # Count the number of breves in the second part of the sequence of middle_notes
-        minim_counter2 = counting_minims(part2_middle_notes, note_durs, undotted_note_gain, dotted_note_gain)
-        part2_count_B = minim_counter2 / float(tempus*prolatio)
+            # Taking the second part of the sequence of the middle notes (part2_middle_notes) into account
+            # Count the number of breves in the second part of the sequence of middle_notes
+            minim_counter2 = counting_minims(part2_middle_notes, note_durs, undotted_note_gain, dotted_note_gain)
+            part2_count_B = minim_counter2 / float(tempus*prolatio)
 
-        # If there is just one breve before the first dot
-        if part1_count_B == 1:
-            # Two possibilities: dot of division / dot of augmentation
-            # We have to take a look at the second part of the middle notes (part2_middle_notes) to figure this out
+            # If there is just one breve before the first dot
+            if part1_count_B == 1:
+                # Two possibilities: dot of division / dot of augmentation
+                # We have to take a look at the second part of the middle notes (part2_middle_notes) to figure this out
 
-            # If the number of breves after the dot is an integer number
-            if part2_count_B == int(part2_count_B):
-                # DOT OF DIVISION
-                no_division_dot_flag = False
-                #print('Imperfection app\n')
-                dot_element = get_next_element(first_dotted_note)
-                dot_element.addAttribute('form', 'div')
-                minim_counter = minim_counter1 + minim_counter2
-                # Total of breves in the middle_notes
-                modification(part1_count_B, start_note, part1_middle_notes, None, None, 'brevis', 'longa')
-                modification(part2_count_B, None, part2_middle_notes, end_note, following_note, 'brevis', 'longa')
+                # If the number of breves after the dot is an integer number
+                if part2_count_B == int(part2_count_B):
+                    # DOT OF DIVISION
+                    no_division_dot_flag = False
+                    #print('Imperfection app\n')
+                    dot_element.addAttribute('form', 'div')
+                    minim_counter = minim_counter1 + minim_counter2
+                    # Total of breves in the middle_notes
+                    modification(part1_count_B, start_note, part1_middle_notes, None, None, 'brevis', 'longa')
+                    modification(part2_count_B, None, part2_middle_notes, end_note, following_note, 'brevis', 'longa')
+                else:
+                    # DOT OF AUGMENTATION
+                    #print('Augmentation_typeI\n')
+                    dot_element.addAttribute('form', 'aug')
+                    first_dotted_note.addAttribute('quality', 'p')
+                    first_dotted_note.addAttribute('num', '2')
+                    first_dotted_note.addAttribute('numbase', '3')
+                    minim_counter = minim_counter1 + (0.5 * first_dotted_note_default_gain) + minim_counter2
+
+            # If there is more than one breve before the first dot, it is impossible for that dot to be a 'dot of division'
             else:
                 # DOT OF AUGMENTATION
-                #print('Augmentation_typeI\n')
-                dot_element = get_next_element(first_dotted_note)
+                #print('Augmentation_def\n')
                 dot_element.addAttribute('form', 'aug')
                 first_dotted_note.addAttribute('quality', 'p')
                 first_dotted_note.addAttribute('num', '2')
                 first_dotted_note.addAttribute('numbase', '3')
                 minim_counter = minim_counter1 + (0.5 * first_dotted_note_default_gain) + minim_counter2
 
-        # If there is more than one breve before the first dot, it is impossible for that dot to be a 'dot of division'
-        else:
-            # DOT OF AUGMENTATION
-            #print('Augmentation_def\n')
-            dot_element = get_next_element(first_dotted_note)
-            dot_element.addAttribute('form', 'aug')
-            first_dotted_note.addAttribute('quality', 'p')
-            first_dotted_note.addAttribute('num', '2')
-            first_dotted_note.addAttribute('numbase', '3')
-            minim_counter = minim_counter1 + (0.5 * first_dotted_note_default_gain) + minim_counter2
-
-        # Total of breves in the middle_notes
-        count_B = minim_counter / (tempus * prolatio)
+            # Total of breves in the middle_notes
+            count_B = minim_counter / (tempus * prolatio)
         
     if no_division_dot_flag:
         # Checking that the sequence of notes is fine, and then calling the modification function
