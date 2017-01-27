@@ -34,6 +34,17 @@ def followed_by_dot(target_element):
     else:
         return False
 
+def find_first_dotted_note(sequence_of_notes):
+    """Return the index of the first dotted note in a sequence of notes"""
+    note_counter = -1
+    first_dotted_note_index = -1
+    for noterest in sequence_of_notes:
+        note_counter += 1
+        if noterest is not None and followed_by_dot(noterest):
+            first_dotted_note_index = note_counter
+            break
+    return first_dotted_note_index
+
 # Given the total amount of "breves" in-between the "longs", see if they can be arranged in groups of 3
 # According to how many breves remain ungrouped (1, 2 or 0), modifiy the duration of the appropriate note of the sequence ('imperfection', 'alteration', no-modification)
 def modification(counter, start_note, middle_notes, end_note, following_note, short_note, long_note):
@@ -157,19 +168,9 @@ def minims_between_semibreves(start_note, middle_notes, end_note, following_note
     modification(minim_counter, start_note, middle_notes, end_note, following_note, 'minima', 'semibrevis')
 
 def sb_between_breves(start_note, middle_notes, end_note, following_note):
-    no_division_dot_flag = True #default
-    #print([start_note] + middle_notes + [end_note])
-    seq = [start_note] + middle_notes
-    # FIND THE FIRST DOT OF THE SEQUENCE
-    note_counter = -1
-    first_dotted_note_index = -1
-    for noterest in seq:
-        note_counter += 1
-        if noterest is not None and followed_by_dot(noterest):
-            first_dotted_note_index = note_counter
-            #print(noterest)
-            #print(seq[first_dotted_note_index])
-            break
+    no_division_dot_flag = True    # Default value
+    sequence = [start_note] + middle_notes
+    first_dotted_note_index = find_first_dotted_note(sequence)
 
     # If first_dotted_note_index == -1, then there is no dot in the sequence at all
     if first_dotted_note_index == -1:
@@ -249,8 +250,8 @@ def sb_between_breves(start_note, middle_notes, end_note, following_note):
         # We have to divide the sequence of middle_notes in 2 parts: before the dot, and after the dot.
         # Then count the number of breves in each of the two parts to discover if this 'dot' is a 
         # 'dot of division' or a 'dot of addition'
-        part1_middle_notes = seq[1 : first_dotted_note_index + 1]
-        part2_middle_notes = seq[first_dotted_note_index + 1 : len(seq)]
+        part1_middle_notes = sequence[1 : first_dotted_note_index + 1]
+        part2_middle_notes = sequence[first_dotted_note_index + 1 : len(sequence)]
 
         # Count the number of breves in the first part of the sequence of middle_notes
         minim_counter1 = 0
@@ -353,7 +354,7 @@ def sb_between_breves(start_note, middle_notes, end_note, following_note):
         # If there is more than one semibreve before the first dot, it is impossible for that dot to be a 'dot of division'
         else:
             # DOT OF AUGMENTATION
-            #print(seq)
+            #print(sequence)
             #print('Augmentation_def\n')
             first_dotted_note = part1_middle_notes[-1]
             dot_element = get_next_element(first_dotted_note)
@@ -381,18 +382,9 @@ def sb_between_breves(start_note, middle_notes, end_note, following_note):
         modification(count_Sb, start_note, middle_notes, end_note, following_note, 'semibrevis', 'brevis')
 
 def breves_between_longas(start_note, middle_notes, end_note, following_note):
-    no_division_dot_flag = True #default
-    #print([start_note] + middle_notes + [end_note])
-    seq = [start_note] + middle_notes
-    # FIND THE FIRST DOT OF THE SEQUENCE
-    note_counter = -1
-    first_dotted_note_index = -1
-    for noterest in seq:
-        note_counter += 1
-        if noterest is not None and followed_by_dot(noterest):
-            first_dotted_note_index = note_counter
-            #print(noterest)
-            break
+    no_division_dot_flag = True    # Default value
+    sequence = [start_note] + middle_notes
+    first_dotted_note_index = find_first_dotted_note(sequence)
 
     # If first_dotted_note_index == -1, then there is no dot in the sequence at all
     if first_dotted_note_index == -1:
@@ -493,8 +485,8 @@ def breves_between_longas(start_note, middle_notes, end_note, following_note):
         # We have to divide the sequence of middle_notes in 2 parts: before the dot, and after the dot.
         # Then count the number of breves in each of the two parts to discover if this 'dot' is a 
         # 'dot of division' or a 'dot of addition'
-        part1_middle_notes = seq[1 : first_dotted_note_index + 1]
-        part2_middle_notes = seq[first_dotted_note_index + 1 : len(seq)]
+        part1_middle_notes = sequence[1 : first_dotted_note_index + 1]
+        part2_middle_notes = sequence[first_dotted_note_index + 1 : len(sequence)]
 
         # Count the number of breves in the first part of the sequence of middle_notes
         minim_counter1 = 0
@@ -617,7 +609,7 @@ def breves_between_longas(start_note, middle_notes, end_note, following_note):
         # If there is more than one breve before the first dot, it is impossible for that dot to be a 'dot of division'
         else:
             # DOT OF AUGMENTATION
-            #print(seq)
+            #print(sequence)
             #print('Augmentation_def\n')
             first_dotted_note = part1_middle_notes[-1]
             dot_element = get_next_element(first_dotted_note)
