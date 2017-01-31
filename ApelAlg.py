@@ -80,7 +80,7 @@ def counting_minims(sequence_of_notes, note_durs, undotted_note_gain, dotted_not
             # This dot could be either of perfection or of augmentation. 
             # In the case of a dot of perfection there is no need to do anything, as the note value is kept perfect.
             # In the case of a dot of augmentation, the note value should be changed from imperfect to perfect.
-            if (index == 1 and prolatio == 2) or (index == 2 and tempus == 2) or (index > 1):
+            if (index == 1 and prolatio == 2) or (index == 2 and tempus == 2) or (index == 3 and modusminor == 2) or (index == 4 and modusmaior == 2):
             ## NOTE TO SELF: ##
             #### Right now index == 1, is the index of prolatio. ####
             #### If later I put prolatio in a higher index like n, ####
