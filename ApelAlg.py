@@ -66,7 +66,7 @@ def counting_minims_in_an_undotted_sequence(sequence_of_notes, note_durs, undott
         #print((gain, minim_counter))
     return minim_counter
 
-def counting_minims(sequence_of_notes, note_durs, undotted_note_gain, dotted_note_gain):
+def counting_minims(sequence_of_notes, note_durs, undotted_note_gain, dotted_note_gain, prolatio = None, tempus = None, modusminor = None, modusmaior = None):
     minim_counter = 0
     for note in sequence_of_notes:
         dur = note.getAttribute('dur').value
@@ -80,7 +80,7 @@ def counting_minims(sequence_of_notes, note_durs, undotted_note_gain, dotted_not
             # This dot could be either of perfection or of augmentation. 
             # In the case of a dot of perfection there is no need to do anything, as the note value is kept perfect.
             # In the case of a dot of augmentation, the note value should be changed from imperfect to perfect.
-            if (index == 1 and prolatio == 2) or (index == 2 and tempus == 2) or (index == 3 and modusminor == 2) or (index == 4 and modusmaior == 2):
+            if (index == 1 and prolatio == 2) or (index == 2 and tempus == 2) or (index == 3 and modusminor == 2) or (index == 4 and modusmaior == 2) or (index < 1):
             ## NOTE TO SELF: ##
             #### Right now index == 1, is the index of prolatio. ####
             #### If later I put prolatio in a higher index like n, ####
@@ -214,7 +214,7 @@ def minims_between_semibreves(start_note, middle_notes, end_note, following_note
     # According to how many minims remain ungrouped (1, 2 or 0), modifiy the duration of the appropriate note of the sequence ('imperfection', 'alteration', no-modification)
     modification(minim_counter, start_note, middle_notes, end_note, following_note, 'minima', 'semibrevis')
 
-def sb_between_breves(start_note, middle_notes, end_note, following_note):
+def sb_between_breves(start_note, middle_notes, end_note, following_note, prolatio):
     no_division_dot_flag = True    # Default value
     sequence = [start_note] + middle_notes
     first_dotted_note_index = find_first_dotted_note(sequence)
@@ -225,7 +225,6 @@ def sb_between_breves(start_note, middle_notes, end_note, following_note):
 
     # I have already taken into account that the minim could be dotted (and smaller values?),
     # the new note that could be dotted is the semibrevis. SO:
-
 
     # If first_dotted_note_index == -1, then there is no dot in the sequence at all
     if first_dotted_note_index == -1:
@@ -241,7 +240,7 @@ def sb_between_breves(start_note, middle_notes, end_note, following_note):
         dot_element.addAttribute('form', 'perf')
         #print('Perfection\n')
         # Getting the total of semibreves in the middle_notes
-        minim_counter = counting_minims(middle_notes, note_durs, undotted_note_gain, dotted_note_gain)
+        minim_counter = counting_minims(middle_notes, note_durs, undotted_note_gain, dotted_note_gain, prolatio)
         count_Sb = minim_counter / (prolatio)
 
     # Otherwise, if the dot is in any middle note:
@@ -250,7 +249,7 @@ def sb_between_breves(start_note, middle_notes, end_note, following_note):
         dot_element = get_next_element(first_dotted_note)
         if dot_element.hasAttribute('form') and dot_element.getAttribute('form').value == 'aug':
             #If the first dot is an already known dot of augmentation
-            minim_counter = counting_minims(middle_notes, note_durs, undotted_note_gain, dotted_note_gain)
+            minim_counter = counting_minims(middle_notes, note_durs, undotted_note_gain, dotted_note_gain, prolatio)
             count_Sb = minim_counter / (prolatio)
         else:
             # We have to divide the sequence of middle_notes in 2 parts: before the dot, and after the dot.
@@ -271,7 +270,7 @@ def sb_between_breves(start_note, middle_notes, end_note, following_note):
 
             # Taking the second part of the sequence of the middle notes (part2_middle_notes) into account
             # Count the number of semibreves in the second part of the sequence of middle_notes
-            minim_counter2 = counting_minims(part2_middle_notes, note_durs, undotted_note_gain, dotted_note_gain)
+            minim_counter2 = counting_minims(part2_middle_notes, note_durs, undotted_note_gain, dotted_note_gain, prolatio)
             part2_count_Sb = minim_counter2 / float(prolatio)
 
 
@@ -303,7 +302,6 @@ def sb_between_breves(start_note, middle_notes, end_note, following_note):
             # If there is more than one semibreve before the first dot, it is impossible for that dot to be a 'dot of division'
             else:
                 # DOT OF AUGMENTATION
-                #print(sequence)
                 #print('Augmentation_def\n')
                 dot_element.addAttribute('form', 'aug')
                 first_dotted_note.addAttribute('quality', 'p')
@@ -328,7 +326,7 @@ def sb_between_breves(start_note, middle_notes, end_note, following_note):
         # According to how many semibreves remain ungrouped (1, 2 or 0), modifiy the duration of the appropriate note of the sequence ('imperfection', 'alteration', no-modification)
         modification(count_Sb, start_note, middle_notes, end_note, following_note, 'semibrevis', 'brevis')
 
-def breves_between_longas(start_note, middle_notes, end_note, following_note):
+def breves_between_longas(start_note, middle_notes, end_note, following_note, prolatio, tempus):
     no_division_dot_flag = True    # Default value
     sequence = [start_note] + middle_notes
     first_dotted_note_index = find_first_dotted_note(sequence)
@@ -351,7 +349,7 @@ def breves_between_longas(start_note, middle_notes, end_note, following_note):
         dot_element.addAttribute('form', 'perf')
         #print('Perfection\n')
         # Total of breves in the middle_notes
-        minim_counter = counting_minims(middle_notes, note_durs, undotted_note_gain, dotted_note_gain)
+        minim_counter = counting_minims(middle_notes, note_durs, undotted_note_gain, dotted_note_gain, prolatio, tempus)
         count_B = minim_counter / (tempus * prolatio)
 
     # Otherwise, if the dot is in any middle note:
@@ -360,7 +358,7 @@ def breves_between_longas(start_note, middle_notes, end_note, following_note):
         dot_element = get_next_element(first_dotted_note)
         if dot_element.hasAttribute('form') and dot_element.getAttribute('form').value == 'aug':
             #If the first dot is an already known dot of augmentation
-            minim_counter = counting_minims(middle_notes, note_durs, undotted_note_gain, dotted_note_gain)
+            minim_counter = counting_minims(middle_notes, note_durs, undotted_note_gain, dotted_note_gain, prolatio, tempus)
             count_B = minim_counter / (tempus * prolatio)
         else:
             # We have to divide the sequence of middle_notes in 2 parts: before the dot, and after the dot.
@@ -380,7 +378,7 @@ def breves_between_longas(start_note, middle_notes, end_note, following_note):
 
             # Taking the second part of the sequence of the middle notes (part2_middle_notes) into account
             # Count the number of breves in the second part of the sequence of middle_notes
-            minim_counter2 = counting_minims(part2_middle_notes, note_durs, undotted_note_gain, dotted_note_gain)
+            minim_counter2 = counting_minims(part2_middle_notes, note_durs, undotted_note_gain, dotted_note_gain, prolatio, tempus)
             part2_count_B = minim_counter2 / float(tempus*prolatio)
 
             # If there is just one breve before the first dot
@@ -433,232 +431,255 @@ def breves_between_longas(start_note, middle_notes, end_note, following_note):
         # According to how many breves remain ungrouped (1, 2 or 0), modifiy the duration of the appropriate note of the sequence ('imperfection', 'alteration', no-modification)
         modification(count_B, start_note, middle_notes, end_note, following_note, 'brevis', 'longa')
 
+# Main function
+def lining_up(quasiscore_mensural_doc):
+    # For each voice (staff element) in the "score"
+    staves = quasiscore_mensural_doc.getElementsByName('staff')
+    stavesDef = quasiscore_mensural_doc.getElementsByName('staffDef')
+    for i in range(0, len(stavesDef)):
+        print("Voice # " + str(i+1) + " results:\n")
+        staffDef = stavesDef[i]
+        staff = staves[i]
 
-# Remove the @quality, @num and @numbase attributes
-file = raw_input("Piece: ")
-doc = documentFromFile(file).getMeiDocument()
-listNotesRests = doc.getElementsByName('note')
-listNotesRests.extend(doc.getElementsByName('rest'))
-for note_or_rest in listNotesRests:
-    note_or_rest.removeAttribute('num')
-    note_or_rest.removeAttribute('numbase')
-    note_or_rest.removeAttribute('quality')
-documentToFile(doc, file[:-4] + "_stg0.mei")
+        # Getting the mensuration information of the voice
+        prolatio = int(staffDef.getAttribute('prolatio').value)
+        tempus = int(staffDef.getAttribute('tempus').value)
+        modusminor = int(staffDef.getAttribute('modusminor').value)
+        modusmaior = int(staffDef.getAttribute('modusmaior').value)
 
-# For each voice (staff element) in the "score"
-staves = doc.getElementsByName('staff')
-stavesDef = doc.getElementsByName('staffDef')
-for i in range(0, len(stavesDef)):
-    print("\n\nVOICE # " + str(i+1) + "\n")
-    staffDef = stavesDef[i]
-    staff = staves[i]
+        # Getting all the notes and rests of one voice into a python list, in order.
+        # This allows to retrieve the index, which is not possible with MEI lists.
+        voice_content = staff.getChildrenByName('layer')[0].getChildren()
+        voice_noterest_content = []
+        for element in voice_content:
+            name = element.name
+            if name == 'note' or name == 'rest':
+                voice_noterest_content.append(element)
+            else:
+                #print(name)
+                #print(element)
+                #print ""
+                pass
+        #print(voice_noterest_content)
 
-    # Getting the mensuration information of the voice
-    prolatio = int(staffDef.getAttribute('prolatio').value)
-    tempus = int(staffDef.getAttribute('tempus').value)
-    modusminor = int(staffDef.getAttribute('modusminor').value)
-    modusmaior = int(staffDef.getAttribute('modusmaior').value)
+        # Find indices for starting and ending points of each sequence of notes to be analyzed.
+        # Each of the following is a list of indices of notes greater or equal than: a Semibreve, a Breve, a Long and a Maxima, respectively.
+        list_of_indices_geq_Sb = []
+        list_of_indices_geq_B = []
+        list_of_indices_geq_L = []
+        list_of_indices_geq_Max = []
+        # Get the indices
+        for noterest in voice_noterest_content:
+            dur = noterest.getAttribute('dur').value
+            if dur == 'semibrevis':
+                list_of_indices_geq_Sb.append(voice_noterest_content.index(noterest))
+            elif dur == 'brevis':
+                list_of_indices_geq_Sb.append(voice_noterest_content.index(noterest))
+                list_of_indices_geq_B.append(voice_noterest_content.index(noterest))
+            elif dur == 'longa':
+                list_of_indices_geq_Sb.append(voice_noterest_content.index(noterest))
+                list_of_indices_geq_B.append(voice_noterest_content.index(noterest))
+                list_of_indices_geq_L.append(voice_noterest_content.index(noterest))
+            elif dur == 'maxima':
+                list_of_indices_geq_Sb.append(voice_noterest_content.index(noterest))
+                list_of_indices_geq_B.append(voice_noterest_content.index(noterest))
+                list_of_indices_geq_L.append(voice_noterest_content.index(noterest))
+                list_of_indices_geq_Max.append(voice_noterest_content.index(noterest))
+            else:
+                #print("SHOULD BE A MINIM, IS IT?  It is " + dur)
+                #print(noterest)
+                #print ""
+                pass
 
-    # Getting all the notes and rests of one voice into a python list, in order.
-    # This allows to retrieve the index, which is not possible with MEI lists.
-    voice_content = staff.getChildrenByName('layer')[0].getChildren()
-    voice_noterest_content = []
-    for element in voice_content:
-        name = element.name
-        if name == 'note' or name == 'rest':
-            voice_noterest_content.append(element)
-        else:
-            #print(name)
-            #print(element)
+        # Minims in between semibreves (or higher note values)
+        if prolatio == 3:
+            #print("\nSEMIBREVE GEQ")
+            #print(list_of_indices_geq_Sb)
             #print ""
-            pass
-    #print(voice_noterest_content)
 
-    # Find indices for starting and ending points of each sequence of notes to be analyzed.
-    # Each of the following is a list of indices of notes greater or equal than: a Semibreve, a Breve, a Long and a Maxima, respectively.
-    list_of_indices_geq_Sb = []
-    list_of_indices_geq_B = []
-    list_of_indices_geq_L = []
-    list_of_indices_geq_Max = []
-    # Get the indices
-    for noterest in voice_noterest_content:
-        dur = noterest.getAttribute('dur').value
-        if dur == 'semibrevis':
-            list_of_indices_geq_Sb.append(voice_noterest_content.index(noterest))
-        elif dur == 'brevis':
-            list_of_indices_geq_Sb.append(voice_noterest_content.index(noterest))
-            list_of_indices_geq_B.append(voice_noterest_content.index(noterest))
-        elif dur == 'longa':
-            list_of_indices_geq_Sb.append(voice_noterest_content.index(noterest))
-            list_of_indices_geq_B.append(voice_noterest_content.index(noterest))
-            list_of_indices_geq_L.append(voice_noterest_content.index(noterest))
-        elif dur == 'maxima':
-            list_of_indices_geq_Sb.append(voice_noterest_content.index(noterest))
-            list_of_indices_geq_B.append(voice_noterest_content.index(noterest))
-            list_of_indices_geq_L.append(voice_noterest_content.index(noterest))
-            list_of_indices_geq_Max.append(voice_noterest_content.index(noterest))
+            if 0 not in list_of_indices_geq_Sb and list_of_indices_geq_Sb != []:
+                start_note = None
+                f = list_of_indices_geq_Sb[0]
+                end_note = voice_noterest_content[f]
+                try:
+                    following_note = voice_noterest_content[f+1]
+                except:
+                    following_note = None
+                middle_notes = voice_noterest_content[0:f]
+                #print(start_note)
+                #print(middle_notes)
+                #print(end_note)
+                minims_between_semibreves(start_note, middle_notes, end_note, following_note)
+
+            for i in range(0, len(list_of_indices_geq_Sb)-1):
+                # Define the sequence of notes
+                o = list_of_indices_geq_Sb[i]
+                start_note = voice_noterest_content[o]
+                f = list_of_indices_geq_Sb[i+1]
+                end_note = voice_noterest_content[f]
+                try:
+                    following_note = voice_noterest_content[f+1]
+                except:
+                    following_note = None
+                middle_notes = voice_noterest_content[o+1:f]
+                #print(start_note)
+                #print(middle_notes)
+                #print(end_note)
+                minims_between_semibreves(start_note, middle_notes, end_note, following_note)
+        
+        # prolatio = 2
         else:
-            #print("SHOULD BE A MINIM, IS IT?  It is " + dur)
-            #print(noterest)
-            #print ""
             pass
 
-    # Minims in between semibreves (or higher note values)
-    if prolatio == 3:
-        print("\nSEMIBREVE GEQ")
-        #print(list_of_indices_geq_Sb)
-        #print ""
+        # Semibreves in between breves (or higher note values)
+        if tempus == 3:
+            #print("\nBREVE GEQ")
+            #print(list_of_indices_geq_B)
+            #print ""
 
-        if 0 not in list_of_indices_geq_Sb and list_of_indices_geq_Sb != []:
-            start_note = None
-            f = list_of_indices_geq_Sb[0]
-            end_note = voice_noterest_content[f]
+            if 0 not in list_of_indices_geq_B and list_of_indices_geq_B != []:
+                start_note = None
+                f = list_of_indices_geq_B[0]
+                end_note = voice_noterest_content[f]
+                try:
+                    following_note = voice_noterest_content[f+1]
+                except:
+                    following_note = None
+                middle_notes = voice_noterest_content[0:f]
+                #print(start_note)
+                #print(middle_notes)
+                #print(end_note)
+                sb_between_breves(start_note, middle_notes, end_note, following_note, prolatio)
+
+            for i in range(0, len(list_of_indices_geq_B)-1):
+                # Define the sequence of notes
+                o = list_of_indices_geq_B[i]
+                start_note = voice_noterest_content[o]
+                f = list_of_indices_geq_B[i+1]
+                end_note = voice_noterest_content[f]
+                try:
+                    following_note = voice_noterest_content[f+1]
+                except:
+                    following_note = None
+                middle_notes = voice_noterest_content[o+1:f]
+                #print(start_note)
+                #print(middle_notes)
+                #print(end_note)
+                sb_between_breves(start_note, middle_notes, end_note, following_note, prolatio)
+
+        # tempus = 2
+        else:
+            pass
+
+        # Breves in between longas (or higher note values)
+        if modusminor == 3:
+            #print("\nLONGA GEQ")
+            #print(list_of_indices_geq_L)
+            #print ""
+
+            if 0 not in list_of_indices_geq_L and list_of_indices_geq_L != []:
+                start_note = None
+                f = list_of_indices_geq_L[0]
+                end_note = voice_noterest_content[f]
+                try:
+                    following_note = voice_noterest_content[f+1]
+                except:
+                    following_note = None
+                middle_notes = voice_noterest_content[0:f]
+                #print(start_note)
+                #print(middle_notes)
+                #print(end_note)
+                breves_between_longas(start_note, middle_notes, end_note, following_note, prolatio, tempus)
+
+            for i in range(0, len(list_of_indices_geq_L)-1):
+                # Define the sequence of notes
+                o = list_of_indices_geq_L[i]
+                start_note = voice_noterest_content[o]
+                f = list_of_indices_geq_L[i+1]
+                end_note = voice_noterest_content[f]
+                try:
+                    following_note = voice_noterest_content[f+1]
+                except:
+                    following_note = None
+                middle_notes = voice_noterest_content[o+1:f]
+                #print(start_note)
+                #print(middle_notes)
+                #print(end_note)
+                breves_between_longas(start_note, middle_notes, end_note, following_note, prolatio, tempus)
+
+        # modusminor = 2
+        else:
+            pass
+
+
+        # There are notes that, when dotted, the dot used must be a dot of augmentation
+        # Only imperfect notes can be augmented by a dot, but not all dots in them are augmentation dots
+        # These imperfect notes can be followed by a division dot, as they can form a perfection with a larger note.
+        # If a note is perfect, by the functions above all the dotted notes with smaller values are examined to determine if the dot is a 'division dot' or an 'augmentation dot'
+        # But in case of larger values, this is not evaluated.
+        # The following code performs that action. It goes from 'maxima' to 'semibrevis', until if finds a perfect mensuration. 
+        # All the notes larger than that perfect note are considered to be augmented by any dot following them.
+
+        note_level = ['maxima', 'longa', 'brevis', 'semibrevis']
+        mensuration = [modusmaior, modusminor, tempus, prolatio]
+        notes_NoDivisionDot_possibility = []
+        i = 0
+        acum_boolean =  mensuration[0]
+        while (acum_boolean % 2 == 0):
+            notes_NoDivisionDot_possibility.append(note_level[i])
+            i += 1
             try:
-                following_note = voice_noterest_content[f+1]
+                acum_boolean += mensuration[i]
             except:
-                following_note = None
-            middle_notes = voice_noterest_content[0:f]
-            #print(start_note)
-            #print(middle_notes)
-            #print(end_note)
-            minims_between_semibreves(start_note, middle_notes, end_note, following_note)
+                break
+        #print(acum_boolean)
+        #print(notes_NoDivisionDot_possibility)
+        if len(notes_NoDivisionDot_possibility) != 0:
+            dots = staff.getDescendantsByName('dot')
+            for dot in dots:
+                dotted_note = get_preceding_element(dot)
+                # The preceding element of a dot should be either a <note> or a <rest>, so the following variable (dur_dotted_note) should be well defined
+                dur_dotted_note = dotted_note.getAttribute('dur').value
+                if dur_dotted_note in notes_NoDivisionDot_possibility:
+                    # Augmentation dot
+                    dot.addAttribute('form', 'aug')
+                    dotted_note.addAttribute('quality', 'p')
+                    dotted_note.addAttribute('num', '2')
+                    dotted_note.addAttribute('numbase', '3')
+    return quasiscore_mensural_doc
 
-        for i in range(0, len(list_of_indices_geq_Sb)-1):
-            # Define the sequence of notes
-            o = list_of_indices_geq_Sb[i]
-            start_note = voice_noterest_content[o]
-            f = list_of_indices_geq_Sb[i+1]
-            end_note = voice_noterest_content[f]
-            try:
-                following_note = voice_noterest_content[f+1]
-            except:
-                following_note = None
-            middle_notes = voice_noterest_content[o+1:f]
-            #print(start_note)
-            #print(middle_notes)
-            #print(end_note)
-            minims_between_semibreves(start_note, middle_notes, end_note, following_note)
-    
-    # prolatio = 2
-    else:
-        pass
+# Comparison function
+def comparison(out_doc, gt_doc):
 
-    # Semibreves in between breves (or higher note values)
-    if tempus == 3:
-        print("\nBREVE GEQ")
-        #print(list_of_indices_geq_B)
-        #print ""
+    # Getting all the notes and rests contained in the two mei-documents
+    gt_notes = gt_doc.getElementsByName('note')
+    gt_notes.extend(gt_doc.getElementsByName('rest'))
 
-        if 0 not in list_of_indices_geq_B and list_of_indices_geq_B != []:
-            start_note = None
-            f = list_of_indices_geq_B[0]
-            end_note = voice_noterest_content[f]
-            try:
-                following_note = voice_noterest_content[f+1]
-            except:
-                following_note = None
-            middle_notes = voice_noterest_content[0:f]
-            #print(start_note)
-            #print(middle_notes)
-            #print(end_note)
-            sb_between_breves(start_note, middle_notes, end_note, following_note)
+    # Compare the quality values (actual duration) values of these notes (and rests) in both transcriptions
+    for gt_note in gt_notes:
+        out_note = out_doc.getElementById(gt_note.id)
+        gt_quality = gt_note.getAttribute('quality')
+        out_quality = out_note.getAttribute('quality')
 
-        for i in range(0, len(list_of_indices_geq_B)-1):
-            # Define the sequence of notes
-            o = list_of_indices_geq_B[i]
-            start_note = voice_noterest_content[o]
-            f = list_of_indices_geq_B[i+1]
-            end_note = voice_noterest_content[f]
-            try:
-                following_note = voice_noterest_content[f+1]
-            except:
-                following_note = None
-            middle_notes = voice_noterest_content[o+1:f]
-            #print(start_note)
-            #print(middle_notes)
-            #print(end_note)
-            sb_between_breves(start_note, middle_notes, end_note, following_note)
+        if gt_quality is None and out_quality is None:
+            pass
 
-    # tempus = 2
-    else:
-        pass
+        elif gt_quality is not None and out_quality is None:
+            voice_number = gt_note.getAncestor('staff').getAttribute('n').value
+            print("The note " + gt_note.id + " in voice " + voice_number)
+            print("Has a quality '" + gt_quality.value + "'' in the ground truth file\nthat is NOT PRESENT IN THE OUTPUT FILE\n")
+        
+        elif gt_quality is None and out_quality is not None:
+            voice_number = gt_note.getAncestor('staff').getAttribute('n').value
+            print("The note " + gt_note.id + " in voice " + voice_number)
+            print("HAS A QUALITY '" + out_quality.value + "'' IN THE OUTPUT FILE\nthat is not present in the ground truth\n")
 
-    # Breves in between longas (or higher note values)
-    if modusminor == 3:
-        print("\nLONGA GEQ")
-        #print(list_of_indices_geq_L)
-        #print ""
+        elif gt_quality.value == out_quality.value:
+            pass
 
-        if 0 not in list_of_indices_geq_L and list_of_indices_geq_L != []:
-            start_note = None
-            f = list_of_indices_geq_L[0]
-            end_note = voice_noterest_content[f]
-            try:
-                following_note = voice_noterest_content[f+1]
-            except:
-                following_note = None
-            middle_notes = voice_noterest_content[0:f]
-            #print(start_note)
-            #print(middle_notes)
-            #print(end_note)
-            breves_between_longas(start_note, middle_notes, end_note, following_note)
-
-        for i in range(0, len(list_of_indices_geq_L)-1):
-            # Define the sequence of notes
-            o = list_of_indices_geq_L[i]
-            start_note = voice_noterest_content[o]
-            f = list_of_indices_geq_L[i+1]
-            end_note = voice_noterest_content[f]
-            try:
-                following_note = voice_noterest_content[f+1]
-            except:
-                following_note = None
-            middle_notes = voice_noterest_content[o+1:f]
-            #print(start_note)
-            #print(middle_notes)
-            #print(end_note)
-            breves_between_longas(start_note, middle_notes, end_note, following_note)
-
-    # modusminor = 2
-    else:
-        pass
-
-    # There are notes that, when dotted, the dot used must be a dot of augmentation
-    # Only imperfect notes can be augmented by a dot, but not all dots in them are augmentation dots
-    # These imperfect notes can be followed by a division dot, as they can form a perfection with a larger note.
-    # If a note is perfect, by the functions above all the dotted notes with smaller values are examined to determine if the dot is a 'division dot' or an 'augmentation dot'
-    # But in case of larger values, this is not evaluated.
-    # The following code performs that action. It goes from 'maxima' to 'semibrevis', until if finds a perfect mensuration. 
-    # All the notes larger than that perfect note are considered to be augmented by any dot following them.
-
-    note_level = ['maxima', 'longa', 'brevis', 'semibrevis']
-    mensuration = [modusmaior, modusminor, tempus, prolatio]
-    notes_NoDivisionDot_possibility = []
-    i = 0
-    acum_boolean =  mensuration[0]
-    while (acum_boolean % 2 == 0):
-        notes_NoDivisionDot_possibility.append(note_level[i])
-        i += 1
-        try:
-            acum_boolean += mensuration[i]
-        except:
-            break
-    print(acum_boolean)
-    print(notes_NoDivisionDot_possibility)
-    if len(notes_NoDivisionDot_possibility) != 0:
-        dots = staff.getDescendantsByName('dot')
-        for dot in dots:
-            dotted_note = get_preceding_element(dot)
-            # The preceding element of a dot should be either a <note> or a <rest>, so the following variable (dur_dotted_note) should be well defined
-            dur_dotted_note = dotted_note.getAttribute('dur').value
-            if dur_dotted_note in notes_NoDivisionDot_possibility:
-                # Augmentation dot
-                dot.addAttribute('form', 'aug')
-                dotted_note.addAttribute('quality', 'p')
-                dotted_note.addAttribute('num', '2')
-                dotted_note.addAttribute('numbase', '3')
-
-
-
-
-    documentToFile(doc, file[:-4] + "_STG3.mei")
+        else:
+            voice_number = gt_note.getAncestor('staff').getAttribute('n').value
+            print("The note " + gt_note.id + " in voice " + voice_number)
+            print("The QUALITY is DIFFERENT")
+            print("In the ground truth it is: '" + gt_quality.value + "'")
+            print("In the output file it is: '" + out_quality.value + "'\n")
