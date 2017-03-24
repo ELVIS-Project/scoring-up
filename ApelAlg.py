@@ -49,6 +49,10 @@ def find_first_dotted_note(sequence_of_notes):
 
 # Functions related to the counting of minims in a sequence of notes
 def counting_minims_in_an_undotted_sequence(sequence_of_notes, note_durs, undotted_note_gain):
+    #### REDIFINING THESE 2 PARAMETERS FOR NOW
+    note_durs = ['minima', 'semibrevis', 'brevis', 'longa', 'maxima']
+    undotted_note_gain = [1, prolatio, tempus * prolatio, modusminor * tempus * prolatio, modusmaior * modusminor * tempus * prolatio]
+
     minim_counter = 0
     for note in sequence_of_notes:
         dur = note.getAttribute('dur').value
@@ -67,6 +71,11 @@ def counting_minims_in_an_undotted_sequence(sequence_of_notes, note_durs, undott
     return minim_counter
 
 def counting_minims(sequence_of_notes, note_durs, undotted_note_gain, dotted_note_gain, prolatio = None, tempus = None, modusminor = None, modusmaior = None):
+    #### REDIFINING THESE 3 PARAMETERS FOR NOW
+    note_durs = ['minima', 'semibrevis', 'brevis', 'longa', 'maxima']
+    undotted_note_gain = [1, prolatio, tempus * prolatio, modusminor * tempus * prolatio, modusmaior * modusminor * tempus * prolatio]
+    dotted_note_gain = [1.5, 3, 3 * prolatio, 3 * tempus * prolatio, 3 * modusminor * tempus * prolatio]
+
     minim_counter = 0
     for note in sequence_of_notes:
         dur = note.getAttribute('dur').value
@@ -431,6 +440,105 @@ def breves_between_longas(start_note, middle_notes, end_note, following_note, pr
         # According to how many breves remain ungrouped (1, 2 or 0), modifiy the duration of the appropriate note of the sequence ('imperfection', 'alteration', no-modification)
         modification(count_B, start_note, middle_notes, end_note, following_note, 'brevis', 'longa')
 
+def find_note_level_of_coloration(modusmaior, modusminor, tempus, prolatio, colored_figures):
+    # Determine the note-level at which coloration is working (i.e., the perfect note it is meant to imperfect)
+    # If a maxima is colored, and the default value of the maxima is 3 (modusmaior = 3), then the coloration is working at the level of the maxima
+    if modusmaior == 3 and "maxima" in colored_figures:
+        coloration_level = "Max"
+    # If a longa is colored, and the default value of the longa is 3 (modusminor = 3), then the coloration is working at the level of the longa
+    elif modusminor == 3 and "longa" in colored_figures:
+        coloration_level = "L"
+    # If a breve is colored, and the default value of the breve is 3 (tempus = 3), then the coloration is working at the level of the breve
+    elif tempus == 3 and "brevis" in colored_figures:
+        coloration_level = "B"
+    # If a semibreve is colored, and the default value of the semibreve is 3 (prolatio = 3), then the coloration is working at the level of the semibreve
+    elif prolatio == 3 and "semibrevis" in colored_figures:
+        coloration_level = "Sb"
+    # Coloration can only work at these 4 levels, as only these four notes (i.e., maxima, longa, breve, and semibreve) can be perfect (i.e., have triple values)
+    else:
+        coloration_level = None
+    return coloration_level
+
+def get_colored_notes_and_rests(noterest_sequence):
+    # List to store all the <note> and <rest> elements that have coloration
+    colored_notes_and_rests = []
+    # List to store the value (@dur) of these colored <note> and <rest> elements
+    colored_durs = []
+    for noterest in noterest_sequence:
+        # Find out if the note or rest is colored
+        if noterest.hasAttribute('color'):
+            colored_notes_and_rests.append(noterest)
+            # Fill the colroed_durs list with the duration (@dur) of these colored <note> and <rest> elements
+            dur = noterest.getAttribute('dur').value
+            if dur not in colored_durs:
+                colored_durs.append(dur)
+    # Return both the list of all the colored notes and rests, and the list of the figuras (i.e., note shapes or @dur values) of these colored notes and rests
+    return [colored_notes_and_rests, colored_durs]
+
+def coloration_effect(notes_and_rests_per_voice, modusmaior, modusminor, tempus, prolatio):
+    """
+        Apply the effect of coloration once found the note-level that coloration is working at.
+    """
+    # This is done basically by multiplying by 2/3 the duration of all notes equal or larger than the coloration's note-level,
+    # and keeping the values of the smaller colored notes the same as their original (uncolored) note values.
+    
+    # Get the list of colored <note> and <rest> elements
+    colored_notes, durs_of_colored_notes = get_colored_notes_and_rests(notes_and_rests_per_voice)
+    # Get the note-level at which the coloration is working (i.e., the perect note it is meant to imperfect)
+    coloration_level = find_note_level_of_coloration(modusmaior, modusminor, tempus, prolatio, durs_of_colored_notes)
+
+    # Given the note-level of the coloration (e.g., the breve), this note must be imperfect when colored.
+    # For example: The colored breve is 2/3 the value of the uncolored breve, thus the former will have a @num = 3 and @numbase = 2.
+
+    # Colored notes shorter than the note-level of the coloration will keep their original (uncolored) value.
+    # Example continuation: Colored semibreves = uncolored semibreves, thus the former won't have any extra @num and @numbase attributes.
+
+    # Colored notes larger than the note-level of the coloration, will remain perfect or imperfect as their uncolored versions,
+    # but their total value will change since now they will be made up of imperfect (colored) units instead of perfect.
+    # Example continuation: An uncolored long that is imperfect, normally consists of 2 PERFECT breves; the colored long, while still
+    # imperfect, now consists of 2 IMPERFECT (COLORED) breves, thus its total duration changes: 
+    # colored_long = 2 x colored_breve = 2 x (2/3 x uncolored_breve)= 2/3 x (2 x uncolored_breve) = 2/3 x uncolored_long
+    # The same happens with the maxima. Thus, the longa and the maxima will have @num = 2 and @numbase = 2.
+    
+    if coloration_level == "Max":
+        for note in colored_notes:
+            # Multiplying the duration of the coloration's note-level and larger levels by 2/3
+            if note.name == "maxima":
+                note.addAttribute('num', '3')
+                note.addAttribute('numbase', '2')
+            # For smaller notes, do nothing
+            else:
+                pass
+    elif coloration_level == "L":
+        for note in colored_notes:
+            # Multiplying the duration of the coloration's note-level and larger levels by 2/3
+            if note.name == "longa" or note.name == "maxima":
+                note.addAttribute('num', '3')
+                note.addAttribute('numbase', '2')
+            # For smaller notes, do nothing
+            else:
+                pass
+    elif coloration_level == "B":
+        for note in colored_notes:
+            # Multiplying the duration of the coloration's note-level and larger levels by 2/3
+            if note.name == "brevis" or note.name == "longa" or note.name == "maxima":
+                note.addAttribute('num', '3')
+                note.addAttribute('numbase', '2')
+            # For smaller notes, do nothing
+            else:
+                pass
+    elif coloration_level == "Sb":
+        for note in colored_notes:
+            # Multiplying the duration of the coloration's note-level and larger levels by 2/3
+            if note.name == "semibrevis" or note.name == "brevis" or note.name == "longa" or note.name == "maxima":
+                note.addAttribute('num', '3')
+                note.addAttribute('numbase', '2')
+            # For smaller notes, do nothing
+            else:
+                pass
+    else:
+        pass
+
 # Main function
 def lining_up(quasiscore_mensural_doc):
     # For each voice (staff element) in the "score"
@@ -462,6 +570,9 @@ def lining_up(quasiscore_mensural_doc):
                 pass
         #print(voice_noterest_content)
 
+        # Encoding the effect of coloration in the durational values of the colored notes/rests
+        coloration_effect(voice_noterest_content, modusmaior, modusminor, tempus, prolatio)
+
         # Find indices for starting and ending points of each sequence of notes to be analyzed.
         # Each of the following is a list of indices of notes greater or equal than: a Semibreve, a Breve, a Long and a Maxima, respectively.
         list_of_indices_geq_Sb = []
@@ -471,16 +582,16 @@ def lining_up(quasiscore_mensural_doc):
         # Get the indices
         for noterest in voice_noterest_content:
             dur = noterest.getAttribute('dur').value
-            if dur == 'semibrevis':
+            if dur == 'semibrevis' and not noterest.hasAttribute('color'):
                 list_of_indices_geq_Sb.append(voice_noterest_content.index(noterest))
-            elif dur == 'brevis':
+            elif dur == 'brevis' and not noterest.hasAttribute('color'):
                 list_of_indices_geq_Sb.append(voice_noterest_content.index(noterest))
                 list_of_indices_geq_B.append(voice_noterest_content.index(noterest))
-            elif dur == 'longa':
+            elif dur == 'longa' and not noterest.hasAttribute('color'):
                 list_of_indices_geq_Sb.append(voice_noterest_content.index(noterest))
                 list_of_indices_geq_B.append(voice_noterest_content.index(noterest))
                 list_of_indices_geq_L.append(voice_noterest_content.index(noterest))
-            elif dur == 'maxima':
+            elif dur == 'maxima' and not noterest.hasAttribute('color'):
                 list_of_indices_geq_Sb.append(voice_noterest_content.index(noterest))
                 list_of_indices_geq_B.append(voice_noterest_content.index(noterest))
                 list_of_indices_geq_L.append(voice_noterest_content.index(noterest))
