@@ -49,10 +49,6 @@ def find_first_dotted_note(sequence_of_notes):
 
 # Functions related to the counting of minims in a sequence of notes
 def counting_minims_in_an_undotted_sequence(sequence_of_notes, note_durs, undotted_note_gain):
-    #### REDIFINING THESE 2 PARAMETERS FOR NOW
-    note_durs = ['minima', 'semibrevis', 'brevis', 'longa', 'maxima']
-    undotted_note_gain = [1, prolatio, tempus * prolatio, modusminor * tempus * prolatio, modusmaior * modusminor * tempus * prolatio]
-
     minim_counter = 0
     for note in sequence_of_notes:
         dur = note.getAttribute('dur').value
@@ -71,11 +67,6 @@ def counting_minims_in_an_undotted_sequence(sequence_of_notes, note_durs, undott
     return minim_counter
 
 def counting_minims(sequence_of_notes, note_durs, undotted_note_gain, dotted_note_gain, prolatio = None, tempus = None, modusminor = None, modusmaior = None):
-    #### REDIFINING THESE 3 PARAMETERS FOR NOW
-    note_durs = ['minima', 'semibrevis', 'brevis', 'longa', 'maxima']
-    undotted_note_gain = [1, prolatio, tempus * prolatio, modusminor * tempus * prolatio, modusmaior * modusminor * tempus * prolatio]
-    dotted_note_gain = [1.5, 3, 3 * prolatio, 3 * tempus * prolatio, 3 * modusminor * tempus * prolatio]
-
     minim_counter = 0
     for note in sequence_of_notes:
         dur = note.getAttribute('dur').value
@@ -211,11 +202,11 @@ def modification(counter, start_note, middle_notes, end_note, following_note, sh
     else:
         pass
 
-def minims_between_semibreves(start_note, middle_notes, end_note, following_note):
+def minims_between_semibreves(start_note, middle_notes, end_note, following_note, prolatio, tempus, modusminor, modusmaior):
     # Counting notes in between the extremes
-    note_durs = ['minima']
-    undotted_note_gain = [1]
-    dotted_note_gain = [1.5]
+    note_durs = ['minima', 'semibrevis', 'brevis', 'longa', 'maxima']
+    undotted_note_gain = [1, prolatio, tempus * prolatio, modusminor * tempus * prolatio, modusmaior * modusminor * tempus * prolatio]
+    dotted_note_gain = [1.5, 3, 3 * prolatio, 3 * tempus * prolatio, 3 * modusminor * tempus * prolatio]
 
     minim_counter = counting_minims(middle_notes, note_durs, undotted_note_gain, dotted_note_gain)
 
@@ -223,14 +214,14 @@ def minims_between_semibreves(start_note, middle_notes, end_note, following_note
     # According to how many minims remain ungrouped (1, 2 or 0), modifiy the duration of the appropriate note of the sequence ('imperfection', 'alteration', no-modification)
     modification(minim_counter, start_note, middle_notes, end_note, following_note, 'minima', 'semibrevis')
 
-def sb_between_breves(start_note, middle_notes, end_note, following_note, prolatio):
+def sb_between_breves(start_note, middle_notes, end_note, following_note, prolatio, tempus, modusminor, modusmaior):
     no_division_dot_flag = True    # Default value
     sequence = [start_note] + middle_notes
     first_dotted_note_index = find_first_dotted_note(sequence)
 
-    note_durs = ['minima', 'semibrevis']
-    undotted_note_gain = [1, prolatio]
-    dotted_note_gain = [1.5, 3]
+    note_durs = ['minima', 'semibrevis', 'brevis', 'longa', 'maxima']
+    undotted_note_gain = [1, prolatio, tempus * prolatio, modusminor * tempus * prolatio, modusmaior * modusminor * tempus * prolatio]
+    dotted_note_gain = [1.5, 3, 3 * prolatio, 3 * tempus * prolatio, 3 * modusminor * tempus * prolatio]
 
     # I have already taken into account that the minim could be dotted (and smaller values?),
     # the new note that could be dotted is the semibrevis. SO:
@@ -335,14 +326,14 @@ def sb_between_breves(start_note, middle_notes, end_note, following_note, prolat
         # According to how many semibreves remain ungrouped (1, 2 or 0), modifiy the duration of the appropriate note of the sequence ('imperfection', 'alteration', no-modification)
         modification(count_Sb, start_note, middle_notes, end_note, following_note, 'semibrevis', 'brevis')
 
-def breves_between_longas(start_note, middle_notes, end_note, following_note, prolatio, tempus):
+def breves_between_longas(start_note, middle_notes, end_note, following_note, prolatio, tempus, modusminor, modusmaior):
     no_division_dot_flag = True    # Default value
     sequence = [start_note] + middle_notes
     first_dotted_note_index = find_first_dotted_note(sequence)
 
-    note_durs = ['minima', 'semibrevis', 'brevis']
-    undotted_note_gain = [1, prolatio, tempus * prolatio]
-    dotted_note_gain = [1.5, 3, 3 * prolatio]
+    note_durs = ['minima', 'semibrevis', 'brevis', 'longa', 'maxima']
+    undotted_note_gain = [1, prolatio, tempus * prolatio, modusminor * tempus * prolatio, modusmaior * modusminor * tempus * prolatio]
+    dotted_note_gain = [1.5, 3, 3 * prolatio, 3 * tempus * prolatio, 3 * modusminor * tempus * prolatio]
 
     # If first_dotted_note_index == -1, then there is no dot in the sequence at all
     if first_dotted_note_index == -1:
@@ -620,7 +611,7 @@ def lining_up(quasiscore_mensural_doc):
                 #print(start_note)
                 #print(middle_notes)
                 #print(end_note)
-                minims_between_semibreves(start_note, middle_notes, end_note, following_note)
+                minims_between_semibreves(start_note, middle_notes, end_note, following_note, prolatio, tempus, modusminor, modusmaior)
 
             for i in range(0, len(list_of_indices_geq_Sb)-1):
                 # Define the sequence of notes
@@ -636,7 +627,7 @@ def lining_up(quasiscore_mensural_doc):
                 #print(start_note)
                 #print(middle_notes)
                 #print(end_note)
-                minims_between_semibreves(start_note, middle_notes, end_note, following_note)
+                minims_between_semibreves(start_note, middle_notes, end_note, following_note, prolatio, tempus, modusminor, modusmaior)
         
         # prolatio = 2
         else:
@@ -660,7 +651,7 @@ def lining_up(quasiscore_mensural_doc):
                 #print(start_note)
                 #print(middle_notes)
                 #print(end_note)
-                sb_between_breves(start_note, middle_notes, end_note, following_note, prolatio)
+                sb_between_breves(start_note, middle_notes, end_note, following_note, prolatio, tempus, modusminor, modusmaior)
 
             for i in range(0, len(list_of_indices_geq_B)-1):
                 # Define the sequence of notes
@@ -676,7 +667,7 @@ def lining_up(quasiscore_mensural_doc):
                 #print(start_note)
                 #print(middle_notes)
                 #print(end_note)
-                sb_between_breves(start_note, middle_notes, end_note, following_note, prolatio)
+                sb_between_breves(start_note, middle_notes, end_note, following_note, prolatio, tempus, modusminor, modusmaior)
 
         # tempus = 2
         else:
@@ -700,7 +691,7 @@ def lining_up(quasiscore_mensural_doc):
                 #print(start_note)
                 #print(middle_notes)
                 #print(end_note)
-                breves_between_longas(start_note, middle_notes, end_note, following_note, prolatio, tempus)
+                breves_between_longas(start_note, middle_notes, end_note, following_note, prolatio, tempus, modusminor, modusmaior)
 
             for i in range(0, len(list_of_indices_geq_L)-1):
                 # Define the sequence of notes
@@ -716,7 +707,7 @@ def lining_up(quasiscore_mensural_doc):
                 #print(start_note)
                 #print(middle_notes)
                 #print(end_note)
-                breves_between_longas(start_note, middle_notes, end_note, following_note, prolatio, tempus)
+                breves_between_longas(start_note, middle_notes, end_note, following_note, prolatio, tempus, modusminor, modusmaior)
 
         # modusminor = 2
         else:
