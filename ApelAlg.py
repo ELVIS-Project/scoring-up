@@ -568,16 +568,16 @@ def lining_up(quasiscore_mensural_doc):
         # Get the indices
         for noterest in voice_noterest_content:
             dur = noterest.getAttribute('dur').value
-            if dur == 'semibrevis' and not noterest.hasAttribute('color'):
+            if dur == 'semibrevis' and not noterest.hasAttribute('colored'):
                 list_of_indices_geq_Sb.append(voice_noterest_content.index(noterest))
-            elif dur == 'brevis' and not noterest.hasAttribute('color'):
+            elif dur == 'brevis' and not noterest.hasAttribute('colored'):
                 list_of_indices_geq_Sb.append(voice_noterest_content.index(noterest))
                 list_of_indices_geq_B.append(voice_noterest_content.index(noterest))
-            elif dur == 'longa' and not noterest.hasAttribute('color'):
+            elif dur == 'longa' and not noterest.hasAttribute('colored'):
                 list_of_indices_geq_Sb.append(voice_noterest_content.index(noterest))
                 list_of_indices_geq_B.append(voice_noterest_content.index(noterest))
                 list_of_indices_geq_L.append(voice_noterest_content.index(noterest))
-            elif dur == 'maxima' and not noterest.hasAttribute('color'):
+            elif dur == 'maxima' and not noterest.hasAttribute('colored'):
                 list_of_indices_geq_Sb.append(voice_noterest_content.index(noterest))
                 list_of_indices_geq_B.append(voice_noterest_content.index(noterest))
                 list_of_indices_geq_L.append(voice_noterest_content.index(noterest))
