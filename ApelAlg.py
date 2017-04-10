@@ -140,15 +140,23 @@ def modification(counter, start_note, middle_notes, end_note, following_note, sh
 
     # 2 breves left out:
     elif counter % 3 == 2:
-        before_last = middle_notes[-1]
+        # One of he possibilities when 2 breves are left out, is alteration
+        # One must alter the last (uncolored) note from the middle_notes of the sequence
+        # The last middle note is given by:
+        last_middle_note = middle_notes[-1]
+        # If this note is uncolored, it is a candidate for alteration (given that it is a note and not a rest and that it is a breve and not a smaller value)
+        last_uncolored_note = last_middle_note
+        # But if it is colored, we need to find the last "uncolored" note, as this is the one that would be altered
+        while last_uncolored_note.hasAttribute('colored'):
+            last_uncolored_note = get_preceding_element(last_uncolored_note)
         # 2 exact breves between the longs
         if counter == 2:
             # Default case
-            if before_last.name == 'note' and before_last.getAttribute('dur').value == short_note and not before_last.hasAttribute('quality'):
+            if last_uncolored_note.name == 'note' and last_uncolored_note.getAttribute('dur').value == short_note and not last_uncolored_note.hasAttribute('quality'):
                 # Alteration
-                before_last.addAttribute('quality', 'a')
-                before_last.addAttribute('num', '1')
-                before_last.addAttribute('numbase', '2')
+                last_uncolored_note.addAttribute('quality', 'a')
+                last_uncolored_note.addAttribute('num', '1')
+                last_uncolored_note.addAttribute('numbase', '2')
             # Exception Case
             elif (start_note is not None and start_note.name == 'note' and start_note.getAttribute('dur').value == long_note and not start_note.hasAttribute('quality') and not followed_by_dot(start_note)) and (end_note is not None and end_note.name == 'note' and end_note.getAttribute('dur').value == long_note and not end_note.hasAttribute('quality') and not followed_by_dot(end_note)):
                 # Imperfection a.p.p. 
@@ -188,11 +196,11 @@ def modification(counter, start_note, middle_notes, end_note, following_note, sh
                     print("The imperfected note is " + str(end_note) + " and is followed by the perfect note " + str(following_note))
                     print("")
             # Exception Case
-            elif before_last.name == 'note' and before_last.getAttribute('dur').value == short_note and not before_last.hasAttribute('quality'):
+            elif last_uncolored_note.name == 'note' and last_uncolored_note.getAttribute('dur').value == short_note and not last_uncolored_note.hasAttribute('quality'):
                 # Alteration
-                before_last.addAttribute('quality', 'a')
-                before_last.addAttribute('num', '1')
-                before_last.addAttribute('numbase', '2')
+                last_uncolored_note.addAttribute('quality', 'a')
+                last_uncolored_note.addAttribute('num', '1')
+                last_uncolored_note.addAttribute('numbase', '2')
             # Mistake Case
             else:
                 print("MISTAKE 2 - Imperfections a.p.p. and a.p.a. are impossible - Alteration is also impossible")
