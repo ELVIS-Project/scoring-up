@@ -445,12 +445,13 @@ def get_colored_notes_and_rests(noterest_sequence):
     colored_durs = []
     for noterest in noterest_sequence:
         # Find out if the note or rest is colored
-        if noterest.hasAttribute('color'):
+        if noterest.hasAttribute('colored'):
             colored_notes_and_rests.append(noterest)
             # Fill the colroed_durs list with the duration (@dur) of these colored <note> and <rest> elements
             dur = noterest.getAttribute('dur').value
             if dur not in colored_durs:
                 colored_durs.append(dur)
+                print(dur)
     # Return both the list of all the colored notes and rests, and the list of the figuras (i.e., note shapes or @dur values) of these colored notes and rests
     return [colored_notes_and_rests, colored_durs]
 
@@ -465,6 +466,7 @@ def coloration_effect(notes_and_rests_per_voice, modusmaior, modusminor, tempus,
     colored_notes, durs_of_colored_notes = get_colored_notes_and_rests(notes_and_rests_per_voice)
     # Get the note-level at which the coloration is working (i.e., the perect note it is meant to imperfect)
     coloration_level = find_note_level_of_coloration(modusmaior, modusminor, tempus, prolatio, durs_of_colored_notes)
+    print("Coloration level: " + str(coloration_level))
 
     # Given the note-level of the coloration (e.g., the breve), this note must be imperfect when colored.
     # For example: The colored breve is 2/3 the value of the uncolored breve, thus the former will have a @num = 3 and @numbase = 2.
@@ -482,7 +484,7 @@ def coloration_effect(notes_and_rests_per_voice, modusmaior, modusminor, tempus,
     if coloration_level == "Max":
         for note in colored_notes:
             # Multiplying the duration of the coloration's note-level and larger levels by 2/3
-            if note.name == "maxima":
+            if note.getAttribute('dur').value == "maxima":
                 note.addAttribute('num', '3')
                 note.addAttribute('numbase', '2')
             # For smaller notes, do nothing
@@ -491,7 +493,7 @@ def coloration_effect(notes_and_rests_per_voice, modusmaior, modusminor, tempus,
     elif coloration_level == "L":
         for note in colored_notes:
             # Multiplying the duration of the coloration's note-level and larger levels by 2/3
-            if note.name == "longa" or note.name == "maxima":
+            if note.getAttribute('dur').value == "longa" or note.getAttribute('dur').value == "maxima":
                 note.addAttribute('num', '3')
                 note.addAttribute('numbase', '2')
             # For smaller notes, do nothing
@@ -500,7 +502,7 @@ def coloration_effect(notes_and_rests_per_voice, modusmaior, modusminor, tempus,
     elif coloration_level == "B":
         for note in colored_notes:
             # Multiplying the duration of the coloration's note-level and larger levels by 2/3
-            if note.name == "brevis" or note.name == "longa" or note.name == "maxima":
+            if note.getAttribute('dur').value == "brevis" or note.getAttribute('dur').value == "longa" or note.getAttribute('dur').value == "maxima":
                 note.addAttribute('num', '3')
                 note.addAttribute('numbase', '2')
             # For smaller notes, do nothing
@@ -509,7 +511,7 @@ def coloration_effect(notes_and_rests_per_voice, modusmaior, modusminor, tempus,
     elif coloration_level == "Sb":
         for note in colored_notes:
             # Multiplying the duration of the coloration's note-level and larger levels by 2/3
-            if note.name == "semibrevis" or note.name == "brevis" or note.name == "longa" or note.name == "maxima":
+            if note.getAttribute('dur').value == "semibrevis" or note.getAttribute('dur').value == "brevis" or note.getAttribute('dur').value == "longa" or note.getAttribute('dur').value == "maxima":
                 note.addAttribute('num', '3')
                 note.addAttribute('numbase', '2')
             # For smaller notes, do nothing
