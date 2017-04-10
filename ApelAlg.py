@@ -28,6 +28,12 @@ def get_preceding_element(target_element):
         preceding_element = None
     return preceding_element
 
+def get_preceding_noterest(target_element):
+    preceeding_element = get_preceding_element(target_element)
+    while preceeding_element.name != 'note' and preceeding_element.name != 'rest':
+        preceeding_element = get_preceding_element(preceeding_element)
+    return preceeding_element
+
 # Functions related to dots
 def followed_by_dot(target_element):
     next_element = get_next_element(target_element)
@@ -148,7 +154,7 @@ def modification(counter, start_note, middle_notes, end_note, following_note, sh
         last_uncolored_note = last_middle_note
         # But if it is colored, we need to find the last "uncolored" note, as this is the one that would be altered
         while last_uncolored_note.hasAttribute('colored'):
-            last_uncolored_note = get_preceding_element(last_uncolored_note)
+            last_uncolored_note = get_preceding_noterest(last_uncolored_note)
         # 2 exact breves between the longs
         if counter == 2:
             # Default case
@@ -180,6 +186,7 @@ def modification(counter, start_note, middle_notes, end_note, following_note, sh
                 print("")
         # 5, 8, 11, 14, 17, 20, ... breves between the longs
         else:
+            print(last_uncolored_note)
             # Default case
             if (start_note is not None and start_note.name == 'note' and start_note.getAttribute('dur').value == long_note and not start_note.hasAttribute('quality') and not followed_by_dot(start_note)) and (end_note is not None and end_note.name == 'note' and end_note.getAttribute('dur').value == long_note and not end_note.hasAttribute('quality') and not followed_by_dot(end_note)):
                 # Imperfection a.p.p. 
