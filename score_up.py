@@ -30,7 +30,10 @@ if __name__ == "__main__":
         out_apel = ApelAlg.lining_up(input_quasiscore_doc)
         if args.compare:
             print("\nCOMPARISON RESUTLS - Notes/Rests (with their xml:id and voice number) that don't match with the ground truth\n")
-            ApelAlg.comparison(out_apel, pymei.documentFromFile(args.compare).getMeiDocument())
+            accuracy_results = ApelAlg.comparison(out_apel, pymei.documentFromFile(args.compare).getMeiDocument())
+            print("\nACCURACY:")
+            for i in range (0, len(accuracy_results)):
+                print("Voice # " + str(i) + ":\t" + str(accuracy_results[i]) + " = " + str(float(accuracy_results[i])*100))
         pymei.documentToFile(out_apel, args.output_file)
     else:
         quasiscore = merge.merge_music_section(args.list_of_input_files)
@@ -39,5 +42,7 @@ if __name__ == "__main__":
         pymei.documentToFile(score, args.output_file)
         if args.compare:
             print("\nCOMPARISON RESUTLS - Notes/Rests (with their xml:id and voice number) that don't match with the ground truth\n")
-            ApelAlg.comparison(pymei.documentFromFile(args.output_file).getMeiDocument(), pymei.documentFromFile(args.compare).getMeiDocument())
-        
+            accuracy_results = ApelAlg.comparison(pymei.documentFromFile(args.output_file).getMeiDocument(), pymei.documentFromFile(args.compare).getMeiDocument())
+            print("\nACCURACY:")
+            for i in range (0, len(accuracy_results)):
+                print("Voice # " + str(i) + ":\t" + str(accuracy_results[i]) + " = " + str(float(accuracy_results[i])*100))
