@@ -855,35 +855,43 @@ def lining_up(quasiscore_mensural_doc):
 # Comparison function
 def comparison(out_doc, gt_doc):
 
-    # Getting all the notes and rests contained in the two mei-documents
+    # Getting all the notes and rests contained in the ground truth mensural-mei document
     gt_notes = gt_doc.getElementsByName('note')
     gt_notes.extend(gt_doc.getElementsByName('rest'))
 
-    # Compare the quality values (actual duration) values of these notes (and rests) in both transcriptions
+    # Compare the duration of the notes (and rests) in the ground truth and in the output of the Apel script.
+    # The duration is given by the three attributes: @dur, @num, and @numbase.
     for gt_note in gt_notes:
+        # Gettting the notes from the output of the Apel script that correspond (i.e., share the same @xml:id) to each note in the ground truth
         out_note = out_doc.getElementById(gt_note.id)
-        gt_quality = gt_note.getAttribute('quality')
-        out_quality = out_note.getAttribute('quality')
 
-        if gt_quality is None and out_quality is None:
+        # Getting the @dur, @num, and @numbase attributes for all the ground truth notes (and rests)
+        gtval_dur = gt_note.getAttribute('dur').value
+        try:
+            gtval_num = gt_note.getAttribute('num').value
+        except:
+            gtval_num = 1
+        try:
+            gtval_numbase = gt_note.getAttribute('numbase').value
+        except:
+            gtval_numbase = 1
+
+        # Getting the @dur, @num, and @numbase attributes for all the notes (and rests) in the output file from the Apel script
+        outval_dur = out_note.getAttribute('dur').value
+        try:
+            outval_num = out_note.getAttribute('num').value
+        except:
+            outval_num = 1
+        try:
+            outval_numbase = out_note.getAttribute('numbase').value
+        except:
+            outval_numbase = 1
+
+        # Determine if both notes (ground truth's and Apel's) share the same value (same figure and quality)
+        if (gtval_dur == outval_dur) and (gtval_num == outval_num) and (gtval_numbase == outval_numbase):
             pass
-
-        elif gt_quality is not None and out_quality is None:
-            voice_number = gt_note.getAncestor('staff').getAttribute('n').value
-            print("The note " + gt_note.id + " in voice " + voice_number)
-            print("Has a quality '" + gt_quality.value + "'' in the ground truth file\nthat is NOT PRESENT IN THE OUTPUT FILE\n")
-        
-        elif gt_quality is None and out_quality is not None:
-            voice_number = gt_note.getAncestor('staff').getAttribute('n').value
-            print("The note " + gt_note.id + " in voice " + voice_number)
-            print("HAS A QUALITY '" + out_quality.value + "'' IN THE OUTPUT FILE\nthat is not present in the ground truth\n")
-
-        elif gt_quality.value == out_quality.value:
-            pass
-
         else:
             voice_number = gt_note.getAncestor('staff').getAttribute('n').value
-            print("The note " + gt_note.id + " in voice " + voice_number)
-            print("The QUALITY is DIFFERENT")
-            print("In the ground truth it is: '" + gt_quality.value + "'")
-            print("In the output file it is: '" + out_quality.value + "'\n")
+            print("NOT EQUAL: the " + gt_note.name.upper() + " " + gt_note.id + " in voice " + voice_number)
+            print("In GROUND TRUTH: " + gtval_dur.upper() + ", with " + str(Fraction(int(gtval_numbase), int(gtval_num))) + " x default value")
+            print("In APEL  OUTPUT: " + outval_dur.upper() + ", with " + str(Fraction(int(outval_numbase), int(outval_num))) + " x default value\n")
