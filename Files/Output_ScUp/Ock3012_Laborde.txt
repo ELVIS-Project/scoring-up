@@ -1,0 +1,455 @@
+
+APEL RESUTLS - Warnings with respect to rules in conflict
+
+Voice # 1 results:
+
+Coloration level: None
+
+semibrevis, 2, 2
+semibrevis, 2, 4
+
+minima, 1, 1
+minima, 3/2, 5/2
+semiminima, 1/2, 3
+semibrevis, 2, 5
+minima, 1, 6
+semibrevis, 2, 8
+minima, 1, 9
+minima, 1, 10
+semibrevis, 2, 12
+minima, 1, 13
+semibrevis, 2, 15
+semibrevis, 3, 18
+minima, 1, 19
+minima, 1, 20
+minima, 1, 21
+minima, 3/2, 45/2
+fusa, 1/4, 91/4
+fusa, 1/4, 23
+semiminima, 1/2, 47/2
+semiminima, 1/2, 24
+semibrevis, 2, 26
+minima, 1, 27
+semibrevis, 2, 29
+semibrevis, 2, 31
+semibrevis, 2, 33
+minima, 1, 34
+minima, 1, 35
+semibrevis, 2, 37
+minima, 1, 38
+minima, 1, 39
+minima, 1, 40
+semibrevis, 2, 42
+minima, 1, 43
+minima, 1, 44
+minima, 1, 45
+minima, 1, 46
+semibrevis, 2, 48
+minima, 1, 49
+minima, 1, 50
+minima, 1, 51
+minima, 1, 52
+semibrevis, 2, 54
+minima, 1, 55
+semibrevis, 2, 57
+semibrevis, 2, 59
+semibrevis, 2, 61
+minima, 1, 62
+semibrevis, 2, 64
+minima, 1, 65
+minima, 1, 66
+semibrevis, 2, 68
+minima, 1, 69
+semibrevis, 2, 71
+semibrevis, 2, 73
+semibrevis, 2, 75
+minima, 3/2, 153/2
+semiminima, 1/2, 77
+semibrevis, 2, 79
+
+semibrevis, 2, 2
+semibrevis, 2, 4
+
+minima, 1, 1
+minima, 1, 2
+semibrevis, 2, 4
+minima, 1, 5
+semibrevis, 2, 7
+semibrevis, 2, 9
+minima, 1, 10
+minima, 1, 11
+minima, 1, 12
+semibrevis, 2, 14
+minima, 1, 15
+minima, 1, 16
+minima, 1, 17
+semibrevis, 2, 19
+semibrevis, 2, 21
+semibrevis, 2, 23
+semibrevis, 3, 26
+minima, 1, 27
+minima, 3/2, 57/2
+semiminima, 1/2, 29
+semibrevis, 2, 31
+semibrevis, 2, 33
+semibrevis, 2, 35
+semibrevis, 3, 38
+minima, 1, 39
+semiminima, 1/2, 79/2
+minima, 1, 81/2
+semibrevis, 3, 87/2
+minima, 1, 89/2
+minima, 1, 91/2
+semiminima, 1/2, 46
+semiminima, 1/2, 93/2
+semibrevis, 2, 97/2
+minima, 1, 99/2
+semibrevis, 2, 103/2
+minima, 1, 105/2
+semibrevis, 2, 109/2
+semibrevis, 2, 113/2
+semibrevis, 2, 117/2
+semibrevis, 2, 121/2
+minima, 1, 123/2
+semibrevis, 2, 127/2
+minima, 1, 129/2
+minima, 3/2, 66
+semiminima, 1/2, 133/2
+semiminima, 1/2, 67
+semiminima, 1/2, 135/2
+semibrevis, 2, 139/2
+minima, 1, 141/2
+semibrevis, 2, 145/2
+semibrevis, 2, 149/2
+semibrevis, 2, 153/2
+minima, 1, 155/2
+minima, 3/2, 79
+semiminima, 1/2, 159/2
+minima, 3/2, 81
+semiminima, 1/2, 163/2
+semiminima, 1/2, 82
+semiminima, 1/2, 165/2
+minima, 3/2, 84
+semiminima, 1/2, 169/2
+semibrevis, 2, 173/2
+minima, 3/2, 88
+semiminima, 1/2, 177/2
+semibrevis, 2, 181/2
+semibrevis, 2, 185/2
+minima, 1, 187/2
+minima, 3/2, 95
+semiminima, 1/2, 191/2
+semiminima, 1/2, 96
+semiminima, 1/2, 193/2
+minima, 1, 195/2
+minima, 3/2, 99
+semiminima, 1/2, 199/2
+semiminima, 1/2, 100
+semiminima, 1/2, 201/2
+BAD! THE DIVISION IS NOT AN INTEGER NUMBER - not an integer number of Semibreves!
+[<MeiElement note:m-576>, <MeiElement note:m-616>, <MeiElement note:m-617>, <MeiElement note:m-651>, <MeiElement note:m-652>, <MeiElement note:m-653>, <MeiElement note:m-654>, <MeiElement note:m-673>, <MeiElement rest:m-674>, <MeiElement note:m-675>, <MeiElement note:m-676>, <MeiElement note:m-700>, <MeiElement note:m-701>, <MeiElement note:m-702>, <MeiElement note:m-703>, <MeiElement note:m-705>, <MeiElement note:m-744>, <MeiElement rest:m-745>, <MeiElement note:m-746>, <MeiElement note:m-783>, <MeiElement note:m-784>, <MeiElement note:m-785>, <MeiElement note:m-787>, <MeiElement note:m-817>, <MeiElement rest:m-818>, <MeiElement note:m-819>, <MeiElement note:m-848>, <MeiElement note:m-849>, <MeiElement note:m-850>, <MeiElement note:m-851>, <MeiElement note:m-882>, <MeiElement note:m-883>, <MeiElement note:m-884>, <MeiElement note:m-885>, <MeiElement note:m-886>, <MeiElement note:m-900>, <MeiElement note:m-901>, <MeiElement note:m-902>, <MeiElement note:m-903>, <MeiElement note:m-924>, <MeiElement note:m-925>, <MeiElement note:m-926>, <MeiElement note:m-961>, <MeiElement note:m-963>, <MeiElement note:m-964>, <MeiElement note:m-965>, <MeiElement note:m-999>, <MeiElement note:m-1001>, <MeiElement note:m-1002>, <MeiElement note:m-1003>, <MeiElement note:m-1004>, <MeiElement note:m-1005>, <MeiElement note:m-1024>, <MeiElement rest:m-1025>, <MeiElement note:m-1026>, <MeiElement note:m-1054>, <MeiElement note:m-1055>, <MeiElement note:m-1056>, <MeiElement note:m-1057>, <MeiElement note:m-1058>, <MeiElement note:m-1060>, <MeiElement note:m-1061>, <MeiElement note:m-1092>, <MeiElement note:m-1093>, <MeiElement note:m-1094>, <MeiElement note:m-1095>, <MeiElement note:m-1096>, <MeiElement note:m-1138>, <MeiElement note:m-1139>, <MeiElement note:m-1140>, <MeiElement note:m-1141>, <MeiElement note:m-1168>, <MeiElement note:m-1169>, <MeiElement note:m-1171>, <MeiElement note:m-1173>, <MeiElement note:m-1174>, <MeiElement note:m-1175>, <MeiElement note:m-1177>, <MeiElement note:m-1179>, <MeiElement note:m-1197>]
+Semibreves: 52.75
+Voice # 2 results:
+
+Coloration level: None
+
+semibrevis, 2, 2
+semibrevis, 3, 5
+minima, 1, 6
+minima, 3/2, 15/2
+semiminima, 1/2, 8
+semibrevis, 2, 10
+semibrevis, 2, 12
+semibrevis, 2, 14
+minima, 1, 15
+semibrevis, 2, 17
+minima, 1, 18
+minima, 1, 19
+minima, 1, 20
+semibrevis, 2, 22
+minima, 1, 23
+minima, 1, 24
+minima, 1, 25
+semibrevis, 2, 27
+minima, 1, 28
+semibrevis, 2, 30
+
+minima, 1, 1
+minima, 1, 2
+minima, 1, 3
+semibrevis, 2, 5
+minima, 1, 6
+minima, 1, 7
+minima, 1, 8
+
+semiminima, 1/2, 1/2
+semiminima, 1/2, 1
+semiminima, 1/2, 3/2
+semibrevis, 2, 7/2
+minima, 1, 9/2
+minima, 1, 11/2
+minima, 1, 13/2
+minima, 1, 15/2
+semibrevis, 2, 19/2
+minima, 1, 21/2
+minima, 1, 23/2
+minima, 1, 25/2
+minima, 1, 27/2
+semibrevis, 2, 31/2
+minima, 1, 33/2
+minima, 1, 35/2
+minima, 1, 37/2
+semibrevis, 2, 41/2
+minima, 1, 43/2
+minima, 3/2, 23
+semiminima, 1/2, 47/2
+minima, 1, 49/2
+minima, 1, 51/2
+semibrevis, 3, 57/2
+minima, 1, 59/2
+minima, 1, 61/2
+minima, 1, 63/2
+minima, 1, 65/2
+minima, 3/2, 34
+semiminima, 1/2, 69/2
+minima, 1, 71/2
+minima, 1, 73/2
+minima, 3/2, 38
+semiminima, 1/2, 77/2
+minima, 1, 79/2
+minima, 1, 81/2
+minima, 1, 83/2
+minima, 3/2, 43
+semiminima, 1/2, 87/2
+minima, 1, 89/2
+minima, 1, 91/2
+minima, 1, 93/2
+minima, 1, 95/2
+minima, 3/2, 49
+semiminima, 1/2, 99/2
+minima, 1, 101/2
+minima, 1, 103/2
+semibrevis, 2, 107/2
+
+semibrevis, 2, 2
+minima, 1, 3
+minima, 1, 4
+minima, 1, 5
+minima, 1, 6
+semibrevis, 3, 9
+minima, 1, 10
+minima, 1, 11
+minima, 1, 12
+semibrevis, 2, 14
+minima, 1, 15
+minima, 1, 16
+minima, 1, 17
+minima, 1, 18
+semibrevis, 2, 20
+semibrevis, 3, 23
+minima, 1, 24
+semibrevis, 2, 26
+minima, 1, 27
+minima, 1, 28
+minima, 1, 29
+minima, 1, 30
+semibrevis, 3, 33
+minima, 1, 34
+minima, 1, 35
+minima, 1, 36
+minima, 1, 37
+minima, 3/2, 77/2
+semiminima, 1/2, 39
+minima, 1, 40
+semibrevis, 2, 42
+semibrevis, 3, 45
+semiminima, 1/2, 91/2
+semiminima, 1/2, 46
+minima, 3/2, 95/2
+semiminima, 1/2, 48
+semibrevis, 3, 51
+minima, 1, 52
+minima, 1, 53
+minima, 1, 54
+minima, 1, 55
+minima, 1, 56
+semibrevis, 2, 58
+semibrevis, 2, 60
+
+semibrevis, 2, 2
+minima, 1, 3
+semibrevis, 2, 5
+minima, 1, 6
+semibrevis, 2, 8
+semibrevis, 2, 10
+minima, 1, 11
+minima, 1, 12
+minima, 1, 13
+semibrevis, 2, 15
+semibrevis, 2, 17
+semibrevis, 2, 19
+minima, 1, 20
+minima, 1, 21
+minima, 1, 22
+minima, 1, 23
+minima, 1, 24
+semibrevis, 2, 26
+Voice # 3 results:
+
+Coloration level: None
+
+semibrevis, 2, 2
+
+minima, 1, 1
+semibrevis, 2, 3
+semibrevis, 3, 6
+minima, 1, 7
+semibrevis, 2, 9
+semibrevis, 2, 11
+semibrevis, 2, 13
+semibrevis, 2, 15
+
+semibrevis, 2, 2
+minima, 1, 3
+
+semiminima, 1/2, 1/2
+minima, 1, 3/2
+minima, 1, 5/2
+minima, 1, 7/2
+minima, 1, 9/2
+minima, 1, 11/2
+semibrevis, 2, 15/2
+semibrevis, 2, 19/2
+minima, 1, 21/2
+semibrevis, 3, 27/2
+minima, 3/2, 15
+semiminima, 1/2, 31/2
+minima, 1, 33/2
+minima, 1, 35/2
+minima, 1, 37/2
+semibrevis, 2, 41/2
+semibrevis, 2, 45/2
+minima, 1, 47/2
+minima, 1, 49/2
+minima, 3/2, 26
+semiminima, 1/2, 53/2
+semibrevis, 2, 57/2
+minima, 1, 59/2
+minima, 1, 61/2
+minima, 3/2, 32
+semiminima, 1/2, 65/2
+semibrevis, 2, 69/2
+minima, 1, 71/2
+minima, 1, 73/2
+minima, 1, 75/2
+minima, 1, 77/2
+minima, 1, 79/2
+minima, 1, 81/2
+minima, 1, 83/2
+minima, 1, 85/2
+semibrevis, 2, 89/2
+semibrevis, 2, 93/2
+semibrevis, 2, 97/2
+semibrevis, 2, 101/2
+minima, 1, 103/2
+minima, 1, 105/2
+minima, 1, 107/2
+minima, 1, 109/2
+minima, 1, 111/2
+minima, 1, 113/2
+minima, 1, 115/2
+minima, 1, 117/2
+semibrevis, 2, 121/2
+semibrevis, 2, 125/2
+minima, 1, 127/2
+minima, 1, 129/2
+semibrevis, 3, 135/2
+minima, 1, 137/2
+semibrevis, 2, 141/2
+semibrevis, 2, 145/2
+minima, 1, 147/2
+semibrevis, 2, 151/2
+minima, 1, 153/2
+
+semibrevis, 2, 2
+minima, 1, 3
+
+semiminima, 1/2, 1/2
+semibrevis, 2, 5/2
+semibrevis, 3, 11/2
+minima, 1, 13/2
+minima, 1, 15/2
+minima, 1, 17/2
+minima, 1, 19/2
+minima, 1, 21/2
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+
+
+semibrevis, 2, 2
+minima, 1, 3
+minima, 1, 4
+minima, 1, 5
+minima, 1, 6
+semibrevis, 2, 8
+semibrevis, 2, 10
+semibrevis, 2, 12
+semibrevis, 2, 14
+semibrevis, 2, 16
+
+minima, 1, 1
+minima, 1, 2
+minima, 1, 3
+minima, 3/2, 9/2
+semiminima, 1/2, 5
+semiminima, 1/2, 11/2
+semiminima, 1/2, 6
+semibrevis, 2, 8
+minima, 1, 9
+
+semibrevis, 2, 2
+minima, 1, 3
+semibrevis, 2, 5
+minima, 1, 6
+
+semibrevis, 2, 2
+minima, 1, 3
+minima, 1, 4
+minima, 1, 5
+minima, 1, 6
+minima, 1, 7
+semibrevis, 2, 9
+minima, 1, 10
+minima, 1, 11
+minima, 1, 12
+semibrevis, 2, 14
+
+COMPARISON RESUTLS - Notes/Rests (with their xml:id and voice number) that don't match with the ground truth
+
+NOT EQUAL: the NOTE m-42 in voice 1
+In GROUND TRUTH: BREVIS, with 2/3 x default value
+In APEL  OUTPUT: BREVIS, with 1 x default value
+
+NOT EQUAL: the NOTE m-576 in voice 1
+In GROUND TRUTH: BREVIS, with 2/3 x default value
+In APEL  OUTPUT: BREVIS, with 1 x default value
+
+NOT EQUAL: the NOTE m-849 in voice 1
+In GROUND TRUTH: MINIMA, with 3/2 x default value
+In APEL  OUTPUT: MINIMA, with 1 x default value
+
+NOT EQUAL: the NOTE m-1049 in voice 3
+In GROUND TRUTH: BREVIS, with 2/3 x default value
+In APEL  OUTPUT: BREVIS, with 1 x default value
+
+NOT EQUAL: the NOTE m-1211 in voice 3
+In GROUND TRUTH: BREVIS, with 1 x default value
+In APEL  OUTPUT: BREVIS, with 2/3 x default value
+
+
+ACCURACY:
+Voice # 0:	46/47 = 97.8723404255
+Voice # 1:	1 = 100.0
+Voice # 2:	61/62 = 98.3870967742

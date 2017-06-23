@@ -1,0 +1,394 @@
+
+APEL RESUTLS - Warnings with respect to rules in conflict
+
+Voice # 1 results:
+
+brevis
+semibrevis
+Coloration level: Sb
+
+brevis, 4, 4
+semibrevis, 2, 6
+minima, 1, 7
+minima, 1, 8
+<MeiElement note:m-57>
+
+minima, 1, 1
+
+minima, 1, 1
+minima, 1, 2
+semiminima, 1/2, 5/2
+semiminima, 1/2, 3
+minima, 1, 4
+minima, 1, 5
+<MeiElement note:m-80>
+
+minima, 1, 1
+minima, 1, 2
+minima, 1, 3
+brevis, 4, 7
+semibrevis, 2, 9
+brevis, 4, 13
+semibrevis, 2, 15
+minima, 1, 16
+
+minima, 1, 1
+minima, 1, 2
+
+minima, 1, 1
+
+minima, 1, 1
+
+minima, 1, 1
+
+minima, 1, 1
+minima, 1, 2
+
+minima, 1, 1
+minima, 1, 2
+minima, 1, 3
+
+minima, 1, 1
+minima, 1, 2
+BAD! Not an integer number of Minimas!
+[<MeiElement note:m-213>, <MeiElement rest:m-216>, <MeiElement rest:m-217>, <MeiElement note:m-218>, <MeiElement note:m-237>, <MeiElement note:m-238>, <MeiElement note:m-240>]
+Minimas: 5.5
+
+minima, 1, 1
+
+minima, 1, 1
+
+minima, 1, 1
+
+minima, 1, 1
+minima, 1, 2
+minima, 1, 3
+minima, 1, 4
+minima, 1, 5
+semiminima, 1/2, 11/2
+semiminima, 1/2, 6
+minima, 1, 7
+
+minima, 1, 1
+
+
+minima, 1, 1
+minima, 1, 2
+minima, 1, 3
+
+minima, 1, 1
+
+minima, 1, 1
+
+minima, 1, 1
+
+minima, 1, 1
+
+minima, 1, 1
+minima, 1, 2
+minima, 1, 3
+minima, 1, 4
+minima, 1, 5
+minima, 1, 6
+
+minima, 1, 1
+
+minima, 1, 1
+minima, 1, 2
+minima, 1, 3
+brevis, 4, 7
+semibrevis, 2, 9
+brevis, 4, 13
+semibrevis, 2, 15
+
+minima, 1, 1
+minima, 1, 2
+minima, 1, 3
+minima, 1, 4
+
+minima, 1, 1
+
+minima, 1, 1
+minima, 1, 2
+minima, 1, 3
+semiminima, 1/2, 7/2
+semiminima, 1/2, 4
+minima, 1, 5
+<MeiElement note:m-527>
+
+Voice # 2 results:
+
+brevis
+semibrevis
+Coloration level: Sb
+
+
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+minima, 1, 1
+minima, 1, 2
+
+minima, 1, 1
+
+minima, 1, 1
+minima, 1, 2
+minima, 1, 3
+
+minima, 1, 1
+brevis, 4, 5
+semibrevis, 2, 7
+minima, 1, 8
+minima, 1, 9
+
+minima, 1, 1
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+minima, 1, 1
+minima, 1, 2
+
+minima, 1, 1
+minima, 1, 2
+minima, 1, 3
+
+minima, 1, 1
+minima, 1, 2
+BAD! Not an integer number of Minimas!
+[<MeiElement note:m-221>, <MeiElement rest:m-224>, <MeiElement rest:m-225>, <MeiElement note:m-226>, <MeiElement note:m-245>, <MeiElement note:m-246>, <MeiElement note:m-247>]
+Minimas: 5.5
+
+minima, 1, 1
+
+minima, 1, 1
+minima, 1, 2
+
+minima, 1, 1
+
+minima, 1, 1
+
+minima, 1, 1
+
+minima, 1, 1
+
+minima, 1, 1
+
+minima, 1, 1
+minima, 1, 2
+minima, 1, 3
+
+minima, 1, 1
+brevis, 4, 5
+semibrevis, 2, 7
+minima, 1, 8
+minima, 1, 9
+
+minima, 1, 1
+
+minima, 1, 1
+semibrevis, 2, 3
+semibrevis, 2, 5
+semibrevis, 2, 7
+minima, 1, 8
+minima, 1, 9
+
+minima, 1, 1
+
+minima, 1, 1
+minima, 1, 2
+minima, 1, 3
+
+BAD! Not an integer number of Minimas!
+[<MeiElement note:m-437>, <MeiElement rest:m-455>, <MeiElement rest:m-456>, <MeiElement note:m-457>, <MeiElement note:m-458>]
+Minimas: 3.5
+
+minima, 1, 1
+brevis, 4, 5
+semibrevis, 2, 7
+
+minima, 1, 1
+
+minima, 1, 1
+
+minima, 1, 1
+
+minima, 1, 1
+
+minima, 1, 1
+minima, 1, 2
+
+minima, 1, 1
+Voice # 3 results:
+
+brevis
+semibrevis
+Coloration level: Sb
+
+
+
+
+minima, 1, 1
+
+minima, 1, 1
+minima, 1, 2
+
+minima, 1, 1
+minima, 1, 2
+minima, 1, 3
+brevis, 4, 7
+semibrevis, 2, 9
+brevis, 4, 13
+semibrevis, 2, 15
+
+minima, 1, 1
+
+minima, 1, 1
+minima, 1, 2
+semibrevis, 2, 4
+semibrevis, 2, 6
+semibrevis, 2, 8
+minima, 1, 9
+
+minima, 1, 1
+minima, 1, 2
+
+minima, 1, 1
+minima, 1, 2
+minima, 1, 3
+
+minima, 1, 1
+
+minima, 1, 1
+minima, 1, 2
+
+minima, 1, 1
+
+minima, 1, 1
+
+brevis, 4, 4
+semibrevis, 2, 6
+minima, 1, 7
+
+minima, 1, 1
+minima, 1, 2
+
+minima, 1, 1
+minima, 1, 2
+minima, 1, 3
+
+minima, 1, 1
+brevis, 4, 5
+semibrevis, 2, 7
+
+minima, 1, 1
+
+minima, 1, 1
+semibrevis, 2, 3
+semibrevis, 2, 5
+semibrevis, 2, 7
+minima, 1, 8
+minima, 1, 9
+
+minima, 1, 1
+minima, 1, 2
+minima, 1, 3
+brevis, 4, 7
+semibrevis, 2, 9
+brevis, 4, 13
+semibrevis, 2, 15
+
+minima, 1, 1
+
+minima, 1, 1
+minima, 1, 2
+semibrevis, 2, 4
+semibrevis, 2, 6
+semibrevis, 2, 8
+<MeiElement note:m-499>
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+COMPARISON RESUTLS - Notes/Rests (with their xml:id and voice number) that don't match with the ground truth
+
+NOT EQUAL: the NOTE m-98 in voice 1
+In GROUND TRUTH: SEMIBREVIS, with 1 x default value
+In APEL  OUTPUT: SEMIBREVIS, with 2/3 x default value
+
+NOT EQUAL: the NOTE m-147 in voice 1
+In GROUND TRUTH: SEMIBREVIS, with 2/3 x default value
+In APEL  OUTPUT: SEMIBREVIS, with 1 x default value
+
+NOT EQUAL: the NOTE m-218 in voice 1
+In GROUND TRUTH: MINIMA, with 1 x default value
+In APEL  OUTPUT: MINIMA, with 3/2 x default value
+
+NOT EQUAL: the NOTE m-238 in voice 1
+In GROUND TRUTH: MINIMA, with 2 x default value
+In APEL  OUTPUT: MINIMA, with 1 x default value
+
+NOT EQUAL: the NOTE m-123 in voice 2
+In GROUND TRUTH: SEMIBREVIS, with 2/3 x default value
+In APEL  OUTPUT: SEMIBREVIS, with 1 x default value
+
+NOT EQUAL: the NOTE m-155 in voice 2
+In GROUND TRUTH: MINIMA, with 2 x default value
+In APEL  OUTPUT: MINIMA, with 1 x default value
+
+NOT EQUAL: the NOTE m-226 in voice 2
+In GROUND TRUTH: MINIMA, with 1 x default value
+In APEL  OUTPUT: MINIMA, with 3/2 x default value
+
+NOT EQUAL: the NOTE m-246 in voice 2
+In GROUND TRUTH: MINIMA, with 2 x default value
+In APEL  OUTPUT: MINIMA, with 1 x default value
+
+NOT EQUAL: the NOTE m-331 in voice 2
+In GROUND TRUTH: SEMIBREVIS, with 2/3 x default value
+In APEL  OUTPUT: SEMIBREVIS, with 1 x default value
+
+NOT EQUAL: the NOTE m-369 in voice 2
+In GROUND TRUTH: MINIMA, with 2 x default value
+In APEL  OUTPUT: MINIMA, with 1 x default value
+
+NOT EQUAL: the NOTE m-388 in voice 2
+In GROUND TRUTH: SEMIBREVIS, with 2/3 x default value
+In APEL  OUTPUT: SEMIBREVIS, with 1 x default value
+
+NOT EQUAL: the NOTE m-416 in voice 2
+In GROUND TRUTH: MINIMA, with 2 x default value
+In APEL  OUTPUT: MINIMA, with 1 x default value
+
+NOT EQUAL: the NOTE m-457 in voice 2
+In GROUND TRUTH: MINIMA, with 1 x default value
+In APEL  OUTPUT: MINIMA, with 3/2 x default value
+
+NOT EQUAL: the NOTE m-164 in voice 3
+In GROUND TRUTH: MINIMA, with 2 x default value
+In APEL  OUTPUT: MINIMA, with 1 x default value
+
+NOT EQUAL: the NOTE m-206 in voice 3
+In GROUND TRUTH: SEMIBREVIS, with 2/3 x default value
+In APEL  OUTPUT: SEMIBREVIS, with 1 x default value
+
+NOT EQUAL: the NOTE m-396 in voice 3
+In GROUND TRUTH: SEMIBREVIS, with 2/3 x default value
+In APEL  OUTPUT: SEMIBREVIS, with 1 x default value
+
+NOT EQUAL: the NOTE m-422 in voice 3
+In GROUND TRUTH: MINIMA, with 2 x default value
+In APEL  OUTPUT: MINIMA, with 1 x default value
+
+
+ACCURACY:
+Voice # 0:	95/99 = 95.9595959596
+Voice # 1:	82/91 = 90.1098901099
+Voice # 2:	77/81 = 95.0617283951

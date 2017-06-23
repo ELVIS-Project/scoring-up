@@ -30,6 +30,8 @@ for file in files:
                         long_to_2breveRests = True
                         # First breve-rest
                         rest.getAttribute('dur').setValue('brevis')
+                        rest.removeAttribute('num')
+                        rest.removeAttribute('numbase')
                         # Second breve-rest (with the same attributes)
                         other_breve_rest = MeiElement('rest')
                         other_breve_rest.setAttributes(rest.getAttributes())

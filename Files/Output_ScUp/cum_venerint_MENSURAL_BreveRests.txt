@@ -1,0 +1,593 @@
+
+APEL RESUTLS - Warnings with respect to rules in conflict
+
+Voice # 1 results:
+
+Coloration level: None
+
+
+
+
+minima, 1, 1
+
+
+
+
+
+
+
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+
+
+
+
+
+minima, 1, 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+minima, 1, 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+minima, 1, 1
+
+
+
+
+
+
+
+
+
+
+minima, 1, 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+minima, 1, 1
+
+
+
+brevis, 6, 6
+
+semibrevis, 3, 3
+semibrevis, 2, 5
+minima, 1, 6
+semibrevis, 3, 9
+semibrevis, 3, 12
+semibrevis, 3, 15
+semibrevis, 3, 18
+
+semibrevis, 3, 3
+semibrevis, 3, 6
+
+semibrevis, 2, 2
+minima, 1, 3
+semibrevis, 2, 5
+minima, 1, 6
+brevis, 6, 12
+semibrevis, 2, 14
+minima, 1, 15
+semibrevis, 2, 17
+minima, 1, 18
+brevis, 6, 24
+semibrevis, 3, 27
+semibrevis, 3, 30
+semibrevis, 3, 33
+semibrevis, 3, 36
+semibrevis, 3, 39
+semibrevis, 2, 41
+minima, 1, 42
+brevis, 6, 48
+brevis, 6, 54
+brevis, 6, 60
+brevis, 6, 66
+semibrevis, 3, 69
+semibrevis, 3, 72
+semibrevis, 3, 75
+semibrevis, 3, 78
+brevis, 6, 84
+semibrevis, 3, 87
+semibrevis, 3, 90
+semibrevis, 3, 93
+semibrevis, 3, 96
+brevis, 6, 102
+semibrevis, 3, 105
+semibrevis, 3, 108
+semibrevis, 3, 111
+semibrevis, 3, 114
+semibrevis, 3, 117
+semibrevis, 3, 120
+<MeiElement note:m-345>
+
+semibrevis, 3, 3
+semibrevis, 2, 5
+minima, 1, 6
+
+brevis, 6, 6
+brevis, 6, 12
+brevis, 6, 18
+brevis, 6, 24
+brevis, 6, 30
+<MeiElement note:m-415>
+
+brevis, 6, 6
+semibrevis, 3, 9
+semibrevis, 3, 12
+semibrevis, 3, 15
+semibrevis, 3, 18
+brevis, 6, 24
+semibrevis, 3, 27
+semibrevis, 3, 30
+semibrevis, 3, 33
+semibrevis, 3, 36
+
+brevis, 6, 6
+semibrevis, 3, 9
+semibrevis, 3, 12
+semibrevis, 3, 15
+semibrevis, 3, 18
+brevis, 6, 24
+semibrevis, 3, 27
+semibrevis, 3, 30
+semibrevis, 3, 33
+semibrevis, 3, 36
+brevis, 6, 42
+brevis, 6, 48
+brevis, 6, 54
+brevis, 6, 60
+semibrevis, 3, 63
+semibrevis, 3, 66
+brevis, 6, 72
+brevis, 6, 78
+semibrevis, 3, 81
+semibrevis, 3, 84
+brevis, 6, 90
+brevis, 6, 96
+semibrevis, 3, 99
+semibrevis, 3, 102
+semibrevis, 3, 105
+semibrevis, 3, 108
+brevis, 6, 114
+brevis, 6, 120
+brevis, 6, 126
+semibrevis, 3, 129
+semibrevis, 2, 131
+minima, 1, 132
+semibrevis, 3, 135
+semibrevis, 3, 138
+semibrevis, 3, 141
+semibrevis, 3, 144
+brevis, 6, 150
+brevis, 6, 156
+semibrevis, 3, 159
+semibrevis, 3, 162
+semibrevis, 3, 165
+semibrevis, 2, 167
+minima, 1, 168
+semibrevis, 3, 171
+semibrevis, 3, 174
+brevis, 6, 180
+
+brevis, 6, 6
+semibrevis, 3, 9
+semibrevis, 3, 12
+semibrevis, 3, 15
+semibrevis, 3, 18
+brevis, 6, 24
+brevis, 6, 30
+brevis, 6, 36
+brevis, 6, 42
+semibrevis, 3, 45
+semibrevis, 3, 48
+brevis, 6, 54
+brevis, 6, 60
+
+brevis, 6, 6
+semibrevis, 3, 9
+semibrevis, 3, 12
+semibrevis, 3, 15
+semibrevis, 3, 18
+
+
+brevis, 6, 6
+semibrevis, 3, 9
+semibrevis, 3, 12
+semibrevis, 3, 15
+semibrevis, 3, 18
+semibrevis, 3, 21
+semibrevis, 2, 23
+minima, 1, 24
+brevis, 6, 30
+brevis, 6, 36
+Voice # 2 results:
+
+Coloration level: None
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+brevis, 6, 6
+semibrevis, 3, 9
+semibrevis, 3, 12
+brevis, 6, 18
+brevis, 6, 24
+brevis, 6, 30
+<MeiElement note:m-100>
+
+brevis, 6, 6
+brevis, 6, 12
+brevis, 6, 18
+
+brevis, 6, 6
+brevis, 6, 12
+brevis, 6, 18
+brevis, 6, 24
+
+brevis, 6, 6
+brevis, 6, 12
+
+brevis, 6, 6
+brevis, 6, 12
+
+brevis, 6, 6
+
+brevis, 6, 6
+brevis, 6, 12
+brevis, 6, 18
+brevis, 6, 24
+brevis, 6, 30
+semibrevis, 3, 33
+semibrevis, 3, 36
+
+brevis, 6, 6
+
+brevis, 6, 6
+brevis, 6, 12
+brevis, 6, 18
+
+
+brevis, 6, 6
+semibrevis, 3, 9
+semibrevis, 3, 12
+semibrevis, 3, 15
+semibrevis, 3, 18
+
+brevis, 6, 6
+brevis, 6, 12
+brevis, 6, 18
+
+brevis, 6, 6
+semibrevis, 3, 9
+semibrevis, 3, 12
+semibrevis, 3, 15
+semibrevis, 3, 18
+
+brevis, 6, 6
+
+brevis, 6, 6
+brevis, 6, 12
+brevis, 6, 18
+
+brevis, 6, 6
+
+brevis, 6, 6
+semibrevis, 3, 9
+semibrevis, 3, 12
+semibrevis, 3, 15
+semibrevis, 3, 18
+
+brevis, 6, 6
+brevis, 6, 12
+brevis, 6, 18
+brevis, 6, 24
+brevis, 6, 30
+brevis, 6, 36
+brevis, 6, 42
+semibrevis, 3, 45
+semibrevis, 3, 48
+brevis, 6, 54
+
+brevis, 6, 6
+brevis, 6, 12
+brevis, 6, 18
+brevis, 6, 24
+semibrevis, 3, 27
+semibrevis, 3, 30
+brevis, 6, 36
+
+Voice # 3 results:
+
+Coloration level: None
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+brevis, 6, 6
+brevis, 6, 12
+
+
+
+
+
+
+
+brevis, 6, 6
+brevis, 6, 12
+
+
+
+
+
+
+
+
+
+
+
+brevis, 6, 6
+brevis, 6, 12
+
+
+
+
+
+
+
+brevis, 6, 6
+brevis, 6, 12
+
+
+
+
+
+COMPARISON RESUTLS - Notes/Rests (with their xml:id and voice number) that don't match with the ground truth
+
+NOT EQUAL: the NOTE m-994 in voice 1
+In GROUND TRUTH: LONGA, with 2/3 x default value
+In APEL  OUTPUT: LONGA, with 1 x default value
+
+NOT EQUAL: the NOTE m-1057 in voice 1
+In GROUND TRUTH: BREVIS, with 2 x default value
+In APEL  OUTPUT: BREVIS, with 1 x default value
+
+
+ACCURACY:
+Voice # 0:	149/151 = 98.6754966887
+Voice # 1:	1 = 100.0
+Voice # 2:	1 = 100.0

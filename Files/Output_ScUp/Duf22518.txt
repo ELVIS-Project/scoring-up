@@ -1,0 +1,250 @@
+
+APEL RESUTLS - Warnings with respect to rules in conflict
+
+Voice # 1 results:
+
+Coloration level: None
+
+minima, 1, 1
+minima, 1, 2
+minima, 1, 3
+
+minima, 1, 1
+
+minima, 1, 1
+minima, 1, 2
+
+minima, 1, 1
+
+minima, 1, 1
+
+minima, 1, 1
+minima, 1, 2
+
+minima, 1, 1
+minima, 1, 2
+minima, 1, 3
+
+minima, 1, 1
+
+minima, 1, 1
+
+minima, 1, 1
+minima, 1, 2
+
+minima, 1, 1
+minima, 1, 2
+minima, 1, 3
+minima, 1, 4
+minima, 1, 5
+minima, 1, 6
+minima, 1, 7
+
+minima, 1, 1
+
+minima, 1, 1
+minima, 1, 2
+
+
+minima, 1, 1
+minima, 1, 2
+minima, 1, 3
+minima, 1, 4
+minima, 1, 5
+semiminima, 1/2, 11/2
+semiminima, 1/2, 6
+minima, 1, 7
+minima, 1, 8
+
+semiminima, 1/2, 1/2
+minima, 1, 3/2
+minima, 3/2, 3
+semiminima, 1/2, 7/2
+semiminima, 1/2, 4
+semiminima, 1/2, 9/2
+semiminima, 1/2, 5
+semiminima, 1/2, 11/2
+minima, 1, 13/2
+minima, 1, 15/2
+minima, 1, 17/2
+minima, 3/2, 10
+minima, 1, 11
+minima, 1, 12
+BAD! Not an integer number of Minimas!
+[<MeiElement rest:m-202>, <MeiElement note:m-215>, <MeiElement note:m-216>, <MeiElement note:m-217>, <MeiElement note:m-218>, <MeiElement note:m-219>, <MeiElement note:m-220>, <MeiElement note:m-221>, <MeiElement note:m-237>, <MeiElement note:m-238>, <MeiElement note:m-239>, <MeiElement note:m-240>, <MeiElement note:m-241>, <MeiElement note:m-242>, <MeiElement note:m-262>, <MeiElement note:m-263>, <MeiElement note:m-264>, <MeiElement note:m-265>, <MeiElement note:m-266>, <MeiElement rest:m-267>, <MeiElement note:m-268>, <MeiElement note:m-269>, <MeiElement note:m-288>, <MeiElement note:m-289>, <MeiElement note:m-290>]
+Minimas: 20.5
+
+minima, 1, 1
+
+minima, 1, 1
+minima, 1, 2
+
+minima, 1, 1
+Voice # 2 results:
+
+semibrevis
+Coloration level: Sb
+
+
+
+
+semibrevis, 2, 2
+semibrevis, 2, 4
+semibrevis, 2, 6
+
+
+minima, 1, 1
+
+minima, 1, 1
+minima, 1, 2
+MISTAKE 1 - Impossible to do Imperfection a.p.p. and also Imperfection a.p.a.
+<MeiElement note:m-122>
+None
+
+
+minima, 1, 1
+
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+
+
+minima, 1, 1
+minima, 1, 2
+minima, 1, 3
+minima, 1, 4
+minima, 1, 5
+semiminima, 1/2, 11/2
+semiminima, 1/2, 6
+minima, 1, 7
+minima, 1, 8
+<MeiElement note:m-273>
+WARNING! An imperfection a.p.a. is required, but this imperfect note is followed by a perfect note, this contradicts the fundamental rule: 'A note is perfect before another one of the same kind'.
+The imperfected note is <MeiElement note:m-275> and is followed by the perfect note <MeiElement note:m-294>
+
+
+
+minima, 1, 1
+minima, 1, 2
+minima, 1, 3
+minima, 1, 4
+
+minima, 1, 1
+
+Voice # 3 results:
+
+semibrevis
+Coloration level: Sb
+
+
+
+minima, 1, 1
+
+minima, 1, 1
+minima, 1, 2
+
+minima, 1, 1
+
+minima, 1, 1
+minima, 1, 2
+semibrevis, 2, 4
+semibrevis, 2, 6
+semibrevis, 2, 8
+<MeiElement note:m-92>
+
+minima, 1, 1
+minima, 1, 2
+minima, 1, 3
+minima, 1, 4
+minima, 1, 5
+minima, 1, 6
+semiminima, 1/2, 13/2
+semiminima, 1/2, 7
+minima, 1, 8
+minima, 1, 9
+minima, 1, 10
+minima, 1, 11
+<MeiElement note:m-172>
+
+minima, 1, 1
+
+minima, 1, 1
+minima, 1, 2
+minima, 1, 3
+minima, 1, 4
+minima, 1, 5
+MISTAKE 1 - Impossible to do Imperfection a.p.p. and also Imperfection a.p.a.
+<MeiElement note:m-173>
+None
+
+<MeiElement note:m-196>
+
+
+
+minima, 1, 1
+
+minima, 1, 1
+minima, 1, 2
+
+
+minima, 1, 1
+minima, 1, 2
+minima, 1, 3
+minima, 1, 4
+minima, 1, 5
+minima, 1, 6
+semiminima, 1/2, 13/2
+semiminima, 1/2, 7
+
+
+minima, 1, 1
+
+minima, 1, 1
+minima, 1, 2
+minima, 1, 3
+minima, 1, 4
+
+
+COMPARISON RESUTLS - Notes/Rests (with their xml:id and voice number) that don't match with the ground truth
+
+NOT EQUAL: the NOTE m-269 in voice 1
+In GROUND TRUTH: MINIMA, with 1 x default value
+In APEL  OUTPUT: MINIMA, with 3/2 x default value
+
+NOT EQUAL: the NOTE m-289 in voice 1
+In GROUND TRUTH: MINIMA, with 2 x default value
+In APEL  OUTPUT: MINIMA, with 1 x default value
+
+NOT EQUAL: the NOTE m-122 in voice 2
+In GROUND TRUTH: BREVIS, with 5/6 x default value
+In APEL  OUTPUT: BREVIS, with 1 x default value
+
+NOT EQUAL: the NOTE m-227 in voice 2
+In GROUND TRUTH: SEMIBREVIS, with 1 x default value
+In APEL  OUTPUT: SEMIBREVIS, with 2/3 x default value
+
+NOT EQUAL: the NOTE m-273 in voice 2
+In GROUND TRUTH: MINIMA, with 2 x default value
+In APEL  OUTPUT: MINIMA, with 1 x default value
+
+NOT EQUAL: the NOTE m-275 in voice 2
+In GROUND TRUTH: SEMIBREVIS, with 1 x default value
+In APEL  OUTPUT: SEMIBREVIS, with 2/3 x default value
+
+NOT EQUAL: the NOTE m-128 in voice 3
+In GROUND TRUTH: SEMIBREVIS, with 1 x default value
+In APEL  OUTPUT: SEMIBREVIS, with 2/3 x default value
+
+NOT EQUAL: the NOTE m-172 in voice 3
+In GROUND TRUTH: MINIMA, with 2 x default value
+In APEL  OUTPUT: MINIMA, with 1 x default value
+
+
+ACCURACY:
+Voice # 0:	65/67 = 97.0149253731
+Voice # 1:	19/21 = 90.4761904762
+Voice # 2:	28/29 = 96.5517241379

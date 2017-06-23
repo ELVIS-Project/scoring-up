@@ -1,0 +1,386 @@
+
+APEL RESUTLS - Warnings with respect to rules in conflict
+
+Voice # 1 results:
+
+Coloration level: None
+
+semibrevis, 2, 2
+semibrevis, 2, 4
+semibrevis, 2, 6
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+semibrevis, 2, 4
+
+semibrevis, 2, 2
+semibrevis, 2, 4
+semibrevis, 2, 6
+semibrevis, 2, 8
+semibrevis, 2, 10
+semibrevis, 2, 12
+
+minima, 1, 1
+semibrevis, 3, 4
+minima, 1, 5
+minima, 1, 6
+minima, 1, 7
+
+semibrevis, 2, 2
+semibrevis, 2, 4
+semibrevis, 2, 6
+semibrevis, 2, 8
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+
+minima, 1, 1
+minima, 1, 2
+minima, 1, 3
+
+semibrevis, 2, 2
+semibrevis, 2, 4
+semibrevis, 2, 6
+semibrevis, 2, 8
+semibrevis, 2, 10
+<MeiElement note:m-565>
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+MISTAKE 1 - Impossible to do Imperfection a.p.p. and also Imperfection a.p.a.
+<MeiElement note:m-602>
+None
+
+
+semibrevis, 2, 2
+semibrevis, 2, 4
+
+minima, 1, 1
+semibrevis, 2, 3
+semibrevis, 2, 5
+semibrevis, 2, 7
+minima, 1, 8
+minima, 1, 9
+minima, 1, 10
+semiminima, 1/2, 21/2
+semiminima, 1/2, 11
+minima, 1, 12
+minima, 1, 13
+minima, 1, 14
+minima, 1, 15
+minima, 1, 16
+semiminima, 1/2, 33/2
+semiminima, 1/2, 17
+minima, 1, 18
+minima, 1, 19
+minima, 1, 20
+minima, 1, 21
+minima, 1, 22
+minima, 1, 23
+minima, 1, 24
+minima, 1, 25
+minima, 1, 26
+semiminima, 1/2, 53/2
+semiminima, 1/2, 27
+minima, 1, 28
+minima, 1, 29
+minima, 1, 30
+minima, 1, 31
+
+
+semibrevis, 2, 2
+semibrevis, 2, 4
+semibrevis, 2, 6
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+semibrevis, 2, 4
+semibrevis, 2, 6
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+semibrevis, 2, 4
+semibrevis, 2, 6
+semibrevis, 2, 8
+
+semibrevis, 2, 2
+semibrevis, 2, 4
+
+minima, 1, 1
+semibrevis, 2, 3
+semibrevis, 2, 5
+<MeiElement note:m-1133>
+
+semibrevis, 2, 2
+semibrevis, 2, 4
+semibrevis, 2, 6
+semibrevis, 2, 8
+semibrevis, 2, 10
+
+minima, 1, 1
+semibrevis, 2, 3
+semibrevis, 2, 5
+semibrevis, 2, 7
+semibrevis, 2, 9
+semibrevis, 3, 12
+minima, 1, 13
+semibrevis, 2, 15
+semibrevis, 3, 18
+minima, 1, 19
+semibrevis, 2, 21
+minima, 1, 22
+minima, 1, 23
+minima, 1, 24
+minima, 1, 25
+semibrevis, 2, 27
+semibrevis, 2, 29
+minima, 1, 30
+minima, 1, 31
+Voice # 2 results:
+
+longa
+brevis
+Coloration level: B
+
+
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+semibrevis, 2, 4
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+semibrevis, 2, 4
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+semibrevis, 2, 4
+semibrevis, 2, 6
+semibrevis, 2, 8
+semibrevis, 2, 10
+<MeiElement note:m-422>
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+semibrevis, 2, 4
+
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+semibrevis, 2, 4
+
+semibrevis, 2, 2
+semibrevis, 2, 4
+semibrevis, 2, 6
+semibrevis, 2, 8
+semibrevis, 2, 10
+semibrevis, 2, 12
+semibrevis, 2, 14
+
+semibrevis, 2, 2
+minima, 1, 3
+minima, 1, 4
+semibrevis, 2, 6
+semibrevis, 2, 8
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+semibrevis, 2, 4
+MISTAKE 1 - Impossible to do Imperfection a.p.p. and also Imperfection a.p.a.
+<MeiElement note:m-898>
+None
+
+
+semibrevis, 2, 2
+
+
+
+
+longa, 8, 8
+brevis, 4, 12
+brevis, 4, 16
+brevis, 4, 20
+brevis, 4, 24
+semibrevis, 2, 26
+semibrevis, 2, 28
+semibrevis, 2, 30
+semibrevis, 2, 32
+semibrevis, 2, 34
+minima, 1, 35
+minima, 1, 36
+semibrevis, 2, 38
+semibrevis, 2, 40
+semibrevis, 2, 42
+semibrevis, 2, 44
+semibrevis, 2, 46
+semibrevis, 2, 48
+
+semibrevis, 2, 2
+Voice # 3 results:
+
+longa
+brevis
+Coloration level: B
+
+semibrevis, 2, 2
+semibrevis, 2, 4
+semibrevis, 2, 6
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+semibrevis, 2, 4
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+semibrevis, 2, 4
+semibrevis, 2, 6
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+semibrevis, 2, 4
+
+semibrevis, 2, 2
+
+
+semibrevis, 2, 2
+
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+semibrevis, 2, 4
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+semibrevis, 2, 4
+semibrevis, 2, 6
+semibrevis, 2, 8
+semibrevis, 2, 10
+semibrevis, 2, 12
+semibrevis, 2, 14
+semibrevis, 2, 16
+<MeiElement note:m-810>
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+semibrevis, 2, 4
+semibrevis, 2, 6
+
+semibrevis, 2, 2
+semibrevis, 2, 4
+semibrevis, 2, 6
+semibrevis, 2, 8
+
+semibrevis, 2, 2
+
+
+semibrevis, 2, 2
+semibrevis, 2, 4
+semibrevis, 2, 6
+semibrevis, 2, 8
+
+semibrevis, 2, 2
+semibrevis, 2, 4
+semibrevis, 2, 6
+semibrevis, 2, 8
+longa, 8, 16
+brevis, 4, 20
+brevis, 4, 24
+brevis, 4, 28
+brevis, 4, 32
+semibrevis, 2, 34
+semibrevis, 2, 36
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+semibrevis, 2, 4
+semibrevis, 2, 6
+semibrevis, 2, 8
+semibrevis, 2, 10
+semibrevis, 2, 12
+semibrevis, 2, 14
+WARNING! An imperfection a.p.a. is required, but this imperfect note is followed by a perfect note, this contradicts the fundamental rule: 'A note is perfect before another one of the same kind'.
+The imperfected note is <MeiElement note:m-1296> and is followed by the perfect note <MeiElement note:m-1306>
+
+
+
+COMPARISON RESUTLS - Notes/Rests (with their xml:id and voice number) that don't match with the ground truth
+
+NOT EQUAL: the NOTE m-513 in voice 1
+In GROUND TRUTH: BREVIS, with 1 x default value
+In APEL  OUTPUT: BREVIS, with 2/3 x default value
+
+NOT EQUAL: the NOTE m-565 in voice 1
+In GROUND TRUTH: SEMIBREVIS, with 2 x default value
+In APEL  OUTPUT: SEMIBREVIS, with 1 x default value
+
+NOT EQUAL: the NOTE m-845 in voice 2
+In GROUND TRUTH: LONGA, with 5/6 x default value
+In APEL  OUTPUT: LONGA, with 1 x default value
+
+NOT EQUAL: the NOTE m-1053 in voice 3
+In GROUND TRUTH: BREVIS, with 2/3 x default value
+In APEL  OUTPUT: BREVIS, with 1 x default value
+
+NOT EQUAL: the NOTE m-1219 in voice 3
+In GROUND TRUTH: SEMIBREVIS, with 2 x default value
+In APEL  OUTPUT: SEMIBREVIS, with 1 x default value
+
+
+ACCURACY:
+Voice # 0:	63/64 = 98.4375
+Voice # 1:	84/85 = 98.8235294118
+Voice # 2:	45/46 = 97.8260869565

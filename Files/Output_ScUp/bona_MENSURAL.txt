@@ -1,0 +1,1008 @@
+
+APEL RESUTLS - Warnings with respect to rules in conflict
+
+Voice # 1 results:
+
+Coloration level: None
+
+
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+
+
+minima, 1, 1
+minima, 1, 2
+minima, 1, 3
+
+
+
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+
+
+
+
+
+
+
+minima, 1, 1
+minima, 1, 2
+minima, 1, 3
+
+minima, 1, 1
+
+
+
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+
+
+
+
+
+
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+
+minima, 1, 1
+
+
+
+
+
+minima, 1, 1
+minima, 1, 2
+minima, 1, 3
+
+minima, 1, 1
+
+
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+minima, 1, 1
+minima, 1, 2
+minima, 1, 3
+
+minima, 1, 1
+
+minima, 1, 1
+minima, 1, 2
+minima, 1, 3
+
+minima, 1, 1
+
+
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+
+minima, 1, 1
+
+
+
+
+
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+minima, 1, 1
+minima, 1, 2
+minima, 1, 3
+
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+
+minima, 1, 1
+minima, 1, 2
+minima, 1, 3
+
+minima, 1, 1
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+minima, 1, 1
+
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+minima, 1, 1
+minima, 1, 2
+minima, 1, 3
+minima, 1, 4
+
+minima, 1, 1
+
+
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+
+minima, 1, 1
+minima, 1, 2
+minima, 1, 3
+
+minima, 1, 1
+
+
+
+brevis, 6, 6
+semibrevis, 3, 9
+semibrevis, 3, 12
+semibrevis, 2, 14
+minima, 1, 15
+semibrevis, 2, 17
+minima, 1, 18
+brevis, 6, 24
+
+semibrevis, 3, 3
+semibrevis, 3, 6
+semibrevis, 2, 8
+minima, 1, 9
+semibrevis, 2, 11
+minima, 1, 12
+brevis, 6, 18
+brevis, 6, 24
+semibrevis, 3, 27
+semibrevis, 3, 30
+semibrevis, 2, 32
+minima, 1, 33
+semibrevis, 2, 35
+minima, 1, 36
+semibrevis, 3, 39
+semibrevis, 3, 42
+semibrevis, 2, 44
+minima, 1, 45
+semibrevis, 2, 47
+minima, 1, 48
+brevis, 6, 54
+brevis, 6, 60
+brevis, 6, 66
+semibrevis, 3, 69
+minima, 1, 70
+minima, 1, 71
+minima, 1, 72
+brevis, 6, 78
+semibrevis, 3, 81
+semibrevis, 3, 84
+brevis, 6, 90
+semibrevis, 2, 92
+minima, 1, 93
+semibrevis, 2, 95
+minima, 1, 96
+
+brevis, 6, 6
+semibrevis, 3, 9
+semibrevis, 3, 12
+brevis, 6, 18
+brevis, 6, 24
+brevis, 6, 30
+brevis, 6, 36
+brevis, 6, 42
+minima, 1, 43
+minima, 1, 44
+minima, 1, 45
+semibrevis, 2, 47
+minima, 1, 48
+semibrevis, 3, 51
+semibrevis, 3, 54
+brevis, 6, 60
+brevis, 6, 66
+semibrevis, 2, 68
+minima, 1, 69
+semibrevis, 2, 71
+minima, 1, 72
+brevis, 6, 78
+semibrevis, 3, 81
+semibrevis, 3, 84
+brevis, 6, 90
+brevis, 6, 96
+
+semibrevis, 3, 3
+semibrevis, 3, 6
+brevis, 6, 12
+semibrevis, 2, 14
+minima, 1, 15
+semibrevis, 2, 17
+minima, 1, 18
+brevis, 6, 24
+semibrevis, 2, 26
+minima, 1, 27
+semibrevis, 2, 29
+minima, 1, 30
+semibrevis, 3, 33
+semibrevis, 3, 36
+brevis, 6, 42
+semibrevis, 2, 44
+minima, 1, 45
+semibrevis, 2, 47
+minima, 1, 48
+brevis, 6, 54
+brevis, 6, 60
+brevis, 6, 66
+semibrevis, 2, 68
+minima, 1, 69
+semibrevis, 2, 71
+minima, 1, 72
+
+semibrevis, 3, 3
+semibrevis, 2, 5
+minima, 1, 6
+brevis, 6, 12
+brevis, 6, 18
+semibrevis, 3, 21
+semibrevis, 3, 24
+brevis, 6, 30
+minima, 1, 31
+minima, 1, 32
+minima, 1, 33
+semibrevis, 2, 35
+minima, 1, 36
+brevis, 6, 42
+brevis, 6, 48
+brevis, 6, 54
+semibrevis, 2, 56
+minima, 1, 57
+semibrevis, 2, 59
+minima, 1, 60
+
+semibrevis, 2, 2
+minima, 1, 3
+semibrevis, 2, 5
+minima, 1, 6
+brevis, 6, 12
+brevis, 6, 18
+minima, 1, 19
+minima, 1, 20
+minima, 1, 21
+semibrevis, 2, 23
+minima, 1, 24
+brevis, 6, 30
+minima, 1, 31
+minima, 1, 32
+minima, 1, 33
+semibrevis, 2, 35
+minima, 1, 36
+brevis, 6, 42
+brevis, 6, 48
+brevis, 6, 54
+semibrevis, 2, 56
+minima, 1, 57
+semibrevis, 2, 59
+minima, 1, 60
+
+brevis, 6, 6
+semibrevis, 2, 8
+minima, 1, 9
+semibrevis, 2, 11
+minima, 1, 12
+brevis, 6, 18
+semibrevis, 3, 21
+semibrevis, 2, 23
+minima, 1, 24
+brevis, 6, 30
+brevis, 6, 36
+brevis, 6, 42
+brevis, 6, 48
+semibrevis, 3, 51
+semibrevis, 3, 54
+semibrevis, 2, 56
+minima, 1, 57
+semibrevis, 2, 59
+minima, 1, 60
+semibrevis, 3, 63
+semibrevis, 3, 66
+semibrevis, 2, 68
+minima, 1, 69
+semibrevis, 2, 71
+minima, 1, 72
+semibrevis, 3, 75
+semibrevis, 3, 78
+brevis, 6, 84
+semibrevis, 3, 87
+semibrevis, 2, 89
+minima, 1, 90
+semibrevis, 2, 92
+minima, 1, 93
+semibrevis, 2, 95
+minima, 1, 96
+semibrevis, 3, 99
+semibrevis, 3, 102
+semibrevis, 2, 104
+minima, 1, 105
+semibrevis, 2, 107
+minima, 1, 108
+brevis, 6, 114
+brevis, 6, 120
+semibrevis, 3, 123
+semibrevis, 3, 126
+semibrevis, 2, 128
+minima, 1, 129
+semibrevis, 2, 131
+minima, 1, 132
+brevis, 6, 138
+semibrevis, 2, 140
+minima, 1, 141
+semibrevis, 2, 143
+minima, 1, 144
+semibrevis, 3, 147
+semibrevis, 3, 150
+semibrevis, 2, 152
+minima, 1, 153
+semibrevis, 2, 155
+minima, 1, 156
+semibrevis, 3, 159
+minima, 1, 160
+minima, 1, 161
+minima, 1, 162
+brevis, 6, 168
+semibrevis, 3, 171
+semibrevis, 2, 173
+minima, 1, 174
+semibrevis, 2, 176
+minima, 1, 177
+semibrevis, 2, 179
+minima, 1, 180
+brevis, 6, 186
+brevis, 6, 192
+brevis, 6, 198
+minima, 1, 199
+minima, 1, 200
+minima, 1, 201
+semibrevis, 2, 203
+minima, 1, 204
+brevis, 6, 210
+semibrevis, 2, 212
+minima, 1, 213
+semibrevis, 2, 215
+minima, 1, 216
+semibrevis, 2, 218
+minima, 1, 219
+semibrevis, 2, 221
+minima, 1, 222
+semibrevis, 3, 225
+semibrevis, 2, 227
+minima, 1, 228
+brevis, 6, 234
+semibrevis, 3, 237
+semibrevis, 2, 239
+minima, 1, 240
+semibrevis, 2, 242
+minima, 1, 243
+semibrevis, 2, 245
+minima, 1, 246
+minima, 1, 247
+minima, 1, 248
+minima, 1, 249
+semibrevis, 2, 251
+minima, 1, 252
+brevis, 6, 258
+brevis, 6, 264
+brevis, 6, 270
+semibrevis, 2, 272
+minima, 1, 273
+semibrevis, 2, 275
+minima, 1, 276
+semibrevis, 3, 279
+semibrevis, 3, 282
+semibrevis, 2, 284
+minima, 1, 285
+semibrevis, 2, 287
+minima, 1, 288
+brevis, 6, 294
+semibrevis, 3, 297
+semibrevis, 3, 300
+minima, 1, 301
+minima, 1, 302
+minima, 1, 303
+semibrevis, 2, 305
+minima, 1, 306
+semibrevis, 3, 309
+semibrevis, 3, 312
+Voice # 2 results:
+
+Coloration level: None
+
+
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+
+
+
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+
+minima, 1, 1
+
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+
+
+
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+
+
+
+
+
+
+
+
+minima, 1, 1
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+
+minima, 1, 1
+
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+
+
+
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+minima, 1, 1
+
+
+
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+
+
+
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+
+
+
+
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+
+minima, 1, 1
+
+
+
+brevis, 6, 6
+brevis, 6, 12
+brevis, 6, 18
+semibrevis, 2, 20
+minima, 1, 21
+semibrevis, 2, 23
+minima, 1, 24
+brevis, 6, 30
+semibrevis, 3, 33
+semibrevis, 3, 36
+
+semibrevis, 3, 3
+semibrevis, 3, 6
+semibrevis, 2, 8
+minima, 1, 9
+semibrevis, 2, 11
+minima, 1, 12
+semibrevis, 2, 14
+minima, 1, 15
+semibrevis, 2, 17
+minima, 1, 18
+
+brevis, 6, 6
+
+brevis, 6, 6
+brevis, 6, 12
+
+brevis, 6, 6
+brevis, 6, 12
+
+semibrevis, 3, 3
+semibrevis, 3, 6
+semibrevis, 3, 9
+semibrevis, 3, 12
+semibrevis, 2, 14
+minima, 1, 15
+semibrevis, 2, 17
+minima, 1, 18
+
+semibrevis, 3, 3
+semibrevis, 3, 6
+semibrevis, 2, 8
+minima, 1, 9
+semibrevis, 2, 11
+minima, 1, 12
+brevis, 6, 18
+
+brevis, 6, 6
+
+semibrevis, 3, 3
+semibrevis, 3, 6
+brevis, 6, 12
+
+brevis, 6, 6
+brevis, 6, 12
+
+semibrevis, 3, 3
+semibrevis, 3, 6
+semibrevis, 3, 9
+semibrevis, 3, 12
+semibrevis, 2, 14
+minima, 1, 15
+semibrevis, 2, 17
+minima, 1, 18
+
+semibrevis, 3, 3
+semibrevis, 2, 5
+minima, 1, 6
+semibrevis, 3, 9
+semibrevis, 3, 12
+semibrevis, 2, 14
+minima, 1, 15
+semibrevis, 2, 17
+minima, 1, 18
+
+brevis, 6, 6
+semibrevis, 3, 9
+semibrevis, 3, 12
+semibrevis, 3, 15
+semibrevis, 3, 18
+semibrevis, 2, 20
+minima, 1, 21
+semibrevis, 2, 23
+minima, 1, 24
+
+semibrevis, 3, 3
+semibrevis, 3, 6
+semibrevis, 3, 9
+semibrevis, 3, 12
+brevis, 6, 18
+
+brevis, 6, 6
+semibrevis, 3, 9
+semibrevis, 2, 11
+minima, 1, 12
+semibrevis, 3, 15
+semibrevis, 2, 17
+minima, 1, 18
+semibrevis, 2, 20
+minima, 1, 21
+semibrevis, 2, 23
+minima, 1, 24
+
+semibrevis, 3, 3
+semibrevis, 2, 5
+minima, 1, 6
+semibrevis, 3, 9
+semibrevis, 3, 12
+semibrevis, 2, 14
+minima, 1, 15
+semibrevis, 2, 17
+minima, 1, 18
+
+brevis, 6, 6
+
+
+brevis, 6, 6
+brevis, 6, 12
+semibrevis, 2, 14
+minima, 1, 15
+semibrevis, 2, 17
+minima, 1, 18
+brevis, 6, 24
+semibrevis, 2, 26
+minima, 1, 27
+semibrevis, 2, 29
+minima, 1, 30
+semibrevis, 3, 33
+semibrevis, 3, 36
+brevis, 6, 42
+brevis, 6, 48
+brevis, 6, 54
+
+brevis, 6, 6
+brevis, 6, 12
+brevis, 6, 18
+semibrevis, 3, 21
+semibrevis, 3, 24
+brevis, 6, 30
+semibrevis, 2, 32
+minima, 1, 33
+semibrevis, 2, 35
+minima, 1, 36
+semibrevis, 3, 39
+semibrevis, 2, 41
+minima, 1, 42
+brevis, 6, 48
+brevis, 6, 54
+brevis, 6, 60
+brevis, 6, 66
+semibrevis, 2, 68
+minima, 1, 69
+semibrevis, 2, 71
+minima, 1, 72
+semibrevis, 3, 75
+semibrevis, 3, 78
+
+semibrevis, 3, 3
+semibrevis, 3, 6
+brevis, 6, 12
+semibrevis, 2, 14
+minima, 1, 15
+semibrevis, 2, 17
+minima, 1, 18
+semibrevis, 3, 21
+semibrevis, 3, 24
+brevis, 6, 30
+brevis, 6, 36
+brevis, 6, 42
+brevis, 6, 48
+brevis, 6, 54
+semibrevis, 2, 56
+minima, 1, 57
+semibrevis, 2, 59
+minima, 1, 60
+brevis, 6, 66
+semibrevis, 3, 69
+semibrevis, 2, 71
+minima, 1, 72
+semibrevis, 3, 75
+semibrevis, 3, 78
+Voice # 3 results:
+
+Coloration level: None
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+COMPARISON RESUTLS - Notes/Rests (with their xml:id and voice number) that don't match with the ground truth
+
+NOT EQUAL: the NOTE m-1728 in voice 1
+In GROUND TRUTH: LONGA, with 2/3 x default value
+In APEL  OUTPUT: LONGA, with 1 x default value
+
+NOT EQUAL: the NOTE m-1737 in voice 2
+In GROUND TRUTH: LONGA, with 2/3 x default value
+In APEL  OUTPUT: LONGA, with 1 x default value
+
+
+ACCURACY:
+Voice # 0:	273/274 = 99.6350364964
+Voice # 1:	179/180 = 99.4444444444
+Voice # 2:	1 = 100.0

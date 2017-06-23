@@ -1,0 +1,303 @@
+
+APEL RESUTLS - Warnings with respect to rules in conflict
+
+Voice # 1 results:
+
+brevis
+semibrevis
+minima
+Coloration level: B
+
+
+semibrevis, 2, 2
+
+minima, 1, 1
+semibrevis, 2, 3
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+brevis, 4, 6
+
+semibrevis, 2, 2
+semibrevis, 2, 4
+semibrevis, 2, 6
+semibrevis, 2, 8
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+semibrevis, 2, 4
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+semibrevis, 2, 4
+semibrevis, 2, 6
+
+semibrevis, 2, 2
+brevis, 4, 6
+semibrevis, 2, 8
+semibrevis, 2, 10
+brevis, 4, 14
+
+
+brevis, 4, 4
+brevis, 4, 8
+semibrevis, 2, 10
+minima, 1, 11
+minima, 1, 12
+
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+semibrevis, 2, 4
+semibrevis, 2, 6
+
+minima, 1, 1
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+semibrevis, 2, 4
+
+minima, 1, 1
+semibrevis, 2, 3
+semibrevis, 2, 5
+<MeiElement note:m-467>
+
+semibrevis, 2, 2
+semibrevis, 2, 4
+
+minima, 1, 1
+
+semibrevis, 2, 2
+semibrevis, 2, 4
+
+minima, 1, 1
+semibrevis, 2, 3
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+semibrevis, 3, 5
+minima, 1, 6
+
+semibrevis, 2, 2
+Voice # 2 results:
+
+brevis
+semibrevis
+Coloration level: B
+
+semibrevis, 2, 2
+
+minima, 1, 1
+semibrevis, 2, 3
+
+semibrevis, 2, 2
+brevis, 4, 6
+semibrevis, 2, 8
+semibrevis, 2, 10
+brevis, 4, 14
+semibrevis, 2, 16
+
+minima, 1, 1
+semibrevis, 2, 3
+
+semibrevis, 2, 2
+semibrevis, 2, 4
+semibrevis, 2, 6
+semibrevis, 2, 8
+
+semibrevis, 2, 2
+semibrevis, 2, 4
+semibrevis, 2, 6
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+semibrevis, 2, 4
+
+semibrevis, 2, 2
+semibrevis, 2, 4
+semibrevis, 2, 6
+brevis, 4, 10
+brevis, 4, 14
+brevis, 4, 18
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+semibrevis, 2, 4
+
+semibrevis, 2, 2
+semibrevis, 2, 4
+semibrevis, 2, 6
+semibrevis, 2, 8
+brevis, 4, 12
+brevis, 4, 16
+semibrevis, 2, 18
+semibrevis, 2, 20
+semibrevis, 2, 22
+
+minima, 1, 1
+semibrevis, 2, 3
+semibrevis, 2, 5
+<MeiElement note:m-382>
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+brevis, 4, 6
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+
+minima, 1, 1
+semibrevis, 2, 3
+semibrevis, 2, 5
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+semibrevis, 2, 4
+
+minima, 1, 1
+semibrevis, 2, 3
+semibrevis, 2, 5
+semibrevis, 3, 8
+semiminima, 1/2, 17/2
+semiminima, 1/2, 9
+
+semibrevis, 2, 2
+
+minima, 1, 1
+semibrevis, 2, 3
+semibrevis, 2, 5
+semibrevis, 2, 7
+<MeiElement note:m-569>
+WARNING! An imperfection a.p.a. is required, but this imperfect note is followed by a perfect note, this contradicts the fundamental rule: 'A note is perfect before another one of the same kind'.
+The imperfected note is <MeiElement note:m-571> and is followed by the perfect note <MeiElement note:m-582>
+
+
+Voice # 3 results:
+
+brevis
+longa
+Coloration level: B
+
+semibrevis, 2, 2
+
+minima, 1, 1
+semibrevis, 2, 3
+semibrevis, 3, 6
+semiminima, 1/2, 13/2
+semiminima, 1/2, 7
+semibrevis, 2, 9
+
+semibrevis, 2, 2
+brevis, 4, 6
+brevis, 4, 10
+brevis, 4, 14
+semibrevis, 2, 16
+
+minima, 1, 1
+semibrevis, 2, 3
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+
+minima, 1, 1
+semibrevis, 2, 3
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+semibrevis, 2, 4
+semibrevis, 2, 6
+semibrevis, 3, 9
+minima, 1, 10
+semibrevis, 2, 12
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+
+minima, 1, 1
+semibrevis, 2, 3
+semibrevis, 3, 6
+minima, 1, 7
+semibrevis, 2, 9
+
+semibrevis, 2, 2
+
+semibrevis, 3, 3
+minima, 1, 4
+semibrevis, 2, 6
+semibrevis, 2, 8
+
+semibrevis, 2, 2
+semibrevis, 2, 4
+semibrevis, 2, 6
+semibrevis, 2, 8
+
+minima, 1, 1
+semibrevis, 2, 3
+minima, 1, 4
+semibrevis, 2, 6
+minima, 1, 7
+minima, 1, 8
+minima, 1, 9
+longa, 8, 17
+brevis, 4, 21
+
+
+semibrevis, 2, 2
+
+minima, 1, 1
+semibrevis, 2, 3
+semibrevis, 2, 5
+
+semibrevis, 2, 2
+
+minima, 1, 1
+semibrevis, 2, 3
+semibrevis, 3, 6
+semiminima, 1/2, 13/2
+semiminima, 1/2, 7
+semibrevis, 2, 9
+semibrevis, 2, 11
+
+semibrevis, 2, 2
+semibrevis, 2, 4
+semibrevis, 2, 6
+semibrevis, 2, 8
+semibrevis, 2, 10
+minima, 1, 11
+minima, 1, 12
+
+semibrevis, 2, 2
+
+COMPARISON RESUTLS - Notes/Rests (with their xml:id and voice number) that don't match with the ground truth
+
+
+ACCURACY:
+Voice # 0:	1 = 100.0
+Voice # 1:	1 = 100.0
+Voice # 2:	1 = 100.0

@@ -1,0 +1,345 @@
+
+APEL RESUTLS - Warnings with respect to rules in conflict
+
+Voice # 1 results:
+
+brevis
+semibrevis
+minima
+Coloration level: B
+
+
+semibrevis, 2, 2
+
+minima, 1, 1
+semibrevis, 2, 3
+brevis, 4, 7
+semibrevis, 2, 9
+semibrevis, 2, 11
+brevis, 4, 15
+
+semibrevis, 2, 2
+semibrevis, 2, 4
+semibrevis, 2, 6
+semibrevis, 2, 8
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+semibrevis, 2, 4
+
+
+semibrevis, 2, 2
+semibrevis, 2, 4
+semibrevis, 2, 6
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+semibrevis, 2, 4
+
+
+brevis, 4, 4
+brevis, 4, 8
+semibrevis, 2, 10
+minima, 1, 11
+minima, 1, 12
+brevis, 4, 16
+<MeiElement rest:m-281>
+MISTAKE 2 - Imperfections a.p.p. and a.p.a. are impossible - Alteration is also impossible
+<MeiElement rest:m-281>
+<MeiElement note:m-341>
+
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+semibrevis, 2, 4
+semibrevis, 2, 6
+
+minima, 1, 1
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+semibrevis, 2, 4
+minima, 1, 5
+minima, 1, 6
+semibrevis, 2, 8
+semibrevis, 2, 10
+<MeiElement note:m-462>
+
+semibrevis, 2, 2
+WARNING! An imperfection a.p.a. is required, but this imperfect note is followed by a perfect note, this contradicts the fundamental rule: 'A note is perfect before another one of the same kind'.
+The imperfected note is <MeiElement note:m-476> and is followed by the perfect note <MeiElement note:m-490>
+
+
+
+semibrevis, 2, 2
+semibrevis, 2, 4
+
+minima, 1, 1
+semibrevis, 2, 3
+
+semibrevis, 2, 2
+semibrevis, 2, 4
+
+
+semibrevis, 2, 2
+Voice # 2 results:
+
+brevis
+semibrevis
+Coloration level: B
+
+semibrevis, 2, 2
+
+minima, 1, 1
+semibrevis, 2, 3
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+
+minima, 1, 1
+semibrevis, 2, 3
+
+semibrevis, 2, 2
+semibrevis, 2, 4
+semibrevis, 2, 6
+semibrevis, 2, 8
+
+semibrevis, 2, 2
+semibrevis, 2, 4
+semibrevis, 2, 6
+semibrevis, 2, 8
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+semibrevis, 2, 4
+
+semibrevis, 2, 2
+semibrevis, 2, 4
+semibrevis, 2, 6
+brevis, 4, 10
+brevis, 4, 14
+brevis, 4, 18
+brevis, 4, 22
+semibrevis, 3, 25
+semibrevis, 2, 27
+semibrevis, 2, 29
+BAD! THE DIVISION IS NOT AN INTEGER NUMBER - not an integer number of Semibreves!
+[<MeiElement note:m-216>, <MeiElement note:m-229>, <MeiElement note:m-230>, <MeiElement note:m-231>, <MeiElement note:m-243>, <MeiElement note:m-244>, <MeiElement note:m-259>, <MeiElement note:m-271>, <MeiElement note:m-272>, <MeiElement note:m-284>, <MeiElement note:m-285>, <MeiElement note:m-300>]
+Semibreves: 14.5
+
+semibrevis, 2, 2
+semibrevis, 2, 4
+semibrevis, 2, 6
+semibrevis, 2, 8
+brevis, 4, 12
+brevis, 4, 16
+semibrevis, 2, 18
+semibrevis, 2, 20
+semibrevis, 2, 22
+
+minima, 1, 1
+semibrevis, 2, 3
+semibrevis, 2, 5
+<MeiElement note:m-376>
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+semibrevis, 2, 4
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+
+minima, 1, 1
+semibrevis, 2, 3
+semibrevis, 2, 5
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+semibrevis, 2, 4
+
+minima, 1, 1
+semibrevis, 2, 3
+semibrevis, 2, 5
+semibrevis, 2, 7
+minima, 1, 8
+minima, 1, 9
+
+semibrevis, 2, 2
+minima, 1, 3
+minima, 1, 4
+semibrevis, 2, 6
+semibrevis, 2, 8
+semibrevis, 2, 10
+<MeiElement note:m-560>
+WARNING! An imperfection a.p.a. is required, but this imperfect note is followed by a perfect note, this contradicts the fundamental rule: 'A note is perfect before another one of the same kind'.
+The imperfected note is <MeiElement note:m-562> and is followed by the perfect note <MeiElement note:m-573>
+
+
+Voice # 3 results:
+
+brevis
+longa
+Coloration level: B
+
+semibrevis, 2, 2
+
+minima, 1, 1
+semibrevis, 2, 3
+semibrevis, 3, 6
+semiminima, 1/2, 13/2
+semiminima, 1/2, 7
+semibrevis, 2, 9
+
+semibrevis, 2, 2
+brevis, 4, 6
+brevis, 4, 10
+brevis, 4, 14
+semibrevis, 2, 16
+
+minima, 1, 1
+semibrevis, 2, 3
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+
+minima, 1, 1
+semibrevis, 2, 3
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+semibrevis, 2, 4
+semibrevis, 2, 6
+semibrevis, 3, 9
+minima, 1, 10
+semibrevis, 2, 12
+
+semibrevis, 2, 2
+semibrevis, 2, 4
+
+semibrevis, 2, 2
+
+minima, 1, 1
+semibrevis, 2, 3
+semibrevis, 3, 6
+minima, 1, 7
+semibrevis, 2, 9
+
+semibrevis, 2, 2
+
+semibrevis, 3, 3
+minima, 1, 4
+semibrevis, 2, 6
+semibrevis, 2, 8
+
+semibrevis, 2, 2
+semibrevis, 2, 4
+semibrevis, 2, 6
+semibrevis, 2, 8
+
+minima, 1, 1
+semibrevis, 2, 3
+minima, 1, 4
+semibrevis, 2, 6
+minima, 1, 7
+minima, 1, 8
+minima, 1, 9
+longa, 8, 17
+brevis, 4, 21
+
+
+semibrevis, 2, 2
+
+minima, 1, 1
+semibrevis, 2, 3
+semibrevis, 2, 5
+
+semibrevis, 2, 2
+
+minima, 1, 1
+semibrevis, 2, 3
+semibrevis, 3, 6
+semiminima, 1/2, 13/2
+semiminima, 1/2, 7
+semibrevis, 2, 9
+semibrevis, 2, 11
+
+semibrevis, 2, 2
+semibrevis, 2, 4
+semibrevis, 2, 6
+semibrevis, 2, 8
+semibrevis, 2, 10
+minima, 1, 11
+minima, 1, 12
+
+semibrevis, 2, 2
+
+COMPARISON RESUTLS - Notes/Rests (with their xml:id and voice number) that don't match with the ground truth
+
+NOT EQUAL: the NOTE m-328 in voice 1
+In GROUND TRUTH: BREVIS, with 1 x default value
+In APEL  OUTPUT: BREVIS, with 2/3 x default value
+
+NOT EQUAL: the NOTE m-522 in voice 1
+In GROUND TRUTH: BREVIS, with 2/3 x default value
+In APEL  OUTPUT: BREVIS, with 1 x default value
+
+NOT EQUAL: the NOTE m-537 in voice 1
+In GROUND TRUTH: SEMIBREVIS, with 1 x default value
+In APEL  OUTPUT: SEMIBREVIS, with 2 x default value
+
+NOT EQUAL: the NOTE m-539 in voice 1
+In GROUND TRUTH: BREVIS, with 2/3 x default value
+In APEL  OUTPUT: BREVIS, with 1 x default value
+
+NOT EQUAL: the NOTE m-272 in voice 2
+In GROUND TRUTH: SEMIBREVIS, with 1 x default value
+In APEL  OUTPUT: SEMIBREVIS, with 3/2 x default value
+
+NOT EQUAL: the NOTE m-285 in voice 2
+In GROUND TRUTH: SEMIBREVIS, with 2 x default value
+In APEL  OUTPUT: SEMIBREVIS, with 1 x default value
+
+NOT EQUAL: the NOTE m-234 in voice 3
+In GROUND TRUTH: BREVIS, with 2/3 x default value
+In APEL  OUTPUT: BREVIS, with 1 x default value
+
+NOT EQUAL: the NOTE m-248 in voice 3
+In GROUND TRUTH: SEMIBREVIS, with 1 x default value
+In APEL  OUTPUT: SEMIBREVIS, with 2 x default value
+
+NOT EQUAL: the NOTE m-249 in voice 3
+In GROUND TRUTH: BREVIS, with 2/3 x default value
+In APEL  OUTPUT: BREVIS, with 1 x default value
+
+
+ACCURACY:
+Voice # 0:	35/37 = 94.5945945946
+Voice # 1:	81/83 = 97.5903614458
+Voice # 2:	86/89 = 96.6292134831
