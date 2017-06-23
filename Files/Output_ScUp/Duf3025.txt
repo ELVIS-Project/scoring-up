@@ -352,7 +352,7 @@ semibrevis, 2, 8
 semibrevis, 2, 10
 semibrevis, 2, 12
 semibrevis, 2, 14
-WARNING! An imperfection a.p.a. is required, but this imperfect note is followed by a perfect note, this contradicts the fundamental rule: 'A note is perfect before another one of the same kind'.
+WARNING 1! An imperfection a.p.a. is required, but this imperfect note is followed by a perfect note, this contradicts the fundamental rule: 'A note is perfect before another one of the same kind'.
 The imperfected note is <MeiElement note:m-1296> and is followed by the perfect note <MeiElement note:m-1306>
 
 
@@ -371,16 +371,8 @@ NOT EQUAL: the NOTE m-845 in voice 2
 In GROUND TRUTH: LONGA, with 5/6 x default value
 In APEL  OUTPUT: LONGA, with 1 x default value
 
-NOT EQUAL: the NOTE m-1053 in voice 3
-In GROUND TRUTH: BREVIS, with 2/3 x default value
-In APEL  OUTPUT: BREVIS, with 1 x default value
-
-NOT EQUAL: the NOTE m-1219 in voice 3
-In GROUND TRUTH: SEMIBREVIS, with 2 x default value
-In APEL  OUTPUT: SEMIBREVIS, with 1 x default value
-
 
 ACCURACY:
 Voice # 0:	63/64 = 98.4375
 Voice # 1:	84/85 = 98.8235294118
-Voice # 2:	45/46 = 97.8260869565
+Voice # 2:	1 = 100.0

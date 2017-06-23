@@ -56,7 +56,7 @@
 					<section xml:id="m-38">
 						<staff xml:id="m-40" n="1">
 							<layer xml:id="m-41" n="1">
-								<note xml:id="m-42" dur="brevis" dur.ges="2048p" oct="5" pname="c">
+								<note xml:id="m-42" dur="brevis" dur.ges="2048p" oct="5" pname="c" quality="i" num="3" numbase="2">
 									<verse xml:id="m-44" n="1">
 										<syl xml:id="m-45" wordpos="i">Ma</syl>
 									</verse>
@@ -353,7 +353,7 @@
 								</note>
 								<dot xml:id="m-0a2c4984-5b8c-480d-a73c-cf4af08d7e4b" form="aug" />
 								<note xml:id="m-574" dur="semiminima" dur.ges="256p" oct="5" pname="f" />
-								<note xml:id="m-575" dur="semibrevis" dur.ges="1024p" oct="5" pname="d" />
+								<note xml:id="m-575" dur="semibrevis" dur.ges="1024p" oct="5" pname="d" quality="a" num="1" numbase="2" />
 								<note xml:id="m-576" dur="brevis" dur.ges="2048p" oct="5" pname="e">
 									<verse xml:id="m-580" n="2">
 										<syl xml:id="m-581" wordpos="i">-e</syl>

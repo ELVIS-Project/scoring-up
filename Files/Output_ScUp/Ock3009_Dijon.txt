@@ -50,7 +50,7 @@ minima, 1, 11
 minima, 1, 12
 brevis, 4, 16
 <MeiElement rest:m-281>
-MISTAKE 2 - Imperfections a.p.p. and a.p.a. are impossible - Alteration is also impossible
+MISTAKE 3n + 2 - Imperfections a.p.p. and a.p.a. are impossible - Alteration is also impossible
 <MeiElement rest:m-281>
 <MeiElement note:m-341>
 
@@ -78,7 +78,7 @@ semibrevis, 2, 10
 <MeiElement note:m-462>
 
 semibrevis, 2, 2
-WARNING! An imperfection a.p.a. is required, but this imperfect note is followed by a perfect note, this contradicts the fundamental rule: 'A note is perfect before another one of the same kind'.
+WARNING 1! An imperfection a.p.a. is required, but this imperfect note is followed by a perfect note, this contradicts the fundamental rule: 'A note is perfect before another one of the same kind'.
 The imperfected note is <MeiElement note:m-476> and is followed by the perfect note <MeiElement note:m-490>
 
 
@@ -192,9 +192,6 @@ semibrevis, 2, 6
 semibrevis, 2, 8
 semibrevis, 2, 10
 <MeiElement note:m-560>
-WARNING! An imperfection a.p.a. is required, but this imperfect note is followed by a perfect note, this contradicts the fundamental rule: 'A note is perfect before another one of the same kind'.
-The imperfected note is <MeiElement note:m-562> and is followed by the perfect note <MeiElement note:m-573>
-
 
 Voice # 3 results:
 
@@ -326,6 +323,14 @@ NOT EQUAL: the NOTE m-285 in voice 2
 In GROUND TRUTH: SEMIBREVIS, with 2 x default value
 In APEL  OUTPUT: SEMIBREVIS, with 1 x default value
 
+NOT EQUAL: the NOTE m-526 in voice 2
+In GROUND TRUTH: BREVIS, with 2/3 x default value
+In APEL  OUTPUT: BREVIS, with 1 x default value
+
+NOT EQUAL: the NOTE m-562 in voice 2
+In GROUND TRUTH: BREVIS, with 2/3 x default value
+In APEL  OUTPUT: BREVIS, with 1 x default value
+
 NOT EQUAL: the NOTE m-234 in voice 3
 In GROUND TRUTH: BREVIS, with 2/3 x default value
 In APEL  OUTPUT: BREVIS, with 1 x default value
@@ -334,12 +339,12 @@ NOT EQUAL: the NOTE m-248 in voice 3
 In GROUND TRUTH: SEMIBREVIS, with 1 x default value
 In APEL  OUTPUT: SEMIBREVIS, with 2 x default value
 
-NOT EQUAL: the NOTE m-249 in voice 3
-In GROUND TRUTH: BREVIS, with 2/3 x default value
-In APEL  OUTPUT: BREVIS, with 1 x default value
+NOT EQUAL: the NOTE m-277 in voice 3
+In GROUND TRUTH: SEMIBREVIS, with 1 x default value
+In APEL  OUTPUT: SEMIBREVIS, with 2 x default value
 
 
 ACCURACY:
 Voice # 0:	35/37 = 94.5945945946
-Voice # 1:	81/83 = 97.5903614458
+Voice # 1:	79/83 = 95.1807228916
 Voice # 2:	86/89 = 96.6292134831

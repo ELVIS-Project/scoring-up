@@ -515,18 +515,10 @@ semibrevis, 2, 37/2
 
 COMPARISON RESUTLS - Notes/Rests (with their xml:id and voice number) that don't match with the ground truth
 
-NOT EQUAL: the NOTE m-117 in voice 3
-In GROUND TRUTH: BREVIS, with 2/3 x default value
-In APEL  OUTPUT: BREVIS, with 1 x default value
-
-NOT EQUAL: the NOTE m-200 in voice 3
-In GROUND TRUTH: SEMIBREVIS, with 2 x default value
-In APEL  OUTPUT: SEMIBREVIS, with 1 x default value
-
 
 ACCURACY:
 Voice # 0:	1 = 100.0
 Voice # 1:	1 = 100.0
-Voice # 2:	28/29 = 96.5517241379
+Voice # 2:	1 = 100.0
 Voice # 3:	1 = 100.0
 Voice # 4:	1 = 100.0

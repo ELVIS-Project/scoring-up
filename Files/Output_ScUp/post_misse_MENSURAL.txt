@@ -300,7 +300,7 @@ brevis, 4, 8
 
 
 brevis, 4, 4
-WARNING! An imperfection a.p.a. is required, but this imperfect note is followed by a perfect note, this contradicts the fundamental rule: 'A note is perfect before another one of the same kind'.
+WARNING 1! An imperfection a.p.a. is required, but this imperfect note is followed by a perfect note, this contradicts the fundamental rule: 'A note is perfect before another one of the same kind'.
 The imperfected note is <MeiElement note:m-309> and is followed by the perfect note <MeiElement note:m-340>
 
 
@@ -328,7 +328,7 @@ brevis, 4, 8
 
 
 brevis, 4, 4
-WARNING! An imperfection a.p.a. is required, but this imperfect note is followed by a perfect note, this contradicts the fundamental rule: 'A note is perfect before another one of the same kind'.
+WARNING 1! An imperfection a.p.a. is required, but this imperfect note is followed by a perfect note, this contradicts the fundamental rule: 'A note is perfect before another one of the same kind'.
 The imperfected note is <MeiElement note:m-855> and is followed by the perfect note <MeiElement note:m-887>
 
 
@@ -356,7 +356,7 @@ brevis, 4, 8
 
 
 brevis, 4, 4
-WARNING! An imperfection a.p.a. is required, but this imperfect note is followed by a perfect note, this contradicts the fundamental rule: 'A note is perfect before another one of the same kind'.
+WARNING 1! An imperfection a.p.a. is required, but this imperfect note is followed by a perfect note, this contradicts the fundamental rule: 'A note is perfect before another one of the same kind'.
 The imperfected note is <MeiElement note:m-1391> and is followed by the perfect note <MeiElement note:m-1425>
 
 
@@ -384,7 +384,7 @@ brevis, 4, 8
 
 
 brevis, 4, 4
-WARNING! An imperfection a.p.a. is required, but this imperfect note is followed by a perfect note, this contradicts the fundamental rule: 'A note is perfect before another one of the same kind'.
+WARNING 1! An imperfection a.p.a. is required, but this imperfect note is followed by a perfect note, this contradicts the fundamental rule: 'A note is perfect before another one of the same kind'.
 The imperfected note is <MeiElement note:m-1918> and is followed by the perfect note <MeiElement note:m-1947>
 
 

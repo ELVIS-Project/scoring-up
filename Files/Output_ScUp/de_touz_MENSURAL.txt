@@ -341,31 +341,31 @@ semibrevis, 2, 74
 minima, 1, 75
 semibrevis, 2, 77
 minima, 1, 78
-brevis, 6, 84
+brevis, 4, 82
+semibrevis, 2, 84
 semibrevis, 2, 86
 semibrevis, 2, 88
 semibrevis, 2, 90
-semibrevis, 2, 92
-minima, 1, 93
-minima, 1, 94
+minima, 1, 91
+minima, 1, 92
+semibrevis, 2, 94
 semibrevis, 2, 96
 semibrevis, 2, 98
-semibrevis, 2, 100
-semibrevis, 2, 102
-brevis, 6, 108
+semibrevis, 4, 102
+brevis, 4, 106
+minima, 1, 107
+minima, 1, 108
 minima, 1, 109
 minima, 1, 110
-minima, 1, 111
-minima, 1, 112
+semibrevis, 2, 112
 semibrevis, 2, 114
-semibrevis, 2, 116
+minima, 1, 115
+minima, 1, 116
 minima, 1, 117
 minima, 1, 118
-minima, 1, 119
-minima, 1, 120
+semibrevis, 2, 120
 semibrevis, 2, 122
-semibrevis, 2, 124
-semibrevis, 2, 126
+semibrevis, 4, 126
 brevis, 4, 130
 semibrevis, 2, 132
 semibrevis, 2, 134
@@ -402,17 +402,17 @@ semibrevis, 2, 74
 minima, 1, 75
 semibrevis, 2, 77
 minima, 1, 78
-brevis, 6, 84
+brevis, 4, 82
+semibrevis, 2, 84
 semibrevis, 2, 86
 semibrevis, 2, 88
 semibrevis, 2, 90
-semibrevis, 2, 92
-minima, 1, 93
-minima, 1, 94
+minima, 1, 91
+minima, 1, 92
+semibrevis, 2, 94
 semibrevis, 2, 96
 semibrevis, 2, 98
-semibrevis, 2, 100
-semibrevis, 2, 102
+semibrevis, 4, 102
 brevis, 6, 108
 minima, 1, 109
 minima, 1, 110
@@ -523,17 +523,17 @@ semibrevis, 2, 74
 minima, 1, 75
 semibrevis, 2, 77
 minima, 1, 78
-brevis, 6, 84
+brevis, 4, 82
+semibrevis, 2, 84
 semibrevis, 2, 86
 semibrevis, 2, 88
 semibrevis, 2, 90
-semibrevis, 2, 92
-minima, 1, 93
-minima, 1, 94
+minima, 1, 91
+minima, 1, 92
+semibrevis, 2, 94
 semibrevis, 2, 96
 semibrevis, 2, 98
-semibrevis, 2, 100
-semibrevis, 2, 102
+semibrevis, 4, 102
 brevis, 6, 108
 minima, 1, 109
 minima, 1, 110
@@ -584,31 +584,31 @@ semibrevis, 2, 74
 minima, 1, 75
 semibrevis, 2, 77
 minima, 1, 78
-brevis, 6, 84
+brevis, 4, 82
+semibrevis, 2, 84
 semibrevis, 2, 86
 semibrevis, 2, 88
 semibrevis, 2, 90
-semibrevis, 2, 92
-minima, 1, 93
-minima, 1, 94
+minima, 1, 91
+minima, 1, 92
+semibrevis, 2, 94
 semibrevis, 2, 96
 semibrevis, 2, 98
-semibrevis, 2, 100
-semibrevis, 2, 102
-brevis, 6, 108
+semibrevis, 4, 102
+brevis, 4, 106
+minima, 1, 107
+minima, 1, 108
 minima, 1, 109
 minima, 1, 110
-minima, 1, 111
-minima, 1, 112
+semibrevis, 2, 112
 semibrevis, 2, 114
-semibrevis, 2, 116
+minima, 1, 115
+minima, 1, 116
 minima, 1, 117
 minima, 1, 118
-minima, 1, 119
-minima, 1, 120
+semibrevis, 2, 120
 semibrevis, 2, 122
-semibrevis, 2, 124
-semibrevis, 2, 126
+semibrevis, 4, 126
 brevis, 6, 132
 semibrevis, 2, 134
 minima, 1, 135
@@ -1047,53 +1047,69 @@ brevis, 6, 12
 
 COMPARISON RESUTLS - Notes/Rests (with their xml:id and voice number) that don't match with the ground truth
 
-NOT EQUAL: the NOTE m-178 in voice 1
-In GROUND TRUTH: BREVIS, with 2/3 x default value
-In APEL  OUTPUT: BREVIS, with 1 x default value
+NOT EQUAL: the NOTE m-216 in voice 1
+In GROUND TRUTH: BREVIS, with 1 x default value
+In APEL  OUTPUT: BREVIS, with 2/3 x default value
 
-NOT EQUAL: the NOTE m-215 in voice 1
-In GROUND TRUTH: SEMIBREVIS, with 2 x default value
-In APEL  OUTPUT: SEMIBREVIS, with 1 x default value
+NOT EQUAL: the NOTE m-267 in voice 1
+In GROUND TRUTH: SEMIBREVIS, with 1 x default value
+In APEL  OUTPUT: SEMIBREVIS, with 2 x default value
 
-NOT EQUAL: the NOTE m-500 in voice 1
-In GROUND TRUTH: BREVIS, with 2/3 x default value
-In APEL  OUTPUT: BREVIS, with 1 x default value
+NOT EQUAL: the NOTE m-1524 in voice 1
+In GROUND TRUTH: BREVIS, with 1 x default value
+In APEL  OUTPUT: BREVIS, with 2/3 x default value
 
-NOT EQUAL: the NOTE m-541 in voice 1
-In GROUND TRUTH: SEMIBREVIS, with 2 x default value
-In APEL  OUTPUT: SEMIBREVIS, with 1 x default value
-
-NOT EQUAL: the NOTE m-1149 in voice 1
-In GROUND TRUTH: BREVIS, with 2/3 x default value
-In APEL  OUTPUT: BREVIS, with 1 x default value
-
-NOT EQUAL: the NOTE m-1194 in voice 1
-In GROUND TRUTH: SEMIBREVIS, with 2 x default value
-In APEL  OUTPUT: SEMIBREVIS, with 1 x default value
-
-NOT EQUAL: the NOTE m-1479 in voice 1
-In GROUND TRUTH: BREVIS, with 2/3 x default value
-In APEL  OUTPUT: BREVIS, with 1 x default value
-
-NOT EQUAL: the NOTE m-1523 in voice 1
-In GROUND TRUTH: SEMIBREVIS, with 2 x default value
-In APEL  OUTPUT: SEMIBREVIS, with 1 x default value
+NOT EQUAL: the NOTE m-1569 in voice 1
+In GROUND TRUTH: SEMIBREVIS, with 1 x default value
+In APEL  OUTPUT: SEMIBREVIS, with 2 x default value
 
 NOT EQUAL: the NOTE m-321 in voice 2
 In GROUND TRUTH: LONGA, with 5/6 x default value
 In APEL  OUTPUT: LONGA, with 1 x default value
 
+NOT EQUAL: the NOTE m-559 in voice 2
+In GROUND TRUTH: BREVIS, with 1 x default value
+In APEL  OUTPUT: BREVIS, with 2/3 x default value
+
+NOT EQUAL: the NOTE m-607 in voice 2
+In GROUND TRUTH: SEMIBREVIS, with 1 x default value
+In APEL  OUTPUT: SEMIBREVIS, with 2 x default value
+
 NOT EQUAL: the NOTE m-647 in voice 2
 In GROUND TRUTH: LONGA, with 5/6 x default value
 In APEL  OUTPUT: LONGA, with 1 x default value
+
+NOT EQUAL: the NOTE m-885 in voice 2
+In GROUND TRUTH: BREVIS, with 1 x default value
+In APEL  OUTPUT: BREVIS, with 2/3 x default value
+
+NOT EQUAL: the NOTE m-931 in voice 2
+In GROUND TRUTH: SEMIBREVIS, with 1 x default value
+In APEL  OUTPUT: SEMIBREVIS, with 2 x default value
 
 NOT EQUAL: the NOTE m-968 in voice 2
 In GROUND TRUTH: LONGA, with 5/6 x default value
 In APEL  OUTPUT: LONGA, with 1 x default value
 
+NOT EQUAL: the NOTE m-1214 in voice 2
+In GROUND TRUTH: BREVIS, with 1 x default value
+In APEL  OUTPUT: BREVIS, with 2/3 x default value
+
+NOT EQUAL: the NOTE m-1263 in voice 2
+In GROUND TRUTH: SEMIBREVIS, with 1 x default value
+In APEL  OUTPUT: SEMIBREVIS, with 2 x default value
+
 NOT EQUAL: the NOTE m-1294 in voice 2
 In GROUND TRUTH: LONGA, with 5/6 x default value
 In APEL  OUTPUT: LONGA, with 1 x default value
+
+NOT EQUAL: the NOTE m-1541 in voice 2
+In GROUND TRUTH: BREVIS, with 1 x default value
+In APEL  OUTPUT: BREVIS, with 2/3 x default value
+
+NOT EQUAL: the NOTE m-1590 in voice 2
+In GROUND TRUTH: SEMIBREVIS, with 1 x default value
+In APEL  OUTPUT: SEMIBREVIS, with 2 x default value
 
 NOT EQUAL: the NOTE m-1620 in voice 2
 In GROUND TRUTH: LONGA, with 5/6 x default value
@@ -1105,6 +1121,6 @@ In APEL  OUTPUT: LONGA, with 1 x default value
 
 
 ACCURACY:
-Voice # 0:	295/303 = 97.3597359736
-Voice # 1:	38/39 = 97.4358974359
+Voice # 0:	299/303 = 98.6798679868
+Voice # 1:	110/117 = 94.0170940171
 Voice # 2:	1 = 100.0

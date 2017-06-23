@@ -327,49 +327,41 @@ NOT EQUAL: the NOTE m-147 in voice 1
 In GROUND TRUTH: SEMIBREVIS, with 2/3 x default value
 In APEL  OUTPUT: SEMIBREVIS, with 1 x default value
 
+NOT EQUAL: the NOTE m-213 in voice 1
+In GROUND TRUTH: SEMIBREVIS, with 1 x default value
+In APEL  OUTPUT: SEMIBREVIS, with 2/3 x default value
+
 NOT EQUAL: the NOTE m-218 in voice 1
 In GROUND TRUTH: MINIMA, with 1 x default value
 In APEL  OUTPUT: MINIMA, with 3/2 x default value
 
-NOT EQUAL: the NOTE m-238 in voice 1
-In GROUND TRUTH: MINIMA, with 2 x default value
-In APEL  OUTPUT: MINIMA, with 1 x default value
+NOT EQUAL: the NOTE m-426 in voice 1
+In GROUND TRUTH: SEMIBREVIS, with 1 x default value
+In APEL  OUTPUT: SEMIBREVIS, with 2/3 x default value
 
-NOT EQUAL: the NOTE m-123 in voice 2
-In GROUND TRUTH: SEMIBREVIS, with 2/3 x default value
-In APEL  OUTPUT: SEMIBREVIS, with 1 x default value
+NOT EQUAL: the NOTE m-431 in voice 1
+In GROUND TRUTH: MINIMA, with 1 x default value
+In APEL  OUTPUT: MINIMA, with 2 x default value
 
-NOT EQUAL: the NOTE m-155 in voice 2
-In GROUND TRUTH: MINIMA, with 2 x default value
-In APEL  OUTPUT: MINIMA, with 1 x default value
+NOT EQUAL: the NOTE m-221 in voice 2
+In GROUND TRUTH: SEMIBREVIS, with 1 x default value
+In APEL  OUTPUT: SEMIBREVIS, with 2/3 x default value
 
 NOT EQUAL: the NOTE m-226 in voice 2
 In GROUND TRUTH: MINIMA, with 1 x default value
 In APEL  OUTPUT: MINIMA, with 3/2 x default value
 
-NOT EQUAL: the NOTE m-246 in voice 2
-In GROUND TRUTH: MINIMA, with 2 x default value
-In APEL  OUTPUT: MINIMA, with 1 x default value
-
-NOT EQUAL: the NOTE m-331 in voice 2
-In GROUND TRUTH: SEMIBREVIS, with 2/3 x default value
-In APEL  OUTPUT: SEMIBREVIS, with 1 x default value
-
-NOT EQUAL: the NOTE m-369 in voice 2
-In GROUND TRUTH: MINIMA, with 2 x default value
-In APEL  OUTPUT: MINIMA, with 1 x default value
-
-NOT EQUAL: the NOTE m-388 in voice 2
-In GROUND TRUTH: SEMIBREVIS, with 2/3 x default value
-In APEL  OUTPUT: SEMIBREVIS, with 1 x default value
-
-NOT EQUAL: the NOTE m-416 in voice 2
-In GROUND TRUTH: MINIMA, with 2 x default value
-In APEL  OUTPUT: MINIMA, with 1 x default value
-
 NOT EQUAL: the NOTE m-457 in voice 2
 In GROUND TRUTH: MINIMA, with 1 x default value
 In APEL  OUTPUT: MINIMA, with 3/2 x default value
+
+NOT EQUAL: the NOTE m-109 in voice 3
+In GROUND TRUTH: SEMIBREVIS, with 1 x default value
+In APEL  OUTPUT: SEMIBREVIS, with 2/3 x default value
+
+NOT EQUAL: the NOTE m-112 in voice 3
+In GROUND TRUTH: MINIMA, with 1 x default value
+In APEL  OUTPUT: MINIMA, with 2 x default value
 
 NOT EQUAL: the NOTE m-164 in voice 3
 In GROUND TRUTH: MINIMA, with 2 x default value
@@ -379,16 +371,16 @@ NOT EQUAL: the NOTE m-206 in voice 3
 In GROUND TRUTH: SEMIBREVIS, with 2/3 x default value
 In APEL  OUTPUT: SEMIBREVIS, with 1 x default value
 
-NOT EQUAL: the NOTE m-396 in voice 3
-In GROUND TRUTH: SEMIBREVIS, with 2/3 x default value
-In APEL  OUTPUT: SEMIBREVIS, with 1 x default value
+NOT EQUAL: the NOTE m-441 in voice 3
+In GROUND TRUTH: SEMIBREVIS, with 1 x default value
+In APEL  OUTPUT: SEMIBREVIS, with 2/3 x default value
 
-NOT EQUAL: the NOTE m-422 in voice 3
-In GROUND TRUTH: MINIMA, with 2 x default value
-In APEL  OUTPUT: MINIMA, with 1 x default value
+NOT EQUAL: the NOTE m-446 in voice 3
+In GROUND TRUTH: MINIMA, with 1 x default value
+In APEL  OUTPUT: MINIMA, with 2 x default value
 
 
 ACCURACY:
-Voice # 0:	95/99 = 95.9595959596
-Voice # 1:	82/91 = 90.1098901099
-Voice # 2:	77/81 = 95.0617283951
+Voice # 0:	31/33 = 93.9393939394
+Voice # 1:	88/91 = 96.7032967033
+Voice # 2:	25/27 = 92.5925925926

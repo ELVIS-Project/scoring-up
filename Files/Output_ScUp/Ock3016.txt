@@ -602,9 +602,9 @@ NOT EQUAL: the NOTE m-287 in voice 2
 In GROUND TRUTH: SEMIBREVIS, with 1 x default value
 In APEL  OUTPUT: SEMIBREVIS, with 2 x default value
 
-NOT EQUAL: the NOTE m-288 in voice 2
-In GROUND TRUTH: BREVIS, with 2/3 x default value
-In APEL  OUTPUT: BREVIS, with 1 x default value
+NOT EQUAL: the NOTE m-677 in voice 2
+In GROUND TRUTH: SEMIBREVIS, with 1 x default value
+In APEL  OUTPUT: SEMIBREVIS, with 2 x default value
 
 NOT EQUAL: the NOTE m-1003 in voice 2
 In GROUND TRUTH: SEMIBREVIS, with 1 x default value
@@ -618,9 +618,9 @@ NOT EQUAL: the NOTE m-1292 in voice 2
 In GROUND TRUTH: LONGA, with 2/3 x default value
 In APEL  OUTPUT: LONGA, with 1 x default value
 
-NOT EQUAL: the NOTE m-1793 in voice 2
-In GROUND TRUTH: BREVIS, with 2/3 x default value
-In APEL  OUTPUT: BREVIS, with 1 x default value
+NOT EQUAL: the NOTE m-1993 in voice 2
+In GROUND TRUTH: SEMIBREVIS, with 1 x default value
+In APEL  OUTPUT: SEMIBREVIS, with 2 x default value
 
 NOT EQUAL: the NOTE m-2009 in voice 2
 In GROUND TRUTH: BREVIS, with 2/3 x default value

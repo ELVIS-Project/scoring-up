@@ -670,7 +670,7 @@
 									</verse>
 								</note>
 								<barLine xml:id="m-3727b6da-4392-4625-8d16-070dfc534932" />
-								<note xml:id="m-994" dur="longa" dur.ges="6144p" oct="4" pname="d">
+								<note xml:id="m-994" dur="longa" dur.ges="6144p" oct="4" pname="d" quality="i" num="3" numbase="2">
 									<verse xml:id="m-996" n="1">
 										<syl xml:id="m-997" wordpos="i">qui</syl>
 									</verse>
@@ -717,7 +717,7 @@
 										<syl xml:id="m-1083" con="d" wordpos="m">dou</syl>
 									</verse>
 								</note>
-								<note xml:id="m-1057" artic="stop" dur="brevis" dur.ges="6144p" oct="4" pname="f">
+								<note xml:id="m-1057" artic="stop" dur="brevis" dur.ges="6144p" oct="4" pname="f" quality="a" num="1" numbase="2">
 									<accid xml:id="m-1058" accid="s" />
 								</note>
 								<barLine xml:id="m-a6b929f3-465b-4c1a-a0d2-668d8c37e545" />
@@ -1071,7 +1071,7 @@
 									<accid xml:id="m-958" accid.ges="f" />
 								</note>
 								<barLine xml:id="m-53b228ed-e002-4efd-a5f1-c4ad8b6bb722" />
-								<note xml:id="m-983" dur="longa" dur.ges="9216p" oct="3" oct.ges="2" pname="a">
+								<note xml:id="m-983" dur="longa" dur.ges="9216p" oct="3" oct.ges="2" pname="a" quality="i" num="3" numbase="2">
 									<verse xml:id="m-1007" n="1">
 										<syl xml:id="m-1008" con="d" wordpos="i">for</syl>
 									</verse>
@@ -1104,7 +1104,7 @@
 									</verse>
 								</note>
 								<note xml:id="m-1038" dur="semibrevis" dur.ges="1536p" oct="3" oct.ges="2" pname="a" />
-								<note xml:id="m-1039" dur="brevis" dur.ges="3072p" oct="3" oct.ges="2" pname="b">
+								<note xml:id="m-1039" dur="brevis" dur.ges="3072p" oct="3" oct.ges="2" pname="b" quality="a" num="1" numbase="2">
 									<accid xml:id="m-1040" accid.ges="f" />
 								</note>
 								<barLine xml:id="m-5b62dd7a-c761-4b00-8953-f3334025962d" />

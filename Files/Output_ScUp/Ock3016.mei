@@ -1038,7 +1038,7 @@
 										<syl xml:id="m-292" wordpos="i">Quant</syl>
 									</verse>
 								</note>
-								<note xml:id="m-288" dur="brevis" dur.ges="2048p" oct="3" oct.ges="2" pname="d">
+								<note xml:id="m-288" dur="brevis" dur.ges="2048p" oct="3" oct.ges="2" pname="d" quality="i" num="3" numbase="2">
 									<verse xml:id="m-293" n="1">
 										<syl xml:id="m-294" wordpos="i">-vant</syl>
 									</verse>
@@ -1218,7 +1218,7 @@
 										<syl xml:id="m-687" wordpos="i">-por-</syl>
 									</verse>
 								</note>
-								<note xml:id="m-677" dur="semibrevis" dur.ges="1024p" oct="3" oct.ges="2" pname="d">
+								<note xml:id="m-677" dur="semibrevis" dur.ges="1024p" oct="3" oct.ges="2" pname="d" quality="a" num="1" numbase="2">
 									<verse xml:id="m-688" n="2">
 										<syl xml:id="m-689" wordpos="i">-tu-</syl>
 									</verse>
@@ -1689,7 +1689,7 @@
 										<syl xml:id="m-1797" wordpos="i">que</syl>
 									</verse>
 								</note>
-								<note xml:id="m-1793" dur="brevis" dur.ges="2048p" oct="4" oct.ges="3" pname="c">
+								<note xml:id="m-1793" dur="brevis" dur.ges="2048p" oct="4" oct.ges="3" pname="c" quality="i" num="3" numbase="2">
 									<verse xml:id="m-1798" n="1">
 										<syl xml:id="m-1799" wordpos="i">veoir</syl>
 									</verse>
@@ -1767,7 +1767,7 @@
 								<note xml:id="m-1990" dur="minima" dur.ges="512p" oct="3" oct.ges="2" pname="a" />
 								<note xml:id="m-1991" dur="minima" dur.ges="512p" oct="3" oct.ges="2" pname="b" />
 								<note xml:id="m-1992" dur="minima" dur.ges="512p" oct="4" oct.ges="3" pname="c" />
-								<note xml:id="m-1993" dur="semibrevis" dur.ges="1024p" oct="3" oct.ges="2" pname="a" />
+								<note xml:id="m-1993" dur="semibrevis" dur.ges="1024p" oct="3" oct.ges="2" pname="a" quality="a" num="1" numbase="2" />
 								<barLine xml:id="m-72324fff-541f-4b6d-bfd0-23fe708fdbac" />
 								<note xml:id="m-2009" dur="brevis" dur.ges="2048p" oct="3" oct.ges="2" pname="b">
 									<verse xml:id="m-2010" n="2">

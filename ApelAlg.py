@@ -134,7 +134,7 @@ def modification(counter, start_note, middle_notes, end_note, following_note, sh
             end_note.addAttribute('numbase', '2')
             # Raise a warning when this imperfect note is followed by a perfect note (contradiction with the first rule)
             if following_note is not None and following_note.getAttribute('dur').value == long_note:
-                print("WARNING! An imperfection a.p.a. is required, but this imperfect note is followed by a perfect note, this contradicts the fundamental rule: 'A note is perfect before another one of the same kind'.")
+                print("WARNING 1! An imperfection a.p.a. is required, but this imperfect note is followed by a perfect note, this contradicts the fundamental rule: 'A note is perfect before another one of the same kind'.")
                 print("The imperfected note is " + str(end_note) + " and is followed by the perfect note " + str(following_note))
                 print("")
         # Mistake Case
@@ -175,7 +175,7 @@ def modification(counter, start_note, middle_notes, end_note, following_note, sh
                 end_note.addAttribute('numbase', '2')
                 # Raise a warning when this imperfect note is followed by a perfect note (contradiction with the first rule)
                 if following_note is not None and following_note.getAttribute('dur').value == long_note:
-                    print("WARNING! An imperfection a.p.a. is required, but this imperfect note is followed by a perfect note, this contradicts the fundamental rule: 'A note is perfect before another one of the same kind'.")
+                    print("WARNING 2! An imperfection a.p.a. is required, but this imperfect note is followed by a perfect note, this contradicts the fundamental rule: 'A note is perfect before another one of the same kind'.")
                     print("The imperfected note is " + str(end_note) + " and is followed by the perfect note " + str(following_note))
                     print("")
             # Mistake Case
@@ -187,8 +187,37 @@ def modification(counter, start_note, middle_notes, end_note, following_note, sh
         # 5, 8, 11, 14, 17, 20, ... breves between the longs
         else:
             print(last_uncolored_note)
+            # By default, the preferred option involves imperfection a.p.a (together with imperfection a.p.p.), 
+            # so we assume that imperfection a.p.a. would be possible and not enter in conflict with rule # 1
+            impapa_against_rule1 = False
             # Default case
             if (start_note is not None and start_note.name == 'note' and start_note.getAttribute('dur').value == long_note and not start_note.hasAttribute('quality') and not followed_by_dot(start_note)) and (end_note is not None and end_note.name == 'note' and end_note.getAttribute('dur').value == long_note and not end_note.hasAttribute('quality') and not followed_by_dot(end_note)):
+                # Check if imperfection a.p.a. enters or not in conflict with rule # 1.
+                if following_note is not None and following_note.getAttribute('dur').value == long_note:
+                    # If it does, set the flag (impapa_against_rule1) to True.
+                    # In this case, imperfection a.p.a. is discarded, except if the "alterantive interpretation" (here, alteration) is also forbidden
+                    impapa_against_rule1 = True
+                    pass
+                # If it does not enter in conflict, we go with the "Default interpretation" of the notes
+                else:
+                    # Imperfection a.p.p. 
+                    start_note.addAttribute('quality', 'i')
+                    start_note.addAttribute('num', '3')
+                    start_note.addAttribute('numbase', '2')
+                    # Imperfection a.p.a.
+                    end_note.addAttribute('quality', 'i')
+                    end_note.addAttribute('num', '3')
+                    end_note.addAttribute('numbase', '2')
+            # Exception Case
+            elif last_uncolored_note.name == 'note' and last_uncolored_note.getAttribute('dur').value == short_note and not last_uncolored_note.hasAttribute('quality'):
+                # Alteration
+                last_uncolored_note.addAttribute('quality', 'a')
+                last_uncolored_note.addAttribute('num', '1')
+                last_uncolored_note.addAttribute('numbase', '2')
+            # Default + Warning Case
+            elif impapa_against_rule1:
+                # If the "alternative interpretation" is forbidden, and imperfection imp. a.p.a. was discarded just because it entered in conflict with rule # 1
+                # (this is, impapa_against_rule1 flag is True), then we force imperfection a.p.a. as it is the only viable option. But we also raise a 'warning'
                 # Imperfection a.p.p. 
                 start_note.addAttribute('quality', 'i')
                 start_note.addAttribute('num', '3')
@@ -198,26 +227,44 @@ def modification(counter, start_note, middle_notes, end_note, following_note, sh
                 end_note.addAttribute('num', '3')
                 end_note.addAttribute('numbase', '2')
                 # Raise a warning when this imperfect note is followed by a perfect note (contradiction with the first rule)
-                if following_note is not None and following_note.getAttribute('dur').value == long_note:
-                    print("WARNING! An imperfection a.p.a. is required, but this imperfect note is followed by a perfect note, this contradicts the fundamental rule: 'A note is perfect before another one of the same kind'.")
-                    print("The imperfected note is " + str(end_note) + " and is followed by the perfect note " + str(following_note))
-                    print("")
-            # Exception Case
-            elif last_uncolored_note.name == 'note' and last_uncolored_note.getAttribute('dur').value == short_note and not last_uncolored_note.hasAttribute('quality'):
-                # Alteration
-                last_uncolored_note.addAttribute('quality', 'a')
-                last_uncolored_note.addAttribute('num', '1')
-                last_uncolored_note.addAttribute('numbase', '2')
+                print("WARNING 3n + 2! An imperfection a.p.a. is required, but this imperfect note is followed by a perfect note, this contradicts the fundamental rule: 'A note is perfect before another one of the same kind'.")
+                print("The imperfected note is " + str(end_note) + " and is followed by the perfect note " + str(following_note))
+                print("")
             # Mistake Case
             else:
-                print("MISTAKE 2 - Imperfections a.p.p. and a.p.a. are impossible - Alteration is also impossible")
+                print("MISTAKE 3n + 2 - Imperfections a.p.p. and a.p.a. are impossible - Alteration is also impossible")
                 print(start_note)
                 print(end_note)
                 print("")
     
     # 0 breves left out:
     else:
-        pass
+        if counter <= 3:
+            pass
+        else:
+            # One of the possibilities when 6,9,12,etc. breves are left out, involves alteration
+            # One must alter the last (uncolored) note from the middle_notes of the sequence
+            # The last middle note is given by:
+            last_middle_note = middle_notes[-1]
+            # If this note is uncolored, it is a candidate for alteration (given that it is a note and not a rest and that it is a breve and not a smaller value)
+            last_uncolored_note = last_middle_note
+            # But if it is colored, we need to find the last "uncolored" note, as this is the one that would be altered
+            while last_uncolored_note.hasAttribute('colored'):
+                last_uncolored_note = get_preceding_noterest(last_uncolored_note)
+            # Default Case:
+            if (start_note is not None and start_note.name == 'note' and start_note.getAttribute('dur').value == long_note and not start_note.hasAttribute('quality') and not followed_by_dot(start_note)) and (last_uncolored_note.name == 'note' and last_uncolored_note.getAttribute('dur').value == short_note and not last_uncolored_note.hasAttribute('quality')):
+                # Imperfection a.p.p.
+                start_note.addAttribute('quality', 'i')
+                start_note.addAttribute('num', '3')
+                start_note.addAttribute('numbase', '2')
+                # Alteration
+                last_uncolored_note.addAttribute('quality', 'a')
+                last_uncolored_note.addAttribute('num', '1')
+                last_uncolored_note.addAttribute('numbase', '2')
+            # Exception Case:
+            else:
+                # Start note remains perfect
+                pass
 
 def minims_between_semibreves(start_note, middle_notes, end_note, following_note, note_durs, undotted_note_gain, dotted_note_gain):
     no_division_dot_flag = True    # Default value

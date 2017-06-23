@@ -185,9 +185,6 @@ semibrevis, 2, 3
 semibrevis, 2, 5
 semibrevis, 2, 7
 <MeiElement note:m-569>
-WARNING! An imperfection a.p.a. is required, but this imperfect note is followed by a perfect note, this contradicts the fundamental rule: 'A note is perfect before another one of the same kind'.
-The imperfected note is <MeiElement note:m-571> and is followed by the perfect note <MeiElement note:m-582>
-
 
 Voice # 3 results:
 
@@ -296,8 +293,24 @@ semibrevis, 2, 2
 
 COMPARISON RESUTLS - Notes/Rests (with their xml:id and voice number) that don't match with the ground truth
 
+NOT EQUAL: the NOTE m-219 in voice 2
+In GROUND TRUTH: BREVIS, with 1 x default value
+In APEL  OUTPUT: BREVIS, with 2/3 x default value
+
+NOT EQUAL: the NOTE m-234 in voice 2
+In GROUND TRUTH: SEMIBREVIS, with 1 x default value
+In APEL  OUTPUT: SEMIBREVIS, with 2 x default value
+
+NOT EQUAL: the NOTE m-532 in voice 2
+In GROUND TRUTH: BREVIS, with 2/3 x default value
+In APEL  OUTPUT: BREVIS, with 1 x default value
+
+NOT EQUAL: the NOTE m-571 in voice 2
+In GROUND TRUTH: BREVIS, with 2/3 x default value
+In APEL  OUTPUT: BREVIS, with 1 x default value
+
 
 ACCURACY:
 Voice # 0:	1 = 100.0
-Voice # 1:	1 = 100.0
+Voice # 1:	77/81 = 95.0617283951
 Voice # 2:	1 = 100.0

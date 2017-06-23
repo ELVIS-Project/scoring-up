@@ -1435,7 +1435,7 @@
 									</verse>
 								</note>
 								<barLine xml:id="m-5176751d-1a35-4069-bfdf-45f74a8f8eac" />
-								<note xml:id="m-1053" dur="brevis" dur.ges="2048p" oct="3" oct.ges="2" pname="g">
+								<note xml:id="m-1053" dur="brevis" dur.ges="2048p" oct="3" oct.ges="2" pname="g" quality="i" num="3" numbase="2">
 									<verse xml:id="m-1057" n="1">
 										<syl xml:id="m-1058" wordpos="i">-nir</syl>
 									</verse>
@@ -1507,7 +1507,7 @@
 								</note>
 								<barLine xml:id="m-74e6dc38-7e24-4468-82ae-b666038d8d24" />
 								<rest xml:id="m-1218" dur="semibrevis" dur.ges="1024p" />
-								<note xml:id="m-1219" artic="stop" dur="semibrevis" dur.ges="2048p" oct="3" oct.ges="2" pname="g" />
+								<note xml:id="m-1219" artic="stop" dur="semibrevis" dur.ges="2048p" oct="3" oct.ges="2" pname="g" quality="a" num="1" numbase="2" />
 								<barLine xml:id="m-7933d079-f83c-4008-94da-034ef34904ab" />
 								<note xml:id="m-1235" dur="brevis" dur.ges="2048p" oct="4" oct.ges="3" pname="d" quality="i" num="3" numbase="2" />
 								<note xml:id="m-1236" dur="semibrevis" dur.ges="1024p" oct="3" oct.ges="2" pname="g" />

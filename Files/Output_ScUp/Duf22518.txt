@@ -123,9 +123,6 @@ semiminima, 1/2, 6
 minima, 1, 7
 minima, 1, 8
 <MeiElement note:m-273>
-WARNING! An imperfection a.p.a. is required, but this imperfect note is followed by a perfect note, this contradicts the fundamental rule: 'A note is perfect before another one of the same kind'.
-The imperfected note is <MeiElement note:m-275> and is followed by the perfect note <MeiElement note:m-294>
-
 
 
 minima, 1, 1
@@ -223,17 +220,9 @@ NOT EQUAL: the NOTE m-122 in voice 2
 In GROUND TRUTH: BREVIS, with 5/6 x default value
 In APEL  OUTPUT: BREVIS, with 1 x default value
 
-NOT EQUAL: the NOTE m-227 in voice 2
-In GROUND TRUTH: SEMIBREVIS, with 1 x default value
-In APEL  OUTPUT: SEMIBREVIS, with 2/3 x default value
-
 NOT EQUAL: the NOTE m-273 in voice 2
 In GROUND TRUTH: MINIMA, with 2 x default value
 In APEL  OUTPUT: MINIMA, with 1 x default value
-
-NOT EQUAL: the NOTE m-275 in voice 2
-In GROUND TRUTH: SEMIBREVIS, with 1 x default value
-In APEL  OUTPUT: SEMIBREVIS, with 2/3 x default value
 
 NOT EQUAL: the NOTE m-128 in voice 3
 In GROUND TRUTH: SEMIBREVIS, with 1 x default value
@@ -246,5 +235,5 @@ In APEL  OUTPUT: MINIMA, with 1 x default value
 
 ACCURACY:
 Voice # 0:	65/67 = 97.0149253731
-Voice # 1:	19/21 = 90.4761904762
+Voice # 1:	20/21 = 95.2380952381
 Voice # 2:	28/29 = 96.5517241379
