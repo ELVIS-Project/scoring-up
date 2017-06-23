@@ -305,6 +305,10 @@ NOT EQUAL: the NOTE m-532 in voice 2
 In GROUND TRUTH: BREVIS, with 2/3 x default value
 In APEL  OUTPUT: BREVIS, with 1 x default value
 
+NOT EQUAL: the NOTE m-569 in voice 2
+In GROUND TRUTH: SEMIBREVIS, with 1 x default value
+In APEL  OUTPUT: SEMIBREVIS, with 2 x default value
+
 NOT EQUAL: the NOTE m-571 in voice 2
 In GROUND TRUTH: BREVIS, with 2/3 x default value
 In APEL  OUTPUT: BREVIS, with 1 x default value
@@ -312,5 +316,5 @@ In APEL  OUTPUT: BREVIS, with 1 x default value
 
 ACCURACY:
 Voice # 0:	1 = 100.0
-Voice # 1:	77/81 = 95.0617283951
+Voice # 1:	76/81 = 93.8271604938
 Voice # 2:	1 = 100.0

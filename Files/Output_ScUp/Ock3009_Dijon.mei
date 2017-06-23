@@ -302,7 +302,7 @@
 								<note xml:id="m-544" dur="semibrevis" dur.ges="1024p" oct="3" oct.ges="2" pname="d" />
 								<note xml:id="m-545" dur="semibrevis" dur.ges="1024p" oct="3" oct.ges="2" pname="a" />
 								<barLine xml:id="m-b8350733-7b8f-4a36-bc63-bc8d7173e83c" />
-								<note xml:id="m-560" dur="semibrevis" dur.ges="1024p" oct="3" oct.ges="2" pname="b" />
+								<note xml:id="m-560" dur="semibrevis" dur.ges="1024p" oct="3" oct.ges="2" pname="b" quality="a" num="1" numbase="2" />
 								<note xml:id="m-562" dur="brevis" dur.ges="2048p" oct="3" oct.ges="2" pname="a" />
 								<barLine xml:id="m-824ff298-83a1-4fc1-81a9-236a29338f67" />
 								<note xml:id="m-573" dur="brevis" dur.ges="3072p" oct="3" oct.ges="2" pname="g" />
