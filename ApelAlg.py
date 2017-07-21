@@ -580,13 +580,13 @@ def find_note_level_of_coloration(modusmaior, modusminor, tempus, prolatio, colo
     if modusmaior == 3 and "maxima" in colored_figures:
         coloration_level = "Max"
     # If a longa is colored, and the default value of the longa is 3 (modusminor = 3), then the coloration is working at the level of the longa
-    elif modusminor == 3 and "longa" in colored_figures:
+    elif modusminor == 3 and ("longa" in colored_figures or "maxima" in colored_figures):
         coloration_level = "L"
     # If a breve is colored, and the default value of the breve is 3 (tempus = 3), then the coloration is working at the level of the breve
-    elif tempus == 3 and "brevis" in colored_figures:
+    elif tempus == 3 and ("brevis" in colored_figures or "longa" in colored_figures or "maxima" in colored_figures):
         coloration_level = "B"
     # If a semibreve is colored, and the default value of the semibreve is 3 (prolatio = 3), then the coloration is working at the level of the semibreve
-    elif prolatio == 3 and "semibrevis" in colored_figures:
+    elif prolatio == 3 and ("semibrevis" in colored_figures or "brevis" in colored_figures or "longa" in colored_figures or "maxima" in colored_figures):
         coloration_level = "Sb"
     # Coloration can only work at these 4 levels, as only these four notes (i.e., maxima, longa, breve, and semibreve) can be perfect (i.e., have triple values)
     else:
@@ -673,7 +673,9 @@ def coloration_effect(notes_and_rests_per_voice, modusmaior, modusminor, tempus,
             else:
                 pass
     else:
-        pass
+        for note in colored_notes:
+            note.addAttribute('num', '3')
+            note.addAttribute('numbase', '2')
 
 # Main function
 def lining_up(quasiscore_mensural_doc):
@@ -948,8 +950,12 @@ def comparison(out_doc, gt_doc):
             else:
                 print("NOT EQUAL: the " + gt_note.name.upper() + " " + gt_note.id + " in voice " + voice_number)
                 print("In GROUND TRUTH: " + gtval_dur.upper() + ", with " + str(Fraction(int(gtval_numbase), int(gtval_num))) + " x default value")
-                print("In APEL  OUTPUT: " + outval_dur.upper() + ", with " + str(Fraction(int(outval_numbase), int(outval_num))) + " x default value\n")
+                print("In APEL  OUTPUT: " + outval_dur.upper() + ", with " + str(Fraction(int(outval_numbase), int(outval_num))) + " x default value")
                 diff += 1
+                if (gt_note.hasAttribute('colored')):
+                    print("COLORED!\n")
+                else:
+                    print ""
 
         accuracy_ratio_per_voice = 1 - Fraction(diff,len(gt_notes))
         accuracy_list.append(accuracy_ratio_per_voice)
