@@ -115,19 +115,22 @@ def counting_minims(sequence_of_notes, note_durs, undotted_note_gain, dotted_not
         print(dur + ", " + str(gain) + ", " + str(minim_counter))
     return minim_counter
 
+def has_been_modified(note):
+    return (note.hasAttribute('num') and note.hasAttribute('numbase'))
+
 # Given the total amount of "breves" in-between the "longs", see if they can be arranged in groups of 3
 # According to how many breves remain ungrouped (1, 2 or 0), modifiy the duration of the appropriate note of the sequence ('imperfection', 'alteration', no-modification)
 def modification(counter, start_note, middle_notes, end_note, following_note, short_note, long_note):
     # 1 breve left out:
     if counter % 3 == 1:
         # Default Case
-        if start_note is not None and start_note.name == 'note' and start_note.getAttribute('dur').value == long_note and not start_note.hasAttribute('quality') and not followed_by_dot(start_note):
+        if start_note is not None and start_note.name == 'note' and start_note.getAttribute('dur').value == long_note and not has_been_modified(start_note) and not followed_by_dot(start_note):
             # Imperfection a.p.p.
             start_note.addAttribute('quality', 'i')
             start_note.addAttribute('num', '3')
             start_note.addAttribute('numbase', '2')
         # Exception Case
-        elif end_note is not None and end_note.name == 'note' and end_note.getAttribute('dur').value == long_note and not end_note.hasAttribute('quality') and not followed_by_dot(end_note):
+        elif end_note is not None and end_note.name == 'note' and end_note.getAttribute('dur').value == long_note and not has_been_modified(end_note) and not followed_by_dot(end_note):
             # Imperfection a.p.a.
             end_note.addAttribute('quality', 'i')
             end_note.addAttribute('num', '3')
@@ -158,13 +161,13 @@ def modification(counter, start_note, middle_notes, end_note, following_note, sh
         # 2 exact breves between the longs
         if counter == 2:
             # Default case
-            if last_uncolored_note.name == 'note' and last_uncolored_note.getAttribute('dur').value == short_note and not last_uncolored_note.hasAttribute('quality'):
+            if last_uncolored_note.name == 'note' and last_uncolored_note.getAttribute('dur').value == short_note and not has_been_modified(last_uncolored_note):
                 # Alteration
                 last_uncolored_note.addAttribute('quality', 'a')
                 last_uncolored_note.addAttribute('num', '1')
                 last_uncolored_note.addAttribute('numbase', '2')
             # Exception Case
-            elif (start_note is not None and start_note.name == 'note' and start_note.getAttribute('dur').value == long_note and not start_note.hasAttribute('quality') and not followed_by_dot(start_note)) and (end_note is not None and end_note.name == 'note' and end_note.getAttribute('dur').value == long_note and not end_note.hasAttribute('quality') and not followed_by_dot(end_note)):
+            elif (start_note is not None and start_note.name == 'note' and start_note.getAttribute('dur').value == long_note and not has_been_modified(start_note) and not followed_by_dot(start_note)) and (end_note is not None and end_note.name == 'note' and end_note.getAttribute('dur').value == long_note and not has_been_modified(end_note) and not followed_by_dot(end_note)):
                 # Imperfection a.p.p. 
                 start_note.addAttribute('quality', 'i')
                 start_note.addAttribute('num', '3')
@@ -188,12 +191,12 @@ def modification(counter, start_note, middle_notes, end_note, following_note, sh
         else:
             print(last_uncolored_note)
             # Default Case: Check the conditions to apply the 'default interpretation', which implies imperfection a.p.a.
-            if (start_note is not None and start_note.name == 'note' and start_note.getAttribute('dur').value == long_note and not start_note.hasAttribute('quality') and not followed_by_dot(start_note)) and (end_note is not None and end_note.name == 'note' and end_note.getAttribute('dur').value == long_note and not end_note.hasAttribute('quality') and not followed_by_dot(end_note)):
+            if (start_note is not None and start_note.name == 'note' and start_note.getAttribute('dur').value == long_note and not has_been_modified(start_note) and not followed_by_dot(start_note)) and (end_note is not None and end_note.name == 'note' and end_note.getAttribute('dur').value == long_note and not has_been_modified(end_note) and not followed_by_dot(end_note)):
                 # Check if imperfection a.p.a. enters or not in conflict with rule # 1.
                 if following_note is not None and following_note.getAttribute('dur').value == long_note:
                     # If it does, imperfection a.p.a. is discarded, except if the "alterantive interpretation" (the 'Exception Case') is also forbidden
                     # Exception Case
-                    if last_uncolored_note.name == 'note' and last_uncolored_note.getAttribute('dur').value == short_note and not last_uncolored_note.hasAttribute('quality'):
+                    if last_uncolored_note.name == 'note' and last_uncolored_note.getAttribute('dur').value == short_note and not has_been_modified(last_uncolored_note):
                         # Alteration
                         last_uncolored_note.addAttribute('quality', 'a')
                         last_uncolored_note.addAttribute('num', '1')
@@ -226,7 +229,7 @@ def modification(counter, start_note, middle_notes, end_note, following_note, sh
                     end_note.addAttribute('num', '3')
                     end_note.addAttribute('numbase', '2')
             # Exception Case
-            elif last_uncolored_note.name == 'note' and last_uncolored_note.getAttribute('dur').value == short_note and not last_uncolored_note.hasAttribute('quality'):
+            elif last_uncolored_note.name == 'note' and last_uncolored_note.getAttribute('dur').value == short_note and not has_been_modified(last_uncolored_note):
                 # Alteration
                 last_uncolored_note.addAttribute('quality', 'a')
                 last_uncolored_note.addAttribute('num', '1')
@@ -253,7 +256,7 @@ def modification(counter, start_note, middle_notes, end_note, following_note, sh
             while last_uncolored_note.hasAttribute('colored'):
                 last_uncolored_note = get_preceding_noterest(last_uncolored_note)
             # Default Case:
-            if (start_note is not None and start_note.name == 'note' and start_note.getAttribute('dur').value == long_note and not start_note.hasAttribute('quality') and not followed_by_dot(start_note)) and (last_uncolored_note.name == 'note' and last_uncolored_note.getAttribute('dur').value == short_note and not last_uncolored_note.hasAttribute('quality')):
+            if (start_note is not None and start_note.name == 'note' and start_note.getAttribute('dur').value == long_note and not has_been_modified(start_note) and not followed_by_dot(start_note)) and (last_uncolored_note.name == 'note' and last_uncolored_note.getAttribute('dur').value == short_note and not has_been_modified(last_uncolored_note)):
                 # Imperfection a.p.p.
                 start_note.addAttribute('quality', 'i')
                 start_note.addAttribute('num', '3')
@@ -725,25 +728,20 @@ def lining_up(quasiscore_mensural_doc):
         # Get the indices
         for noterest in voice_noterest_content:
             dur = noterest.getAttribute('dur').value
-            if dur == 'semibrevis' and not noterest.hasAttribute('colored'):
+            if dur == 'semibrevis' or noterest.hasAttribute('colored'):
                 list_of_indices_geq_Sb.append(voice_noterest_content.index(noterest))
-            elif dur == 'brevis' and not noterest.hasAttribute('colored'):
+            if dur == 'brevis' or noterest.hasAttribute('colored'):
                 list_of_indices_geq_Sb.append(voice_noterest_content.index(noterest))
                 list_of_indices_geq_B.append(voice_noterest_content.index(noterest))
-            elif dur == 'longa' and not noterest.hasAttribute('colored'):
+            if dur == 'longa' or noterest.hasAttribute('colored'):
                 list_of_indices_geq_Sb.append(voice_noterest_content.index(noterest))
                 list_of_indices_geq_B.append(voice_noterest_content.index(noterest))
                 list_of_indices_geq_L.append(voice_noterest_content.index(noterest))
-            elif dur == 'maxima' and not noterest.hasAttribute('colored'):
+            if dur == 'maxima' or noterest.hasAttribute('colored'):
                 list_of_indices_geq_Sb.append(voice_noterest_content.index(noterest))
                 list_of_indices_geq_B.append(voice_noterest_content.index(noterest))
                 list_of_indices_geq_L.append(voice_noterest_content.index(noterest))
                 list_of_indices_geq_Max.append(voice_noterest_content.index(noterest))
-            else:
-                #print("SHOULD BE A MINIM, IS IT?  It is " + dur)
-                #print(noterest)
-                #print ""
-                pass
 
         # Minims in between semibreves (or higher note values)
         if prolatio == 3:
@@ -816,9 +814,9 @@ def lining_up(quasiscore_mensural_doc):
                 except:
                     following_note = None
                 middle_notes = voice_noterest_content[o+1:f]
-                #print(start_note)
-                #print(middle_notes)
-                #print(end_note)
+                # print(start_note)
+                # print(middle_notes)
+                # print(end_note)
                 sb_between_breves(start_note, middle_notes, end_note, following_note, prolatio, note_durs, undotted_note_gain, dotted_note_gain)
 
         # tempus = 2
