@@ -85,6 +85,7 @@ def counting_minims_in_an_undotted_sequence(sequence_of_notes, note_durs, undott
 def minims_between_semibreves(start_note, middle_notes, end_note, note_durs, undotted_note_gain):
     # Let us figure out if there is an alteration candidate in this sequence:
     alteration_candidate = False
+    alteration_candidate_id = None
 
     # Total of minims in the middle_notes
     minim_counter = counting_minims_in_an_undotted_sequence(middle_notes, note_durs, undotted_note_gain)
@@ -104,6 +105,7 @@ def minims_between_semibreves(start_note, middle_notes, end_note, note_durs, und
         # If it is a note and it is a minima: it is candidate to alteration
         if last_uncolored_note.getAttribute('dur').value == "minima" and last_uncolored_note.name == "note":
             alteration_candidate = True
+            alteration_candidate_id = last_uncolored_note.id
 
     # #debug:
     # print ""
@@ -125,11 +127,12 @@ def minims_between_semibreves(start_note, middle_notes, end_note, note_durs, und
     # print str(end_note) + " " + str(end_dur)
 
     # Flag for alteration candidate is returned
-    return alteration_candidate       
+    return [alteration_candidate, alteration_candidate_id]       
 
 def sb_between_breves(start_note, middle_notes, end_note, prolatio, note_durs, undotted_note_gain):
     # Let us figure out if there is an alteration candidate in this sequence:
     alteration_candidate = False
+    alteration_candidate_id = None
 
     # Total of semibreves in the middle_notes
     minim_counter = counting_minims_in_an_undotted_sequence(middle_notes, note_durs, undotted_note_gain)
@@ -150,6 +153,7 @@ def sb_between_breves(start_note, middle_notes, end_note, prolatio, note_durs, u
         # If it is a note and it is a semibrevis: it is candidate to alteration
         if last_uncolored_note.getAttribute('dur').value == "semibrevis" and last_uncolored_note.name == "note":
             alteration_candidate = True
+            alteration_candidate_id = last_uncolored_note.id
 
     # #debug:
     # print ""
@@ -171,11 +175,12 @@ def sb_between_breves(start_note, middle_notes, end_note, prolatio, note_durs, u
     # print str(end_note) + " " + str(end_dur)
 
     # Flag for alteration candidate is returned
-    return alteration_candidate  
+    return [alteration_candidate, alteration_candidate_id]  
 
 def breves_between_longas(start_note, middle_notes, end_note, prolatio, tempus, note_durs, undotted_note_gain):
     # Let us figure out if there is an alteration candidate in this sequence:
     alteration_candidate = False
+    alteration_candidate_id = None
 
     # Total of breves in the middle_notes
     minim_counter = counting_minims_in_an_undotted_sequence(middle_notes, note_durs, undotted_note_gain)
@@ -196,6 +201,7 @@ def breves_between_longas(start_note, middle_notes, end_note, prolatio, tempus, 
         # If it is a note and it is a breve: it is candidate to alteration
         if last_uncolored_note.getAttribute('dur').value == "brevis" and last_uncolored_note.name == "note":
             alteration_candidate = True
+            alteration_candidate_id = last_uncolored_note.id
 
     # #debug:
     # print ""
@@ -217,7 +223,7 @@ def breves_between_longas(start_note, middle_notes, end_note, prolatio, tempus, 
     # print str(end_note) + " " + str(end_dur)
 
     # Flag for alteration candidate is returned
-    return alteration_candidate
+    return [alteration_candidate, alteration_candidate_id]
 
 
 
@@ -311,6 +317,7 @@ def alteration_note_candidates(modusmaior, modusminor, tempus, prolatio, layer):
         #print ""
 
         minim_alt_candidate = 0
+        minim_alt_candidate_ids = []
 
         if 0 not in list_of_indices_geq_Sb and list_of_indices_geq_Sb != []:
             start_note = None
@@ -322,8 +329,11 @@ def alteration_note_candidates(modusmaior, modusminor, tempus, prolatio, layer):
                 following_note = None
             middle_notes = voice_noterest_content[0:f]
 
-            if minims_between_semibreves(start_note, middle_notes, end_note, note_durs, undotted_note_gain):
+            candidate = minims_between_semibreves(start_note, middle_notes, end_note, note_durs, undotted_note_gain)
+            if candidate[0]:
                 minim_alt_candidate += 1
+                minim_alt_candidate_ids.append(candidate[1])
+
 
         for i in range(0, len(list_of_indices_geq_Sb)-1):
             # Define the sequence of notes
@@ -337,12 +347,15 @@ def alteration_note_candidates(modusmaior, modusminor, tempus, prolatio, layer):
                 following_note = None
             middle_notes = voice_noterest_content[o+1:f]
 
-            if minims_between_semibreves(start_note, middle_notes, end_note, note_durs, undotted_note_gain):
+            candidate = minims_between_semibreves(start_note, middle_notes, end_note, note_durs, undotted_note_gain)
+            if candidate[0]:
                 minim_alt_candidate += 1
+                minim_alt_candidate_ids.append(candidate[1])
 
     # prolatio = 2
     else:
         minim_alt_candidate = None
+        minim_alt_candidate_ids = []
         pass
 
     # Semibreves in between breves (or higher note values)
@@ -352,6 +365,8 @@ def alteration_note_candidates(modusmaior, modusminor, tempus, prolatio, layer):
         #print ""
 
         semibreve_alt_candidate = 0
+        semibreve_alt_candidate_ids = []
+
 
         if 0 not in list_of_indices_geq_B and list_of_indices_geq_B != []:
             start_note = None
@@ -363,8 +378,10 @@ def alteration_note_candidates(modusmaior, modusminor, tempus, prolatio, layer):
                 following_note = None
             middle_notes = voice_noterest_content[0:f]
 
-            if sb_between_breves(start_note, middle_notes, end_note, prolatio, note_durs, undotted_note_gain):
+            candidate = sb_between_breves(start_note, middle_notes, end_note, prolatio, note_durs, undotted_note_gain)
+            if candidate[0]:
                 semibreve_alt_candidate += 1
+                semibreve_alt_candidate_ids.append(candidate[1])
 
         for i in range(0, len(list_of_indices_geq_B)-1):
             # Define the sequence of notes
@@ -378,12 +395,16 @@ def alteration_note_candidates(modusmaior, modusminor, tempus, prolatio, layer):
                 following_note = None
             middle_notes = voice_noterest_content[o+1:f]
 
-            if sb_between_breves(start_note, middle_notes, end_note, prolatio, note_durs, undotted_note_gain):
+            candidate = sb_between_breves(start_note, middle_notes, end_note, prolatio, note_durs, undotted_note_gain)
+            if candidate[0]:
                 semibreve_alt_candidate += 1
+                semibreve_alt_candidate_ids.append(candidate[1])
+
 
     # tempus = 2
     else:
         semibreve_alt_candidate = None
+        semibreve_alt_candidate_ids = []
         pass
 
     # Breves in between longas (or higher note values)
@@ -393,6 +414,7 @@ def alteration_note_candidates(modusmaior, modusminor, tempus, prolatio, layer):
         #print ""
 
         breve_alt_candidate = 0
+        breve_alt_candidate_ids = []
 
         if 0 not in list_of_indices_geq_L and list_of_indices_geq_L != []:
             start_note = None
@@ -404,8 +426,10 @@ def alteration_note_candidates(modusmaior, modusminor, tempus, prolatio, layer):
                 following_note = None
             middle_notes = voice_noterest_content[0:f]
 
-            if breves_between_longas(start_note, middle_notes, end_note, prolatio, tempus, note_durs, undotted_note_gain):
+            candidate = breves_between_longas(start_note, middle_notes, end_note, prolatio, tempus, note_durs, undotted_note_gain)
+            if candidate[0]:
                 breve_alt_candidate += 1
+                breve_alt_candidate_ids.append(candidate[1])
 
         for i in range(0, len(list_of_indices_geq_L)-1):
             # Define the sequence of notes
@@ -419,16 +443,20 @@ def alteration_note_candidates(modusmaior, modusminor, tempus, prolatio, layer):
                 following_note = None
             middle_notes = voice_noterest_content[o+1:f]
 
-            if breves_between_longas(start_note, middle_notes, end_note, prolatio, tempus, note_durs, undotted_note_gain):
+            candidate = breves_between_longas(start_note, middle_notes, end_note, prolatio, tempus, note_durs, undotted_note_gain)
+            if candidate[0]:
                 breve_alt_candidate += 1
+                breve_alt_candidate_ids.append(candidate[1])
 
     # modusminor = 2
     else:
         breve_alt_candidate = None
+        breve_alt_candidate_ids = []
         pass
 
 
     alt_candidates_list = [breve_alt_candidate, semibreve_alt_candidate, minim_alt_candidate]
+    alt_candidates_list_ids = [breve_alt_candidate_ids, semibreve_alt_candidate_ids, minim_alt_candidate_ids]
     # count_altcandidates = 0
     # for item in alt_candidates_list:
     #     try:
@@ -436,7 +464,7 @@ def alteration_note_candidates(modusmaior, modusminor, tempus, prolatio, layer):
     #     except:
     #         count_altcandidates += 0
     # print str(alt_candidates_list) + " = " + str(count_altcandidates)
-    return alt_candidates_list
+    return [alt_candidates_list, alt_candidates_list_ids]
 
 def colored_notes(layer):
     # To determine the colored notes --> look for @colored attribute (.hasAttribute)
@@ -475,42 +503,54 @@ def notes_susceptible_to_augmentation(modusmaior, modusminor, tempus, prolatio, 
 
 
 
-def main(directory, filename, archivo, notelevel):
+def main(directory, filename, archivo, notelevel, archivoid):
 
-    #print(filename + "\n")
-    mensural_gtdoc = documentFromFile(directory + filename).getMeiDocument()
-    staves = mensural_gtdoc.getElementsByName('staff')
-    stavesDef = mensural_gtdoc.getElementsByName('staffDef')
-    
-    for i in range(0, len(stavesDef)):
-        #print "Voice # " + str(i)
-
-        staffDef = stavesDef[i]
-        modusmaior = int(staffDef.getAttribute('modusmaior').value)
-        modusminor = int(staffDef.getAttribute('modusminor').value)
-        tempus = int(staffDef.getAttribute('tempus').value)
-        prolatio = int(staffDef.getAttribute('prolatio').value)
-
-        staff = staves[i]
-        layer = staff.getChildrenByName('layer')[0]
-
-        perfimp = perfect_notes(modusmaior, modusminor, tempus, prolatio, layer)
-        alt =alteration_note_candidates(modusmaior, modusminor, tempus, prolatio, layer)
-        col = colored_notes(layer)
-        #print("colored notes: " + str(col))
-        aug = notes_susceptible_to_augmentation(modusmaior, modusminor, tempus, prolatio, layer)
-        #print("Susceptible to augmentation: " + str(aug))
-        #print ""
+    if filename == "IvTrem07.mei":
+        pass
+    else:
+        #print(filename + "\n")
+        mensural_gtdoc = documentFromFile(directory + filename).getMeiDocument()
+        staves = mensural_gtdoc.getElementsByName('staff')
+        stavesDef = mensural_gtdoc.getElementsByName('staffDef')
         
-        for k in range(0, 3):
-            archivo.write(filename[:-4] + ',' + ('Voice # ' + str(i+1)) + ',' + notelevel[k] + ',' + str(perfimp[k]) + ',' + str(alt[k]) + ',' + str(col) + ',' + str(aug) + '\n')
+        cmn_gtdoc = documentFromFile('../Files/GroundTruth/cmn-mei/' + filename).getMeiDocument()
 
+        for i in range(0, len(stavesDef)):
+            #print "Voice # " + str(i)
+
+            staffDef = stavesDef[i]
+            modusmaior = int(staffDef.getAttribute('modusmaior').value)
+            modusminor = int(staffDef.getAttribute('modusminor').value)
+            tempus = int(staffDef.getAttribute('tempus').value)
+            prolatio = int(staffDef.getAttribute('prolatio').value)
+
+            staff = staves[i]
+            layer = staff.getChildrenByName('layer')[0]
+
+            perfimp = perfect_notes(modusmaior, modusminor, tempus, prolatio, layer)
+            alt =alteration_note_candidates(modusmaior, modusminor, tempus, prolatio, layer)
+            col = colored_notes(layer)
+            #print("colored notes: " + str(col))
+            aug = notes_susceptible_to_augmentation(modusmaior, modusminor, tempus, prolatio, layer)
+            #print("Susceptible to augmentation: " + str(aug))
+            #print ""
+            
+            for k in range(0, 3):
+                archivo.write(filename[:-4] + ',' + ('Voice # ' + str(i+1)) + ',' + notelevel[k] + ',' + str(perfimp[k]) + ',' + str(alt[0][k]) + ',' + str(col) + ',' + str(aug) + '\n')
+
+                alt_ids_list = alt[1][k]
+                for alt_id in alt_ids_list:
+                    mens_alt_note = mensural_gtdoc.getElementById(alt_id)
+                    cmn_alt_note = cmn_gtdoc.getElementById(alt_id)
+                    archivoid.write(filename[:-4] + ',' + str(i+1) + ',' + alt_id + ',' + mens_alt_note.getAttribute('dur').value + ',' + cmn_alt_note.getAncestor('measure').getAttribute('n').value + '\n')
 
 def run():
     directory = "../Files/GroundTruth/mensural-mei/"
     files = listdir(directory)
-    archivo = open('mutable_notes.csv','w')
+    archivo = open('mutable_notes_2.csv','w')
+    archivoid = open('mutable_notes_2_with_id.csv', 'w')
     archivo.write('Piece,Voice,Note Level,Perfect / Imperfect,Regular / Altered,Colored,Regular / Augmented\n')
+    archivoid.write('Piece,Voice,Id,Note Shape,Measure\n')
     notelevel = ['L - B', 'B - Sb', 'Sb - M']
     for filename in files:
-        main(directory, filename, archivo, notelevel)
+        main(directory, filename, archivo, notelevel, archivoid)
