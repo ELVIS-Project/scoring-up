@@ -28,36 +28,33 @@ minima, 1, 15
 semibrevis, 2, 17
 semibrevis, 2, 19
 semibrevis, 2, 21
-minima, 1, 22
-fusa, 1/4, 89/4
-fusa, 1/4, 45/2
-minima, 1, 47/2
-minima, 1, 49/2
-semibrevis, 2, 53/2
-semibrevis, 2, 57/2
-semibrevis, 2, 61/2
-semibrevis, 2, 65/2
-semibrevis, 2, 69/2
-minima, 1, 71/2
-semibrevis, 2, 75/2
-minima, 1, 77/2
-semibrevis, 3, 83/2
-semiminima, 1/2, 42
+minima, 3/2, 45/2
+fusa, 1/4, 91/4
+fusa, 1/4, 23
+minima, 1, 24
+minima, 1, 25
+semibrevis, 2, 27
+semibrevis, 2, 29
+semibrevis, 2, 31
+semibrevis, 2, 33
+semibrevis, 2, 35
+minima, 1, 36
+semibrevis, 2, 38
+minima, 1, 39
+semibrevis, 3, 42
 semiminima, 1/2, 85/2
-minima, 3/2, 44
-fusa, 1/4, 177/4
-fusa, 1/4, 89/2
-semibrevis, 3, 95/2
-minima, 1, 97/2
-minima, 3/2, 50
-semiminima, 1/2, 101/2
-minima, 1, 103/2
-semibrevis, 2, 107/2
-semibrevis, 2, 111/2
-minima, 1, 113/2
-BAD! THE DIVISION IS NOT AN INTEGER NUMBER - not an integer number of Semibreves!
-[None, <MeiElement rest:m-42>, <MeiElement rest:m-43>, <MeiElement note:m-44>, <MeiElement note:m-77>, <MeiElement note:m-78>, <MeiElement note:m-79>, <MeiElement note:m-81>, <MeiElement note:m-136>, <MeiElement note:m-137>, <MeiElement note:m-139>, <MeiElement note:m-140>, <MeiElement note:m-142>, <MeiElement note:m-195>, <MeiElement note:m-196>, <MeiElement note:m-197>, <MeiElement note:m-199>, <MeiElement note:m-258>, <MeiElement note:m-260>, <MeiElement note:m-261>, <MeiElement note:m-294>, <MeiElement rest:m-295>, <MeiElement note:m-296>, <MeiElement note:m-346>, <MeiElement note:m-347>, <MeiElement note:m-350>, <MeiElement note:m-351>, <MeiElement note:m-352>, <MeiElement note:m-354>, <MeiElement note:m-406>, <MeiElement rest:m-407>, <MeiElement note:m-408>, <MeiElement note:m-455>, <MeiElement note:m-456>, <MeiElement note:m-457>, <MeiElement note:m-459>, <MeiElement note:m-515>, <MeiElement note:m-516>, <MeiElement note:m-517>, <MeiElement note:m-518>, <MeiElement note:m-519>, <MeiElement note:m-521>, <MeiElement note:m-557>, <MeiElement note:m-558>, <MeiElement note:m-559>, <MeiElement note:m-560>, <MeiElement note:m-585>, <MeiElement note:m-587>, <MeiElement note:m-588>, <MeiElement note:m-589>, <MeiElement note:m-606>]
-Semibreves: 35.75
+semiminima, 1/2, 43
+minima, 3/2, 89/2
+fusa, 1/4, 179/4
+fusa, 1/4, 45
+semibrevis, 3, 48
+minima, 1, 49
+minima, 3/2, 101/2
+semiminima, 1/2, 51
+minima, 1, 52
+semibrevis, 2, 54
+semibrevis, 2, 56
+minima, 1, 57
 
 semibrevis, 2, 2
 
@@ -234,8 +231,6 @@ semibrevis, 2, 9
 Voice # 3 results:
 
 brevis
-semiminima
-fusa
 longa
 Coloration level: B
 
@@ -299,11 +294,8 @@ semibrevis, 2, 45/2
 minima, 3/2, 24
 fusa, 1/4, 97/4
 fusa, 1/4, 49/2
-semiminima, 1/2, 25
-fusa, 1/4, 101/4
-BAD! THE DIVISION IS NOT AN INTEGER NUMBER - not an integer number of Semibreves!
-[<MeiElement note:m-329>, <MeiElement note:m-330>, <MeiElement note:m-386>, <MeiElement note:m-387>, <MeiElement note:m-389>, <MeiElement rest:m-390>, <MeiElement note:m-391>, <MeiElement note:m-439>, <MeiElement note:m-440>, <MeiElement note:m-441>, <MeiElement note:m-442>, <MeiElement note:m-443>, <MeiElement note:m-445>, <MeiElement rest:m-495>, <MeiElement note:m-496>, <MeiElement note:m-497>, <MeiElement note:m-498>, <MeiElement note:m-499>, <MeiElement rest:m-541>, <MeiElement note:m-542>, <MeiElement note:m-544>, <MeiElement note:m-545>, <MeiElement note:m-570>, <MeiElement note:m-571>, <MeiElement note:m-572>, <MeiElement note:m-574>, <MeiElement note:m-575>, <MeiElement note:m-599>, <MeiElement note:m-600>, <MeiElement note:m-601>, <MeiElement note:m-602>, <MeiElement rest:m-626>, <MeiElement note:m-627>, <MeiElement note:m-628>, <MeiElement note:m-629>, <MeiElement note:m-631>, <MeiElement note:m-633>, <MeiElement note:m-634>, <MeiElement note:m-666>]
-Semibreves: 21.875
+semiminima, 3/4, 101/4
+fusa, 1/4, 51/2
 
 minima, 1, 1
 semibrevis, 2, 3
@@ -366,10 +358,6 @@ minima, 1, 11/2
 
 COMPARISON RESUTLS - Notes/Rests (with their xml:id and voice number) that don't match with the ground truth
 
-NOT EQUAL: the NOTE m-346 in voice 1
-In GROUND TRUTH: MINIMA, with 3/2 x default value
-In APEL  OUTPUT: MINIMA, with 1 x default value
-
 NOT EQUAL: the NOTE m-897 in voice 2
 In GROUND TRUTH: BREVIS, with 2/3 x default value
 In APEL  OUTPUT: BREVIS, with 1 x default value
@@ -377,14 +365,6 @@ In APEL  OUTPUT: BREVIS, with 1 x default value
 NOT EQUAL: the NOTE m-940 in voice 2
 In GROUND TRUTH: SEMIBREVIS, with 2 x default value
 In APEL  OUTPUT: SEMIBREVIS, with 1 x default value
-
-NOT EQUAL: the NOTE m-329 in voice 3
-In GROUND TRUTH: BREVIS, with 2/3 x default value
-In APEL  OUTPUT: BREVIS, with 1 x default value
-
-NOT EQUAL: the NOTE m-633 in voice 3
-In GROUND TRUTH: SEMIMINIMA, with 3/2 x default value
-In APEL  OUTPUT: SEMIMINIMA, with 1 x default value
 
 NOT EQUAL: the NOTE m-950 in voice 3
 In GROUND TRUTH: SEMIBREVIS, with 2 x default value
@@ -396,6 +376,6 @@ In APEL  OUTPUT: SEMIBREVIS, with 2 x default value
 
 
 ACCURACY:
-Voice # 0:	120/121 = 99.173553719
+Voice # 0:	1 = 100.0
 Voice # 1:	83/85 = 97.6470588235
-Voice # 2:	113/117 = 96.5811965812
+Voice # 2:	115/117 = 98.2905982906

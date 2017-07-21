@@ -575,6 +575,7 @@
 									</verse>
 								</note>
 								<note xml:id="m-1175" dur="minima" dur.ges="768p" oct="4" pname="f" />
+								<dot xml:id="m-6da51558-12f1-4573-996a-fc71ad92ad3f" />
 								<note xml:id="m-1176" dur="semiminima" dur.ges="256p" oct="4" pname="e" />
 								<note xml:id="m-1177" dur="semibrevis" dur.ges="1024p" oct="4" pname="e" />
 								<note xml:id="m-1178" dur="minima" dur.ges="512p" oct="4" pname="d" />

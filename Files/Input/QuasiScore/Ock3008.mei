@@ -206,6 +206,7 @@
 										<syl xml:id="m-360" wordpos="i">-tu-</syl>
 									</verse>
 								</note>
+								<dot xml:id="m-17a59833-bbd6-47fb-a2bb-7a2d447040cf" />
 								<note xml:id="m-347" dur="fusa" dur.ges="128p" oct="4" pname="e">
 									<accid xml:id="m-348" accid="f" />
 								</note>
@@ -1431,8 +1432,9 @@
 								<note xml:id="m-631" dur="fusa" dur.ges="128p" oct="3" oct.ges="2" pname="b">
 									<accid xml:id="m-632" accid.ges="f" />
 								</note>
-								<note xml:id="m-633" dur="semiminima" dur.ges="384p" oct="3" oct.ges="2" pname="a" colored="true" />
-								<note xml:id="m-634" dur="fusa" dur.ges="128p" oct="3" oct.ges="2" pname="g" colored="true" />
+								<note xml:id="m-633" dur="semiminima" dur.ges="384p" oct="3" oct.ges="2" pname="a" />
+								<dot xml:id="m-c39f405f-b68f-45d4-a701-b6138b4ab70d" />
+								<note xml:id="m-634" dur="fusa" dur.ges="128p" oct="3" oct.ges="2" pname="g" />
 								<barLine xml:id="m-d161a571-6c7d-4dc8-b419-b54ed4ca6b0a" />
 								<note xml:id="m-666" dur="brevis" dur.ges="3072p" oct="3" oct.ges="2" pname="b">
 									<accid xml:id="m-667" accid.ges="f" />

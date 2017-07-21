@@ -195,7 +195,7 @@
 									</verse>
 								</note>
 								<barLine xml:id="m-300abbd5-521d-42fc-9da8-452847fd6606" />
-								<note xml:id="m-346" dur="minima" dur.ges="768p" oct="4" pname="f">
+								<note xml:id="m-346" dur="minima" dur.ges="768p" oct="4" pname="f" num="2" numbase="3" quality="p">
 									<verse xml:id="m-355" n="1">
 										<syl xml:id="m-356" wordpos="i">cil</syl>
 									</verse>
@@ -206,6 +206,7 @@
 										<syl xml:id="m-360" wordpos="i">-tu-</syl>
 									</verse>
 								</note>
+								<dot xml:id="m-17a59833-bbd6-47fb-a2bb-7a2d447040cf" form="aug" />
 								<note xml:id="m-347" dur="fusa" dur.ges="128p" oct="4" pname="e">
 									<accid xml:id="m-348" accid="f" />
 								</note>
@@ -1285,7 +1286,7 @@
 									</verse>
 								</note>
 								<barLine xml:id="m-31027d87-4444-4327-b567-e0225a980ffc" />
-								<note xml:id="m-329" dur="brevis" dur.ges="2048p" oct="3" oct.ges="2" pname="f">
+								<note xml:id="m-329" dur="brevis" dur.ges="2048p" oct="3" oct.ges="2" pname="f" quality="i" num="3" numbase="2">
 									<verse xml:id="m-331" n="1">
 										<syl xml:id="m-332" wordpos="i">-e</syl>
 									</verse>
@@ -1431,8 +1432,9 @@
 								<note xml:id="m-631" dur="fusa" dur.ges="128p" oct="3" oct.ges="2" pname="b">
 									<accid xml:id="m-632" accid.ges="f" />
 								</note>
-								<note xml:id="m-633" dur="semiminima" dur.ges="384p" oct="3" oct.ges="2" pname="a" colored="true" />
-								<note xml:id="m-634" dur="fusa" dur.ges="128p" oct="3" oct.ges="2" pname="g" colored="true" />
+								<note xml:id="m-633" dur="semiminima" dur.ges="384p" oct="3" oct.ges="2" pname="a" num="2" numbase="3" quality="p" />
+								<dot xml:id="m-c39f405f-b68f-45d4-a701-b6138b4ab70d" form="aug" />
+								<note xml:id="m-634" dur="fusa" dur.ges="128p" oct="3" oct.ges="2" pname="g" />
 								<barLine xml:id="m-d161a571-6c7d-4dc8-b419-b54ed4ca6b0a" />
 								<note xml:id="m-666" dur="brevis" dur.ges="3072p" oct="3" oct.ges="2" pname="b">
 									<accid xml:id="m-667" accid.ges="f" />

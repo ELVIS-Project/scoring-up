@@ -94,61 +94,59 @@ semibrevis, 2, 31
 semibrevis, 2, 33
 semibrevis, 2, 35
 semibrevis, 3, 38
-minima, 1, 39
-semiminima, 1/2, 79/2
-minima, 1, 81/2
-semibrevis, 3, 87/2
-minima, 1, 89/2
-minima, 1, 91/2
-semiminima, 1/2, 46
+minima, 3/2, 79/2
+semiminima, 1/2, 40
+minima, 1, 41
+semibrevis, 3, 44
+minima, 1, 45
+minima, 1, 46
 semiminima, 1/2, 93/2
-semibrevis, 2, 97/2
-minima, 1, 99/2
-semibrevis, 2, 103/2
-minima, 1, 105/2
-semibrevis, 2, 109/2
-semibrevis, 2, 113/2
-semibrevis, 2, 117/2
-semibrevis, 2, 121/2
-minima, 1, 123/2
-semibrevis, 2, 127/2
-minima, 1, 129/2
-minima, 3/2, 66
-semiminima, 1/2, 133/2
+semiminima, 1/2, 47
+semibrevis, 2, 49
+minima, 1, 50
+semibrevis, 2, 52
+minima, 1, 53
+semibrevis, 2, 55
+semibrevis, 2, 57
+semibrevis, 2, 59
+semibrevis, 2, 61
+minima, 1, 62
+semibrevis, 2, 64
+minima, 1, 65
+minima, 3/2, 133/2
 semiminima, 1/2, 67
 semiminima, 1/2, 135/2
-semibrevis, 2, 139/2
-minima, 1, 141/2
-semibrevis, 2, 145/2
-semibrevis, 2, 149/2
-semibrevis, 2, 153/2
-minima, 1, 155/2
-minima, 3/2, 79
-semiminima, 1/2, 159/2
-minima, 3/2, 81
-semiminima, 1/2, 163/2
+semiminima, 1/2, 68
+semibrevis, 2, 70
+minima, 1, 71
+semibrevis, 2, 73
+semibrevis, 2, 75
+semibrevis, 2, 77
+minima, 1, 78
+minima, 3/2, 159/2
+semiminima, 1/2, 80
+minima, 3/2, 163/2
 semiminima, 1/2, 82
 semiminima, 1/2, 165/2
-minima, 3/2, 84
-semiminima, 1/2, 169/2
-semibrevis, 2, 173/2
-minima, 3/2, 88
-semiminima, 1/2, 177/2
-semibrevis, 2, 181/2
-semibrevis, 2, 185/2
-minima, 1, 187/2
-minima, 3/2, 95
-semiminima, 1/2, 191/2
+semiminima, 1/2, 83
+minima, 3/2, 169/2
+semiminima, 1/2, 85
+semibrevis, 2, 87
+minima, 3/2, 177/2
+semiminima, 1/2, 89
+semibrevis, 2, 91
+semibrevis, 2, 93
+minima, 1, 94
+minima, 3/2, 191/2
 semiminima, 1/2, 96
 semiminima, 1/2, 193/2
-minima, 1, 195/2
-minima, 3/2, 99
-semiminima, 1/2, 199/2
+semiminima, 1/2, 97
+minima, 1, 98
+minima, 3/2, 199/2
 semiminima, 1/2, 100
 semiminima, 1/2, 201/2
-BAD! THE DIVISION IS NOT AN INTEGER NUMBER - not an integer number of Semibreves!
-[<MeiElement note:m-576>, <MeiElement note:m-616>, <MeiElement note:m-617>, <MeiElement note:m-651>, <MeiElement note:m-652>, <MeiElement note:m-653>, <MeiElement note:m-654>, <MeiElement note:m-673>, <MeiElement rest:m-674>, <MeiElement note:m-675>, <MeiElement note:m-676>, <MeiElement note:m-700>, <MeiElement note:m-701>, <MeiElement note:m-702>, <MeiElement note:m-703>, <MeiElement note:m-705>, <MeiElement note:m-744>, <MeiElement rest:m-745>, <MeiElement note:m-746>, <MeiElement note:m-783>, <MeiElement note:m-784>, <MeiElement note:m-785>, <MeiElement note:m-787>, <MeiElement note:m-817>, <MeiElement rest:m-818>, <MeiElement note:m-819>, <MeiElement note:m-848>, <MeiElement note:m-849>, <MeiElement note:m-850>, <MeiElement note:m-851>, <MeiElement note:m-882>, <MeiElement note:m-883>, <MeiElement note:m-884>, <MeiElement note:m-885>, <MeiElement note:m-886>, <MeiElement note:m-900>, <MeiElement note:m-901>, <MeiElement note:m-902>, <MeiElement note:m-903>, <MeiElement note:m-924>, <MeiElement note:m-925>, <MeiElement note:m-926>, <MeiElement note:m-961>, <MeiElement note:m-963>, <MeiElement note:m-964>, <MeiElement note:m-965>, <MeiElement note:m-999>, <MeiElement note:m-1001>, <MeiElement note:m-1002>, <MeiElement note:m-1003>, <MeiElement note:m-1004>, <MeiElement note:m-1005>, <MeiElement note:m-1024>, <MeiElement rest:m-1025>, <MeiElement note:m-1026>, <MeiElement note:m-1054>, <MeiElement note:m-1055>, <MeiElement note:m-1056>, <MeiElement note:m-1057>, <MeiElement note:m-1058>, <MeiElement note:m-1060>, <MeiElement note:m-1061>, <MeiElement note:m-1092>, <MeiElement note:m-1093>, <MeiElement note:m-1094>, <MeiElement note:m-1095>, <MeiElement note:m-1096>, <MeiElement note:m-1138>, <MeiElement note:m-1139>, <MeiElement note:m-1140>, <MeiElement note:m-1141>, <MeiElement note:m-1168>, <MeiElement note:m-1169>, <MeiElement note:m-1171>, <MeiElement note:m-1173>, <MeiElement note:m-1174>, <MeiElement note:m-1175>, <MeiElement note:m-1177>, <MeiElement note:m-1179>, <MeiElement note:m-1197>]
-Semibreves: 52.75
+semiminima, 1/2, 101
+<MeiElement note:m-1179>
 Voice # 2 results:
 
 Coloration level: None
@@ -432,13 +430,9 @@ NOT EQUAL: the NOTE m-575 in voice 1
 In GROUND TRUTH: SEMIBREVIS, with 1 x default value
 In APEL  OUTPUT: SEMIBREVIS, with 2 x default value
 
-NOT EQUAL: the NOTE m-576 in voice 1
-In GROUND TRUTH: BREVIS, with 2/3 x default value
-In APEL  OUTPUT: BREVIS, with 1 x default value
-
-NOT EQUAL: the NOTE m-849 in voice 1
-In GROUND TRUTH: MINIMA, with 3/2 x default value
-In APEL  OUTPUT: MINIMA, with 1 x default value
+NOT EQUAL: the NOTE m-1197 in voice 1
+In GROUND TRUTH: BREVIS, with 1 x default value
+In APEL  OUTPUT: BREVIS, with 2/3 x default value
 
 NOT EQUAL: the NOTE m-1049 in voice 3
 In GROUND TRUTH: BREVIS, with 2/3 x default value
@@ -450,6 +444,6 @@ In APEL  OUTPUT: BREVIS, with 2/3 x default value
 
 
 ACCURACY:
-Voice # 0:	46/47 = 97.8723404255
+Voice # 0:	139/141 = 98.5815602837
 Voice # 1:	1 = 100.0
 Voice # 2:	61/62 = 98.3870967742

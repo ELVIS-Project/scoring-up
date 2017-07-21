@@ -302,6 +302,7 @@ COMPARISON RESUTLS - Notes/Rests (with their xml:id and voice number) that don't
 NOT EQUAL: the NOTE m-328 in voice 1
 In GROUND TRUTH: BREVIS, with 1 x default value
 In APEL  OUTPUT: BREVIS, with 2/3 x default value
+COLORED!
 
 NOT EQUAL: the NOTE m-522 in voice 1
 In GROUND TRUTH: BREVIS, with 2/3 x default value
