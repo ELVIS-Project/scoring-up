@@ -77,17 +77,17 @@ archivo.write(",,,,,,Note Shape,Quality,Note Shape,Quality\n")
 cmn_gtdirectory = "../Files/GroundTruth/cmn-mei/"
 files = listdir(cmn_gtdirectory)
 for filename in files:
+    if filename.endswith('.mei'):
+        cmn_gtfile = cmn_gtdirectory + filename
+        mensural_gtfile = "../Files/GroundTruth/mensural-mei/" + filename
+        scored_up_result = "../Files/Output_ScUp/" + filename
 
-    cmn_gtfile = cmn_gtdirectory + filename
-    mensural_gtfile = "../Files/GroundTruth/mensural-mei/" + filename
-    scored_up_result = "../Files/Output_ScUp/" + filename
+        cmn_gtdoc = documentFromFile(cmn_gtfile).getMeiDocument()
+        mens_gtdoc = documentFromFile(mensural_gtfile).getMeiDocument()
+        scup_doc = documentFromFile(scored_up_result).getMeiDocument()
+        
+        comparison(scup_doc, mens_gtdoc, cmn_gtdoc, archivo, filename)
 
-    cmn_gtdoc = documentFromFile(cmn_gtfile).getMeiDocument()
-    mens_gtdoc = documentFromFile(mensural_gtfile).getMeiDocument()
-    scup_doc = documentFromFile(scored_up_result).getMeiDocument()
-    
-    comparison(scup_doc, mens_gtdoc, cmn_gtdoc, archivo, filename)
+        #subprocess.call(["python", "../score_up.py", "-apel", quasiscore_file, scored_up_result, "-compare", ground_truth_file])
 
-    #subprocess.call(["python", "../score_up.py", "-apel", quasiscore_file, scored_up_result, "-compare", ground_truth_file])
-
-    
+        
