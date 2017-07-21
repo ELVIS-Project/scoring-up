@@ -1,68 +1,93 @@
+from os import listdir
 from pymei import *
 from fractions import *
-from os import listdir
+import sys
 
-# Pieces which transcription by Apel and a original transcription in Sibelius we are about to compare
-pieces = ['bona_againstTrem', 'cum_venerint_againstIv', 'de_touz_against_Iv', 'decens_againstIv', 'diex_MT', 'durement_MT', 'postMisse_MT', 'hugo_against_Iv']
-directory = './3_Apel_results/'
-files = listdir(directory)
 
-for file in files:
-    if file.endswith('_STG3.mei'):
-        for piece in pieces:
-            if file.startswith(piece):
-                print("\n" + piece.upper() + "\n")
-                # Determining the files that contain the piece in the different formats: CMN MEI and Mensural MEI (the 2 transcriptions) 
-                cmn_file = "./0_motets_corrected/2_cmn_mei/" + piece + ".mei"
-                print(cmn_file)
-                # The Mensural MEI files to compare: the transcription done by Apel and the one in Sibelius
-                mensural_ApelTranscriptFile = "./3_Apel_results/" + file     #file2
-                print(mensural_ApelTranscriptFile)
-                mensural_SibTranscriptFile = "./1_ground_truth/" + file[:-9] + ".mei"   #file1
-                print(mensural_SibTranscriptFile)
-                print("")
+# Comparison function
+def comparison(out_doc, gt_doc, cmn_doc, archivo, filename):
 
-                # Getting the Mei Documents for these files
-                cmnDoc = documentFromFile(cmn_file).getMeiDocument()
-                karenDoc = documentFromFile(mensural_SibTranscriptFile).getMeiDocument()
-                apelDoc = documentFromFile(mensural_ApelTranscriptFile).getMeiDocument()
+    gt_staves = gt_doc.getElementsByName('staff')
+    accuracy_list = []
+    string = filename
+    for gt_staff in gt_staves:
+        diff = 0
+        
+        voice_number = gt_staff.getAttribute('n').value
+        gt_layer = gt_staff.getChildrenByName('layer')[0]
+        # Getting all the notes and rests for each voice in the ground truth mensural-mei document
+        gt_notes = gt_layer.getChildrenByName('note')
+        gt_notes.extend(gt_layer.getChildrenByName('rest'))
 
-                # Getting all the notes and rests contained in them
-                sib_notes = karenDoc.getElementsByName('note')
-                sib_notes.extend(karenDoc.getElementsByName('rest'))
+        # Compare the duration of the notes (and rests) in the ground truth and in the output of the Apel script.
+        # The duration is given by the three attributes: @dur, @num, and @numbase.
+        for gt_note in gt_notes:
+            # Gettting the notes from the output of the Apel script that correspond (i.e., share the same @xml:id) to each note in the ground truth
+            out_note = out_doc.getElementById(gt_note.id)
 
-                # Compare the quality values (actual duration) values of these notes (and rests) in both transcriptions
-                for sib_note in sib_notes:
-                    apel_note = apelDoc.getElementById(sib_note.id)
+            # Getting the @dur, @num, and @numbase attributes for all the ground truth notes (and rests)
+            gtval_dur = gt_note.getAttribute('dur').value
+            try:
+                gtval_num = gt_note.getAttribute('num').value
+            except:
+                gtval_num = 1
+            try:
+                gtval_numbase = gt_note.getAttribute('numbase').value
+            except:
+                gtval_numbase = 1
 
-                    sib_quality = sib_note.getAttribute('quality')
-                    apel_quality = apel_note.getAttribute('quality')
+            # Getting the @dur, @num, and @numbase attributes for all the notes (and rests) in the output file from the Apel script
+            outval_dur = out_note.getAttribute('dur').value
+            try:
+                outval_num = out_note.getAttribute('num').value
+            except:
+                outval_num = 1
+            try:
+                outval_numbase = out_note.getAttribute('numbase').value
+            except:
+                outval_numbase = 1
 
-                    if sib_quality is None and apel_quality is None:
-                        pass
+            # Determine if both notes (ground truth's and Apel's) share the same value (same figure and quality)
+            if (gtval_dur == outval_dur) and (gtval_num == outval_num) and (gtval_numbase == outval_numbase):
+                pass
+            else:
+                cmn_note = cmn_doc.getElementById(gt_note.id)
+                measure = cmn_note.getAncestor('measure')
+                measure_number = measure.getAttribute('n').value
+                cmn_note_index_in_measure = 0
+                for note in cmn_note.getPeers():
+                    cmn_note_index_in_measure += 1
+                    if note == cmn_note:
+                        break
+                string = string + ',' + voice_number + ',' + gt_note.name.upper() + ',' + gt_note.id + ',' + measure_number + ',' + str(cmn_note_index_in_measure)
+                string = string + ',' + gtval_dur + ',' + str(float(gtval_numbase)/float(gtval_num))
+                string = string + ',' + outval_dur + ',' + str(float(outval_numbase)/float(outval_num)) + '\n'
+                archivo.write(string)
+                diff += 1
+                string = ''
 
-                    elif sib_quality is not None and apel_quality is None:
-                        cmn_note = cmnDoc.getElementById(sib_note.id)
-                        voice_number = cmn_note.getAncestor('staff').getAttribute('n').value
-                        measure_number = cmn_note.getAncestor('measure').getAttribute('n').value
-                        print("The note " + sib_note.id + " in measure " + measure_number + " and voice " + voice_number)
-                        print("Has a quality '" + sib_quality.value + "'' in Sibelius\nthat is NOT PRESENT IN APEL\n")
-                    
-                    elif sib_quality is None and apel_quality is not None:
-                        cmn_note = cmnDoc.getElementById(sib_note.id)
-                        voice_number = cmn_note.getAncestor('staff').getAttribute('n').value
-                        measure_number = cmn_note.getAncestor('measure').getAttribute('n').value
-                        print("The note " + sib_note.id + " in measure " + measure_number + " and voice " + voice_number)
-                        print("HAS A QUALITY '" + apel_quality.value + "'' IN APEL\nthat is not present in Sibelius\n")
+        accuracy_ratio_per_voice = 1 - Fraction(diff,len(gt_notes))
+        accuracy_list.append(accuracy_ratio_per_voice)
 
-                    elif sib_quality.value == apel_quality.value:
-                        pass
+    return accuracy_list
 
-                    else:
-                        cmn_note = cmnDoc.getElementById(sib_note.id)
-                        voice_number = cmn_note.getAncestor('staff').getAttribute('n').value
-                        measure_number = cmn_note.getAncestor('measure').getAttribute('n').value
-                        print("The note " + sib_note.id + " in measure " + measure_number + " and voice " + voice_number)
-                        print("The QUALITY is DIFFERENT")
-                        print("Sibelius' transcription: '" + sib_quality.value + "'")
-                        print("Apel's algorithm: '" + apel_quality.value + "'\n")
+archivo = open("comparison4.csv", "w")
+archivo.write("Piece,Voice,Note/Rest,Id,Measure Number,Position in Measure,Ground truth,,Script,\n")
+archivo.write(",,,,,,Note Shape,Quality,Note Shape,Quality\n")
+cmn_gtdirectory = "../Files/GroundTruth/cmn-mei/"
+files = listdir(cmn_gtdirectory)
+for filename in files:
+
+    cmn_gtfile = cmn_gtdirectory + filename
+    mensural_gtfile = "../Files/GroundTruth/mensural-mei/" + filename
+    scored_up_result = "../Files/Output_ScUp/" + filename
+
+    cmn_gtdoc = documentFromFile(cmn_gtfile).getMeiDocument()
+    mens_gtdoc = documentFromFile(mensural_gtfile).getMeiDocument()
+    scup_doc = documentFromFile(scored_up_result).getMeiDocument()
+    
+    comparison(scup_doc, mens_gtdoc, cmn_gtdoc, archivo, filename)
+
+    #subprocess.call(["python", "../score_up.py", "-apel", quasiscore_file, scored_up_result, "-compare", ground_truth_file])
+
+    
