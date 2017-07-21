@@ -206,7 +206,7 @@
 										<syl xml:id="m-360" wordpos="i">-tu-</syl>
 									</verse>
 								</note>
-								<dot xml:id="m-17a59833-bbd6-47fb-a2bb-7a2d447040cf" form="aug" />
+								<dot xml:id="m-3ee37594-106a-4104-a0f6-9ab066f634be" form="aug" />
 								<note xml:id="m-347" dur="fusa" dur.ges="128p" oct="4" pname="e">
 									<accid xml:id="m-348" accid="f" />
 								</note>
@@ -1433,7 +1433,7 @@
 									<accid xml:id="m-632" accid.ges="f" />
 								</note>
 								<note xml:id="m-633" dur="semiminima" dur.ges="384p" oct="3" oct.ges="2" pname="a" num="2" numbase="3" quality="p" />
-								<dot xml:id="m-c39f405f-b68f-45d4-a701-b6138b4ab70d" form="aug" />
+								<dot xml:id="m-49901ab7-718d-4e5a-bb2f-7d429e18db67" form="aug" />
 								<note xml:id="m-634" dur="fusa" dur.ges="128p" oct="3" oct.ges="2" pname="g" />
 								<barLine xml:id="m-d161a571-6c7d-4dc8-b419-b54ed4ca6b0a" />
 								<note xml:id="m-666" dur="brevis" dur.ges="3072p" oct="3" oct.ges="2" pname="b">
@@ -1572,7 +1572,7 @@
 								<dot xml:id="m-e16b1f79-2aeb-4cc4-844f-b09508bcf8d3" form="div" />
 								<barLine xml:id="m-5044ed23-c889-4004-bd62-4e14e87f80da" />
 								<rest xml:id="m-949" dur="semibrevis" dur.ges="1024p" />
-								<note xml:id="m-950" artic="stop" dur="semibrevis" dur.ges="2048p" oct="3" oct.ges="2" pname="d">
+								<note xml:id="m-950" artic="stop" dur="semibrevis" dur.ges="2048p" oct="3" oct.ges="2" pname="d" quality="a" num="1" numbase="2">
 									<verse xml:id="m-951" n="1">
 										<syl xml:id="m-952" wordpos="i">For-</syl>
 									</verse>
@@ -1623,7 +1623,7 @@
 								</note>
 								<note xml:id="m-1045" dur="minima" dur.ges="512p" oct="3" oct.ges="2" pname="g" />
 								<barLine xml:id="m-41fd7024-9c9a-4988-82fc-556e1bdf3770" />
-								<note xml:id="m-1081" dur="minima" dur.ges="768p" oct="3" oct.ges="2" pname="e" num="2" numbase="3" quality="p" />
+								<note xml:id="m-1081" dur="minima" dur.ges="768p" oct="3" oct.ges="2" pname="e" quality="p" num="2" numbase="3" />
 								<dot xml:id="m-6e3c0aa3-d390-4367-9202-53613456cd9b" form="aug" />
 								<note xml:id="m-1082" dur="semiminima" dur.ges="256p" oct="3" oct.ges="2" pname="d" />
 								<note xml:id="m-1083" dur="semibrevis" dur.ges="1024p" oct="3" oct.ges="2" pname="g" />
@@ -1659,7 +1659,7 @@
 									</verse>
 								</note>
 								<note xml:id="m-1142" dur="minima" dur.ges="512p" oct="4" oct.ges="3" pname="c" />
-								<note xml:id="m-1143" dur="semibrevis" dur.ges="1024p" oct="3" oct.ges="2" pname="a" quality="a" num="1" numbase="2">
+								<note xml:id="m-1143" dur="semibrevis" dur.ges="1024p" oct="3" oct.ges="2" pname="a">
 									<verse xml:id="m-1148" n="1">
 										<syl xml:id="m-1149" wordpos="i">sans</syl>
 									</verse>

@@ -234,11 +234,11 @@
 								<note xml:id="m-259" dur="brevis" dur.ges="2048p" oct="4" oct.ges="3" pname="d" colored="true" num="3" numbase="2" />
 								<barLine xml:id="m-9845afe4-c29e-4a47-9468-1bff47143f19" />
 								<note xml:id="m-271" dur="brevis" dur.ges="2048p" oct="3" oct.ges="2" pname="a" colored="true" num="3" numbase="2" />
-								<note xml:id="m-272" dur="semibrevis" dur.ges="1024p" oct="3" oct.ges="2" pname="g" num="2" numbase="3" quality="p" />
-								<dot xml:id="m-4331a2f6-89f7-4b5d-b8b2-60c592f9a943" form="aug" />
+								<note xml:id="m-272" dur="semibrevis" dur.ges="1024p" oct="3" oct.ges="2" pname="g" />
+								<dot xml:id="m-4331a2f6-89f7-4b5d-b8b2-60c592f9a943" form="div" />
 								<barLine xml:id="m-6cc0ac45-c35c-4548-ad01-ea7ee8f011e3" />
 								<note xml:id="m-284" dur="semibrevis" dur.ges="1024p" oct="3" oct.ges="2" pname="f" />
-								<note xml:id="m-285" artic="stop" dur="semibrevis" dur.ges="2048p" oct="3" oct.ges="2" pname="e" />
+								<note xml:id="m-285" artic="stop" dur="semibrevis" dur.ges="2048p" oct="3" oct.ges="2" pname="e" quality="a" num="1" numbase="2" />
 								<barLine xml:id="m-921f0220-5689-46fe-8336-72edaef278ba" />
 								<note xml:id="m-300" dur="brevis" dur.ges="2048p" oct="3" oct.ges="2" pname="d" quality="i" num="3" numbase="2" />
 								<rest xml:id="m-302" dur="semibrevis" dur.ges="1024p" />

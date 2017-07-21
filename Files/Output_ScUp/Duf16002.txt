@@ -7,11 +7,15 @@ brevis
 semibrevis
 Coloration level: Sb
 
-brevis, 4, 4
-semibrevis, 2, 6
-minima, 1, 7
-minima, 1, 8
-<MeiElement note:m-57>
+
+
+
+
+
+
+
+minima, 1, 1
+minima, 1, 2
 
 minima, 1, 1
 
@@ -26,11 +30,23 @@ minima, 1, 5
 minima, 1, 1
 minima, 1, 2
 minima, 1, 3
-brevis, 4, 7
-semibrevis, 2, 9
-brevis, 4, 13
-semibrevis, 2, 15
-minima, 1, 16
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+minima, 1, 1
 
 minima, 1, 1
 minima, 1, 2
@@ -96,10 +112,22 @@ minima, 1, 1
 minima, 1, 1
 minima, 1, 2
 minima, 1, 3
-brevis, 4, 7
-semibrevis, 2, 9
-brevis, 4, 13
-semibrevis, 2, 15
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 minima, 1, 1
 minima, 1, 2
@@ -139,10 +167,16 @@ minima, 1, 2
 minima, 1, 3
 
 minima, 1, 1
-brevis, 4, 5
-semibrevis, 2, 7
-minima, 1, 8
-minima, 1, 9
+
+
+
+
+
+
+
+
+minima, 1, 1
+minima, 1, 2
 
 minima, 1, 1
 
@@ -184,19 +218,34 @@ minima, 1, 2
 minima, 1, 3
 
 minima, 1, 1
-brevis, 4, 5
-semibrevis, 2, 7
-minima, 1, 8
-minima, 1, 9
+
+
+
+
+
+
+
+
+minima, 1, 1
+minima, 1, 2
 
 minima, 1, 1
 
 minima, 1, 1
-semibrevis, 2, 3
-semibrevis, 2, 5
-semibrevis, 2, 7
-minima, 1, 8
-minima, 1, 9
+
+
+
+
+
+
+
+
+
+
+
+
+minima, 1, 1
+minima, 1, 2
 
 minima, 1, 1
 
@@ -209,8 +258,14 @@ BAD! Not an integer number of Minimas!
 Minimas: 3.5
 
 minima, 1, 1
-brevis, 4, 5
-semibrevis, 2, 7
+
+
+
+
+
+
+
+
 
 minima, 1, 1
 
@@ -241,19 +296,66 @@ minima, 1, 2
 minima, 1, 1
 minima, 1, 2
 minima, 1, 3
-brevis, 4, 7
-semibrevis, 2, 9
-brevis, 4, 13
-semibrevis, 2, 15
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 minima, 1, 1
 
 minima, 1, 1
 minima, 1, 2
-semibrevis, 2, 4
-semibrevis, 2, 6
-semibrevis, 2, 8
-minima, 1, 9
+
+
+
+
+
+
+
+
+
+
+
+
+minima, 1, 1
+
+minima, 1, 1
+minima, 1, 2
+
+minima, 1, 1
+minima, 1, 2
+minima, 1, 3
+
+minima, 1, 1
+
+minima, 1, 1
+minima, 1, 2
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+
+
+
+
+
+
+
+minima, 1, 1
 
 minima, 1, 1
 minima, 1, 2
@@ -264,53 +366,68 @@ minima, 1, 3
 
 minima, 1, 1
 
+
+
+
+
+
+
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+
+
+
+
+
+
+
+
+
+
 minima, 1, 1
 minima, 1, 2
-
-minima, 1, 1
-
-minima, 1, 1
-
-brevis, 4, 4
-semibrevis, 2, 6
-minima, 1, 7
-
-minima, 1, 1
-minima, 1, 2
-
-minima, 1, 1
-minima, 1, 2
-minima, 1, 3
-
-minima, 1, 1
-brevis, 4, 5
-semibrevis, 2, 7
-
-minima, 1, 1
-
-minima, 1, 1
-semibrevis, 2, 3
-semibrevis, 2, 5
-semibrevis, 2, 7
-minima, 1, 8
-minima, 1, 9
 
 minima, 1, 1
 minima, 1, 2
 minima, 1, 3
-brevis, 4, 7
-semibrevis, 2, 9
-brevis, 4, 13
-semibrevis, 2, 15
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 minima, 1, 1
 
 minima, 1, 1
 minima, 1, 2
-semibrevis, 2, 4
-semibrevis, 2, 6
-semibrevis, 2, 8
-<MeiElement note:m-499>
+
+
+
+
+
+
+
+
+
+
+
+
 
 minima, 1, 1
 
@@ -319,14 +436,6 @@ minima, 1, 1
 
 COMPARISON RESUTLS - Notes/Rests (with their xml:id and voice number) that don't match with the ground truth
 
-NOT EQUAL: the NOTE m-98 in voice 1
-In GROUND TRUTH: SEMIBREVIS, with 1 x default value
-In APEL  OUTPUT: SEMIBREVIS, with 2/3 x default value
-
-NOT EQUAL: the NOTE m-147 in voice 1
-In GROUND TRUTH: SEMIBREVIS, with 2/3 x default value
-In APEL  OUTPUT: SEMIBREVIS, with 1 x default value
-
 NOT EQUAL: the NOTE m-213 in voice 1
 In GROUND TRUTH: SEMIBREVIS, with 1 x default value
 In APEL  OUTPUT: SEMIBREVIS, with 2/3 x default value
@@ -334,14 +443,6 @@ In APEL  OUTPUT: SEMIBREVIS, with 2/3 x default value
 NOT EQUAL: the NOTE m-218 in voice 1
 In GROUND TRUTH: MINIMA, with 1 x default value
 In APEL  OUTPUT: MINIMA, with 3/2 x default value
-
-NOT EQUAL: the NOTE m-426 in voice 1
-In GROUND TRUTH: SEMIBREVIS, with 1 x default value
-In APEL  OUTPUT: SEMIBREVIS, with 2/3 x default value
-
-NOT EQUAL: the NOTE m-431 in voice 1
-In GROUND TRUTH: MINIMA, with 1 x default value
-In APEL  OUTPUT: MINIMA, with 2 x default value
 
 NOT EQUAL: the NOTE m-221 in voice 2
 In GROUND TRUTH: SEMIBREVIS, with 1 x default value
@@ -355,32 +456,8 @@ NOT EQUAL: the NOTE m-457 in voice 2
 In GROUND TRUTH: MINIMA, with 1 x default value
 In APEL  OUTPUT: MINIMA, with 3/2 x default value
 
-NOT EQUAL: the NOTE m-109 in voice 3
-In GROUND TRUTH: SEMIBREVIS, with 1 x default value
-In APEL  OUTPUT: SEMIBREVIS, with 2/3 x default value
-
-NOT EQUAL: the NOTE m-112 in voice 3
-In GROUND TRUTH: MINIMA, with 1 x default value
-In APEL  OUTPUT: MINIMA, with 2 x default value
-
-NOT EQUAL: the NOTE m-164 in voice 3
-In GROUND TRUTH: MINIMA, with 2 x default value
-In APEL  OUTPUT: MINIMA, with 1 x default value
-
-NOT EQUAL: the NOTE m-206 in voice 3
-In GROUND TRUTH: SEMIBREVIS, with 2/3 x default value
-In APEL  OUTPUT: SEMIBREVIS, with 1 x default value
-
-NOT EQUAL: the NOTE m-441 in voice 3
-In GROUND TRUTH: SEMIBREVIS, with 1 x default value
-In APEL  OUTPUT: SEMIBREVIS, with 2/3 x default value
-
-NOT EQUAL: the NOTE m-446 in voice 3
-In GROUND TRUTH: MINIMA, with 1 x default value
-In APEL  OUTPUT: MINIMA, with 2 x default value
-
 
 ACCURACY:
-Voice # 0:	31/33 = 93.9393939394
+Voice # 0:	97/99 = 97.9797979798
 Voice # 1:	88/91 = 96.7032967033
-Voice # 2:	25/27 = 92.5925925926
+Voice # 2:	1 = 100.0

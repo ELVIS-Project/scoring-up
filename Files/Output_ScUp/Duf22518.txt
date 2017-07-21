@@ -88,9 +88,18 @@ Coloration level: Sb
 
 
 
-semibrevis, 2, 2
-semibrevis, 2, 4
-semibrevis, 2, 6
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 minima, 1, 1
@@ -148,10 +157,18 @@ minima, 1, 1
 
 minima, 1, 1
 minima, 1, 2
-semibrevis, 2, 4
-semibrevis, 2, 6
-semibrevis, 2, 8
-<MeiElement note:m-92>
+
+
+
+
+
+
+
+
+
+
+
+
 
 minima, 1, 1
 minima, 1, 2

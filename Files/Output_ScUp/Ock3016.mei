@@ -575,7 +575,7 @@
 									</verse>
 								</note>
 								<note xml:id="m-1175" dur="minima" dur.ges="768p" oct="4" pname="f" num="2" numbase="3" quality="p" />
-								<dot xml:id="m-6da51558-12f1-4573-996a-fc71ad92ad3f" form="aug" />
+								<dot xml:id="m-d33953f8-ea8f-4d88-b1a8-082ddb900ee0" form="aug" />
 								<note xml:id="m-1176" dur="semiminima" dur.ges="256p" oct="4" pname="e" />
 								<note xml:id="m-1177" dur="semibrevis" dur.ges="1024p" oct="4" pname="e" />
 								<note xml:id="m-1178" dur="minima" dur.ges="512p" oct="4" pname="d" />
@@ -1541,7 +1541,7 @@
 									</verse>
 								</note>
 								<barLine xml:id="m-92353d01-245d-42d6-9095-7d413bcf0070" />
-								<note xml:id="m-1454" dur="semibrevis" dur.ges="1536p" oct="3" oct.ges="2" pname="e" num="2" numbase="3" quality="p" />
+								<note xml:id="m-1454" dur="semibrevis" dur.ges="1536p" oct="3" oct.ges="2" pname="e" quality="p" num="2" numbase="3" />
 								<dot xml:id="m-fbacf4a7-9bf1-46fa-959e-9cc4acb19fc9" form="aug" />
 								<note xml:id="m-1455" dur="minima" dur.ges="512p" oct="3" oct.ges="2" pname="c" />
 								<note xml:id="m-1456" dur="semibrevis" dur.ges="1024p" oct="3" oct.ges="2" pname="c">
@@ -1553,7 +1553,7 @@
 									</verse>
 								</note>
 								<barLine xml:id="m-091a7b3c-b11e-4240-adea-863a282f2312" />
-								<note xml:id="m-1489" dur="semibrevis" dur.ges="1024p" oct="3" oct.ges="2" pname="c">
+								<note xml:id="m-1489" dur="semibrevis" dur.ges="1024p" oct="3" oct.ges="2" pname="c" quality="a" num="1" numbase="2">
 									<verse xml:id="m-1491" n="1">
 										<syl xml:id="m-1492" wordpos="i">si</syl>
 									</verse>
@@ -1768,7 +1768,7 @@
 								<note xml:id="m-1990" dur="minima" dur.ges="512p" oct="3" oct.ges="2" pname="a" />
 								<note xml:id="m-1991" dur="minima" dur.ges="512p" oct="3" oct.ges="2" pname="b" />
 								<note xml:id="m-1992" dur="minima" dur.ges="512p" oct="4" oct.ges="3" pname="c" />
-								<note xml:id="m-1993" dur="semibrevis" dur.ges="1024p" oct="3" oct.ges="2" pname="a" />
+								<note xml:id="m-1993" dur="semibrevis" dur.ges="1024p" oct="3" oct.ges="2" pname="a" quality="a" num="1" numbase="2" />
 								<barLine xml:id="m-72324fff-541f-4b6d-bfd0-23fe708fdbac" />
 								<note xml:id="m-2009" dur="brevis" dur.ges="2048p" oct="3" oct.ges="2" pname="b">
 									<verse xml:id="m-2010" n="2">
