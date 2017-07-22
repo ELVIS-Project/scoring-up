@@ -548,7 +548,7 @@ def run():
     directory = "../Files/GroundTruth/mensural-mei/"
     files = listdir(directory)
     archivo = open('mutable_notes_2.csv','w')
-    archivoid = open('mutable_notes_2_with_id.csv', 'w')
+    archivoid = open('notes_subject_to_alteration_with_id.csv', 'w')
     archivo.write('Piece,Voice,Note Level,Perfect / Imperfect,Regular / Altered,Colored,Regular / Augmented\n')
     archivoid.write('Piece,Voice,Id,Note Shape,Measure\n')
     notelevel = ['L - B', 'B - Sb', 'Sb - M']
