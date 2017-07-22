@@ -345,14 +345,18 @@ def minims_between_semibreves(start_note, middle_notes, end_note, following_note
 
             # If there is more than one minim before the first dot, it is impossible for that dot to be a 'dot of division'
             else:
-                # DOT OF AUGMENTATION
-                #print('Augmentation_def\n')
-                dot_element.addAttribute('form', 'aug')
-                first_dotted_note.addAttribute('quality', 'p')
-                first_dotted_note.addAttribute('num', '2')
-                first_dotted_note.addAttribute('numbase', '3')
-                minim_counter = minim_counter1 + (0.5 * first_dotted_note_default_gain) + minim_counter2
-                pass
+                # DOT OF AUGMENTATION (or a dot of perfection at smaller note level)
+                if dot_element.hasAttribute('form') and dot_element.getAttribute('form').value == 'perf':
+                    minim_counter = counting_minims(middle_notes, note_durs, undotted_note_gain, dotted_note_gain)
+                    pass
+                else:
+                    #print('Augmentation_def\n')
+                    dot_element.addAttribute('form', 'aug')
+                    first_dotted_note.addAttribute('quality', 'p')
+                    first_dotted_note.addAttribute('num', '2')
+                    first_dotted_note.addAttribute('numbase', '3')
+                    minim_counter = minim_counter1 + (0.5 * first_dotted_note_default_gain) + minim_counter2
+                    pass
 
 
     if no_division_dot_flag:
@@ -451,14 +455,18 @@ def sb_between_breves(start_note, middle_notes, end_note, following_note, prolat
 
             # If there is more than one semibreve before the first dot, it is impossible for that dot to be a 'dot of division'
             else:
-                # DOT OF AUGMENTATION
-                #print('Augmentation_def\n')
-                dot_element.addAttribute('form', 'aug')
-                first_dotted_note.addAttribute('quality', 'p')
-                first_dotted_note.addAttribute('num', '2')
-                first_dotted_note.addAttribute('numbase', '3')
-                minim_counter = minim_counter1 + (0.5 * first_dotted_note_default_gain) + minim_counter2
-                pass
+                # DOT OF AUGMENTATION (or a dot of perfection at smaller note level)
+                if dot_element.hasAttribute('form') and dot_element.getAttribute('form').value == 'perf':
+                    minim_counter = counting_minims(middle_notes, note_durs, undotted_note_gain, dotted_note_gain, prolatio)
+                    pass
+                else:
+                    #print('Augmentation_def\n')
+                    dot_element.addAttribute('form', 'aug')
+                    first_dotted_note.addAttribute('quality', 'p')
+                    first_dotted_note.addAttribute('num', '2')
+                    first_dotted_note.addAttribute('numbase', '3')
+                    minim_counter = minim_counter1 + (0.5 * first_dotted_note_default_gain) + minim_counter2
+                    pass
 
             # Total of semibreves in the middle_notes
             count_Sb = minim_counter / prolatio
@@ -553,13 +561,17 @@ def breves_between_longas(start_note, middle_notes, end_note, following_note, pr
 
             # If there is more than one breve before the first dot, it is impossible for that dot to be a 'dot of division'
             else:
-                # DOT OF AUGMENTATION
-                #print('Augmentation_def\n')
-                dot_element.addAttribute('form', 'aug')
-                first_dotted_note.addAttribute('quality', 'p')
-                first_dotted_note.addAttribute('num', '2')
-                first_dotted_note.addAttribute('numbase', '3')
-                minim_counter = minim_counter1 + (0.5 * first_dotted_note_default_gain) + minim_counter2
+                # DOT OF AUGMENTATION (or a dot of perfection at smaller note level)
+                if dot_element.hasAttribute('form') and dot_element.getAttribute('form').value == 'perf':
+                    minim_counter = counting_minims(middle_notes, note_durs, undotted_note_gain, dotted_note_gain, prolatio, tempus)
+                    pass
+                else:                
+                    #print('Augmentation_def\n')
+                    dot_element.addAttribute('form', 'aug')
+                    first_dotted_note.addAttribute('quality', 'p')
+                    first_dotted_note.addAttribute('num', '2')
+                    first_dotted_note.addAttribute('numbase', '3')
+                    minim_counter = minim_counter1 + (0.5 * first_dotted_note_default_gain) + minim_counter2
 
             # Total of breves in the middle_notes
             count_B = minim_counter / (tempus * prolatio)
@@ -886,18 +898,27 @@ def lining_up(quasiscore_mensural_doc):
                 break
         #print(acum_boolean)
         #print(notes_NoDivisionDot_possibility)
+
         if len(notes_NoDivisionDot_possibility) != 0:
             dots = staff.getDescendantsByName('dot')
-            for dot in dots:
-                dotted_note = get_preceding_element(dot)
-                # The preceding element of a dot should be either a <note> or a <rest>, so the following variable (dur_dotted_note) should be well defined
-                dur_dotted_note = dotted_note.getAttribute('dur').value
-                if dur_dotted_note in notes_NoDivisionDot_possibility:
-                    # Augmentation dot
+            if len(notes_NoDivisionDot_possibility) == 4:
+                for dot in dots:
                     dot.addAttribute('form', 'aug')
+                    dotted_note = get_preceding_noterest(dot)
                     dotted_note.addAttribute('quality', 'p')
                     dotted_note.addAttribute('num', '2')
                     dotted_note.addAttribute('numbase', '3')
+            else:
+                for dot in dots:
+                    dotted_note = get_preceding_noterest(dot)
+                    # The preceding element of a dot should be either a <note> or a <rest>, so the following variable (dur_dotted_note) should be well defined
+                    dur_dotted_note = dotted_note.getAttribute('dur').value
+                    if dur_dotted_note in notes_NoDivisionDot_possibility:
+                        # Augmentation dot
+                        dot.addAttribute('form', 'aug')
+                        dotted_note.addAttribute('quality', 'p')
+                        dotted_note.addAttribute('num', '2')
+                        dotted_note.addAttribute('numbase', '3')
     return quasiscore_mensural_doc
 
 # Comparison function

@@ -8,22 +8,13 @@ Coloration level: None
 semibrevis, 2, 2
 semibrevis, 2, 4
 semibrevis, 2, 6
-<MeiElement note:m-73>
-[<MeiElement note:m-74>, <MeiElement note:m-117>]
-<MeiElement note:m-118>
 
 semibrevis, 2, 2
 
 semibrevis, 2, 2
-<MeiElement note:m-118>
-[<MeiElement note:m-155>, <MeiElement note:m-156>]
-<MeiElement note:m-193>
 
 semibrevis, 2, 2
 semibrevis, 2, 4
-<MeiElement note:m-193>
-[<MeiElement note:m-194>, <MeiElement note:m-227>, <MeiElement note:m-228>, <MeiElement rest:m-229>, <MeiElement note:m-255>, <MeiElement note:m-256>, <MeiElement note:m-258>, <MeiElement note:m-276>, <MeiElement note:m-277>, <MeiElement note:m-279>, <MeiElement note:m-281>]
-<MeiElement note:m-296>
 
 semibrevis, 2, 2
 semibrevis, 2, 4
@@ -37,38 +28,23 @@ semibrevis, 3, 4
 minima, 1, 5
 minima, 1, 6
 minima, 1, 7
-<MeiElement note:m-296>
-[<MeiElement rest:m-298>, <MeiElement note:m-320>, <MeiElement note:m-321>, <MeiElement note:m-322>]
-<MeiElement note:m-365>
 
 semibrevis, 2, 2
 semibrevis, 2, 4
 semibrevis, 2, 6
 semibrevis, 2, 8
-<MeiElement note:m-365>
-[<MeiElement note:m-367>, <MeiElement note:m-405>]
-<MeiElement note:m-406>
 
 semibrevis, 2, 2
 
 semibrevis, 2, 2
-<MeiElement note:m-406>
-[<MeiElement note:m-442>]
-<MeiElement note:m-444>
 
 semibrevis, 2, 2
-<MeiElement note:m-444>
-[<MeiElement note:m-481>, <MeiElement note:m-482>, <MeiElement note:m-484>, <MeiElement note:m-486>]
-<MeiElement note:m-513>
 
 semibrevis, 2, 2
 
 minima, 1, 1
 minima, 1, 2
 minima, 1, 3
-<MeiElement note:m-513>
-[<MeiElement rest:m-539>, <MeiElement rest:m-540>, <MeiElement note:m-541>, <MeiElement note:m-564>, <MeiElement note:m-565>]
-<MeiElement note:m-602>
 
 semibrevis, 2, 2
 semibrevis, 2, 4
@@ -76,9 +52,6 @@ semibrevis, 2, 6
 semibrevis, 2, 8
 semibrevis, 2, 10
 <MeiElement note:m-565>
-<MeiElement note:m-602>
-[<MeiElement note:m-603>, <MeiElement note:m-640>]
-<MeiElement note:m-641>
 
 semibrevis, 2, 2
 
@@ -87,9 +60,6 @@ MISTAKE 1 - Impossible to do Imperfection a.p.p. and also Imperfection a.p.a.
 <MeiElement note:m-602>
 None
 
-<MeiElement note:m-641>
-[<MeiElement note:m-678>, <MeiElement note:m-679>, <MeiElement note:m-680>, <MeiElement note:m-718>, <MeiElement rest:m-719>, <MeiElement note:m-720>, <MeiElement note:m-745>, <MeiElement note:m-747>, <MeiElement note:m-748>, <MeiElement note:m-749>, <MeiElement note:m-750>, <MeiElement note:m-751>, <MeiElement note:m-752>, <MeiElement note:m-772>, <MeiElement note:m-773>, <MeiElement note:m-774>, <MeiElement note:m-776>, <MeiElement note:m-777>, <MeiElement note:m-779>, <MeiElement note:m-780>, <MeiElement note:m-795>, <MeiElement note:m-796>, <MeiElement note:m-798>, <MeiElement note:m-799>, <MeiElement note:m-800>, <MeiElement note:m-801>, <MeiElement note:m-814>, <MeiElement note:m-815>, <MeiElement note:m-816>, <MeiElement note:m-817>, <MeiElement note:m-818>, <MeiElement note:m-820>, <MeiElement note:m-822>]
-<MeiElement note:m-840>
 
 semibrevis, 2, 2
 semibrevis, 2, 4
@@ -125,42 +95,24 @@ minima, 1, 28
 minima, 1, 29
 minima, 1, 30
 minima, 1, 31
-<MeiElement note:m-840>
-[]
-<MeiElement rest:m-856>
 
-<MeiElement rest:m-856>
-[<MeiElement note:m-881>, <MeiElement note:m-882>, <MeiElement note:m-883>]
-<MeiElement note:m-913>
 
 semibrevis, 2, 2
 semibrevis, 2, 4
 semibrevis, 2, 6
-<MeiElement note:m-913>
-[<MeiElement rest:m-914>, <MeiElement note:m-943>, <MeiElement note:m-944>, <MeiElement note:m-945>]
-<MeiElement note:m-978>
 
 semibrevis, 2, 2
 
 semibrevis, 2, 2
 semibrevis, 2, 4
 semibrevis, 2, 6
-<MeiElement note:m-978>
-[<MeiElement note:m-979>]
-<MeiElement note:m-1004>
 
 semibrevis, 2, 2
-<MeiElement note:m-1004>
-[<MeiElement rest:m-1005>, <MeiElement note:m-1033>, <MeiElement note:m-1034>, <MeiElement note:m-1035>]
-<MeiElement note:m-1068>
 
 semibrevis, 2, 2
 semibrevis, 2, 4
 semibrevis, 2, 6
 semibrevis, 2, 8
-<MeiElement note:m-1068>
-[<MeiElement note:m-1069>, <MeiElement note:m-1101>, <MeiElement note:m-1102>, <MeiElement note:m-1104>, <MeiElement note:m-1133>]
-<MeiElement note:m-1134>
 
 semibrevis, 2, 2
 semibrevis, 2, 4
@@ -169,9 +121,6 @@ minima, 1, 1
 semibrevis, 2, 3
 semibrevis, 2, 5
 <MeiElement note:m-1133>
-<MeiElement note:m-1134>
-[<MeiElement note:m-1159>, <MeiElement rest:m-1161>, <MeiElement note:m-1162>, <MeiElement note:m-1188>, <MeiElement note:m-1189>, <MeiElement note:m-1190>, <MeiElement note:m-1205>, <MeiElement rest:m-1206>, <MeiElement note:m-1207>, <MeiElement note:m-1224>, <MeiElement note:m-1225>, <MeiElement note:m-1226>, <MeiElement note:m-1241>, <MeiElement note:m-1243>, <MeiElement note:m-1244>, <MeiElement note:m-1259>, <MeiElement note:m-1260>, <MeiElement note:m-1262>, <MeiElement note:m-1263>, <MeiElement note:m-1264>, <MeiElement note:m-1283>, <MeiElement note:m-1284>, <MeiElement note:m-1286>, <MeiElement note:m-1287>]
-<MeiElement note:m-1300>
 
 semibrevis, 2, 2
 semibrevis, 2, 4
@@ -203,48 +152,24 @@ Voice # 2 results:
 longa
 brevis
 Coloration level: B
-<MeiElement note:m-66>
-[]
-<MeiElement note:m-89>
 
-<MeiElement note:m-89>
-[]
-<MeiElement note:m-133>
 
-<MeiElement note:m-133>
-[<MeiElement note:m-134>, <MeiElement note:m-172>]
-<MeiElement note:m-173>
 
 semibrevis, 2, 2
 
 semibrevis, 2, 2
-<MeiElement note:m-173>
-[<MeiElement note:m-204>, <MeiElement note:m-205>]
-<MeiElement note:m-232>
-
-semibrevis, 2, 2
-semibrevis, 2, 4
-<MeiElement note:m-232>
-[<MeiElement note:m-233>, <MeiElement note:m-261>]
-<MeiElement note:m-262>
-
-semibrevis, 2, 2
-
-semibrevis, 2, 2
-<MeiElement note:m-262>
-[<MeiElement note:m-285>]
-<MeiElement note:m-286>
-
-semibrevis, 2, 2
-<MeiElement note:m-286>
-[<MeiElement rest:m-302>, <MeiElement note:m-304>]
-<MeiElement note:m-343>
 
 semibrevis, 2, 2
 semibrevis, 2, 4
-<MeiElement note:m-343>
-[<MeiElement note:m-344>, <MeiElement note:m-383>, <MeiElement note:m-384>, <MeiElement note:m-385>, <MeiElement rest:m-421>, <MeiElement note:m-422>]
-<MeiElement note:m-459>
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+semibrevis, 2, 4
 
 semibrevis, 2, 2
 
@@ -254,44 +179,23 @@ semibrevis, 2, 6
 semibrevis, 2, 8
 semibrevis, 2, 10
 <MeiElement note:m-422>
-<MeiElement note:m-459>
-[<MeiElement note:m-460>, <MeiElement note:m-496>, <MeiElement note:m-497>]
-<MeiElement note:m-523>
 
 semibrevis, 2, 2
 
 semibrevis, 2, 2
 semibrevis, 2, 4
-<MeiElement note:m-523>
-[]
-<MeiElement note:m-550>
 
-<MeiElement note:m-550>
-[<MeiElement note:m-551>]
-<MeiElement note:m-580>
-
-semibrevis, 2, 2
-<MeiElement note:m-580>
-[<MeiElement note:m-581>]
-<MeiElement note:m-619>
-
-semibrevis, 2, 2
-<MeiElement note:m-619>
-[<MeiElement note:m-620>, <MeiElement note:m-657>]
-<MeiElement note:m-658>
 
 semibrevis, 2, 2
 
 semibrevis, 2, 2
-<MeiElement note:m-658>
-[<MeiElement note:m-696>, <MeiElement note:m-697>]
-<MeiElement note:m-729>
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
 
 semibrevis, 2, 2
 semibrevis, 2, 4
-<MeiElement note:m-729>
-[<MeiElement note:m-730>, <MeiElement note:m-756>, <MeiElement note:m-758>, <MeiElement note:m-759>, <MeiElement note:m-784>, <MeiElement rest:m-785>, <MeiElement note:m-786>]
-<MeiElement note:m-804>
 
 semibrevis, 2, 2
 semibrevis, 2, 4
@@ -300,23 +204,14 @@ semibrevis, 2, 8
 semibrevis, 2, 10
 semibrevis, 2, 12
 semibrevis, 2, 14
-<MeiElement note:m-804>
-[<MeiElement note:m-805>, <MeiElement note:m-826>, <MeiElement note:m-827>, <MeiElement note:m-830>, <MeiElement note:m-831>]
-<MeiElement note:m-845>
 
 semibrevis, 2, 2
 minima, 1, 3
 minima, 1, 4
 semibrevis, 2, 6
 semibrevis, 2, 8
-<MeiElement note:m-845>
-[<MeiElement note:m-860>]
-<MeiElement note:m-898>
 
 semibrevis, 2, 2
-<MeiElement note:m-898>
-[<MeiElement note:m-900>, <MeiElement rest:m-921>, <MeiElement note:m-922>]
-<MeiElement note:m-960>
 
 semibrevis, 2, 2
 
@@ -326,86 +221,26 @@ MISTAKE 1 - Impossible to do Imperfection a.p.p. and also Imperfection a.p.a.
 <MeiElement note:m-898>
 None
 
-<MeiElement note:m-960>
-[<MeiElement note:m-961>]
-<MeiElement note:m-992>
 
 semibrevis, 2, 2
-<MeiElement note:m-992>
-[]
-<MeiElement note:m-1012>
 
-<MeiElement note:m-1012>
-[]
-<MeiElement note:m-1050>
 
-<MeiElement note:m-1050>
-[]
-<MeiElement rest:m-1081>
 
-<MeiElement rest:m-1081>
-[]
-<MeiElement note:m-1119>
 
-<MeiElement note:m-1119>
-[]
-<MeiElement note:m-1119>
 
-<MeiElement note:m-1119>
-[]
-<MeiElement note:m-1119>
 
-<MeiElement note:m-1119>
-[]
-<MeiElement note:m-1147>
 
-<MeiElement note:m-1147>
-[]
-<MeiElement note:m-1147>
 
-<MeiElement note:m-1147>
-[]
-<MeiElement note:m-1147>
 
-<MeiElement note:m-1147>
-[]
-<MeiElement note:m-1170>
 
-<MeiElement note:m-1170>
-[]
-<MeiElement note:m-1170>
 
-<MeiElement note:m-1170>
-[]
-<MeiElement note:m-1170>
 
-<MeiElement note:m-1170>
-[]
-<MeiElement note:m-1172>
 
-<MeiElement note:m-1172>
-[]
-<MeiElement note:m-1172>
 
-<MeiElement note:m-1172>
-[]
-<MeiElement note:m-1172>
 
-<MeiElement note:m-1172>
-[]
-<MeiElement note:m-1194>
 
-<MeiElement note:m-1194>
-[]
-<MeiElement note:m-1194>
 
-<MeiElement note:m-1194>
-[]
-<MeiElement note:m-1194>
 
-<MeiElement note:m-1194>
-[<MeiElement note:m-1212>, <MeiElement note:m-1213>, <MeiElement note:m-1215>, <MeiElement rest:m-1229>, <MeiElement note:m-1230>, <MeiElement note:m-1231>, <MeiElement note:m-1232>, <MeiElement note:m-1247>, <MeiElement rest:m-1248>, <MeiElement note:m-1249>, <MeiElement note:m-1269>, <MeiElement note:m-1270>, <MeiElement note:m-1271>]
-<MeiElement note:m-1290>
 
 semibrevis, 2, 2
 semibrevis, 2, 4
@@ -420,9 +255,6 @@ semibrevis, 2, 18
 semibrevis, 2, 20
 semibrevis, 2, 22
 semibrevis, 2, 24
-<MeiElement note:m-1290>
-[<MeiElement note:m-1291>]
-<MeiElement note:m-1303>
 
 semibrevis, 2, 2
 Voice # 3 results:
@@ -430,99 +262,51 @@ Voice # 3 results:
 longa
 brevis
 Coloration level: B
-<MeiElement rest:m-69>
-[<MeiElement note:m-93>, <MeiElement note:m-94>, <MeiElement note:m-95>]
-<MeiElement note:m-138>
 
 semibrevis, 2, 2
 semibrevis, 2, 4
 semibrevis, 2, 6
-<MeiElement note:m-138>
-[<MeiElement note:m-139>, <MeiElement note:m-176>]
-<MeiElement note:m-177>
 
 semibrevis, 2, 2
 
 semibrevis, 2, 2
-<MeiElement note:m-177>
-[<MeiElement note:m-208>, <MeiElement note:m-209>]
-<MeiElement note:m-237>
-
-semibrevis, 2, 2
-semibrevis, 2, 4
-<MeiElement note:m-237>
-[<MeiElement note:m-238>, <MeiElement note:m-265>]
-<MeiElement note:m-266>
-
-semibrevis, 2, 2
-
-semibrevis, 2, 2
-<MeiElement note:m-266>
-[<MeiElement note:m-289>]
-<MeiElement note:m-290>
-
-semibrevis, 2, 2
-<MeiElement note:m-290>
-[<MeiElement note:m-307>, <MeiElement rest:m-309>, <MeiElement note:m-310>]
-<MeiElement note:m-347>
 
 semibrevis, 2, 2
 semibrevis, 2, 4
-semibrevis, 2, 6
-<MeiElement note:m-347>
-[<MeiElement note:m-348>]
-<MeiElement note:m-388>
 
 semibrevis, 2, 2
-<MeiElement note:m-388>
-[<MeiElement note:m-389>]
-<MeiElement note:m-425>
 
 semibrevis, 2, 2
-<MeiElement note:m-425>
-[<MeiElement note:m-426>]
-<MeiElement note:m-464>
-
-semibrevis, 2, 2
-<MeiElement note:m-464>
-[<MeiElement note:m-465>, <MeiElement note:m-501>, <MeiElement note:m-503>]
-<MeiElement note:m-527>
 
 semibrevis, 2, 2
 
 semibrevis, 2, 2
 semibrevis, 2, 4
-<MeiElement note:m-527>
-[<MeiElement rest:m-529>]
-<MeiElement note:m-554>
-
-semibrevis, 2, 2
-<MeiElement note:m-554>
-[]
-<MeiElement note:m-584>
-
-<MeiElement note:m-584>
-[<MeiElement note:m-585>]
-<MeiElement note:m-623>
-
-semibrevis, 2, 2
-
-<MeiElement note:m-623>
-[<MeiElement note:m-624>, <MeiElement note:m-661>]
-<MeiElement note:m-662>
+semibrevis, 2, 6
 
 semibrevis, 2, 2
 
 semibrevis, 2, 2
-<MeiElement note:m-662>
-[<MeiElement note:m-700>, <MeiElement note:m-701>]
-<MeiElement note:m-734>
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
 
 semibrevis, 2, 2
 semibrevis, 2, 4
-<MeiElement note:m-734>
-[<MeiElement note:m-735>, <MeiElement note:m-763>, <MeiElement note:m-765>, <MeiElement note:m-767>, <MeiElement rest:m-789>, <MeiElement note:m-790>, <MeiElement note:m-791>, <MeiElement note:m-809>, <MeiElement note:m-810>]
-<MeiElement note:m-834>
+
+semibrevis, 2, 2
+
+
+semibrevis, 2, 2
+
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+
+semibrevis, 2, 2
+semibrevis, 2, 4
 
 semibrevis, 2, 2
 
@@ -535,115 +319,49 @@ semibrevis, 2, 12
 semibrevis, 2, 14
 semibrevis, 2, 16
 <MeiElement note:m-810>
-<MeiElement note:m-834>
-[<MeiElement note:m-835>]
-<MeiElement note:m-850>
 
 semibrevis, 2, 2
-<MeiElement note:m-850>
-[<MeiElement rest:m-852>, <MeiElement note:m-863>, <MeiElement note:m-864>, <MeiElement note:m-865>]
-<MeiElement note:m-904>
 
 semibrevis, 2, 2
 
 semibrevis, 2, 2
 semibrevis, 2, 4
 semibrevis, 2, 6
-<MeiElement note:m-904>
-[<MeiElement rest:m-905>, <MeiElement note:m-925>, <MeiElement note:m-926>, <MeiElement note:m-927>]
-<MeiElement note:m-964>
 
 semibrevis, 2, 2
 semibrevis, 2, 4
 semibrevis, 2, 6
 semibrevis, 2, 8
-<MeiElement note:m-964>
-[<MeiElement note:m-965>]
-<MeiElement note:m-995>
 
 semibrevis, 2, 2
 
-<MeiElement note:m-995>
-[<MeiElement rest:m-996>, <MeiElement note:m-1015>, <MeiElement note:m-1016>, <MeiElement note:m-1017>]
-<MeiElement note:m-1053>
 
 semibrevis, 2, 2
 semibrevis, 2, 4
 semibrevis, 2, 6
 semibrevis, 2, 8
-<MeiElement note:m-1053>
-[<MeiElement note:m-1054>, <MeiElement note:m-1085>, <MeiElement note:m-1086>, <MeiElement note:m-1088>]
-<MeiElement note:m-1124>
 
 semibrevis, 2, 2
 semibrevis, 2, 4
 semibrevis, 2, 6
 semibrevis, 2, 8
-<MeiElement note:m-1124>
-[]
-<MeiElement note:m-1124>
 
-<MeiElement note:m-1124>
-[]
-<MeiElement note:m-1124>
 
-<MeiElement note:m-1124>
-[]
-<MeiElement note:m-1151>
 
-<MeiElement note:m-1151>
-[]
-<MeiElement note:m-1151>
 
-<MeiElement note:m-1151>
-[]
-<MeiElement note:m-1151>
 
-<MeiElement note:m-1151>
-[]
-<MeiElement note:m-1177>
 
-<MeiElement note:m-1177>
-[]
-<MeiElement note:m-1177>
 
-<MeiElement note:m-1177>
-[]
-<MeiElement note:m-1177>
 
-<MeiElement note:m-1177>
-[]
-<MeiElement note:m-1179>
 
-<MeiElement note:m-1179>
-[]
-<MeiElement note:m-1179>
 
-<MeiElement note:m-1179>
-[]
-<MeiElement note:m-1179>
 
-<MeiElement note:m-1179>
-[]
-<MeiElement note:m-1199>
 
-<MeiElement note:m-1199>
-[]
-<MeiElement note:m-1199>
 
-<MeiElement note:m-1199>
-[]
-<MeiElement note:m-1199>
 
-<MeiElement note:m-1199>
-[<MeiElement rest:m-1218>, <MeiElement note:m-1219>]
-<MeiElement note:m-1235>
 
 semibrevis, 2, 2
 semibrevis, 2, 4
-<MeiElement note:m-1235>
-[<MeiElement note:m-1236>, <MeiElement rest:m-1252>, <MeiElement note:m-1254>, <MeiElement note:m-1255>, <MeiElement rest:m-1274>, <MeiElement note:m-1276>, <MeiElement note:m-1278>, <MeiElement note:m-1294>]
-<MeiElement note:m-1296>
 
 semibrevis, 2, 2
 
@@ -657,9 +375,6 @@ semibrevis, 2, 14
 WARNING 1! An imperfection a.p.a. is required, but this imperfect note is followed by a perfect note, this contradicts the fundamental rule: 'A note is perfect before another one of the same kind'.
 The imperfected note is <MeiElement note:m-1296> and is followed by the perfect note <MeiElement note:m-1306>
 
-<MeiElement note:m-1296>
-[]
-<MeiElement note:m-1306>
 
 
 COMPARISON RESUTLS - Notes/Rests (with their xml:id and voice number) that don't match with the ground truth
