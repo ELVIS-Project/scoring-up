@@ -513,4 +513,5 @@ def run():
     archivo.write('Piece,Voice,Note Level,Perfect / Imperfect,Regular / Altered,Colored,Regular / Augmented\n')
     notelevel = ['L - B', 'B - Sb', 'Sb - M']
     for filename in files:
-        main(directory, filename, archivo, notelevel)
+        if filename.endswith('.mei'):
+            main(directory, filename, archivo, notelevel)

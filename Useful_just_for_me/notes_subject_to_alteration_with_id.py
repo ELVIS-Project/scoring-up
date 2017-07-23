@@ -503,7 +503,7 @@ def notes_susceptible_to_augmentation(modusmaior, modusminor, tempus, prolatio, 
 
 
 
-def main(directory, filename, archivo, notelevel, archivoid):
+def main(directory, filename, notelevel, archivoid):
 
     if filename == "IvTrem07.mei":
         pass
@@ -536,8 +536,6 @@ def main(directory, filename, archivo, notelevel, archivoid):
             #print ""
             
             for k in range(0, 3):
-                archivo.write(filename[:-4] + ',' + ('Voice # ' + str(i+1)) + ',' + notelevel[k] + ',' + str(perfimp[k]) + ',' + str(alt[0][k]) + ',' + str(col) + ',' + str(aug) + '\n')
-
                 alt_ids_list = alt[1][k]
                 for alt_id in alt_ids_list:
                     mens_alt_note = mensural_gtdoc.getElementById(alt_id)
@@ -547,10 +545,9 @@ def main(directory, filename, archivo, notelevel, archivoid):
 def run():
     directory = "../Files/GroundTruth/mensural-mei/"
     files = listdir(directory)
-    archivo = open('mutable_notes_2.csv','w')
     archivoid = open('notes_subject_to_alteration_with_id.csv', 'w')
-    archivo.write('Piece,Voice,Note Level,Perfect / Imperfect,Regular / Altered,Colored,Regular / Augmented\n')
     archivoid.write('Piece,Voice,Id,Note Shape,Measure\n')
     notelevel = ['L - B', 'B - Sb', 'Sb - M']
     for filename in files:
-        main(directory, filename, archivo, notelevel, archivoid)
+        if filename.endswith('.mei'):
+            main(directory, filename, notelevel, archivoid)

@@ -178,7 +178,7 @@
 									<accid xml:id="m-566" accid="s" />
 								</note>
 								<barLine xml:id="m-c65b585a-4ce3-403c-8949-ca307a716c29" />
-								<note xml:id="m-579" dur="brevis" dur.ges="3072p" oct="4" pname="g" />
+								<note xml:id="m-579" dur="longa" oct="4" pname="g" />
 								<barLine xml:id="m-07a4d6f0-b5a0-497a-9ffc-f75520f09bbe" />
 							</layer>
 						</staff>
@@ -309,7 +309,7 @@
 								<note xml:id="m-569" dur="semibrevis" dur.ges="1024p" oct="3" oct.ges="2" pname="b" />
 								<note xml:id="m-571" dur="brevis" dur.ges="2048p" oct="3" oct.ges="2" pname="a" />
 								<barLine xml:id="m-01cf2182-d390-4ff7-ab92-cc079339c5ed" />
-								<note xml:id="m-582" dur="brevis" dur.ges="3072p" oct="3" oct.ges="2" pname="g" />
+								<note xml:id="m-582" dur="longa" oct="3" oct.ges="2" pname="g" />
 								<barLine xml:id="m-8895b3e4-5b96-4706-a25b-0b8650d51845" />
 							</layer>
 						</staff>
@@ -461,7 +461,7 @@
 								<note xml:id="m-574" dur="brevis" dur.ges="2048p" oct="4" oct.ges="3" pname="d" />
 								<note xml:id="m-575" dur="semibrevis" dur.ges="1024p" oct="4" oct.ges="3" pname="c" />
 								<barLine xml:id="m-e481d59d-9815-44ec-adf4-6a94443ab48a" />
-								<note xml:id="m-585" dur="brevis" dur.ges="3072p" oct="4" oct.ges="3" pname="d" />
+								<note xml:id="m-585" dur="longa" oct="4" oct.ges="3" pname="d" />
 								<barLine xml:id="m-fbedce2f-0d16-4002-a297-d55ef0a82ad3" />
 							</layer>
 						</staff>

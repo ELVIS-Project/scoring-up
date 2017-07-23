@@ -1348,7 +1348,7 @@
 										<syl xml:id="m-1009" wordpos="i">Par</syl>
 									</verse>
 								</note>
-								<note xml:id="m-1004" dur="brevis" dur.ges="2048p" oct="3" oct.ges="2" pname="f" quality="i" num="3" numbase="2">
+								<note xml:id="m-1004" dur="brevis" dur.ges="2048p" oct="3" oct.ges="2" pname="f" quality="i" num="3" numbase="2" colored="true">
 									<verse xml:id="m-1010" n="1">
 										<syl xml:id="m-1011" wordpos="i">me</syl>
 									</verse>

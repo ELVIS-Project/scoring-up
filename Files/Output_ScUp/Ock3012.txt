@@ -94,9 +94,9 @@ semibrevis, 2, 31
 semibrevis, 2, 33
 semibrevis, 2, 35
 semibrevis, 3, 38
-semibrevis, 2, 40
-semiminima, 1/2, 81/2
-semiminima, 1/2, 41
+minima, 3/2, 79/2
+semiminima, 1/2, 40
+minima, 1, 41
 semibrevis, 3, 44
 minima, 1, 45
 minima, 1, 46
@@ -106,46 +106,47 @@ semibrevis, 2, 49
 minima, 1, 50
 semibrevis, 2, 52
 minima, 1, 53
-<MeiElement note:m-903>
-
-semibrevis, 2, 2
-semibrevis, 2, 4
-minima, 1, 5
-semibrevis, 2, 7
-minima, 1, 8
-minima, 1, 9
-
-fusa, 1/4, 1/4
-fusa, 1/4, 1/2
-semiminima, 1/2, 1
-semiminima, 1/2, 3/2
-semibrevis, 2, 7/2
-minima, 1, 9/2
-semibrevis, 2, 13/2
-semibrevis, 2, 17/2
-semibrevis, 2, 21/2
-minima, 1, 23/2
-minima, 3/2, 13
-semiminima, 1/2, 27/2
-minima, 3/2, 15
-semiminima, 1/2, 31/2
-semiminima, 1/2, 16
-semiminima, 1/2, 33/2
-minima, 1, 35/2
-minima, 1, 37/2
-semibrevis, 2, 41/2
-minima, 1, 43/2
-minima, 1, 45/2
-semibrevis, 2, 49/2
-semibrevis, 2, 53/2
-minima, 1, 55/2
-minima, 3/2, 29
-semiminima, 1/2, 59/2
-semiminima, 1/2, 30
-semiminima, 1/2, 61/2
-minima, 1, 63/2
-semibrevis, 2, 67/2
-minima, 1, 69/2
+semibrevis, 2, 55
+semibrevis, 2, 57
+semibrevis, 2, 59
+semibrevis, 2, 61
+minima, 1, 62
+semibrevis, 2, 64
+minima, 1, 65
+minima, 3/2, 133/2
+semiminima, 1/2, 67
+semiminima, 1/2, 135/2
+semiminima, 1/2, 68
+semibrevis, 2, 70
+minima, 1, 71
+semibrevis, 2, 73
+semibrevis, 2, 75
+semibrevis, 2, 77
+minima, 1, 78
+minima, 3/2, 159/2
+semiminima, 1/2, 80
+minima, 3/2, 163/2
+semiminima, 1/2, 82
+semiminima, 1/2, 165/2
+semiminima, 1/2, 83
+minima, 3/2, 169/2
+semiminima, 1/2, 85
+semibrevis, 2, 87
+minima, 3/2, 177/2
+semiminima, 1/2, 89
+semibrevis, 2, 91
+semibrevis, 2, 93
+minima, 1, 94
+minima, 3/2, 191/2
+semiminima, 1/2, 96
+semiminima, 1/2, 193/2
+semiminima, 1/2, 97
+minima, 1, 98
+minima, 3/2, 199/2
+semiminima, 1/2, 100
+semiminima, 1/2, 201/2
+semiminima, 1/2, 101
+<MeiElement note:m-1179>
 Voice # 2 results:
 
 Coloration level: None
@@ -429,20 +430,20 @@ NOT EQUAL: the NOTE m-575 in voice 1
 In GROUND TRUTH: SEMIBREVIS, with 1 x default value
 In APEL  OUTPUT: SEMIBREVIS, with 2 x default value
 
-NOT EQUAL: the NOTE m-1196 in voice 1
+NOT EQUAL: the NOTE m-1197 in voice 1
 In GROUND TRUTH: BREVIS, with 1 x default value
 In APEL  OUTPUT: BREVIS, with 2/3 x default value
 
-NOT EQUAL: the NOTE m-1051 in voice 3
+NOT EQUAL: the NOTE m-1049 in voice 3
 In GROUND TRUTH: BREVIS, with 2/3 x default value
 In APEL  OUTPUT: BREVIS, with 1 x default value
 
-NOT EQUAL: the NOTE m-1210 in voice 3
+NOT EQUAL: the NOTE m-1211 in voice 3
 In GROUND TRUTH: BREVIS, with 1 x default value
 In APEL  OUTPUT: BREVIS, with 2/3 x default value
 
 
 ACCURACY:
-Voice # 0:	137/139 = 98.5611510791
+Voice # 0:	139/141 = 98.5815602837
 Voice # 1:	1 = 100.0
 Voice # 2:	61/62 = 98.3870967742
