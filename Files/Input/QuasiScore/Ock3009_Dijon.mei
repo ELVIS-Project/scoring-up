@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mei xml:id="m-1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.music-encoding.org/ns/mei" meiversion="2013">
+	<meiHead xml:id="m-2">
+		<fileDesc xml:id="m-3">
+			<titleStmt xml:id="m-4">
+				<title xml:id="m-10" />
+				<respStmt xml:id="m-11">
+					<persName xml:id="m-12" />
+				</respStmt>
+			</titleStmt>
+			<pubStmt xml:id="m-13">
+				<availability xml:id="m-14">
+					<useRestrict xml:id="m-15" />
+				</availability>
+			</pubStmt>
+		</fileDesc>
+		<encodingDesc xml:id="m-16">
+			<appInfo xml:id="m-17">
+				<application xml:id="sibelius" isodate="2017-5-1T13:24:39Z" version="8300">
+					<name xml:id="m-19" type="operating-system">Mac OS X Mountain Lion</name>
+				</application>
+				<application xml:id="sibmei" type="plugin" version="2.0.1">
+					<name xml:id="m-21">Sibelius to MEI Exporter (2.0.1)</name>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<workDesc xml:id="m-5">
+			<work xml:id="m-6">
+				<titleStmt xml:id="m-7">
+					<title xml:id="m-8" />
+					<respStmt xml:id="m-9" />
+				</titleStmt>
+			</work>
+		</workDesc>
+	</meiHead>
+	<music xml:id="m-22">
+		<body xml:id="m-23">
+			<mdiv xml:id="m-24">
+				<score xml:id="m-25">
+					<scoreDef xml:id="m-26">
+						<staffGrp xml:id="m-37" n="1" symbol="bracket">
+							<staffDef xml:id="m-28" clef.line="2" clef.shape="G" key.mode="major" key.sig="0" label="Superius" lines="5" n="1" modusmaior="2" modusminor="2" tempus="3" prolatio="2">
+								<!-- voice.female.soprano.ensemble.ah -->
+								<instrDef xml:id="m-30" midi.channel="1" midi.pan="26" midi.volume="100" />
+							</staffDef>
+							<staffDef xml:id="m-31" clef.dis="8" clef.dis.place="below" clef.line="2" clef.shape="G" key.mode="major" key.sig="0" label="Tenor" lines="5" n="2" modusmaior="2" modusminor="2" tempus="3" prolatio="2">
+								<!-- voice.male.tenor.ensemble.ah -->
+								<instrDef xml:id="m-33" midi.channel="1" midi.pan="81" midi.volume="100" />
+							</staffDef>
+							<staffDef xml:id="m-34" clef.dis="8" clef.dis.place="below" clef.line="2" clef.shape="G" key.mode="major" key.sig="0" label="Contratenor" lines="5" n="3" modusmaior="2" modusminor="2" tempus="3" prolatio="2">
+								<!-- voice.male.tenor.ensemble.ah -->
+								<instrDef xml:id="m-36" midi.channel="1" midi.pan="81" midi.volume="100" />
+							</staffDef>
+						</staffGrp>
+					</scoreDef>
+					<section xml:id="m-38">
+						<staff xml:id="m-40" n="1">
+							<layer xml:id="m-41" n="1">
+								<rest xml:id="m-42" dur="brevis" />
+								<barLine xml:id="m-1112d868-084d-47e9-b72c-92b9b2974337" />
+								<rest xml:id="m-54" dur="brevis" />
+								<barLine xml:id="m-e95d54ba-07be-4ee7-829c-d7ba478b3528" />
+								<note xml:id="m-69" dur="semibrevis" dur.ges="1536p" oct="4" pname="g" />
+								<dot xml:id="m-f30a5d49-cefe-499c-8f52-b146f937e475" />
+								<note xml:id="m-70" dur="minima" dur.ges="512p" oct="4" pname="a" />
+								<note xml:id="m-71" dur="semibrevis" dur.ges="1024p" oct="4" pname="b" />
+								<barLine xml:id="m-a9115e5f-fdcb-4c1f-aa89-f757731d29d4" />
+								<note xml:id="m-83" dur="brevis" dur.ges="2048p" oct="5" pname="c" colored="true" />
+								<note xml:id="m-84" dur="semibrevis" dur.ges="1024p" oct="4" pname="b" colored="true" />
+								<barLine xml:id="m-a7cd975a-5ab3-4f81-a89f-bd2d4ed12544" />
+								<note xml:id="m-97" dur="semibrevis" dur.ges="1024p" oct="4" pname="g" colored="true" />
+								<note xml:id="m-98" dur="brevis" dur.ges="2048p" oct="4" pname="a" colored="true" />
+								<barLine xml:id="m-293d2fa2-7e81-4c5f-b70b-44c2fd753f7f" />
+								<note xml:id="m-110" dur="brevis" dur.ges="2048p" oct="4" pname="b" />
+								<rest xml:id="m-111" dur="semibrevis" dur.ges="1024p" />
+								<barLine xml:id="m-a56d0336-9a98-4198-980e-faaf47d35ea4" />
+								<note xml:id="m-125" dur="semibrevis" dur.ges="1024p" oct="4" pname="b" />
+								<note xml:id="m-126" dur="semibrevis" dur.ges="1024p" oct="4" pname="b" />
+								<note xml:id="m-127" dur="semibrevis" dur.ges="1024p" oct="5" pname="c" />
+								<barLine xml:id="m-bd797865-ef03-48a3-a115-04d2be09ba92" />
+								<note xml:id="m-139" dur="brevis" dur.ges="2048p" oct="5" pname="d" />
+								<note xml:id="m-140" dur="semibrevis" dur.ges="1024p" oct="5" pname="d" />
+								<barLine xml:id="m-c98031c4-1b90-4a45-8b4a-0675a4cea429" />
+								<note xml:id="m-153" dur="brevis" dur.ges="2048p" oct="5" pname="d" />
+								<note xml:id="m-155" dur="semibrevis" dur.ges="1024p" oct="5" pname="c" />
+								<dot xml:id="m-8fa978a6-fd8c-4ed3-b83b-b7b87765625d" />
+								<barLine xml:id="m-16490a00-e925-404a-bd5d-e41523c15f63" />
+								<note xml:id="m-168" dur="semibrevis" dur.ges="1024p" oct="4" pname="b" />
+								<note xml:id="m-169" artic="stop" dur="semibrevis" dur.ges="2048p" oct="4" pname="a" />
+								<barLine xml:id="m-3ccccead-cb9c-4cbb-b594-07976bdc84a0" />
+								<note xml:id="m-183" dur="brevis" dur.ges="3072p" oct="4" pname="g" />
+								<barLine xml:id="m-5478a1cf-d2ad-4961-b53d-4b73f54fa686" />
+								<rest xml:id="m-197" dur="brevis" />
+								<barLine xml:id="m-3deb840a-ee53-40cb-bf38-7d46909b75be" />
+								<note xml:id="m-211" dur="semibrevis" dur.ges="1024p" oct="5" pname="c" />
+								<note xml:id="m-212" dur="semibrevis" dur.ges="1024p" oct="5" pname="c" />
+								<note xml:id="m-213" dur="semibrevis" dur.ges="1024p" oct="5" pname="c" />
+								<barLine xml:id="m-e3b2aeec-5ee7-4671-aa67-4d7ed53a62e9" />
+								<note xml:id="m-225" dur="brevis" dur.ges="2048p" oct="4" pname="g" />
+								<note xml:id="m-226" dur="semibrevis" dur.ges="1024p" oct="4" pname="a" />
+								<barLine xml:id="m-79a70e4f-91a4-47d1-bbcb-222b39355f24" />
+								<note xml:id="m-239" dur="brevis" dur.ges="2048p" oct="4" pname="b" />
+								<note xml:id="m-240" dur="semibrevis" dur.ges="1024p" oct="4" pname="a" />
+								<dot xml:id="m-76cc5936-9e56-4b00-bc25-248df107ac00" />
+								<barLine xml:id="m-83842b90-139e-4094-bad3-90630c6839e5" />
+								<note xml:id="m-254" dur="semibrevis" dur.ges="1024p" oct="4" pname="g" />
+								<note xml:id="m-255" artic="stop" dur="semibrevis" dur.ges="2048p" oct="4" pname="f" />
+								<barLine xml:id="m-77131b6a-7ce0-44b4-85fb-bca245a3fad5" />
+								<note xml:id="m-268" dur="brevis" dur.ges="3072p" oct="4" pname="e" />
+								<barLine xml:id="m-bef65618-6a73-4b9e-b633-43c7c9b5bc37" />
+								<rest xml:id="m-281" dur="brevis" />
+								<barLine xml:id="m-0a10bc64-4428-49d7-8840-00d9610f0d1e" />
+								<note xml:id="m-294" dur="brevis" dur.ges="2048p" oct="4" pname="a" colored="true" />
+								<note xml:id="m-296" dur="brevis" dur.ges="2048p" oct="4" pname="a" colored="true" />
+								<barLine xml:id="m-69e79207-16d6-4bcd-858d-7f3280b107de" />
+								<note xml:id="m-311" dur="semibrevis" dur.ges="1024p" oct="4" pname="g" colored="true" />
+								<note xml:id="m-313" dur="minima" dur.ges="512p" oct="4" pname="f" colored="true" />
+								<note xml:id="m-314" dur="minima" dur.ges="512p" oct="4" pname="e" colored="true" />
+								<barLine xml:id="m-dc567d23-5ba8-4884-b200-11e003b3053b" />
+								<note xml:id="m-328" dur="brevis" dur.ges="3072p" oct="4" pname="d" colored="true" />
+								<barLine xml:id="m-517ecb9f-897d-4a4f-96b9-75bd546cb1f7" />
+								<note xml:id="m-341" dur="brevis" dur.ges="2048p" oct="4" pname="g" />
+								<note xml:id="m-342" dur="semibrevis" dur.ges="1024p" oct="4" pname="a" />
+								<barLine xml:id="m-b06c2230-f0e6-48bf-9b40-23c5aa688069" />
+								<note xml:id="m-357" dur="brevis" dur.ges="2048p" oct="4" pname="b" />
+								<note xml:id="m-358" dur="semibrevis" dur.ges="1024p" oct="4" pname="g" />
+								<barLine xml:id="m-6c8262bd-6951-47bf-bf32-294a2a3c4976" />
+								<note xml:id="m-372" dur="brevis" dur.ges="2048p" oct="4" pname="a" />
+								<note xml:id="m-373" dur="semibrevis" dur.ges="1024p" oct="5" pname="c" />
+								<barLine xml:id="m-2dc5bcb4-c172-4a80-88a1-6caff9e68fbe" />
+								<note xml:id="m-389" dur="semibrevis" dur.ges="1024p" oct="5" pname="d" />
+								<note xml:id="m-390" dur="semibrevis" dur.ges="1536p" oct="5" pname="e" />
+								<dot xml:id="m-a7a6f226-6259-4a98-a115-b35596a8b57f" />
+								<note xml:id="m-391" dur="minima" dur.ges="512p" oct="5" pname="c" />
+								<barLine xml:id="m-dd2367fc-0e43-4116-8a63-edae81e6d364" />
+								<note xml:id="m-404" dur="brevis" dur.ges="2048p" oct="5" pname="c" />
+								<note xml:id="m-405" dur="semibrevis" dur.ges="1024p" oct="4" pname="b" />
+								<barLine xml:id="m-44486e6a-2a14-44cc-a4ec-032ad01dc32c" />
+								<note xml:id="m-417" dur="brevis" dur.ges="2048p" oct="5" pname="c" />
+								<rest xml:id="m-418" dur="semibrevis" dur.ges="1024p" />
+								<barLine xml:id="m-87688df1-6938-4a04-9132-c5aa2ab1c32e" />
+								<note xml:id="m-429" dur="brevis" dur.ges="2048p" oct="5" pname="e" />
+								<note xml:id="m-430" dur="semibrevis" dur.ges="1024p" oct="5" pname="d" />
+								<barLine xml:id="m-3993bc62-23e1-4cff-bf16-8bfac724cf18" />
+								<note xml:id="m-443" dur="semibrevis" dur.ges="1024p" oct="4" pname="b" />
+								<note xml:id="m-445" dur="minima" dur.ges="512p" oct="4" pname="b" />
+								<note xml:id="m-446" dur="minima" dur.ges="512p" oct="5" pname="c" />
+								<note xml:id="m-447" dur="semibrevis" dur.ges="1024p" oct="5" pname="d" />
+								<barLine xml:id="m-c4f77efa-d4b6-44d1-b18d-fcf73d122bf0" />
+								<note xml:id="m-462" dur="semibrevis" dur.ges="1024p" oct="4" pname="g" />
+								<note xml:id="m-463" dur="brevis" dur.ges="2048p" oct="5" pname="c" />
+								<barLine xml:id="m-27923299-5758-4174-a803-67ff9e2f2344" />
+								<note xml:id="m-475" dur="semibrevis" dur.ges="1024p" oct="4" pname="b" />
+								<note xml:id="m-476" dur="brevis" dur.ges="2048p" oct="4" pname="a" />
+								<barLine xml:id="m-f085b79b-7be2-4886-a34c-047c8c35861e" />
+								<note xml:id="m-490" dur="brevis" dur.ges="2048p" oct="4" pname="b" />
+								<rest xml:id="m-491" dur="semibrevis" dur.ges="1024p" />
+								<barLine xml:id="m-ed793124-eda7-4e2b-aa4d-b6184e66d56f" />
+								<note xml:id="m-506" dur="semibrevis" dur.ges="1536p" oct="4" pname="g" />
+								<dot xml:id="m-63d21d93-4b7a-45b9-b382-1119544dec11" />
+								<note xml:id="m-507" dur="minima" dur.ges="512p" oct="4" pname="a" />
+								<note xml:id="m-508" dur="semibrevis" dur.ges="1024p" oct="4" pname="b" />
+								<barLine xml:id="m-2fdbe199-4453-4f28-98d4-5e08b1edf4be" />
+								<note xml:id="m-522" dur="brevis" dur.ges="2048p" oct="5" pname="c" />
+								<note xml:id="m-523" dur="semibrevis" dur.ges="1024p" oct="4" pname="b" />
+								<barLine xml:id="m-7af0c8f1-c20d-4ab0-ac5c-44f8b6e9a37b" />
+								<note xml:id="m-537" dur="semibrevis" dur.ges="1024p" oct="4" pname="g" />
+								<note xml:id="m-539" dur="brevis" dur.ges="2048p" oct="4" pname="a" />
+								<barLine xml:id="m-d097c411-99a2-411d-a617-5f6852c33449" />
+								<note xml:id="m-555" dur="brevis" dur.ges="2048p" oct="4" pname="g" />
+								<note xml:id="m-556" dur="semibrevis" dur.ges="1024p" oct="4" pname="f">
+									<accid xml:id="m-557" accid="s" />
+								</note>
+								<barLine xml:id="m-637ed93c-7c80-4937-b673-443759fb6505" />
+								<note xml:id="m-570" dur="longa" oct="4" pname="g" />
+								<barLine xml:id="m-6384bf2a-b76f-4108-a0db-684f8d144fe0" />
+							</layer>
+						</staff>
+						<staff xml:id="m-43" n="2">
+							<layer xml:id="m-44" n="1">
+								<rest xml:id="m-45" dur="brevis" />
+								<barLine xml:id="m-656b4913-88b8-4620-89c5-cbed17a3ebca" />
+								<note xml:id="m-57" dur="semibrevis" dur.ges="1536p" oct="3" oct.ges="2" pname="g" />
+								<dot xml:id="m-b7a8031b-a589-4fec-9566-803638d8140e" />
+								<note xml:id="m-58" dur="minima" dur.ges="512p" oct="3" oct.ges="2" pname="a" />
+								<note xml:id="m-59" dur="semibrevis" dur.ges="1024p" oct="3" oct.ges="2" pname="b" />
+								<barLine xml:id="m-984afa85-7e90-470b-8852-1a0ed2cc6221" />
+								<note xml:id="m-74" dur="brevis" dur.ges="2048p" oct="4" oct.ges="3" pname="c" />
+								<note xml:id="m-75" dur="semibrevis" dur.ges="1024p" oct="4" oct.ges="3" pname="d" />
+								<barLine xml:id="m-e4037379-0c60-4f4b-9949-57668937968d" />
+								<note xml:id="m-87" dur="brevis" dur.ges="2048p" oct="4" oct.ges="3" pname="e" />
+								<note xml:id="m-88" dur="semibrevis" dur.ges="1024p" oct="4" oct.ges="3" pname="d" />
+								<dot xml:id="m-efc95f08-f6cc-4f43-ab08-88d6c771c3d3" />
+								<barLine xml:id="m-911987c3-855a-4d70-9361-f821df19f9c0" />
+								<note xml:id="m-101" dur="semibrevis" dur.ges="1024p" oct="3" oct.ges="2" pname="b" />
+								<note xml:id="m-102" dur="brevis" dur.ges="2048p" oct="4" oct.ges="3" pname="c" />
+								<barLine xml:id="m-0fbebc0b-7eeb-4d6a-993d-e69520eb6230" />
+								<note xml:id="m-114" dur="semibrevis" dur.ges="1536p" oct="3" oct.ges="2" pname="b" />
+								<dot xml:id="m-30c7ef00-7d51-4a56-825d-fcfea39e6fbf" />
+								<note xml:id="m-115" dur="minima" dur.ges="512p" oct="4" oct.ges="3" pname="c" />
+								<note xml:id="m-116" dur="semibrevis" dur.ges="1024p" oct="4" oct.ges="3" pname="d" />
+								<barLine xml:id="m-a7a35998-fe17-4bf0-9116-fdb3b6364415" />
+								<note xml:id="m-130" dur="brevis" dur.ges="2048p" oct="3" oct.ges="2" pname="g" />
+								<rest xml:id="m-131" dur="semibrevis" dur.ges="1024p" />
+								<barLine xml:id="m-7f9a3331-14c2-44df-a79e-3f34df079d90" />
+								<note xml:id="m-143" dur="semibrevis" dur.ges="1024p" oct="3" oct.ges="2" pname="g" />
+								<note xml:id="m-144" dur="semibrevis" dur.ges="1024p" oct="3" oct.ges="2" pname="g" />
+								<note xml:id="m-145" dur="semibrevis" dur.ges="1024p" oct="3" oct.ges="2" pname="g" />
+								<barLine xml:id="m-bd875e09-69bc-456a-b996-daf7b61ccf0c" />
+								<note xml:id="m-158" dur="brevis" dur.ges="2048p" oct="3" oct.ges="2" pname="d" />
+								<rest xml:id="m-159" dur="semibrevis" dur.ges="1024p" />
+								<barLine xml:id="m-ab2da68e-9a45-41b5-a6bd-770157941beb" />
+								<rest xml:id="m-172" dur="semibrevis" dur.ges="1024p" />
+								<rest xml:id="m-173" dur="semibrevis" dur.ges="1024p" />
+								<note xml:id="m-174" dur="semibrevis" dur.ges="1024p" oct="4" oct.ges="3" pname="d" />
+								<barLine xml:id="m-918e277c-b29e-4bf8-9c2c-010835477156" />
+								<note xml:id="m-186" dur="brevis" dur.ges="2048p" oct="4" oct.ges="3" pname="e" />
+								<note xml:id="m-187" dur="semibrevis" dur.ges="1024p" oct="4" oct.ges="3" pname="d" />
+								<dot xml:id="m-9d817337-f151-4081-922b-7697c47db676" />
+								<barLine xml:id="m-e4086c5c-64ab-43ea-bfc2-4abef6c9a261" />
+								<note xml:id="m-200" dur="semibrevis" dur.ges="1024p" oct="4" oct.ges="3" pname="c" />
+								<note xml:id="m-201" artic="stop" dur="semibrevis" dur.ges="2048p" oct="3" oct.ges="2" pname="b" />
+								<barLine xml:id="m-e01ed78c-9bb1-4114-ae9a-bb077071f1ed" />
+								<note xml:id="m-216" dur="brevis" dur.ges="3072p" oct="3" oct.ges="2" pname="a" />
+								<dot xml:id="m-4ef253b9-0082-4a76-92e5-5108282fccaf" />
+								<barLine xml:id="m-f88b1495-21e3-4280-863d-bd70b3b16dcb" />
+								<note xml:id="m-229" dur="semibrevis" dur.ges="1024p" oct="4" oct.ges="3" pname="c" />
+								<note xml:id="m-230" dur="semibrevis" dur.ges="1024p" oct="4" oct.ges="3" pname="c" />
+								<note xml:id="m-231" dur="semibrevis" dur.ges="1024p" oct="4" oct.ges="3" pname="c" />
+								<barLine xml:id="m-257395e4-74dd-4265-984f-0e36fed9620d" />
+								<note xml:id="m-243" dur="brevis" dur.ges="2048p" oct="3" oct.ges="2" pname="g" colored="true" />
+								<note xml:id="m-244" dur="brevis" dur.ges="2048p" oct="4" oct.ges="3" pname="c" colored="true" />
+								<barLine xml:id="m-b8ac6b20-bb43-4b49-9428-ade3b38d613f" />
+								<note xml:id="m-259" dur="brevis" dur.ges="2048p" oct="4" oct.ges="3" pname="d" colored="true" />
+								<barLine xml:id="m-ada2485a-2fdf-4a9b-86a6-257126ea0ed2" />
+								<note xml:id="m-271" dur="brevis" dur.ges="2048p" oct="3" oct.ges="2" pname="a" colored="true" />
+								<note xml:id="m-272" dur="semibrevis" dur.ges="1024p" oct="3" oct.ges="2" pname="g" />
+								<dot xml:id="m-a692e924-17e0-424c-bb05-56d0e73bda49" />
+								<barLine xml:id="m-d793b3f3-d798-4e71-b590-04267caa5872" />
+								<note xml:id="m-284" dur="semibrevis" dur.ges="1024p" oct="3" oct.ges="2" pname="f" />
+								<note xml:id="m-285" artic="stop" dur="semibrevis" dur.ges="2048p" oct="3" oct.ges="2" pname="e" />
+								<barLine xml:id="m-6fe921a9-ee31-4047-af55-eb750a3a3689" />
+								<note xml:id="m-300" dur="brevis" dur.ges="2048p" oct="3" oct.ges="2" pname="d" />
+								<rest xml:id="m-302" dur="semibrevis" dur.ges="1024p" />
+								<barLine xml:id="m-ca3ef9b8-939b-447d-b426-539c14084b62" />
+								<rest xml:id="m-317" dur="semibrevis" dur.ges="1024p" />
+								<rest xml:id="m-318" dur="semibrevis" dur.ges="1024p" />
+								<note xml:id="m-319" dur="semibrevis" dur.ges="1024p" oct="4" oct.ges="3" pname="c" />
+								<barLine xml:id="m-7b314d2f-7e98-4f86-a62f-7482d57f427f" />
+								<note xml:id="m-331" dur="brevis" dur.ges="2048p" oct="4" oct.ges="3" pname="d" colored="true" />
+								<note xml:id="m-332" dur="brevis" dur.ges="2048p" oct="3" oct.ges="2" pname="b" colored="true" />
+								<barLine xml:id="m-1861d536-aeb0-462f-812c-cd957ac21130" />
+								<note xml:id="m-346" dur="semibrevis" dur.ges="1024p" oct="4" oct.ges="3" pname="c" colored="true" />
+								<note xml:id="m-347" dur="semibrevis" dur.ges="1024p" oct="3" oct.ges="2" pname="a" colored="true" />
+								<barLine xml:id="m-60886ef9-e3a6-4b31-82dd-a0986c51c879" />
+								<note xml:id="m-361" dur="semibrevis" dur.ges="1536p" oct="3" oct.ges="2" pname="g" />
+								<dot xml:id="m-69acaa47-b658-4734-8550-3e6f9fe40596" />
+								<note xml:id="m-362" dur="minima" dur.ges="512p" oct="3" oct.ges="2" pname="a" />
+								<note xml:id="m-363" dur="semibrevis" dur.ges="1024p" oct="3" oct.ges="2" pname="b" />
+								<barLine xml:id="m-374a7b95-f62f-4e78-84c6-68bf5c44b405" />
+								<note xml:id="m-376" dur="semibrevis" dur.ges="1024p" oct="4" oct.ges="3" pname="c" />
+								<note xml:id="m-377" dur="brevis" dur.ges="2048p" oct="3" oct.ges="2" pname="a" />
+								<barLine xml:id="m-18c10631-1f0e-4362-9c7b-5bbb169afc84" />
+								<note xml:id="m-394" dur="semibrevis" dur.ges="1024p" oct="3" oct.ges="2" pname="g" />
+								<note xml:id="m-395" dur="brevis" dur.ges="2048p" oct="4" oct.ges="3" pname="c" />
+								<barLine xml:id="m-3289f80e-aac7-4389-84d4-fb8334548eb2" />
+								<note xml:id="m-408" dur="semibrevis" dur.ges="1024p" oct="4" oct.ges="3" pname="e" />
+								<note xml:id="m-409" artic="stop" dur="semibrevis" dur.ges="2048p" oct="4" oct.ges="3" pname="d" />
+								<barLine xml:id="m-619fee41-b4da-40a8-a80d-99373c09d39b" />
+								<note xml:id="m-421" dur="brevis" dur.ges="2048p" oct="4" oct.ges="3" pname="c" />
+								<note xml:id="m-422" dur="semibrevis" dur.ges="1024p" oct="4" oct.ges="3" pname="c" />
+								<barLine xml:id="m-61fbb706-e528-474e-94e3-347bdc5ad1d0" />
+								<note xml:id="m-433" dur="brevis" dur.ges="2048p" oct="4" oct.ges="3" pname="c" />
+								<note xml:id="m-435" dur="semibrevis" dur.ges="1536p" oct="3" oct.ges="2" pname="b" />
+								<dot xml:id="m-f923e6f6-e9be-47ba-89f7-91bc0e21b92a" />
+								<barLine xml:id="m-ebca530a-b1ec-448e-9781-376cecdaf249" />
+								<note xml:id="m-451" dur="minima" dur.ges="512p" oct="4" oct.ges="3" pname="c" />
+								<note xml:id="m-452" dur="semibrevis" dur.ges="1024p" oct="4" oct.ges="3" pname="d" />
+								<note xml:id="m-453" dur="semibrevis" dur.ges="1024p" oct="3" oct.ges="2" pname="g" />
+								<barLine xml:id="m-1c655a21-6121-4070-bfbb-ac0f61e7e967" />
+								<note xml:id="m-466" dur="brevis" dur.ges="2048p" oct="4" oct.ges="3" pname="c" />
+								<note xml:id="m-467" dur="semibrevis" dur.ges="1024p" oct="3" oct.ges="2" pname="a" />
+								<barLine xml:id="m-76f6b840-6513-4f73-a1ae-658eb0db8f65" />
+								<note xml:id="m-479" dur="brevis" dur.ges="2048p" oct="4" oct.ges="3" pname="d" />
+								<note xml:id="m-480" dur="semibrevis" dur.ges="1024p" oct="4" oct.ges="3" pname="d" />
+								<barLine xml:id="m-5190dde9-391b-48ad-a1df-f8f4ec959c95" />
+								<note xml:id="m-494" dur="semibrevis" dur.ges="1536p" oct="3" oct.ges="2" pname="g" />
+								<dot xml:id="m-a5b1216e-545b-499a-a77e-1e595ab41e43" />
+								<note xml:id="m-495" dur="minima" dur.ges="512p" oct="3" oct.ges="2" pname="a" />
+								<note xml:id="m-496" dur="semibrevis" dur.ges="1024p" oct="3" oct.ges="2" pname="b" />
+								<barLine xml:id="m-090ee56e-a4e4-4640-af23-602f89ce4520" />
+								<note xml:id="m-511" dur="semibrevis" dur.ges="1024p" oct="4" oct.ges="3" pname="c" />
+								<note xml:id="m-512" dur="semibrevis" dur.ges="1024p" oct="4" oct.ges="3" pname="d" />
+								<note xml:id="m-513" dur="minima" dur.ges="512p" oct="4" oct.ges="3" pname="c" />
+								<note xml:id="m-514" dur="minima" dur.ges="512p" oct="3" oct.ges="2" pname="b" />
+								<barLine xml:id="m-3dc46237-8378-4ff4-870e-487f1c40ba5a" />
+								<note xml:id="m-526" dur="brevis" dur.ges="2048p" oct="3" oct.ges="2" pname="a" />
+								<note xml:id="m-527" dur="semibrevis" dur.ges="1024p" oct="3" oct.ges="2" pname="g" />
+								<barLine xml:id="m-0f68e678-e578-4352-b41c-b18149f6edde" />
+								<note xml:id="m-542" dur="minima" dur.ges="512p" oct="3" oct.ges="2" pname="f" />
+								<note xml:id="m-543" dur="minima" dur.ges="512p" oct="3" oct.ges="2" pname="e" />
+								<note xml:id="m-544" dur="semibrevis" dur.ges="1024p" oct="3" oct.ges="2" pname="d" />
+								<note xml:id="m-545" dur="semibrevis" dur.ges="1024p" oct="3" oct.ges="2" pname="a" />
+								<barLine xml:id="m-b8350733-7b8f-4a36-bc63-bc8d7173e83c" />
+								<note xml:id="m-560" dur="semibrevis" dur.ges="1024p" oct="3" oct.ges="2" pname="b" />
+								<note xml:id="m-562" dur="brevis" dur.ges="2048p" oct="3" oct.ges="2" pname="a" />
+								<barLine xml:id="m-824ff298-83a1-4fc1-81a9-236a29338f67" />
+								<note xml:id="m-573" dur="longa" oct="3" oct.ges="2" pname="g" />
+								<barLine xml:id="m-026446e6-4520-42d4-a0b7-e455ca37ec7c" />
+							</layer>
+						</staff>
+						<staff xml:id="m-46" n="3">
+							<layer xml:id="m-47" n="1">
+								<note xml:id="m-48" dur="semibrevis" dur.ges="1536p" oct="3" oct.ges="2" pname="d" />
+								<dot xml:id="m-ca3a3b9a-6506-45a3-8a89-0783be144281" />
+								<note xml:id="m-49" dur="minima" dur.ges="512p" oct="3" oct.ges="2" pname="e" />
+								<note xml:id="m-50" dur="semibrevis" dur.ges="1024p" oct="3" oct.ges="2" pname="f" />
+								<barLine xml:id="m-7ca6ed8a-7771-4d5c-ae0c-f3b247832ead" />
+								<note xml:id="m-62" dur="semibrevis" dur.ges="1536p" oct="3" oct.ges="2" pname="g" />
+								<dot xml:id="m-f74602d5-c571-4027-995a-3881cc80d7a4" />
+								<note xml:id="m-63" dur="semiminima" dur.ges="256p" oct="3" oct.ges="2" pname="f" />
+								<note xml:id="m-64" dur="semiminima" dur.ges="256p" oct="3" oct.ges="2" pname="e" />
+								<note xml:id="m-65" dur="semibrevis" dur.ges="1024p" oct="3" oct.ges="2" pname="d" />
+								<barLine xml:id="m-0a5fe227-514f-455a-87a0-1b9524ee622e" />
+								<note xml:id="m-78" dur="brevis" dur.ges="2048p" oct="3" oct.ges="2" pname="c" />
+								<rest xml:id="m-79" dur="semibrevis" dur.ges="1024p" />
+								<barLine xml:id="m-fa7c6e76-f2ac-4ffb-9406-e375750559be" />
+								<note xml:id="m-91" dur="brevis" dur.ges="2048p" oct="3" oct.ges="2" pname="c" colored="true" />
+								<note xml:id="m-92" dur="brevis" dur.ges="2048p" oct="3" oct.ges="2" pname="g" colored="true" />
+								<barLine xml:id="m-faf65f37-3ba6-4054-8dd5-f82eb709ddef" />
+								<note xml:id="m-106" dur="brevis" dur.ges="2048p" oct="3" oct.ges="2" pname="f" colored="true" />
+								<barLine xml:id="m-6084b7b8-6af4-42bb-b1f7-11b6ce4459fe" />
+								<note xml:id="m-119" dur="semibrevis" dur.ges="1536p" oct="3" oct.ges="2" pname="g" />
+								<dot xml:id="m-c923eca3-38a2-4fb6-b510-76082cfd8990" />
+								<note xml:id="m-120" dur="minima" dur.ges="512p" oct="3" oct.ges="2" pname="f" />
+								<note xml:id="m-121" dur="semibrevis" dur.ges="1024p" oct="3" oct.ges="2" pname="d" />
+								<barLine xml:id="m-41a685dc-d28f-4694-8b21-dab3229e0cf6" />
+								<note xml:id="m-134" dur="brevis" dur.ges="2048p" oct="4" oct.ges="3" pname="d" />
+								<note xml:id="m-135" dur="semibrevis" dur.ges="1024p" oct="4" oct.ges="3" pname="e" />
+								<dot xml:id="m-b1e946fe-8ed8-4497-a650-28a12391fc7a" />
+								<barLine xml:id="m-4cde999a-8bb8-4528-98dc-2e4ff5935442" />
+								<note xml:id="m-148" dur="semibrevis" dur.ges="1024p" oct="4" oct.ges="3" pname="d" />
+								<note xml:id="m-149" dur="brevis" dur.ges="2048p" oct="4" oct.ges="3" pname="g" />
+								<barLine xml:id="m-4bc37f70-59c0-4fa3-99c4-435d8db77cb5" />
+								<note xml:id="m-162" dur="semibrevis" dur.ges="1536p" oct="4" oct.ges="3" pname="f" />
+								<dot xml:id="m-542852a9-996e-4d7e-b0e7-9f9f3750e023" />
+								<note xml:id="m-163" dur="minima" dur.ges="512p" oct="4" oct.ges="3" pname="d" />
+								<note xml:id="m-164" dur="semibrevis" dur.ges="1024p" oct="4" oct.ges="3" pname="e" />
+								<barLine xml:id="m-7558dfb2-c271-48e7-b7e2-53b85c81085e" />
+								<note xml:id="m-177" dur="brevis" dur.ges="2048p" oct="4" oct.ges="3" pname="g" />
+								<note xml:id="m-178" dur="semibrevis" dur.ges="1024p" oct="4" oct.ges="3" pname="f">
+									<accid xml:id="m-179" accid="s" />
+								</note>
+								<barLine xml:id="m-86a969ca-2a12-47e2-ac1d-b28bc6749357" />
+								<note xml:id="m-190" dur="brevis" dur.ges="2048p" oct="4" oct.ges="3" pname="g" />
+								<note xml:id="m-191" dur="semibrevis" dur.ges="1024p" oct="4" oct.ges="3" pname="f">
+									<accid xml:id="m-192" accid="n" />
+								</note>
+								<dot xml:id="m-e8a9cd91-301f-4ce5-bb80-0737b92a9faa" />
+								<barLine xml:id="m-03ceafea-e49d-4548-b4cc-fdb509b882ca" />
+								<note xml:id="m-205" dur="semibrevis" dur.ges="1024p" oct="4" oct.ges="3" pname="e" />
+								<note xml:id="m-206" dur="semibrevis" dur.ges="1024p" oct="4" oct.ges="3" pname="d" />
+								<rest xml:id="m-207" dur="semibrevis" dur.ges="1024p" />
+								<barLine xml:id="m-f8ed9a68-a713-494b-b39c-8b6255a473f7" />
+								<note xml:id="m-219" dur="semibrevis" dur.ges="1536p" oct="4" oct.ges="3" pname="a" />
+								<dot xml:id="m-350b18dd-2e23-4f92-9034-1bd95ccff3f6" />
+								<note xml:id="m-220" dur="minima" dur.ges="512p" oct="4" oct.ges="3" pname="g" />
+								<note xml:id="m-221" dur="semibrevis" dur.ges="1024p" oct="4" oct.ges="3" pname="f" />
+								<barLine xml:id="m-559f2092-728d-4701-91ef-0b5b6164db9d" />
+								<note xml:id="m-234" dur="brevis" dur.ges="2048p" oct="4" oct.ges="3" pname="e" />
+								<note xml:id="m-235" dur="semibrevis" dur.ges="1024p" oct="4" oct.ges="3" pname="e" />
+								<barLine xml:id="m-5922d8d6-cd9d-433d-b062-ae5d6ad431d2" />
+								<note xml:id="m-248" dur="semibrevis" dur.ges="1024p" oct="4" oct.ges="3" pname="d" />
+								<note xml:id="m-249" dur="brevis" dur.ges="2048p" oct="4" oct.ges="3" pname="g" />
+								<barLine xml:id="m-15dc3f7a-6e76-46c7-aa80-11b8e3038b04" />
+								<note xml:id="m-262" dur="semibrevis" dur.ges="1536p" oct="4" oct.ges="3" pname="c" />
+								<dot xml:id="m-6dd1f158-c3cd-4de0-bd6d-3611a32a13ed" />
+								<note xml:id="m-263" dur="minima" dur.ges="512p" oct="3" oct.ges="2" pname="a" />
+								<note xml:id="m-264" dur="semibrevis" dur.ges="1024p" oct="3" oct.ges="2" pname="b" />
+								<barLine xml:id="m-6430652f-07f8-4bba-a705-7b998b4b79cd" />
+								<note xml:id="m-275" dur="semibrevis" dur.ges="1536p" oct="4" oct.ges="3" pname="c" />
+								<dot xml:id="m-1b934e7a-6776-47cb-a856-268e33e57941" />
+								<note xml:id="m-276" dur="minima" dur.ges="512p" oct="4" oct.ges="3" pname="d" />
+								<note xml:id="m-277" dur="semibrevis" dur.ges="1024p" oct="4" oct.ges="3" pname="e" />
+								<barLine xml:id="m-66877340-d0db-4dd6-9063-313f5047abd6" />
+								<note xml:id="m-288" dur="brevis" dur.ges="2048p" oct="4" oct.ges="3" pname="d" />
+								<note xml:id="m-289" dur="semibrevis" dur.ges="1024p" oct="4" oct.ges="3" pname="c">
+									<accid xml:id="m-290" accid="s" />
+								</note>
+								<barLine xml:id="m-4886d584-d8ac-4d3a-984b-56ee261baf8f" />
+								<note xml:id="m-305" dur="brevis" dur.ges="3072p" oct="4" oct.ges="3" pname="d" />
+								<dot xml:id="m-5577edd9-a30d-4cef-af5d-aeadcf4264e1" />
+								<barLine xml:id="m-54193191-5be8-4a8a-9478-c3ec24b26f72" />
+								<note xml:id="m-322" dur="semibrevis" dur.ges="1536p" oct="4" oct.ges="3" pname="c" />
+								<dot xml:id="m-c17c2d65-52b7-4d6c-b9f3-38672f40087b" />
+								<note xml:id="m-323" dur="minima" dur.ges="512p" oct="3" oct.ges="2" pname="b" />
+								<note xml:id="m-324" dur="semibrevis" dur.ges="1024p" oct="3" oct.ges="2" pname="a" />
+								<barLine xml:id="m-32a3b09e-7d1d-46b0-8544-d0f28bb2f8de" />
+								<note xml:id="m-336" dur="semibrevis" dur.ges="1024p" oct="3" oct.ges="2" pname="b" />
+								<note xml:id="m-337" dur="brevis" dur.ges="2048p" oct="3" oct.ges="2" pname="g" />
+								<barLine xml:id="m-c54e751d-5790-473c-90eb-af4a1f53a197" />
+								<note xml:id="m-351" dur="semibrevis" dur.ges="1024p" oct="4" oct.ges="3" pname="d" />
+								<note xml:id="m-352" dur="semibrevis" dur.ges="1024p" oct="4" oct.ges="3" pname="e" />
+								<note xml:id="m-353" dur="semibrevis" dur.ges="1024p" oct="4" oct.ges="3" pname="f" />
+								<barLine xml:id="m-579081f2-aad5-440e-8c69-f33abd90722b" />
+								<note xml:id="m-366" dur="semibrevis" dur.ges="1536p" oct="4" oct.ges="3" pname="g" />
+								<dot xml:id="m-c4b43cee-3590-44cc-b74b-4e463b41a32c" />
+								<note xml:id="m-367" dur="minima" dur.ges="512p" oct="4" oct.ges="3" pname="f" />
+								<note xml:id="m-368" dur="semibrevis" dur.ges="1024p" oct="4" oct.ges="3" pname="d" />
+								<barLine xml:id="m-9f303946-5b08-4d45-98f1-0676fde57996" />
+								<rest xml:id="m-380" dur="minima" dur.ges="512p" />
+								<note xml:id="m-381" dur="semibrevis" dur.ges="1024p" oct="4" oct.ges="3" pname="c" />
+								<note xml:id="m-382" dur="minima" dur.ges="512p" oct="4" oct.ges="3" pname="d" />
+								<note xml:id="m-383" dur="minima" dur.ges="512p" oct="4" oct.ges="3" pname="e" />
+								<note xml:id="m-384" dur="minima" dur.ges="512p" oct="4" oct.ges="3" pname="f" />
+								<barLine xml:id="m-7adb27d6-6e95-4ef7-abe7-f9a51d73018b" />
+								<note xml:id="m-398" dur="longa" dur.ges="4096p" oct="4" oct.ges="3" pname="g" colored="true" />
+								<barLine xml:id="m-fe5d540e-3ce8-46fb-8f96-b6857cfc0b52" />
+								<note xml:id="m-413" dur="brevis" dur.ges="2048p" oct="4" oct.ges="3" pname="f" colored="true" />
+								<barLine xml:id="m-eeb93d5d-fce9-47ae-8b78-986fef441de4" />
+								<note xml:id="m-425" dur="brevis" dur.ges="3072p" oct="4" oct.ges="3" pname="g" />
+								<barLine xml:id="m-bda4a016-38bf-49d1-a4a2-90bb23b6b74d" />
+								<rest xml:id="m-439" dur="brevis" />
+								<barLine xml:id="m-f69123a1-b325-40ae-952e-1a4bdebcf5f0" />
+								<note xml:id="m-456" dur="semibrevis" dur.ges="1536p" oct="3" oct.ges="2" pname="g" />
+								<dot xml:id="m-123f6233-a151-40ea-9b3d-a50755b3b8e3" />
+								<note xml:id="m-457" dur="minima" dur.ges="512p" oct="3" oct.ges="2" pname="a" />
+								<note xml:id="m-458" dur="semibrevis" dur.ges="1024p" oct="3" oct.ges="2" pname="b" />
+								<barLine xml:id="m-996890c6-57a0-464a-b0a0-3700d94686c8" />
+								<note xml:id="m-470" dur="semibrevis" dur.ges="1024p" oct="4" oct.ges="3" pname="c" />
+								<note xml:id="m-471" dur="brevis" dur.ges="2048p" oct="3" oct.ges="2" pname="a" />
+								<barLine xml:id="m-401306e9-9314-49c9-b254-3c539c997f6a" />
+								<note xml:id="m-483" dur="semibrevis" dur.ges="1536p" oct="3" oct.ges="2" pname="d" />
+								<dot xml:id="m-664cf84e-9335-49c9-a544-75476c06eef9" />
+								<note xml:id="m-484" dur="minima" dur.ges="512p" oct="3" oct.ges="2" pname="e" />
+								<note xml:id="m-486" dur="semibrevis" dur.ges="1024p" oct="3" oct.ges="2" pname="f" />
+								<barLine xml:id="m-8a25117c-0329-4520-a460-9c4b20f28cbb" />
+								<note xml:id="m-499" dur="semibrevis" dur.ges="1536p" oct="3" oct.ges="2" pname="g" />
+								<dot xml:id="m-51097406-88c2-4941-b908-e24e9acd3277" />
+								<note xml:id="m-500" dur="semiminima" dur.ges="256p" oct="3" oct.ges="2" pname="f" />
+								<note xml:id="m-501" dur="semiminima" dur.ges="256p" oct="3" oct.ges="2" pname="e" />
+								<note xml:id="m-502" dur="semibrevis" dur.ges="1024p" oct="3" oct.ges="2" pname="d" />
+								<barLine xml:id="m-59b51857-0681-481f-8511-234cbff76cd2" />
+								<note xml:id="m-517" dur="semibrevis" dur.ges="1024p" oct="3" oct.ges="2" pname="c" />
+								<note xml:id="m-518" dur="brevis" dur.ges="2048p" oct="3" oct.ges="2" pname="g" />
+								<barLine xml:id="m-ef162e12-5af9-4941-9047-4cc11ac58292" />
+								<note xml:id="m-531" dur="semibrevis" dur.ges="1024p" oct="3" oct.ges="2" pname="f" />
+								<note xml:id="m-532" dur="semibrevis" dur.ges="1024p" oct="4" oct.ges="3" pname="c" />
+								<note xml:id="m-533" dur="semibrevis" dur.ges="1024p" oct="4" oct.ges="3" pname="d" />
+								<barLine xml:id="m-3852fbc0-c19c-4a51-9f15-21cbfabc421b" />
+								<note xml:id="m-548" dur="semibrevis" dur.ges="1024p" oct="4" oct.ges="3" pname="e" />
+								<note xml:id="m-549" dur="semibrevis" dur.ges="1024p" oct="4" oct.ges="3" pname="f" />
+								<note xml:id="m-550" dur="minima" dur.ges="512p" oct="4" oct.ges="3" pname="e" />
+								<note xml:id="m-551" dur="minima" dur.ges="512p" oct="4" oct.ges="3" pname="d" />
+								<barLine xml:id="m-1cbc1fb3-2c0c-4be4-a5bc-e0924621c16a" />
+								<note xml:id="m-565" dur="brevis" dur.ges="2048p" oct="4" oct.ges="3" pname="d" />
+								<note xml:id="m-566" dur="semibrevis" dur.ges="1024p" oct="4" oct.ges="3" pname="c" />
+								<barLine xml:id="m-050a5405-2e44-4099-9d14-21fb8129139d" />
+								<note xml:id="m-576" dur="longa" oct="4" oct.ges="3" pname="d" />
+								<barLine xml:id="m-843e2265-e021-4c5d-b5b5-acfc4ca09052" />
+							</layer>
+						</staff>
+					</section>
+				</score>
+			</mdiv>
+		</body>
+	</music>
+</mei>

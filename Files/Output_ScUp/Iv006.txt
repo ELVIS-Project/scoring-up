@@ -1,0 +1,486 @@
+
+APEL RESUTLS - Warnings with respect to rules in conflict
+
+Voice # 1 results:
+
+Coloration level: None
+
+
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+
+
+
+minima, 1, 1
+
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+
+
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+
+
+minima, 1, 1
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+minima, 1, 1
+
+
+
+
+
+
+
+minima, 1, 1
+
+
+
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+
+
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+
+
+
+
+
+minima, 1, 1
+
+
+
+
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+minima, 1, 1
+
+
+
+
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+minima, 1, 1
+
+
+
+
+
+
+
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+minima, 1, 1
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+
+
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+
+
+
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+minima, 1, 1
+
+
+
+
+
+minima, 1, 1
+
+
+
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+
+
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+
+
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+minima, 1, 1
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+
+
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+minima, 1, 1
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+minima, 1, 1
+
+
+minima, 1, 1
+
+
+minima, 1, 1
+
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+
+
+Voice # 2 results:
+
+Coloration level: None
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+
+
+
+
+
+
+
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+
+
+
+
+minima, 1, 1
+minima, 1, 2
+minima, 1, 3
+
+minima, 1, 1
+
+
+
+
+
+
+
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+
+
+
+
+
+
+
+minima, 1, 1
+
+
+
+
+minima, 1, 1
+minima, 1, 2
+minima, 1, 3
+
+minima, 1, 1
+
+
+
+
+
+
+
+
+
+
+
+
+minima, 1, 1
+
+
+
+
+minima, 1, 1
+
+
+
+
+
+minima, 1, 1
+
+
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+
+
+
+
+minima, 1, 1
+minima, 1, 2
+minima, 1, 3
+
+minima, 1, 1
+
+
+minima, 1, 1
+
+minima, 1, 1
+
+
+
+
+
+
+
+
+
+
+minima, 1, 1
+
+
+
+
+
+minima, 1, 1
+
+
+
+
+
+
+Voice # 3 results:
+
+Coloration level: None
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+COMPARISON RESUTLS - Notes/Rests (with their xml:id and voice number) that don't match with the ground truth
+
+
+ACCURACY:
+Voice # 0:	1 = 100.0
+Voice # 1:	1 = 100.0
+Voice # 2:	1 = 100.0
