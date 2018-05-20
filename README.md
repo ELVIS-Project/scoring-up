@@ -49,15 +49,17 @@ You have an additional third flag that you can use to evaluate the results of th
 The algorithm is tested on a small set of fourteenth-century Ars Nova pieces from the Ivrea Codex<sup>[1](#one)</sup> and fifteenth-century pieces from Du Fay and Ockeghem<sup>[2](#two)</sup>.
 The files involved in this experiment are distributed in the _Files_ directory as follows:
 - The ground truth Mensural MEI files are in the _Files/GroundTruth/mensural-mei_ directory and their modern transcriptions in CMN MEI are at _Files/GroundTruth/cmn-mei_
-- The output of the scoring-up tool is found in _Files/Output_ScUp_. Here you can find the Mensural MEI score for each piece as well as a text file that lists all the notes (with their ids and voice number) that were misclassified as _perect_ / _imperfect_ / _altered_ by the algorithm. This information is at the bottom of the text file, here it is an example of how it is presented:
+- The output of the scoring-up tool is found in _Files/Output_ScUp_. Here you can find the Mensural MEI score for each piece as well as a text file that lists all the notes (with their _ids_ and _voice number_) that were misclassified as _perect_ / _imperfect_ / _altered_ by the algorithm. This information is at the bottom of the text file, here it is an example of how it is presented:
 
 > NOT EQUAL: the NOTE m-213 in voice 1
+>
 > In GROUND TRUTH: SEMIBREVIS, with 1 x default value
+>
 > In APEL OUTPUT: SEMIBREVIS, with 2/3 x default value
 
-This means that the note in voice 1 with id m-213 was imperfected (i.e., multiplied by 2/3) when, according to the ground truth, it should not. Regular imperfections are represented by 2/3 x default value, alterations are represented by 2 x default value, and augmentations are represented by 3/2 x default value. (Note: the 5/6 fraction that appears in the second voice of Duf22518, Duf3025, and Iv004 represents a partial imperfection, which is a feature yet to be implemented in the scoring-up tool.)
+This means that the note in _voice 1_ with _id m-213_ was imperfected (i.e., multiplied by _2/3_) when, according to the ground truth, it should not. Regular imperfections are represented by _2/3 x default value_, alterations are represented by _2 x default value_, and augmentations are represented by _3/2 x default value_. (Note: the _5/6_ fraction that appears in the second voice of _Duf22518_, _Duf3025_, and _Iv004_ represents a _partial imperfection_, which is a feature yet to be implemented in the scoring-up tool.)
 
-For more details regarding the pieces, the algorithm behind the scoring-up tool, and the results of this experiment, please consult Chapters 3 and 4 of the thesis [Automatic Scoring Up of Mensural Music Using Perfect Mensurations, 1300–1550](http://digitool.library.mcgill.ca/webclient/StreamGate?folder_id=0&dvs=1526794965981~637). A summary of all misclassified notes for all the pieces can be found at _Useful_just_for_me/comparison4.csv_. And a summary of all the notes that were subject to some kind of modification in their durational value (due to imperfection, alteration, the presence of a dot, or coloration) is shown in _Useful_just_for_me/mutable_notes.csv_.
+For more details regarding the pieces, the algorithm behind the scoring-up tool, and the results of this experiment, please consult Chapters 3 and 4 of the thesis [Automatic Scoring Up of Mensural Music Using Perfect Mensurations, 1300–1550](http://digitool.Library.McGill.CA:80/R/-?func=dbin-jump-full&object_id=151045&silo_library=GEN01). A summary of all misclassified notes for all the pieces can be found at _Useful_just_for_me/comparison4.csv_. The _Measure Number_ and the _Position in Measure_ refer to the modern transcriptions found in _Files/GroundTruth/cmn-mei_. A summary of all the notes that were subject to some kind of modification in their durational value (due to imperfection, alteration, the presence of a dot, or coloration) is shown in _Useful_just_for_me/mutable_notes.csv_.
 
 ## Notes
 
