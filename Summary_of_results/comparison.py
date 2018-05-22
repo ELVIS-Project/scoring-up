@@ -71,7 +71,7 @@ def comparison(out_doc, gt_doc, cmn_doc, archivo, filename):
 
     return accuracy_list
 
-archivo = open("comparison4.csv", "w")
+archivo = open("comparison.csv", "w")
 archivo.write("Piece,Voice,Note/Rest,Id,Measure Number,Position in Measure,Ground truth,,Script,\n")
 archivo.write(",,,,,,Note Shape,Quality,Note Shape,Quality\n")
 cmn_gtdirectory = "../Files/GroundTruth/cmn-mei/"
