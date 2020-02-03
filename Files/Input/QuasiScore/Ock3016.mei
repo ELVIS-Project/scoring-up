@@ -39,15 +39,15 @@
 				<score xml:id="m-25">
 					<scoreDef xml:id="m-26">
 						<staffGrp xml:id="m-37" n="1" symbol="bracket">
-							<staffDef xml:id="m-28" clef.line="2" clef.shape="G" key.mode="major" key.sig="0" label="Discantus" lines="5" n="1" modusmaior="2" modusminor="2" tempus="3" prolatio="2">
+							<staffDef xml:id="m-28" clef.line="2" clef.shape="G" key.mode="major" key.sig="0" label="Discantus" lines="5" n="1" modusmaior="2" modusminor="2" tempus="3" prolatio="2" notationtype="mensural.white">
 								<!-- voice.female.soprano.ensemble.ah -->
 								<instrDef xml:id="m-30" midi.channel="1" midi.pan="26" midi.volume="100" />
 							</staffDef>
-							<staffDef xml:id="m-31" clef.dis="8" clef.dis.place="below" clef.line="2" clef.shape="G" key.mode="major" key.sig="0" label="Contra" lines="5" n="2" modusmaior="2" modusminor="2" tempus="3" prolatio="2">
+							<staffDef xml:id="m-31" clef.dis="8" clef.dis.place="below" clef.line="2" clef.shape="G" key.mode="major" key.sig="0" label="Contra" lines="5" n="2" modusmaior="2" modusminor="2" tempus="3" prolatio="2" notationtype="mensural.white">
 								<!-- voice.male.tenor.ensemble.ah -->
 								<instrDef xml:id="m-33" midi.channel="1" midi.pan="81" midi.volume="100" />
 							</staffDef>
-							<staffDef xml:id="m-34" clef.line="4" clef.shape="F" key.mode="major" key.sig="0" label="Tenor" lines="5" n="3" modusmaior="2" modusminor="2" tempus="3" prolatio="2">
+							<staffDef xml:id="m-34" clef.line="4" clef.shape="F" key.mode="major" key.sig="0" label="Tenor" lines="5" n="3" modusmaior="2" modusminor="2" tempus="3" prolatio="2" notationtype="mensural.white">
 								<!-- voice.male.bass.ensemble.ah -->
 								<instrDef xml:id="m-36" midi.channel="1" midi.pan="101" midi.volume="100" />
 							</staffDef>
@@ -575,7 +575,7 @@
 									</verse>
 								</note>
 								<note xml:id="m-1175" dur="minima" dur.ges="768p" oct="4" pname="f" />
-								<dot xml:id="m-b01796e8-7718-4061-ae23-f00e36c6aadd" />
+								<dot xml:id="m-8e2f446d-3799-49bd-9ea6-3bbfeb21cbce" />
 								<note xml:id="m-1176" dur="semiminima" dur.ges="256p" oct="4" pname="e" />
 								<note xml:id="m-1177" dur="semibrevis" dur.ges="1024p" oct="4" pname="e" />
 								<note xml:id="m-1178" dur="minima" dur.ges="512p" oct="4" pname="d" />

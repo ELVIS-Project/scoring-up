@@ -39,15 +39,15 @@
 				<score xml:id="m-25">
 					<scoreDef xml:id="m-26">
 						<staffGrp xml:id="m-37" n="1" symbol="bracket">
-							<staffDef xml:id="m-28" clef.line="2" clef.shape="G" key.mode="major" key.sig="1f" label="Discantus" lines="5" n="1" modusmaior="2" modusminor="2" tempus="3" prolatio="2">
+							<staffDef xml:id="m-28" clef.line="2" clef.shape="G" key.mode="major" key.sig="1f" label="Discantus" lines="5" n="1" modusmaior="2" modusminor="2" tempus="3" prolatio="2" notationtype="mensural.white">
 								<!-- voice.female.soprano.ensemble.ah -->
 								<instrDef xml:id="m-30" midi.channel="1" midi.pan="26" midi.volume="100" />
 							</staffDef>
-							<staffDef xml:id="m-31" clef.dis="8" clef.dis.place="below" clef.line="2" clef.shape="G" key.mode="major" key.sig="1f" label="Tenor" lines="5" n="2" modusmaior="2" modusminor="2" tempus="3" prolatio="2">
+							<staffDef xml:id="m-31" clef.dis="8" clef.dis.place="below" clef.line="2" clef.shape="G" key.mode="major" key.sig="1f" label="Tenor" lines="5" n="2" modusmaior="2" modusminor="2" tempus="3" prolatio="2" notationtype="mensural.white">
 								<!-- voice.male.tenor.ensemble.ah -->
 								<instrDef xml:id="m-33" midi.channel="1" midi.pan="81" midi.volume="100" />
 							</staffDef>
-							<staffDef xml:id="m-34" clef.dis="8" clef.dis.place="below" clef.line="2" clef.shape="G" key.mode="major" key.sig="1f" label="Contra" lines="5" n="3" modusmaior="2" modusminor="2" tempus="3" prolatio="2">
+							<staffDef xml:id="m-34" clef.dis="8" clef.dis.place="below" clef.line="2" clef.shape="G" key.mode="major" key.sig="1f" label="Contra" lines="5" n="3" modusmaior="2" modusminor="2" tempus="3" prolatio="2" notationtype="mensural.white">
 								<!-- voice.male.tenor.ensemble.ah -->
 								<instrDef xml:id="m-36" midi.channel="1" midi.pan="81" midi.volume="100" />
 							</staffDef>
@@ -489,7 +489,7 @@
 										<syl xml:id="m-857" wordpos="i">fa-</syl>
 									</verse>
 								</note>
-								<dot xml:id="m-670317c9-ac10-41fe-be9a-3229e470fd54" />
+								<dot xml:id="m-19b9ae60-6272-4a91-a12e-1b48685442b4" />
 								<note xml:id="m-850" dur="semiminima" dur.ges="256p" oct="5" pname="e" />
 								<note xml:id="m-851" dur="minima" dur.ges="512p" oct="5" pname="d" />
 								<barLine xml:id="m-a8fc7346-e6e0-47ba-a6a1-e32c9a6cc199" />
