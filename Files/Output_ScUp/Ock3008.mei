@@ -39,15 +39,15 @@
 				<score xml:id="m-25">
 					<scoreDef xml:id="m-26">
 						<staffGrp xml:id="m-37" n="1" symbol="bracket">
-							<staffDef xml:id="m-28" clef.line="2" clef.shape="G" key.mode="major" key.sig="1f" label="Discantus" lines="5" n="1" modusmaior="2" modusminor="2" tempus="3" prolatio="2">
+							<staffDef xml:id="m-28" clef.line="2" clef.shape="G" key.mode="major" key.sig="1f" label="Discantus" lines="5" n="1" modusmaior="2" modusminor="2" tempus="3" prolatio="2" notationtype="mensural.white">
 								<!-- voice.female.soprano.ensemble.ah -->
 								<instrDef xml:id="m-30" midi.channel="1" midi.pan="26" midi.volume="100" />
 							</staffDef>
-							<staffDef xml:id="m-31" clef.dis="8" clef.dis.place="below" clef.line="2" clef.shape="G" key.mode="major" key.sig="1f" label="Tenor" lines="5" n="2" modusmaior="2" modusminor="2" tempus="3" prolatio="2">
+							<staffDef xml:id="m-31" clef.dis="8" clef.dis.place="below" clef.line="2" clef.shape="G" key.mode="major" key.sig="1f" label="Tenor" lines="5" n="2" modusmaior="2" modusminor="2" tempus="3" prolatio="2" notationtype="mensural.white">
 								<!-- voice.male.tenor.ensemble.ah -->
 								<instrDef xml:id="m-33" midi.channel="1" midi.pan="81" midi.volume="100" />
 							</staffDef>
-							<staffDef xml:id="m-34" clef.dis="8" clef.dis.place="below" clef.line="2" clef.shape="G" key.mode="major" key.sig="1f" label="Contra" lines="5" n="3" modusmaior="2" modusminor="2" tempus="3" prolatio="2">
+							<staffDef xml:id="m-34" clef.dis="8" clef.dis.place="below" clef.line="2" clef.shape="G" key.mode="major" key.sig="1f" label="Contra" lines="5" n="3" modusmaior="2" modusminor="2" tempus="3" prolatio="2" notationtype="mensural.white">
 								<!-- voice.male.tenor.ensemble.ah -->
 								<instrDef xml:id="m-36" midi.channel="1" midi.pan="81" midi.volume="100" />
 							</staffDef>
@@ -206,7 +206,7 @@
 										<syl xml:id="m-360" wordpos="i">-tu-</syl>
 									</verse>
 								</note>
-								<dot xml:id="m-a8a2a108-efa8-43df-a36e-6c22c34ee201" form="aug" />
+								<dot xml:id="m-e01d1425-84f8-4889-a3d5-958455b89bb3" form="aug" />
 								<note xml:id="m-347" dur="fusa" dur.ges="128p" oct="4" pname="e">
 									<accid xml:id="m-348" accid="f" />
 								</note>
@@ -1433,7 +1433,7 @@
 									<accid xml:id="m-632" accid.ges="f" />
 								</note>
 								<note xml:id="m-633" dur="semiminima" dur.ges="384p" oct="3" oct.ges="2" pname="a" num="2" numbase="3" quality="p" />
-								<dot xml:id="m-35c84299-cffe-4235-ae1b-d381510c026c" form="aug" />
+								<dot xml:id="m-a108880e-3324-4115-82bd-8c45892c73a7" form="aug" />
 								<note xml:id="m-634" dur="fusa" dur.ges="128p" oct="3" oct.ges="2" pname="g" />
 								<barLine xml:id="m-d161a571-6c7d-4dc8-b419-b54ed4ca6b0a" />
 								<note xml:id="m-666" dur="brevis" dur.ges="3072p" oct="3" oct.ges="2" pname="b">
