@@ -42,15 +42,15 @@
 				<score xml:id="m-27">
 					<scoreDef xml:id="m-28">
 						<staffGrp xml:id="m-39" n="1" symbol="bracket">
-							<staffDef xml:id="m-30" clef.line="2" clef.shape="G" key.mode="major" key.sig="0" label="triplum" lines="5" n="1" modusmaior="2" modusminor="3" tempus="2" prolatio="3">
+							<staffDef xml:id="m-30" clef.line="2" clef.shape="G" key.mode="major" key.sig="0" label="triplum" lines="5" n="1" modusmaior="2" modusminor="3" tempus="2" prolatio="3" notationtype="mensural.black">
 								<!-- voice.female.alto.ensemble.ah -->
 								<instrDef xml:id="m-32" midi.channel="1" midi.pan="46" midi.volume="100" />
 							</staffDef>
-							<staffDef xml:id="m-33" clef.dis="8" clef.dis.place="below" clef.line="2" clef.shape="G" key.mode="major" key.sig="0" label="motetus" lines="5" n="2" modusmaior="2" modusminor="3" tempus="2" prolatio="3">
+							<staffDef xml:id="m-33" clef.dis="8" clef.dis.place="below" clef.line="2" clef.shape="G" key.mode="major" key.sig="0" label="motetus" lines="5" n="2" modusmaior="2" modusminor="3" tempus="2" prolatio="3" notationtype="mensural.black">
 								<!-- voice.male.tenor.ensemble.ah -->
 								<instrDef xml:id="m-35" midi.channel="1" midi.pan="81" midi.volume="100" />
 							</staffDef>
-							<staffDef xml:id="m-36" clef.dis="8" clef.dis.place="below" clef.line="2" clef.shape="G" key.mode="major" key.sig="0" label="tenor" lines="5" n="3" modusmaior="2" modusminor="2" tempus="2" prolatio="3">
+							<staffDef xml:id="m-36" clef.dis="8" clef.dis.place="below" clef.line="2" clef.shape="G" key.mode="major" key.sig="0" label="tenor" lines="5" n="3" modusmaior="2" modusminor="2" tempus="2" prolatio="3" notationtype="mensural.black">
 								<!-- voice.male.tenor.ensemble.ah -->
 								<instrDef xml:id="m-38" midi.channel="1" midi.pan="81" midi.volume="100" />
 							</staffDef>
