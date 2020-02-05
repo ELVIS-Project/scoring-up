@@ -1,7 +1,7 @@
 # Scoring-up Script
 The scoring-up script takes a finite number of Mensural MEI files, each of which only contains one part (i.e., voice) from a mensural piece and merge them into just one Mensural MEI file in which all the parts are lined up into a score. The alignment of the parts is a complex issue in mensural notation, since the same note-shape can have different durational values (_perfect_ / _imperfect_ / _altered_) depending on the context.
 
-This scoring-up script consists in two modules: _merge_ and _apel_. The _merge module_ merges the various Mensural MEI files encoding each part into a single Mensural MEI file that encodes the whole piece in a "quasiscore" format (i.e., without any vertical alignment of the parts). The _apel module_ deals with the context-dependent nature of the notation to determine the durational value of the notes by implementing Apel's / Franco's _principles of imperfection and alteration_. In addition to Apel's principles, this module includes functions for: distinguishing between dots of division and dots of augmentation, handling hemiola coloration, and dealing with the simultaneous use of perfect mensurations at different note levels. 
+This scoring-up script consists of a **merge module** and a **set of duration-finder modules**. The **merge module** merges the various Mensural MEI files encoding each part into a single Mensural MEI file that encodes the whole piece in a "quasiscore" format (i.e., without any vertical alignment of the parts). The set of **duration-finder modules** deal with the context-dependent nature of the notation to determine the durational value of the notes according to different styles of mensural notation (namely, _Ars antiqua_, _Ars nova_, and _white mensural notation_). The **ArsNova_and_WhiteMensural module** deals with the context-dependent nature of the notation by implementing the _principles of imperfection and alteration_—outlined by Franco of Cologne (ca. 1280) and Willi Apel. It also includes functions for: distinguishing between dots of division and dots of augmentation, handling hemiola coloration, and dealing with the simultaneous use of perfect mensurations at different note levels. The **ArsAntiqua module** handles Franconian notation, interpreting groups of semibreves as pointed out by Franco's _Ars cantus mensurabilis_ (ca. 1280) for ternary division of the breve.
 
 ## Requirements 
 - The [LibMEI library](https://github.com/DDMAL/libmei). The wiki contains instructions on both the installation of the LibMEI C++ library, and the installation of the python bindings.
@@ -44,7 +44,16 @@ You have an additional third flag that you can use to evaluate the results of th
     ```
     $ python3 score_up.py <filepath of part 1> <filepath of part 2> <filepath of part 3> <filepath of part 4> <filepath for score> -compare <filepath of ground truth>
     ```
+    
+And an additional fourth flag:
+- ```-style```
 
+  Use this flag to indicate the notation style of the music. Three values are available: ```ars_antiqua```, ```ars_nova```, and ```white_mensural```. This flag will indicate which module should be used to compute the duration of the notes (either _ArsAntiqua_ or _ArsNova_and_WhiteMensural_). If this flag is not present, the music is considered to be written in white mensural notation (i.e., the default value of the ```-style``` flag is ```white_mensural```).
+    
+    Example:
+    ```
+    $ python3 score_up.py <filepath of part 1> <filepath of part 2> <filepath of part 3> <filepath of part 4> <filepath for score> -style ars_antiqua -compare <filepath of ground truth>
+    ```
 ## Experiment
 The algorithm is tested on a small set of fourteenth-century Ars Nova pieces from the Ivrea Codex<sup>[1](#one)</sup> and fifteenth-century pieces from Du Fay and Ockeghem<sup>[2](#two)</sup>.
 The files involved in this experiment are distributed in the _Files_ directory as follows:
