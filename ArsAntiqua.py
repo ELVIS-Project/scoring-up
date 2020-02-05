@@ -222,7 +222,7 @@ def modification(counter, start_note, middle_notes, end_note, following_note, sh
                 # Start note remains perfect
                 pass
 
-def modification_semibreve_level(start_note, middle_notes, end_note, following_note):
+def modification_semibreve_level(middle_notes):
     # If there are 3 semibreves:
     counter = len(middle_notes)
     if counter == 3:
@@ -253,17 +253,17 @@ def modification_semibreve_level(start_note, middle_notes, end_note, following_n
 
 def breves_between_longas(start_note, middle_notes, end_note, following_note, tempus, note_durs, undotted_note_gain):
     # Total of breves in the middle_notes        
-    # 1. Pre-processing: Filtering. Remove the 'dot' elements from the middle_notes list 
-    #(so that this list only contains notes and rests that lie between the longs)
+    # 1. Pre-processing: Filtering. Remove the 'dot' elements (and other group markings, such as 'Group_Begin' and 'Group_End')
+    # from the middle_notes list, so that this list only contains notes and rests that lie between the longs.
     sequence_of_middle_notes = []
     for element in middle_notes:
-        if element.name != 'dot':
+        if element.name not in ['dot', 'Group_Begin', 'Group_End']:
             sequence_of_middle_notes.append(element)
     # 2. Use the counter of semibreves to determine the total of breves in the middle_notes
     sb_counter = counting_semibreves(sequence_of_middle_notes, note_durs, undotted_note_gain)
     count_B = sb_counter / tempus
     
-    modification(count_B, start_note, middle_notes, end_note, following_note, 'brevis', 'longa')
+    modification(count_B, start_note, sequence_of_middle_notes, end_note, following_note, 'brevis', 'longa')
 
 # Main function
 def lining_up(quasiscore_mensural_doc):
@@ -284,14 +284,30 @@ def lining_up(quasiscore_mensural_doc):
         note_durs = ['semibrevis', 'brevis', 'longa', 'maxima']
         undotted_note_gain = [1, tempus, modusminor * tempus, modusmaior * modusminor * tempus]
 
-        # Getting all the notes, rests, and dots of one voice into a python list, in order.
-        # This allows to retrieve the index, which is not possible with MEI lists.
+        # Getting all the relevant elements of a staff into a python list (in order of appearance).
+        # The relevant elements (for Ars antiqua) are notes, rests, dots, and other group markings (such as ligatures).
+        # Dots and ligatures are useful for marking the division of groups of semibreves equivalent to a breve.
+        # The python list allows to retrieve the index, which is not possible with MEI lists.
         voice_content = staff.getChildrenByName('layer')[0].getChildren()
         voice_noterest_dots_content = []
         for element in voice_content:
             name = element.name
             if name == 'note' or name == 'rest' or name == 'dot':
                 voice_noterest_dots_content.append(element)
+            elif name == 'ligature':
+                print("Got a ligature!")
+                # The Group_Begin and Group_End elements introduced here are just place holders, a way to indicate that the
+                # set of notes between these two elements belong to the same grouping 
+                #(Maybe I can use just a new element <dot> for that? These elments are not getting exported to the output file, so it should be fine.)
+                voice_noterest_dots_content.append(MeiElement('Group_Begin'))
+                for child in element.getChildren():
+                    if child.name == 'note' or child.name == 'rest':
+                        voice_noterest_dots_content.append(child)
+                    else:
+                        print("This child of ligature is not a note/rest:")
+                        print(child)
+                        print("It is a " + str(child.name))
+                voice_noterest_dots_content.append(MeiElement('Group_End'))
             else:
                 #print(name)
                 #print(element)
@@ -300,12 +316,11 @@ def lining_up(quasiscore_mensural_doc):
         #print(voice_noterest_dots_content)
 
         # Find indices for starting and ending points of each sequence of notes to be analyzed.
-        # Each of the following is a list of indices of notes greater or equal than: a Semibreve, a Breve, a Long and a Maxima, respectively.
-        list_of_indices_geq_B_and_dots = []
-        list_of_indices_geq_L = []
+        list_of_indices_geq_B_and_dots = [] # list of indices of notes greater or equal to the Breve and the indices of group markings (these are, dots of division and beginning and ending of ligatures)
+        list_of_indices_geq_L = [] # list of indices of notes greater or equal to the long (in Ars antiqua, these are just longs---there are no maximas)
         # Get the indices
         for noterest in voice_noterest_dots_content:
-            if noterest.name == 'dot' or noterest.getAttribute('dur').value == 'brevis':
+            if noterest.name in ['dot', 'Group_Begin', 'Group_End'] or noterest.getAttribute('dur').value == 'brevis':
                 list_of_indices_geq_B_and_dots.append(voice_noterest_dots_content.index(noterest))
             elif noterest.getAttribute('dur').value == 'longa':
                 list_of_indices_geq_B_and_dots.append(voice_noterest_dots_content.index(noterest))
@@ -318,34 +333,18 @@ def lining_up(quasiscore_mensural_doc):
             #print ""
 
             if 0 not in list_of_indices_geq_B_and_dots and list_of_indices_geq_B_and_dots != []:
-                start_note = None
                 f = list_of_indices_geq_B_and_dots[0]
-                end_note = voice_noterest_dots_content[f]
-                try:
-                    following_note = voice_noterest_dots_content[f+1]
-                except:
-                    following_note = None
                 middle_notes = voice_noterest_dots_content[0:f]
-                #print(start_note)
                 #print(middle_notes)
-                #print(end_note)
-                modification_semibreve_level(start_note, middle_notes, end_note, following_note)
+                modification_semibreve_level(middle_notes)
 
             for i in range(0, len(list_of_indices_geq_B_and_dots)-1):
                 # Define the sequence of notes
                 o = list_of_indices_geq_B_and_dots[i]
-                start_note = voice_noterest_dots_content[o]
                 f = list_of_indices_geq_B_and_dots[i+1]
-                end_note = voice_noterest_dots_content[f]
-                try:
-                    following_note = voice_noterest_dots_content[f+1]
-                except:
-                    following_note = None
                 middle_notes = voice_noterest_dots_content[o+1:f]
-                # print(start_note)
                 # print(middle_notes)
-                # print(end_note)
-                modification_semibreve_level(start_note, middle_notes, end_note, following_note)
+                modification_semibreve_level(middle_notes)
 
         # tempus = 2
         else:
