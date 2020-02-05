@@ -74,7 +74,7 @@ if __name__ == "__main__":
     parser.add_argument('-apel', help="Use this flag to find out the duration value of each note in a single Mensural MEI file (doesn't matter if this file is encoding a single part, or a quasiscore).", action='store_true')
     parser.add_argument('-compare', help="Use this flag to compare the output of the 'scoring_up' process, or just the output of the second part of it ('-apel') against a ground truth file.")
     parser.add_argument('output_file', help="File path to store the output (could be the output of the whole 'scoring_up.py' program, or just the 'merge' or 'apel' parts, when using the corresponding flags '-merge' and '-apel').")
-    parser.add_argument('-style', choices=["ars_antiqua", "ars_nova", "white_mensural"], default="white_mensural")
+    parser.add_argument('-style', choices=["ars_antiqua", "ars_nova", "white_mensural"], default="white_mensural", help="Use this flag to indicate the notational style of the piece. By default, the flag's value is white_mensural.")
     args = parser.parse_args()
 
     sys.stdout = open(args.output_file[:-4] + ".txt", "w")
