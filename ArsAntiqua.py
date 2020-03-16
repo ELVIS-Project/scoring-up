@@ -277,11 +277,10 @@ def lining_up(quasiscore_mensural_doc):
         # Getting the mensuration information of the voice (prolatio is irrelevant in Ars antiqua)
         tempus = int(staffDef.getAttribute('tempus').value)
         modusminor = int(staffDef.getAttribute('modusminor').value)
-        modusmaior = int(staffDef.getAttribute('modusmaior').value)
 
         # Individual note values and gains, according to the mensuration
-        note_durs = ['semibrevis', 'brevis', 'longa', 'maxima']
-        undotted_note_gain = [1, tempus, modusminor * tempus, modusmaior * modusminor * tempus]
+        note_durs = ['semibrevis', 'brevis', 'longa']
+        undotted_note_gain = [1, tempus, modusminor * tempus]
 
         # Getting all the relevant elements of a staff into a python list (in order of appearance).
         # The relevant elements (for Ars antiqua) are notes, rests, dots, and other group markings (such as ligatures).
