@@ -290,8 +290,12 @@ def lining_up(quasiscore_mensural_doc):
         voice_noterest_dots_content = []
         for element in voice_content:
             name = element.name
-            if name == 'note' or name == 'rest' or name == 'dot':
+            if name == 'note' or name == 'rest':
                 voice_noterest_dots_content.append(element)
+            elif name == 'dot':
+                voice_noterest_dots_content.append(element)
+                # Also encode the dot's functionality (i.e., division)
+                element.addAttribute('form','div')
             elif name == 'ligature':
                 print("Got a ligature!")
                 # The Group_Begin and Group_End elements introduced here are just place holders, a way to indicate that the
