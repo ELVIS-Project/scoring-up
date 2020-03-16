@@ -5,12 +5,11 @@
 #    It is just considered to be equal to 3 minor semibreves, or a pair of minor-major semibreves,
 #    or it is equal to 2 equal-duration semibreves.
 # 4. The fact that the 'breve' can't be catalogued as 'perfect' or 'imperfect', implies that the 'semibreve' can't be 'altered.
-#    It just can be 'major' or 'minor'.
+#    It just can be 'maior' or 'minor'.
 # 5. There are no 'maximas' just 'duplex longas'
 # 6. There is no dot of augmentation (this was introduced in the Ars nova). 
 # Therefore, thre is no issue regarding the distiction between dot's functionality (division vs. augmentation).
 # In other words, in Ars antiqua, all dots are dots of division.
-# 7. All breves are proper (?) They cannot be altered (?)
 from pymei import *
 from fractions import *
 
@@ -78,13 +77,13 @@ def modification(counter, start_note, middle_notes, end_note, following_note, sh
         # Default Case
         if start_note is not None and start_note.name == 'note' and start_note.getAttribute('dur').value == long_note and not has_been_modified(start_note):
             # Imperfection a.p.p.
-            start_note.addAttribute('quality', 'i')
+            start_note.addAttribute('dur.quality', 'imperfecta')
             start_note.addAttribute('num', '3')
             start_note.addAttribute('numbase', '2')
         # Exception Case
         elif end_note is not None and end_note.name == 'note' and end_note.getAttribute('dur').value == long_note and not has_been_modified(end_note):
             # Imperfection a.p.a.
-            end_note.addAttribute('quality', 'i')
+            end_note.addAttribute('dur.quality', 'imperfecta')
             end_note.addAttribute('num', '3')
             end_note.addAttribute('numbase', '2')
             # Raise a warning when this imperfect note is followed by a perfect note (contradiction with the first rule)
@@ -115,17 +114,17 @@ def modification(counter, start_note, middle_notes, end_note, following_note, sh
             # Default case
             if last_uncolored_note.name == 'note' and last_uncolored_note.getAttribute('dur').value == short_note and not has_been_modified(last_uncolored_note):
                 # Alteration
-                last_uncolored_note.addAttribute('quality', 'a')
+                last_uncolored_note.addAttribute('dur.quality', 'altera')
                 last_uncolored_note.addAttribute('num', '1')
                 last_uncolored_note.addAttribute('numbase', '2')
             # Exception Case
             elif (start_note is not None and start_note.name == 'note' and start_note.getAttribute('dur').value == long_note and not has_been_modified(start_note)) and (end_note is not None and end_note.name == 'note' and end_note.getAttribute('dur').value == long_note and not has_been_modified(end_note)):
                 # Imperfection a.p.p. 
-                start_note.addAttribute('quality', 'i')
+                start_note.addAttribute('dur.quality', 'imperfecta')
                 start_note.addAttribute('num', '3')
                 start_note.addAttribute('numbase', '2')
                 # Imperfection a.p.a.
-                end_note.addAttribute('quality', 'i')
+                end_note.addAttribute('dur.quality', 'imperfecta')
                 end_note.addAttribute('num', '3')
                 end_note.addAttribute('numbase', '2')
                 # Raise a warning when this imperfect note is followed by a perfect note (contradiction with the first rule)
@@ -150,7 +149,7 @@ def modification(counter, start_note, middle_notes, end_note, following_note, sh
                     # Exception Case
                     if last_uncolored_note.name == 'note' and last_uncolored_note.getAttribute('dur').value == short_note and not has_been_modified(last_uncolored_note):
                         # Alteration
-                        last_uncolored_note.addAttribute('quality', 'a')
+                        last_uncolored_note.addAttribute('dur.quality', 'altera')
                         last_uncolored_note.addAttribute('num', '1')
                         last_uncolored_note.addAttribute('numbase', '2')
                     # Default + Warning Case
@@ -158,11 +157,11 @@ def modification(counter, start_note, middle_notes, end_note, following_note, sh
                         # If the "alternative interpretation" is forbidden, and imperfection imp. a.p.a. was discarded just because it entered in conflict with rule # 1
                         # (this is, impapa_against_rule1 flag is True), then we force imperfection a.p.a. as it is the only viable option. But we also raise a 'warning'
                         # Imperfection a.p.p. 
-                        start_note.addAttribute('quality', 'i')
+                        start_note.addAttribute('dur.quality', 'imperfecta')
                         start_note.addAttribute('num', '3')
                         start_note.addAttribute('numbase', '2')
                         # Imperfection a.p.a.
-                        end_note.addAttribute('quality', 'i')
+                        end_note.addAttribute('dur.quality', 'imperfecta')
                         end_note.addAttribute('num', '3')
                         end_note.addAttribute('numbase', '2')
                         # Raise a warning when this imperfect note is followed by a perfect note (contradiction with the first rule)
@@ -173,17 +172,17 @@ def modification(counter, start_note, middle_notes, end_note, following_note, sh
                 # Default Case
                 else:
                     # Imperfection a.p.p. 
-                    start_note.addAttribute('quality', 'i')
+                    start_note.addAttribute('dur.quality', 'imperfecta')
                     start_note.addAttribute('num', '3')
                     start_note.addAttribute('numbase', '2')
                     # Imperfection a.p.a.
-                    end_note.addAttribute('quality', 'i')
+                    end_note.addAttribute('dur.quality', 'imperfecta')
                     end_note.addAttribute('num', '3')
                     end_note.addAttribute('numbase', '2')
             # Exception Case
             elif last_uncolored_note.name == 'note' and last_uncolored_note.getAttribute('dur').value == short_note and not has_been_modified(last_uncolored_note):
                 # Alteration
-                last_uncolored_note.addAttribute('quality', 'a')
+                last_uncolored_note.addAttribute('dur.quality', 'altera')
                 last_uncolored_note.addAttribute('num', '1')
                 last_uncolored_note.addAttribute('numbase', '2')
             # Mistake Case
@@ -210,11 +209,11 @@ def modification(counter, start_note, middle_notes, end_note, following_note, sh
             # Default Case:
             if (start_note is not None and start_note.name == 'note' and start_note.getAttribute('dur').value == long_note and not has_been_modified(start_note)) and (last_uncolored_note.name == 'note' and last_uncolored_note.getAttribute('dur').value == short_note and not has_been_modified(last_uncolored_note)):
                 # Imperfection a.p.p.
-                start_note.addAttribute('quality', 'i')
+                start_note.addAttribute('dur.quality', 'imperfecta')
                 start_note.addAttribute('num', '3')
                 start_note.addAttribute('numbase', '2')
                 # Alteration
-                last_uncolored_note.addAttribute('quality', 'a')
+                last_uncolored_note.addAttribute('dur.quality', 'altera')
                 last_uncolored_note.addAttribute('num', '1')
                 last_uncolored_note.addAttribute('numbase', '2')
             # Exception Case:
@@ -235,14 +234,14 @@ def modification_semibreve_level(middle_notes):
         note2 = middle_notes[1]
         # If the first note has a downward stem, we have a major-minor pair of semibreves
         if note1.hasAttribute('stem.dir') and note1.getAttribute('stem.dir').value == 'down':
-            note1.addAttribute('dur.quality', 'major')
+            note1.addAttribute('dur.quality', 'maior')
             note1.addAttribute('num', '1')
             note1.addAttribute('numbase', '2')
             note2.addAttribute('dur.quality', 'minor')
         # On the other hand, if there is no additional markings, we have a minor-major pair of semibreves (default case) 
         else:
             note1.addAttribute('dur.quality', 'minor')
-            note2.addAttribute('dur.quality', 'major')
+            note2.addAttribute('dur.quality', 'maior')
             note2.addAttribute('num', '1')
             note2.addAttribute('numbase', '2')
     # For more than three semibreves:
