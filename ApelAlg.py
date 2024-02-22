@@ -649,7 +649,7 @@ def coloration_effect(notes_and_rests_per_voice, modusmaior, modusminor, tempus,
     # Example continuation: An uncolored long that is imperfect, normally consists of 2 PERFECT breves; the colored long, while still
     # imperfect, now consists of 2 IMPERFECT (COLORED) breves, thus its total duration changes: 
     # colored_long = 2 x colored_breve = 2 x (2/3 x uncolored_breve)= 2/3 x (2 x uncolored_breve) = 2/3 x uncolored_long
-    # The same happens with the maxima. Thus, the longa and the maxima will have @num = 2 and @numbase = 2.
+    # The same happens with the maxima. Thus, the longa and the maxima will have @num = 3 and @numbase = 2.
     
     if coloration_level == "Max":
         for note in colored_notes:
